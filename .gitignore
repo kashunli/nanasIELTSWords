@@ -1,0 +1,27 @@
+# Rust and frontend build output
+/backend/target/
+/frontend/node_modules/
+/frontend/dist/
+**/__pycache__/
+*.py[cod]
+
+# Local runtime projection and copied audio
+/var/content/content.sqlite
+/var/content/content.sqlite-*
+/var/content/media/
+/var/content/exports/
+/var/content/*.json
+
+# Disposable preparation/model work
+/work/
+/content/BV1AT4y1579F/asr-runs/
+/content/BV1AT4y1579F/selected-transcripts.jsonl
+/content/BV1AT4y1579F/meanings.jsonl
+/content/BV1AT4y1579F/accepted-items.jsonl
+*.part
+*.tmp
+
+# Local credentials/configuration
+.env
+.env.*
+!.env.example

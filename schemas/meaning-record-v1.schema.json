@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IELTS vocabulary meaning record",
+  "type": "object",
+  "required": ["stable_id", "part_of_speech", "meaning_en", "meaning_zh", "meaning_status"],
+  "properties": {
+    "stable_id": {"type": "string"},
+    "part_of_speech": {"type": "string", "minLength": 1},
+    "meaning_en": {"type": "string", "minLength": 1},
+    "meaning_zh": {"type": "string", "minLength": 1},
+    "meaning_status": {"enum": ["ai_draft", "reviewed"]}
+  }
+}

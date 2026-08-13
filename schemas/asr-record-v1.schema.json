@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IELTS vocabulary ASR record",
+  "type": "object",
+  "required": ["schema_version", "stable_id", "chapter", "position", "model", "word", "sentence"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "stable_id": {"type": "string"},
+    "chapter": {"type": "integer", "minimum": 1},
+    "position": {"type": "integer", "minimum": 1},
+    "model": {"type": "string"},
+    "word": {"$ref": "#/$defs/segment"},
+    "sentence": {"$ref": "#/$defs/segment"}
+  },
+  "$defs": {
+    "segment": {
+      "type": "object",
+      "required": ["raw_text", "avg_logprob", "no_speech_prob"],
+      "properties": {
+        "raw_text": {"type": "string"},
+        "avg_logprob": {"type": ["number", "null"]},
+        "no_speech_prob": {"type": ["number", "null"]}
+      }
+    }
+  }
+}

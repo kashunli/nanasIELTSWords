@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IELTS vocabulary accepted item",
+  "type": "object",
+  "required": ["schema_version", "stable_id", "item_uuid", "chapter", "position", "headword", "sentence", "word_audio", "sentence_audio"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "stable_id": {"type": "string"},
+    "item_uuid": {"type": "string"},
+    "chapter": {"type": "integer", "minimum": 1},
+    "position": {"type": "integer", "minimum": 1},
+    "headword": {"type": "string", "minLength": 1},
+    "sentence": {"type": "string", "minLength": 1},
+    "word_audio": {"type": "string", "minLength": 1},
+    "sentence_audio": {"type": "string", "minLength": 1}
+  }
+}
