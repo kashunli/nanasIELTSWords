@@ -68,6 +68,8 @@ def main() -> int:
                 "item_uuid": item_uuid,
                 "chapter": chapter_number,
                 "position": position,
+                "source_file": chapter["source_file"],
+                "source_duration": chapter["source_duration"],
                 "raw_cut": item,
                 "word_audio": copied["word_file"],
                 "sentence_audio": copied["sentence_file"],
