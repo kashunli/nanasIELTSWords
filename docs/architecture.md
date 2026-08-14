@@ -35,3 +35,9 @@ contains only explicit, conservative confirmations where a single-word
 headword is supported by a clear inflected or orthographic form in the example
 sentence ASR. It removes that derived warning from the learner-facing status
 while retaining the original ASR record and the resolution evidence.
+
+The React study wall also provides a separate, reversible browser-local ASR
+confirmation queue for items that still need listening review. A learner can
+compare the word audio with the sentence ASR and confirm a match without
+rewriting SQLite, raw ASR, or review reasons. These browser decisions are
+included in the local progress backup and remain keyed by stable item ID.

@@ -2,12 +2,13 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { exportFlaggedAudio, getChapters, getItems, getSummary } from "./api";
 import type { Chapter, Item, Summary } from "./types";
 import { LocalStudyState } from "./features/study/localStudyState";
+import { LocalAsrReviewState } from "./features/review/asrReviewState.mjs";
 import { LineWaveform } from "./features/player/LineWaveform";
 import { nextPlaybackStep } from "./features/player/playbackSequence.mjs";
 import { detectSilenceGapsMs } from "./features/player/waveform.mjs";
 import { useAudioBufferPlayer } from "./features/player/useAudioBufferPlayer";
 
-type Filter = "all" | "review" | "unmarked" | "known" | "flagged";
+type Filter = "all" | "asr" | "review" | "unmarked" | "known" | "flagged";
 type Phase = "word" | "sentence";
 type PlaybackMode = "words" | "sentences" | "both";
 type RunMode = "single" | "consecutive";
@@ -195,6 +196,9 @@ export default function App() {
   const store = useRef<LocalStudyState | null>(null);
   if (!store.current) store.current = new LocalStudyState();
   const study = store.current;
+  const asrReviewStore = useRef<LocalAsrReviewState | null>(null);
+  if (!asrReviewStore.current) asrReviewStore.current = new LocalAsrReviewState();
+  const asrReview = asrReviewStore.current;
   const [summary, setSummary] = useState<Summary>();
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [items, setItems] = useState<Item[]>([]);
@@ -209,12 +213,18 @@ export default function App() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [showBackup, setShowBackup] = useState(false);
-  useEffect(() => study.subscribe(() => setStateVersion(value => value + 1)), [study]);
+  useEffect(() => {
+    const unsubscribeStudy = study.subscribe(() => setStateVersion(value => value + 1));
+    const unsubscribeAsrReview = asrReview.subscribe(() => setStateVersion(value => value + 1));
+    return () => { unsubscribeStudy(); unsubscribeAsrReview(); };
+  }, [asrReview, study]);
   useEffect(() => { void Promise.all([getSummary(), getChapters()]).then(([nextSummary, nextChapters]) => { setSummary(nextSummary); setChapters(nextChapters); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load corpus.")); }, []);
   useEffect(() => { void getItems(chapter, search).then(nextItems => { setItems(nextItems); setSelectedId(current => current && nextItems.some(item => item.stable_id === current) ? current : nextItems[0]?.stable_id); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load items.")); }, [chapter, search]);
-  const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study]);
+  const isAsrPending = (item: Item) => item.transcript_status === "needs_review" && !asrReview.isConfirmed(item.stable_id);
+  const isAsrConfirmed = (item: Item) => item.transcript_status === "needs_review" && asrReview.isConfirmed(item.stable_id);
+  const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "asr") return isAsrPending(item); if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study, asrReview]);
   const selected = visibleItems.find(item => item.stable_id === selectedId) || visibleItems[0];
-  const counts = useMemo(() => ({known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study]);
+  const counts = useMemo(() => ({asr: items.filter(isAsrPending).length, known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study, asrReview]);
   const selectedIndex = selected ? visibleItems.findIndex(item => item.stable_id === selected.stable_id) : -1;
   const finish = (): boolean => {
     if (!selected) return false;
@@ -268,16 +278,34 @@ export default function App() {
   const canPrevious = Boolean(selected && ((mode === "both" && phase === "sentence") || selectedIndex > 0));
   const card = selected ? study.card(selected.item_uuid) : undefined;
   const toggle = (key: "known" | "flagged" | "sentence_starred") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
-  const downloadBackup = () => { const blob = new Blob([JSON.stringify(study.exportSnapshot(), null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
-  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { study.restore(JSON.parse(text)); setMessage("Progress restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
+  const selectedAsrPending = Boolean(selected && isAsrPending(selected));
+  const selectedAsrConfirmed = Boolean(selected && isAsrConfirmed(selected));
+  const confirmAsr = () => {
+    if (!selected || !selectedAsrPending) return;
+    const currentIndex = visibleItems.findIndex(item => item.stable_id === selected.stable_id);
+    const nextItem = visibleItems[currentIndex + 1] || visibleItems[currentIndex - 1];
+    asrReview.confirm(selected.stable_id);
+    setMessage(`${selected.headword} confirmed for this browser.`);
+    if (filter === "asr") {
+      setSelectedId(nextItem?.stable_id);
+      setPhase("word");
+    }
+  };
+  const undoAsr = () => {
+    if (!selected || !selectedAsrConfirmed) return;
+    asrReview.undo(selected.stable_id);
+    setMessage(`${selected.headword} returned to the ASR review queue.`);
+  };
+  const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 2, study: study.exportSnapshot(), asr_review: asrReview.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
+  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { const backup = parsed as {study: unknown; asr_review?: unknown}; study.restore(backup.study); asrReview.restore(backup.asr_review); } else { study.restore(parsed); } setMessage("Progress and ASR review decisions restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
   const exportAudio = () => { if (!chapter) return; const ids = items.filter(item => study.card(item.item_uuid)?.flagged).map(item => item.stable_id); if (!ids.length) { setMessage("No flagged items in this chapter."); return; } void exportFlaggedAudio(chapter, ids).then(result => { setMessage(`Export ready: ${result.file_name}`); window.open(result.audio_url, "_blank"); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Export failed.")); };
   return <div className="app-shell">
     <div className="content-scroll">
     <header className="topbar"><div><span className="eyebrow">IELTS VOCABULARY · AUDIO-FIRST</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items · ${summary.chapters} chapters · ${summary.transcript_review_items} transcript reviews` : "Loading corpus…"}</p></div><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button></header>
-    {showBackup ? <section className="backup-panel"><button onClick={downloadBackup}>Download progress</button><label className="file-button">Restore progress<input type="file" accept="application/json" onChange={restoreBackup} /></label><button onClick={() => { if (window.confirm("Archive and reset local progress?")) study.reset(); }}>Reset progress</button></section> : null}
+    {showBackup ? <section className="backup-panel"><button type="button" onClick={downloadBackup}>Download progress</button><label className="file-button">Restore progress<input type="file" accept="application/json" onChange={restoreBackup} /></label><button type="button" onClick={() => { if (window.confirm("Archive and reset local progress and ASR confirmations?")) { study.reset(); asrReview.reset(); } }}>Reset progress</button></section> : null}
     <nav className="chapter-strip" aria-label="Chapters"><button className={chapter === null ? "active" : ""} onClick={() => setChapter(null)}>All</button>{chapters.map(item => <button key={item.number} className={chapter === item.number ? "active" : ""} onClick={() => setChapter(item.number)}>Ch {item.number}</button>)}</nav>
-    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search headword, meaning, sentence…" /><div className="filters">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
-    <main className="study-layout"><aside className="item-list" aria-label="Vocabulary items">{visibleItems.map(item => { const itemCard = study.card(item.item_uuid); return <button key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { setSelectedId(item.stable_id); setPhase("word"); }}><span>{String(item.position).padStart(3, "0")}</span><strong>{item.headword}</strong><small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}{item.transcript_status === "needs_review" ? " · ASR" : ""}</small></button>})}</aside><section className="focus"><div className="focus-card">{selected ? <><div className="focus-meta">Chapter {selected.chapter} · #{selected.position} {selected.transcript_status === "needs_review" ? <span className="warning">ASR review needed</span> : null}</div><h2>{selected.headword}</h2><p className="pos">{selected.part_of_speech || "word"}</p><div className="meanings"><p>{selected.meaning_en || "Meaning pending"}</p><p>{selected.meaning_zh || "释义待生成"}</p><small>{selected.meaning_status === "ai_draft" ? "AI draft meaning" : "Reviewed meaning"}</small></div><div className="sentence"><span>EXAMPLE</span><p>{selected.sentence}</p></div><div className="card-actions"><button className={card?.known ? "selected" : ""} onClick={() => toggle("known")}>✓ Known</button><button className={card?.flagged ? "selected" : ""} onClick={() => toggle("flagged")}>⚑ Flagged</button><button className={card?.sentence_starred ? "selected" : ""} onClick={() => toggle("sentence_starred")}>★ Sentence</button></div></> : <p>Select an item from the list.</p>}</div></section></main>
+    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search headword, meaning, sentence…" /><div className="filters">{(["all", "asr", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value === "asr" ? "ASR" : value[0].toUpperCase() + value.slice(1)}{value === "asr" ? ` ${counts.asr}` : value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button type="button" onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
+    <main className="study-layout"><aside className="item-list" aria-label="Vocabulary items">{visibleItems.map(item => { const itemCard = study.card(item.item_uuid); return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { setSelectedId(item.stable_id); setPhase("word"); }}><span>{String(item.position).padStart(3, "0")}</span><strong>{item.headword}</strong><small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}{isAsrPending(item) ? " · ASR" : isAsrConfirmed(item) ? " · ✓ confirmed" : ""}</small></button>})}</aside><section className="focus"><div className="focus-card">{selected ? <><div className="focus-meta">Chapter {selected.chapter} · #{selected.position} {selectedAsrPending ? <span className="warning">ASR review needed</span> : selectedAsrConfirmed ? <span className="confirmed">ASR confirmed in this browser</span> : null}</div><h2>{selected.headword}</h2><p className="pos">{selected.part_of_speech || "word"}</p><div className="meanings"><p>{selected.meaning_en || "Meaning pending"}</p><p>{selected.meaning_zh || "释义待生成"}</p><small>{selected.meaning_status === "ai_draft" ? "AI draft meaning" : "Reviewed meaning"}</small></div><div className="sentence"><span>EXAMPLE</span><p>{selected.sentence}</p></div>{selectedAsrPending ? <section className="asr-review" aria-label="ASR review"><div className="asr-review-heading"><span>ASR REVIEW</span><strong>Listen to the word, then compare the sentence transcription.</strong></div><div className="asr-review-reference"><span>SENTENCE ASR REFERENCE</span><p>{selected.sentence}</p></div><div className="asr-review-actions"><button type="button" className="confirm" onClick={confirmAsr}>✓ Confirm match</button><button type="button" onClick={() => setMessage("Kept in the ASR review queue.")}>Keep in queue</button></div><small>Confirmation is stored in this browser only; it does not change canonical ASR.</small></section> : selectedAsrConfirmed ? <section className="asr-review is-confirmed" aria-label="ASR review"><div className="asr-review-heading"><span>ASR REVIEW</span><strong>Confirmed in this browser</strong></div><button type="button" onClick={undoAsr}>Undo confirmation</button></section> : null}<div className="card-actions"><button type="button" className={card?.known ? "selected" : ""} onClick={() => toggle("known")}>✓ Known</button><button type="button" className={card?.flagged ? "selected" : ""} onClick={() => toggle("flagged")}>⚑ Flagged</button><button type="button" className={card?.sentence_starred ? "selected" : ""} onClick={() => toggle("sentence_starred")}>★ Sentence</button></div></> : <p>Select an item from the list.</p>}</div></section></main>
     </div>
      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} phase={phase} mode={mode} runMode={runMode} onEnd={finish} onNext={advanceNext} onPrevious={advancePrevious} onRunModeChange={setRunMode} canNext={canNext} canPrevious={canPrevious} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="both">Word + sentence</option><option value="words">Words only</option><option value="sentences">Sentences only</option></select></label><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div></section>
     {error ? <div className="toast error">{error}</div> : null}
