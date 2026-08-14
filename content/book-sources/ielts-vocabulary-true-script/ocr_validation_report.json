@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T04:38:00.428910+00:00",
+  "generated_at": "2026-08-14T04:47:00.392438+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -800,33 +800,50 @@
     },
     {
       "pdf_page": 104,
+      "book_page": 93,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 105,
+      "book_page": 94,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 106,
+      "book_page": 95,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 107,
+      "book_page": 96,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 108,
+      "book_page": 97,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 109,
+      "book_page": 98,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 110,
@@ -1994,12 +2011,6 @@
     25,
     35,
     36,
-    104,
-    105,
-    106,
-    107,
-    108,
-    109,
     110,
     111,
     112,
@@ -2224,698 +2235,47 @@
     "1": {
       "expected_audio_words": 240,
       "ocr_words": 241,
-      "matched_words": 210,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch01-0019",
-          "headword": "In danger.",
-          "position": 19
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0020",
-          "headword": "Jeopardize.",
-          "position": 20
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0022",
-          "headword": "El Nino.",
-          "position": 22
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0027",
-          "headword": "or this",
-          "position": 27
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0029",
-          "headword": "marble they",
-          "position": 29
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0062",
-          "headword": "Plato.",
-          "position": 62
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0083",
-          "headword": "Golf.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0090",
-          "headword": "stream On",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0103",
-          "headword": "Oceana.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0112",
-          "headword": "warm the",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0113",
-          "headword": "thermal the",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0115",
-          "headword": "arid it",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0116",
-          "headword": "moist his",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0122",
-          "headword": "Thor.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0124",
-          "headword": "freeze the",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0136",
-          "headword": "Celcius.",
-          "position": 136
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0149",
-          "headword": "South East.",
-          "position": 149
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0172",
-          "headword": "toxic all",
-          "position": 172
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0175",
-          "headword": "contaminant",
-          "position": 175
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0176",
-          "headword": "geology he",
-          "position": 176
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0180",
-          "headword": "plates. Plate.",
-          "position": 180
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0189",
-          "headword": "dramatic she",
-          "position": 189
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0190",
-          "headword": "wilderness from",
-          "position": 190
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0191",
-          "headword": "desert the",
-          "position": 191
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0193",
-          "headword": "Baron.",
-          "position": 193
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0195",
-          "headword": "Fertilize.",
-          "position": 195
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0197",
-          "headword": "Luna.",
-          "position": 197
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0208",
-          "headword": "vapor.",
-          "position": 208
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0217",
-          "headword": "Poor.",
-          "position": 217
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch01-0238",
-          "headword": "gas there",
-          "position": 238
-        }
-      ],
+      "matched_words": 240,
+      "matched_by_headword": 26,
+      "matched_by_sentence": 207,
+      "matched_by_order": 7,
+      "missing_audio_words": [],
       "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0014-04",
-          "headword": "endanger"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0014-05",
-          "headword": "jeopardise (= jeopardize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0014-07",
-          "headword": "El Niño"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0015-01",
-          "headword": "ore"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0015-03",
-          "headword": "marble"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0017-12",
-          "headword": "plateau"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0019-07",
-          "headword": "gulf"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0019-14",
-          "headword": "stream"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0020-12",
-          "headword": "Oceania"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-05",
-          "headword": "warm"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-06",
-          "headword": "thermal"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-08",
-          "headword": "arid"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-09",
-          "headword": "moist"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0022-02",
-          "headword": "thaw"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0022-04",
-          "headword": "freeze"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0023-03",
-          "headword": "Celsius"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0024-01",
-          "headword": "southeast"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0025-08",
-          "headword": "toxic"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0025-11",
-          "headword": "contaminate"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0025-12",
-          "headword": "geology"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-03",
-          "headword": "plate"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-12",
-          "headword": "dramatic"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-13",
-          "headword": "wilderness"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-14",
-          "headword": "desert"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0027-02",
-          "headword": "barren"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0027-04",
-          "headword": "fertilise (= fertilize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0027-06",
-          "headword": "lunar"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0028-04",
-          "headword": "vapour (= vapor)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0028-13",
-          "headword": "pour"
-        },
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0030-03",
           "headword": "natural"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0030-07",
-          "headword": "gas"
         }
       ]
     },
     "2": {
       "expected_audio_words": 130,
       "ocr_words": 130,
-      "matched_words": 110,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch02-0001",
-          "headword": "2. Photosynthesis.",
-          "position": 1
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0015",
-          "headword": "Variation Variation",
-          "position": 15
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0016",
-          "headword": "Diversity This",
-          "position": 16
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0017",
-          "headword": "Hybridization Somatic",
-          "position": 17
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0024",
-          "headword": "So,",
-          "position": 24
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0031",
-          "headword": "Plough.",
-          "position": 31
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0038",
-          "headword": "Vars.",
-          "position": 38
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0043",
-          "headword": "Mold.",
-          "position": 43
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0044",
-          "headword": "Pollan.",
-          "position": 44
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0073",
-          "headword": "bow.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0089",
-          "headword": "reef the",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0090",
-          "headword": "alga some",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0095",
-          "headword": "Absorb Dry",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0104",
-          "headword": "protect we",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0105",
-          "headword": "preserve it",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0106",
-          "headword": "conservation some",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0107",
-          "headword": "bush fire the",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0108",
-          "headword": "extinguish they",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0111",
-          "headword": "Parish.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch02-0121",
-          "headword": "Favorable.",
-          "position": 121
-        }
-      ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0033-01",
-          "headword": "photosynthesis"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-02",
-          "headword": "variation"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-03",
-          "headword": "diversity"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-04",
-          "headword": "hybridisation (= hybridization)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-11",
-          "headword": "sow"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0035-07",
-          "headword": "plough (= plow)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0035-14",
-          "headword": "vase"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0036-05",
-          "headword": "mould (= mold)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0036-06",
-          "headword": "pollen"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0038-02",
-          "headword": "bough"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0039-05",
-          "headword": "reef"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0039-06",
-          "headword": "alga"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0039-11",
-          "headword": "absorb"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-05",
-          "headword": "protect"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-06",
-          "headword": "preserve"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-07",
-          "headword": "conservation"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-08",
-          "headword": "bush fire"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-09",
-          "headword": "extinguish"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-12",
-          "headword": "perish"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0041-08",
-          "headword": "favourable (= favorable)"
-        }
-      ]
+      "matched_words": 130,
+      "matched_by_headword": 9,
+      "matched_by_sentence": 117,
+      "matched_by_order": 4,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
     },
     "3": {
       "expected_audio_words": 168,
       "ocr_words": 168,
-      "matched_words": 149,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch03-0016",
-          "headword": "Species species,",
-          "position": 16
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0035",
-          "headword": "hybridize.",
-          "position": 35
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0047",
-          "headword": "Poor.",
-          "position": 47
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0051",
-          "headword": "plume this",
-          "position": 51
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0052",
-          "headword": "feather a",
-          "position": 52
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0060",
-          "headword": "Spiders.",
-          "position": 60
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0079",
-          "headword": "fucks.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0081",
-          "headword": "Carth.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0083",
-          "headword": "Lam.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0094",
-          "headword": "Hawke,",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0104",
-          "headword": "mouse The",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0105",
-          "headword": "rat Now",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0107",
-          "headword": "Hair.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0109",
-          "headword": "behavior.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0113",
-          "headword": "Raw.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0130",
-          "headword": "Jam.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0137",
-          "headword": "Secret.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0150",
-          "headword": "Dorment.",
-          "position": 150
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch03-0155",
-          "headword": "Pray",
-          "position": 155
-        }
-      ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0044-05",
-          "headword": "species"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0045-08",
-          "headword": "hybridise (= hybridize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0046-06",
-          "headword": "paw"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0046-10",
-          "headword": "plume"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0046-11",
-          "headword": "feather"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0047-04",
-          "headword": "spider"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0048-07",
-          "headword": "fox"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0048-09",
-          "headword": "calf"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0048-11",
-          "headword": "lamb"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0049-04",
-          "headword": "hawk"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0049-14",
-          "headword": "mouse"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0049-15",
-          "headword": "rat"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0050-01",
-          "headword": "hare"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0050-03",
-          "headword": "behaviour (= behavior)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0050-07",
-          "headword": "roar"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0051-08",
-          "headword": "germ"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0052-02",
-          "headword": "secrete"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0053-01",
-          "headword": "dormant"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0053-06",
-          "headword": "prey"
-        }
-      ]
+      "matched_words": 168,
+      "matched_by_headword": 12,
+      "matched_by_sentence": 155,
+      "matched_by_order": 1,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
     },
     "4": {
       "expected_audio_words": 74,
       "ocr_words": 75,
-      "matched_words": 70,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch04-0047",
-          "headword": "Iron.",
-          "position": 47
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch04-0049",
-          "headword": "In",
-          "position": 49
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch04-0053",
-          "headword": "Synthe size.",
-          "position": 53
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch04-0066",
-          "headword": "discernible night",
-          "position": 66
-        }
-      ],
+      "matched_words": 74,
+      "matched_by_headword": 6,
+      "matched_by_sentence": 65,
+      "matched_by_order": 3,
+      "missing_audio_words": [],
       "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0060-04",
-          "headword": "ion"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0060-06",
-          "headword": "quantum"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0060-10",
-          "headword": "synthesise (= synthesize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0061-07",
-          "headword": "discernible"
-        },
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0062-01",
           "headword": "cataclysmic"
@@ -2925,642 +2285,254 @@
     "5": {
       "expected_audio_words": 399,
       "ocr_words": 401,
-      "matched_words": 355,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch05-0025",
-          "headword": "instill.",
-          "position": 25
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0027",
-          "headword": "Emphasize",
-          "position": 27
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0028",
-          "headword": "Enhance A",
-          "position": 28
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0029",
-          "headword": "Enable This",
-          "position": 29
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0030",
-          "headword": "Inspire Our",
-          "position": 30
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0041",
-          "headword": "Smart This",
-          "position": 41
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0042",
-          "headword": "All-round.",
-          "position": 42
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0079",
-          "headword": "Licence.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0097",
-          "headword": "Coed.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0100",
-          "headword": "Enroll.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0102",
-          "headword": "Accommodation. The",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0106",
-          "headword": "laboratory.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0124",
-          "headword": "Encyclopedia.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0137",
-          "headword": "Catalog.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0145",
-          "headword": "Real.",
-          "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0148",
-          "headword": "major she",
-          "position": 148
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0162",
-          "headword": "Logistics Chemistry",
-          "position": 162
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0170",
-          "headword": "Maths.",
-          "position": 170
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0176",
-          "headword": "Some,",
-          "position": 176
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0196",
-          "headword": "multiple 18",
-          "position": 196
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0197",
-          "headword": "maximum the",
-          "position": 197
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0220",
-          "headword": "Percent.",
-          "position": 220
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0225",
-          "headword": "Scales.",
-          "position": 225
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0226",
-          "headword": "Ounces.",
-          "position": 226
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0242",
-          "headword": "Melts.",
-          "position": 242
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0256",
-          "headword": "Blend His",
-          "position": 256
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0257",
-          "headword": "Theory There",
-          "position": 257
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0258",
-          "headword": "Empirical His",
-          "position": 258
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0261",
-          "headword": "Principle A",
-          "position": 261
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0283",
-          "headword": "Pre-requisite.",
-          "position": 283
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0295",
-          "headword": "Scrutinize.",
-          "position": 295
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0298",
-          "headword": "Examination.",
-          "position": 298
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0302",
-          "headword": "plagiarise.",
-          "position": 302
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0318",
-          "headword": "Site.",
-          "position": 318
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0333",
-          "headword": "Dissern.",
-          "position": 333
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0334",
-          "headword": "Recognize.",
-          "position": 334
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0342",
-          "headword": "Pursist.",
-          "position": 342
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0345",
-          "headword": "Analyze.",
-          "position": 345
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0347",
-          "headword": "In fur,",
-          "position": 347
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0366",
-          "headword": "Illustrate the",
-          "position": 366
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0374",
-          "headword": "Inquire.",
-          "position": 374
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0383",
-          "headword": "Rank This",
-          "position": 383
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0384",
-          "headword": "Rank There",
-          "position": 384
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0385",
-          "headword": "Row A",
-          "position": 385
-        }
-      ],
+      "matched_words": 399,
+      "matched_by_headword": 46,
+      "matched_by_sentence": 348,
+      "matched_by_order": 5,
+      "missing_audio_words": [],
       "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0066-12",
-          "headword": "instil (= instill)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-01",
-          "headword": "emphasise (= emphasize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-02",
-          "headword": "enhance"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-03",
-          "headword": "enable"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-04",
-          "headword": "inspire"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0068-02",
-          "headword": "smart"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0068-03",
-          "headword": "all-round (= all-around)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0071-04",
-          "headword": "license (= licence)"
-        },
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0071-11",
           "headword": "ceremony"
         },
         {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0072-09",
-          "headword": "coed (= co-educational)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0072-12",
-          "headword": "enrol (= enroll)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0073-01",
-          "headword": "accommodation"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0073-05",
-          "headword": "laboratory (= lab)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0074-11",
-          "headword": "encyclopedia (= encyclopaedia)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0075-11",
-          "headword": "catalogue (= catalog)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0076-02",
-          "headword": "reel"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0076-05",
-          "headword": "major"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0077-06",
-          "headword": "chemistry"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0078-04",
-          "headword": "maths (= mathematics)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0078-10",
-          "headword": "sum"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0080-03",
-          "headword": "multiple"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0080-04",
-          "headword": "maximum"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0081-13",
-          "headword": "per cent (= percent)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0082-05",
-          "headword": "scale"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0082-06",
-          "headword": "ounce"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0083-11",
-          "headword": "melt"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0084-10",
-          "headword": "blend"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0084-11",
-          "headword": "theory"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0085-01",
-          "headword": "empirical"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0085-04",
-          "headword": "principle"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0087-01",
-          "headword": "prerequisite"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0087-13",
-          "headword": "scrutinise (= scrutinize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0087-16",
-          "headword": "examination (= exam)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0088-04",
-          "headword": "plagiarise (= plagiarize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0089-06",
-          "headword": "cite"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0090-06",
-          "headword": "discern"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0090-07",
-          "headword": "recognise (= recognize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0091-02",
-          "headword": "persist"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0091-05",
-          "headword": "analyse (= analyze)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0091-07",
-          "headword": "infer"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0093-01",
-          "headword": "illustrate"
-        },
-        {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0093-08",
           "headword": "research"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0093-10",
-          "headword": "inquire (= enquire)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0094-06",
-          "headword": "grade"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0094-07",
-          "headword": "rank"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0094-08",
-          "headword": "row"
         }
       ]
     },
     "6": {
       "expected_audio_words": 122,
-      "ocr_words": 95,
-      "matched_words": 86,
+      "ocr_words": 122,
+      "matched_words": 122,
+      "matched_by_headword": 18,
+      "matched_by_sentence": 102,
+      "matched_by_order": 2,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
+    },
+    "7": {
+      "expected_audio_words": 79,
+      "ocr_words": 37,
+      "matched_words": 37,
+      "matched_by_headword": 5,
+      "matched_by_sentence": 32,
+      "matched_by_order": 0,
       "missing_audio_words": [
         {
-          "stable_id": "bv1at4y1579f-ch06-0004",
-          "headword": "Engineering.",
-          "position": 4
+          "stable_id": "bv1at4y1579f-ch07-0038",
+          "headword": "Sacred.",
+          "position": 38
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0011",
-          "headword": "Device.",
-          "position": 11
+          "stable_id": "bv1at4y1579f-ch07-0039",
+          "headword": "Hallowed.",
+          "position": 39
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0022",
-          "headword": "Specialise.",
-          "position": 22
+          "stable_id": "bv1at4y1579f-ch07-0040",
+          "headword": "Holy.",
+          "position": 40
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0026",
-          "headword": "Utilize.",
-          "position": 26
+          "stable_id": "bv1at4y1579f-ch07-0041",
+          "headword": "Pope.",
+          "position": 41
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0044",
-          "headword": "Accessory Car",
+          "stable_id": "bv1at4y1579f-ch07-0042",
+          "headword": "Bishop.",
+          "position": 42
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch07-0043",
+          "headword": "Missionary.",
+          "position": 43
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch07-0044",
+          "headword": "Priest.",
           "position": 44
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0047",
-          "headword": "Versatile Plastics",
+          "stable_id": "bv1at4y1579f-ch07-0045",
+          "headword": "Bible.",
+          "position": 45
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch07-0046",
+          "headword": "Church.",
+          "position": 46
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch07-0047",
+          "headword": "Cathedral.",
           "position": 47
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0080",
-          "headword": "Science fiction.",
-          "position": 80
+          "stable_id": "bv1at4y1579f-ch07-0048",
+          "headword": "Choir.",
+          "position": 48
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0089",
-          "headword": "Compressed.",
-          "position": 89
+          "stable_id": "bv1at4y1579f-ch07-0049",
+          "headword": "Monk.",
+          "position": 49
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0095",
-          "headword": "Distill.",
-          "position": 95
+          "stable_id": "bv1at4y1579f-ch07-0050",
+          "headword": "Temple.",
+          "position": 50
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0096",
-          "headword": "mode.",
-          "position": 96
+          "stable_id": "bv1at4y1579f-ch07-0051",
+          "headword": "Pagoda.",
+          "position": 51
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0097",
-          "headword": "mold.",
-          "position": 97
+          "stable_id": "bv1at4y1579f-ch07-0052",
+          "headword": "Empire.",
+          "position": 52
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0098",
-          "headword": "prototype.",
-          "position": 98
+          "stable_id": "bv1at4y1579f-ch07-0053",
+          "headword": "Imperial.",
+          "position": 53
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0099",
-          "headword": "Framework.",
-          "position": 99
+          "stable_id": "bv1at4y1579f-ch07-0054",
+          "headword": "Royal.",
+          "position": 54
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0100",
-          "headword": "Aspect.",
-          "position": 100
+          "stable_id": "bv1at4y1579f-ch07-0055",
+          "headword": "Dynasty.",
+          "position": 55
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0101",
-          "headword": "Phase.",
-          "position": 101
+          "stable_id": "bv1at4y1579f-ch07-0056",
+          "headword": "Chronology.",
+          "position": 56
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0102",
-          "headword": "Operate.",
-          "position": 102
+          "stable_id": "bv1at4y1579f-ch07-0057",
+          "headword": "Emperor.",
+          "position": 57
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0103",
-          "headword": "Facilitate.",
-          "position": 103
+          "stable_id": "bv1at4y1579f-ch07-0058",
+          "headword": "King.",
+          "position": 58
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0104",
-          "headword": "Transform.",
-          "position": 104
+          "stable_id": "bv1at4y1579f-ch07-0059",
+          "headword": "Queen.",
+          "position": 59
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0105",
-          "headword": "Convert.",
-          "position": 105
+          "stable_id": "bv1at4y1579f-ch07-0060",
+          "headword": "Prince.",
+          "position": 60
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0106",
-          "headword": "alter",
-          "position": 106
+          "stable_id": "bv1at4y1579f-ch07-0061",
+          "headword": "Princess.",
+          "position": 61
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0107",
-          "headword": "Shift.",
-          "position": 107
+          "stable_id": "bv1at4y1579f-ch07-0062",
+          "headword": "Majesty.",
+          "position": 62
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0108",
-          "headword": "turn",
-          "position": 108
+          "stable_id": "bv1at4y1579f-ch07-0063",
+          "headword": "Nobility.",
+          "position": 63
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0109",
-          "headword": "adapt",
-          "position": 109
+          "stable_id": "bv1at4y1579f-ch07-0064",
+          "headword": "Lord.",
+          "position": 64
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0110",
-          "headword": "Adjust.",
-          "position": 110
+          "stable_id": "bv1at4y1579f-ch07-0065",
+          "headword": "Knight.",
+          "position": 65
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0111",
-          "headword": "Pinpoint.",
-          "position": 111
+          "stable_id": "bv1at4y1579f-ch07-0066",
+          "headword": "Guardian.",
+          "position": 66
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0112",
-          "headword": "Accurate.",
-          "position": 112
+          "stable_id": "bv1at4y1579f-ch07-0067",
+          "headword": "Nostalgia.",
+          "position": 67
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0113",
-          "headword": "Precis.",
-          "position": 113
+          "stable_id": "bv1at4y1579f-ch07-0068",
+          "headword": "Homesick.",
+          "position": 68
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0114",
-          "headword": "Correct.",
-          "position": 114
+          "stable_id": "bv1at4y1579f-ch07-0069",
+          "headword": "Celebrity.",
+          "position": 69
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0115",
-          "headword": "Error.",
-          "position": 115
+          "stable_id": "bv1at4y1579f-ch07-0070",
+          "headword": "status.",
+          "position": 70
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0116",
-          "headword": "Mistake.",
-          "position": 116
+          "stable_id": "bv1at4y1579f-ch07-0071",
+          "headword": "Background.",
+          "position": 71
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0117",
-          "headword": "Floor.",
-          "position": 117
+          "stable_id": "bv1at4y1579f-ch07-0072",
+          "headword": "Experience.",
+          "position": 72
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0118",
-          "headword": "Wrong.",
-          "position": 118
+          "stable_id": "bv1at4y1579f-ch07-0073",
+          "headword": "Anecdote.",
+          "position": 73
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0119",
-          "headword": "Fault.",
-          "position": 119
+          "stable_id": "bv1at4y1579f-ch07-0074",
+          "headword": "Accident.",
+          "position": 74
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0120",
-          "headword": "Stumble.",
-          "position": 120
+          "stable_id": "bv1at4y1579f-ch07-0075",
+          "headword": "Incident.",
+          "position": 75
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0121",
-          "headword": "Contingency.",
-          "position": 121
+          "stable_id": "bv1at4y1579f-ch07-0076",
+          "headword": "Thrive.",
+          "position": 76
         },
         {
-          "stable_id": "bv1at4y1579f-ch06-0122",
-          "headword": "Circumstance.",
-          "position": 122
+          "stable_id": "bv1at4y1579f-ch07-0077",
+          "headword": "Prosperity.",
+          "position": 77
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch07-0078",
+          "headword": "Setback.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch07-0079",
+          "headword": "Adversity.",
+          "position": 79
         }
       ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0097-04",
-          "headword": "engineer"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0097-11",
-          "headword": "devise"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0098-08",
-          "headword": "specialise (= specialize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0098-12",
-          "headword": "utilise (= utilize)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0100-04",
-          "headword": "accessory"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0100-07",
-          "headword": "versatile"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0102-14",
-          "headword": "science fiction (= sci-fi)"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0103-08",
-          "headword": "compress"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0103-14",
-          "headword": "distil (= distill)"
-        }
-      ]
+      "unexpected_ocr_words": []
     }
   },
-  "word_count": 1110,
+  "word_count": 1174,
   "index_entry_count": 0
 }
