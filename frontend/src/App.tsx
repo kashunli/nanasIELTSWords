@@ -12,7 +12,7 @@ type Phase = "word" | "sentence";
 type PlaybackMode = "words" | "sentences" | "both";
 type RunMode = "single" | "consecutive";
 
-function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPhaseChange, onRunModeChange, canNext}: {item?: Item; phase: Phase; mode: PlaybackMode; runMode: RunMode; onEnd: () => boolean; onNext: () => boolean; onPhaseChange: (phase: Phase) => void; onRunModeChange: (mode: RunMode) => void; canNext: boolean}) {
+function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onPhaseChange, onRunModeChange, canNext, canPrevious}: {item?: Item; phase: Phase; mode: PlaybackMode; runMode: RunMode; onEnd: () => boolean; onNext: () => boolean; onPrevious: () => boolean; onPhaseChange: (phase: Phase) => void; onRunModeChange: (mode: RunMode) => void; canNext: boolean; canPrevious: boolean}) {
   const url = item ? phase === "word" ? item.word_audio_url : item.sentence_audio_url : "";
   const autoAdvanceRef = useRef(false);
   const playOnTargetChangeRef = useRef(false);
@@ -76,8 +76,6 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPhaseChange, 
     ).map(({startMs, endMs}) => ({start_ms: startMs, end_ms: endMs}));
   }, [player.audioBuffer]);
 
-  if (!item) return <section className="player empty-player">Select an item to begin listening.</section>;
-
   const duration = player.audioBuffer?.duration || 0.01;
   const progressLabel = `${formatPlaybackTime(player.currentTime)} / ${formatPlaybackTime(player.audioBuffer?.duration || 0)}`;
   const toggle = () => {
@@ -103,6 +101,15 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPhaseChange, 
       autoAdvanceRef.current = false;
     }
   };
+  const previousManually = () => {
+    playOnTargetChangeRef.current = true;
+    autoAdvanceRef.current = runMode === "consecutive";
+    const moved = onPrevious();
+    if (!moved) {
+      playOnTargetChangeRef.current = false;
+      autoAdvanceRef.current = false;
+    }
+  };
   const toggleRunMode = () => {
     const nextMode: RunMode = runMode === "single" ? "consecutive" : "single";
     if (nextMode === "single") {
@@ -119,6 +126,42 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPhaseChange, 
     player.pause();
     player.setPosition(0);
   };
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const target = event.target;
+      const isTypingTarget = target instanceof HTMLTextAreaElement
+        || target instanceof HTMLSelectElement
+        || (target instanceof HTMLInputElement && target.type !== "range")
+        || (target instanceof HTMLElement && target.isContentEditable);
+      if (isTypingTarget || event.repeat) return;
+
+      const key = event.key.toLowerCase();
+      if (event.code === "Space") {
+        event.preventDefault();
+        toggle();
+      } else if (key === "a") {
+        event.preventDefault();
+        if (canPrevious) previousManually();
+      } else if (key === "d") {
+        event.preventDefault();
+        if (canNext) advanceManually();
+      } else if (key === "r") {
+        event.preventDefault();
+        if (player.audioBuffer) replay();
+      } else if (key === "s") {
+        event.preventDefault();
+        if (player.audioBuffer) stop();
+      } else if (key === "c") {
+        event.preventDefault();
+        toggleRunMode();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown, {capture: true});
+    return () => document.removeEventListener("keydown", handleKeyDown, {capture: true});
+  }, [advanceManually, canNext, canPrevious, player.audioBuffer, previousManually, replay, stop, toggle, toggleRunMode]);
+
+  if (!item) return <section className="player empty-player">Select an item to begin listening.</section>;
+
   return <section className="player" aria-label="Audio player">
     <div className="player-heading"><span>{phase === "word" ? "WORD" : "EXAMPLE SENTENCE"}</span><strong>{item.headword}</strong><small>{item.position} · Chapter {item.chapter}</small></div>
     <LineWaveform
@@ -133,12 +176,13 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPhaseChange, 
     />
     <div className="player-controls">
       <span className="audio-time" aria-label="Playback time">{progressLabel}</span>
-      <button type="button" onClick={replay} disabled={!player.audioBuffer}>Replay</button>
-      <button type="button" className="primary" onClick={toggle} disabled={!player.audioBuffer}>{player.isPlaying ? "Pause" : "Play"}</button>
-      <button type="button" onClick={advanceManually} disabled={!canNext}>Next</button>
-      <button type="button" onClick={stop} disabled={!player.audioBuffer}>Stop</button>
-      <button type="button" className={runMode === "consecutive" ? "selected" : ""} onClick={toggleRunMode} aria-pressed={runMode === "consecutive"}>{runMode === "single" ? "Single" : "Consecutive"}</button>
-      <span>{playerError || `${phase} · ${runMode === "single" ? "single clip" : "play through list"} · ${mode}`}</span>
+      <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-keyshortcuts="R">Replay</button>
+      <button type="button" className="primary" onClick={toggle} disabled={!player.audioBuffer} aria-keyshortcuts="Space">{player.isPlaying ? "Pause" : "Play"}</button>
+      <button type="button" onClick={previousManually} disabled={!canPrevious} aria-keyshortcuts="A">Previous</button>
+      <button type="button" onClick={advanceManually} disabled={!canNext} aria-keyshortcuts="D">Next</button>
+      <button type="button" onClick={stop} disabled={!player.audioBuffer} aria-keyshortcuts="S">Stop</button>
+      <button type="button" className={runMode === "consecutive" ? "selected" : ""} onClick={toggleRunMode} aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C">{runMode === "single" ? "Single" : "Consecutive"}</button>
+      <span>{playerError || `${phase} · ${runMode === "single" ? "single clip" : "play through list"} · ${mode} · A/D previous/next · Space play/pause`}</span>
     </div>
     <div className="player-phases"><button className={phase === "word" ? "active" : ""} onClick={() => onPhaseChange("word")}>Word</button><button className={phase === "sentence" ? "active" : ""} onClick={() => onPhaseChange("sentence")} disabled={!item.sentence_audio_url}>Sentence</button></div>
   </section>;
@@ -209,8 +253,21 @@ export default function App() {
     setPhase(mode === "sentences" ? "sentence" : "word");
     return true;
   };
+  const advancePrevious = (): boolean => {
+    if (!selected) return false;
+    if (mode === "both" && phase === "sentence") {
+      setPhase("word");
+      return true;
+    }
+    const previous = visibleItems[selectedIndex - 1];
+    if (!previous) return false;
+    setSelectedId(previous.stable_id);
+    setPhase(mode === "sentences" || (mode === "both" && Boolean(previous.sentence_audio_url)) ? "sentence" : "word");
+    return true;
+  };
   const changeMode = (nextMode: PlaybackMode) => { setMode(nextMode); setPhase(nextMode === "sentences" ? "sentence" : "word"); };
   const canNext = Boolean(selected && (mode === "both" && phase === "word" && selected.sentence_audio_url || selectedIndex >= 0 && selectedIndex < visibleItems.length - 1));
+  const canPrevious = Boolean(selected && ((mode === "both" && phase === "sentence") || selectedIndex > 0));
   const card = selected ? study.card(selected.item_uuid) : undefined;
   const toggle = (key: "known" | "flagged" | "sentence_starred") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
   const downloadBackup = () => { const blob = new Blob([JSON.stringify(study.exportSnapshot(), null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
@@ -222,7 +279,7 @@ export default function App() {
     <nav className="chapter-strip" aria-label="Chapters"><button className={chapter === null ? "active" : ""} onClick={() => setChapter(null)}>All</button>{chapters.map(item => <button key={item.number} className={chapter === item.number ? "active" : ""} onClick={() => setChapter(item.number)}>Ch {item.number}</button>)}</nav>
     <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search headword, meaning, sentence…" /><div className="filters">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
     <main className="study-layout"><aside className="item-list" aria-label="Vocabulary items">{visibleItems.map(item => { const itemCard = study.card(item.item_uuid); return <button key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { setSelectedId(item.stable_id); setPhase("word"); }}><span>{String(item.position).padStart(3, "0")}</span><strong>{item.headword}</strong><small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}{item.transcript_status === "needs_review" ? " · ASR" : ""}</small></button>})}</aside><section className="focus"><div className="focus-card">{selected ? <><div className="focus-meta">Chapter {selected.chapter} · #{selected.position} {selected.transcript_status === "needs_review" ? <span className="warning">ASR review needed</span> : null}</div><h2>{selected.headword}</h2><p className="pos">{selected.part_of_speech || "word"}</p><div className="meanings"><p>{selected.meaning_en || "Meaning pending"}</p><p>{selected.meaning_zh || "释义待生成"}</p><small>{selected.meaning_status === "ai_draft" ? "AI draft meaning" : "Reviewed meaning"}</small></div><div className="sentence"><span>EXAMPLE</span><p>{selected.sentence}</p></div><div className="card-actions"><button className={card?.known ? "selected" : ""} onClick={() => toggle("known")}>✓ Known</button><button className={card?.flagged ? "selected" : ""} onClick={() => toggle("flagged")}>⚑ Flagged</button><button className={card?.sentence_starred ? "selected" : ""} onClick={() => toggle("sentence_starred")}>★ Sentence</button></div></> : <p>Select an item from the list.</p>}</div></section></main>
-    <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} phase={phase} mode={mode} runMode={runMode} onEnd={finish} onNext={advanceNext} onPhaseChange={setPhase} onRunModeChange={setRunMode} canNext={canNext} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="both">Word + sentence</option><option value="words">Words only</option><option value="sentences">Sentences only</option></select></label><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div></section>
+     <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} phase={phase} mode={mode} runMode={runMode} onEnd={finish} onNext={advanceNext} onPrevious={advancePrevious} onPhaseChange={setPhase} onRunModeChange={setRunMode} canNext={canNext} canPrevious={canPrevious} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="both">Word + sentence</option><option value="words">Words only</option><option value="sentences">Sentences only</option></select></label><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div></section>
     {error ? <div className="toast error">{error}</div> : null}
   </div>;
 }
