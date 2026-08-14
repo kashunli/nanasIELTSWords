@@ -8,6 +8,7 @@ pub struct Summary {
     pub chapters: i64,
     pub items: i64,
     pub transcript_review_items: i64,
+    pub book_reference_items: i64,
 }
 
 #[derive(Debug, Serialize)]
@@ -25,6 +26,29 @@ pub struct ReviewReason {
 }
 
 #[derive(Debug, Serialize, Clone)]
+pub struct BookReference {
+    pub book_word_id: String,
+    pub headword: String,
+    pub ipa: String,
+    pub part_of_speech: String,
+    pub meaning_zh: String,
+    pub example_en: String,
+    pub example_zh: String,
+    pub collocations: String,
+    pub word_formation: String,
+    pub notes: String,
+    pub source_page: String,
+    pub pdf_page: i64,
+    pub printed_page: Option<i64>,
+    pub position_on_page: i64,
+    pub alignment_status: String,
+    pub alignment_evidence: String,
+    pub sentence_match: String,
+    pub needs_review: bool,
+    pub review_reasons: Vec<String>,
+}
+
+#[derive(Debug, Serialize, Clone)]
 pub struct ItemSummary {
     pub stable_id: String,
     pub item_uuid: String,
@@ -39,6 +63,8 @@ pub struct ItemSummary {
     pub meaning_status: String,
     pub word_audio_url: String,
     pub sentence_audio_url: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub book_reference: Option<BookReference>,
 }
 
 #[derive(Debug, Serialize)]

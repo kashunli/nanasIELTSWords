@@ -6,8 +6,10 @@ audio collection: the 22 chapters under Bilibili `BV1AT4y1579F`.
 The application uses the recordings as primary evidence. Whisper supplies the
 initial headword and example sentence transcript; Luna/Codex-generated English
 and Simplified Chinese meanings are stored as clearly labeled draft metadata.
-Future reviewed book/PDF material can replace the displayed text without
-changing stable audio-based item IDs or browser study progress.
+The reviewed book/PDF layer is now imported separately from the ASR layer: when
+its page order and sentence evidence align to an audio item, it supplies the
+learner-facing word dossier without changing stable audio-based item IDs or
+browser study progress. Raw ASR remains visible as evidence.
 
 ## Current source
 
@@ -78,6 +80,29 @@ The initial content workflow is intentionally resumable. A source hash, clip
 hash, ASR model/settings, and meaning-batch hash are recorded before an output
 is reused.
 
+## Reviewed-book OCR enrichment
+
+OCR page records for the true-script book live under:
+
+```text
+content/book-sources/ielts-vocabulary-true-script/page-ocr/
+```
+
+They are parsed into the preparation artifact
+`content/book-sources/ielts-vocabulary-true-script/book_words.json`, then
+projected into SQLite by `tools/build_content.py`. The parser aligns OCR and
+audio conservatively: exact or normalized example-sentence matches and
+headword/alias matches create monotonic anchors; order-only matching is used
+only for equal-length gaps. Unresolved or unequal gaps remain unmatched and
+retain their review reasons.
+
+The runtime API reads the resulting `book_references` table, not OCR files or
+model caches. A matched reference may add the reviewed-book headword, IPA,
+English meaning, Chinese translation, translated example, collocations,
+word-formation notes, source page, and alignment evidence to a word card. The
+canonical ASR word and sentence remain available alongside those fields so a
+learner can distinguish what was heard from what the book source reports.
+
 ## Learner state
 
 Known, Flagged, Starred sentence, playback, and spaced-review state is stored
@@ -88,5 +113,7 @@ state. Use the settings panel to download or restore a progress backup.
 
 Keep future PDFs and authentic book sources under `content/book-sources/` and
 import them into a new accepted-content revision. Book-reviewed text may take
-precedence over ASR for display, but it must preserve the existing
-`bv1at4y1579f-chNN-NNNN` IDs and UUIDs.
+precedence over ASR for display only after a source-backed alignment is
+available; it must preserve the existing `bv1at4y1579f-chNN-NNNN` IDs and
+UUIDs. Keep raw ASR, OCR evidence, alignment status, and review reasons
+available for later audit.

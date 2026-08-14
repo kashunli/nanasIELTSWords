@@ -5,7 +5,9 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sqlite3
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -55,6 +57,28 @@ CREATE TABLE examples (
   accepted_sentence_source TEXT NOT NULL,
   UNIQUE(word_stable_id, position)
 );
+CREATE TABLE book_references (
+  stable_id TEXT PRIMARY KEY REFERENCES word_items(stable_id) ON DELETE CASCADE,
+  book_word_id TEXT NOT NULL UNIQUE,
+  headword TEXT NOT NULL,
+  ipa TEXT NOT NULL,
+  part_of_speech TEXT NOT NULL,
+  meaning_zh TEXT NOT NULL,
+  example_en TEXT NOT NULL,
+  example_zh TEXT NOT NULL,
+  collocations TEXT NOT NULL,
+  word_formation TEXT NOT NULL,
+  notes TEXT NOT NULL,
+  source_page TEXT NOT NULL,
+  pdf_page INTEGER NOT NULL,
+  printed_page INTEGER,
+  position_on_page INTEGER NOT NULL,
+  alignment_status TEXT NOT NULL,
+  alignment_evidence TEXT NOT NULL,
+  sentence_match TEXT NOT NULL,
+  needs_review INTEGER NOT NULL,
+  review_reasons TEXT NOT NULL
+);
 CREATE TABLE review_reasons (
   word_stable_id TEXT NOT NULL REFERENCES word_items(stable_id) ON DELETE CASCADE,
   source TEXT NOT NULL,
@@ -78,6 +102,61 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def normalize_sentence(value: str) -> str:
+    value = unicodedata.normalize("NFKD", value or "").casefold()
+    value = "".join(character for character in value if not unicodedata.combining(character))
+    value = value.replace("’", "'")
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return " ".join(value.split())
+
+
+def sentence_match(book_sentence: str, audio_sentence: str) -> str:
+    if book_sentence.strip() == audio_sentence.strip():
+        return "exact"
+    if normalize_sentence(book_sentence) == normalize_sentence(audio_sentence):
+        return "normalized"
+    return "different"
+
+
+def load_book_references(path: Path, selected: list[dict]) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    selected_ids = {record["stable_id"] for record in selected}
+    references: dict[str, dict] = {}
+    for record in payload.get("words", []):
+        stable_id = record.get("stable_id")
+        if not stable_id or record.get("alignment_status") == "unmatched_ocr_word":
+            continue
+        if stable_id not in selected_ids:
+            raise SystemExit(f"book reference points to unknown audio item: {stable_id}")
+        if stable_id in references:
+            raise SystemExit(f"duplicate book reference for audio item: {stable_id}")
+        source = record.get("source") or {}
+        references[stable_id] = {
+            "book_word_id": str(record.get("book_word_id", "")),
+            "headword": str(record.get("headword", "")),
+            "ipa": str(record.get("ipa", "")),
+            "part_of_speech": str(record.get("part_of_speech", "")),
+            "meaning_zh": str(record.get("meaning_zh", "")),
+            "example_en": str(record.get("example_en", "")),
+            "example_zh": str(record.get("example_zh", "")),
+            "collocations": str(record.get("collocations", "")),
+            "word_formation": str(record.get("word_formation", "")),
+            "notes": str(record.get("notes", "")),
+            "source_page": str(source.get("page_markdown", "")),
+            "pdf_page": int(record.get("pdf_page", 0)),
+            "printed_page": record.get("printed_page"),
+            "position_on_page": int(record.get("position_on_page", 0)),
+            "alignment_status": str(record.get("alignment_status", "")),
+            "alignment_evidence": str(record.get("alignment_evidence", "")),
+            "sentence_match": str(record.get("sentence_match", "")),
+            "needs_review": int(bool(record.get("needs_review"))),
+            "review_reasons": json.dumps(record.get("review_reasons") or [], ensure_ascii=False),
+        }
+    return references
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parents[1])
@@ -88,14 +167,16 @@ def main() -> int:
     source = json.loads((content / "source-manifest.json").read_text(encoding="utf-8"))
     selected = [json.loads(line) for line in (content / "selected-transcripts.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     meaning_path = content / "meanings.jsonl"
+    book_reference_path = root / "content" / "book-sources" / "ielts-vocabulary-true-script" / "book_words.json"
     meanings = {record["stable_id"]: record for record in (json.loads(line) for line in meaning_path.read_text(encoding="utf-8").splitlines() if line.strip())} if meaning_path.exists() else {}
+    book_references = load_book_references(book_reference_path, selected)
     if len(selected) != source["items"]: raise SystemExit(f"selected transcript coverage mismatch: {len(selected)} vs {source['items']}")
     if not args.allow_missing_meanings and set(meanings) != {record["stable_id"] for record in selected}:
         raise SystemExit(f"meaning coverage mismatch: {len(meanings)} vs {len(selected)}")
     by_id = {record["stable_id"]: record for record in selected}
     collection_code = "IELTS_TRUE_VOCAB"
     now = datetime.now(timezone.utc).isoformat()
-    content_version = hashlib.sha256(json.dumps({"source": source["source_manifest_sha256"], "selected": sha256(content / "selected-transcripts.jsonl"), "meanings": sha256(meaning_path) if meaning_path.exists() else ""}, sort_keys=True).encode()).hexdigest()[:16]
+    content_version = hashlib.sha256(json.dumps({"source": source["source_manifest_sha256"], "selected": sha256(content / "selected-transcripts.jsonl"), "meanings": sha256(meaning_path) if meaning_path.exists() else "", "book_words": sha256(book_reference_path) if book_reference_path.exists() else ""}, sort_keys=True).encode()).hexdigest()[:16]
     database_dir = root / "var" / "content"
     database_dir.mkdir(parents=True, exist_ok=True)
     temp_path = database_dir / ".content.sqlite.tmp"
@@ -125,9 +206,17 @@ def main() -> int:
                 (record["stable_id"], record["item_uuid"], collection_code, record["chapter"], record["position"], record["headword"], meaning["part_of_speech"], meaning["meaning_en"], meaning["meaning_zh"], word_audio, record["transcript_status"], meaning.get("meaning_status", "ai_draft"), "asr", "asr"),
             )
             connection.execute("INSERT INTO examples VALUES (?, ?, 0, 'main_sentence', ?, ?, ?, 'asr')", (f"{record['stable_id']}-main", record["stable_id"], record["sentence"], sentence_audio, record["transcript_status"]))
+            book_reference = book_references.get(record["stable_id"])
+            if book_reference:
+                if not book_reference["sentence_match"]:
+                    book_reference["sentence_match"] = sentence_match(book_reference["example_en"], record["sentence"])
+                connection.execute(
+                    "INSERT INTO book_references (stable_id, book_word_id, headword, ipa, part_of_speech, meaning_zh, example_en, example_zh, collocations, word_formation, notes, source_page, pdf_page, printed_page, position_on_page, alignment_status, alignment_evidence, sentence_match, needs_review, review_reasons) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                    (record["stable_id"], book_reference["book_word_id"], book_reference["headword"], book_reference["ipa"], book_reference["part_of_speech"], book_reference["meaning_zh"], book_reference["example_en"], book_reference["example_zh"], book_reference["collocations"], book_reference["word_formation"], book_reference["notes"], book_reference["source_page"], book_reference["pdf_page"], book_reference["printed_page"], book_reference["position_on_page"], book_reference["alignment_status"], book_reference["alignment_evidence"], book_reference["sentence_match"], book_reference["needs_review"], book_reference["review_reasons"]),
+                )
             for reason in record["review_reasons"]: connection.execute("INSERT INTO review_reasons VALUES (?, 'asr', ?)", (record["stable_id"], reason))
             if meaning.get("meaning_status") != "reviewed": connection.execute("INSERT INTO review_reasons VALUES (?, 'meaning', 'ai_draft_meaning')", (record["stable_id"],))
-        for artifact, path in (("source_manifest", content / "source-manifest.json"), ("selected_transcripts", content / "selected-transcripts.jsonl"), ("meanings", meaning_path)):
+        for artifact, path in (("source_manifest", content / "source-manifest.json"), ("selected_transcripts", content / "selected-transcripts.jsonl"), ("meanings", meaning_path), ("book_words", book_reference_path)):
             if path.exists(): connection.execute("INSERT INTO source_revisions VALUES (?, ?, 'ielts-vocabulary-tools-v1', ?)", (artifact, sha256(path), now))
         connection.commit()
         counts = connection.execute("SELECT COUNT(*), COUNT(DISTINCT item_uuid) FROM word_items").fetchone()

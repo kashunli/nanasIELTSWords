@@ -18,9 +18,10 @@ def main() -> int:
     if source["items"] != 3662: raise SystemExit("source item count is not 3662")
     connection = sqlite3.connect(database)
     try:
-        counts = connection.execute("SELECT (SELECT COUNT(*) FROM chapters), (SELECT COUNT(*) FROM word_items), (SELECT COUNT(*) FROM examples), (SELECT COUNT(*) FROM review_reasons)").fetchone()
-        print({"chapters": counts[0], "items": counts[1], "examples": counts[2], "review_reasons": counts[3]})
+        counts = connection.execute("SELECT (SELECT COUNT(*) FROM chapters), (SELECT COUNT(*) FROM word_items), (SELECT COUNT(*) FROM examples), (SELECT COUNT(*) FROM review_reasons), (SELECT COUNT(*) FROM book_references)").fetchone()
+        print({"chapters": counts[0], "items": counts[1], "examples": counts[2], "review_reasons": counts[3], "book_references": counts[4]})
         if counts[0] != 22 or counts[1] != 3662 or counts[2] != 3662: raise SystemExit("runtime count validation failed")
+        if counts[4] < 1000: raise SystemExit("book reference coverage is unexpectedly low")
         if connection.execute("PRAGMA integrity_check").fetchone()[0] != "ok": raise SystemExit("integrity check failed")
         if connection.execute("PRAGMA foreign_key_check").fetchone() is not None: raise SystemExit("foreign key check failed")
     finally:

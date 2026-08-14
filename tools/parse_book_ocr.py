@@ -12,10 +12,27 @@ from typing import Any
 
 
 BOOK_ID = "ielts-vocabulary-true-script"
+ALIGNMENT_LOOKAHEAD = 12
 
 
-def normalize_word(value: str) -> str:
-    value = unicodedata.normalize("NFKC", value or "").casefold()
+def normalize_word_forms(value: str) -> set[str]:
+    """Return the base word and printed spelling aliases for matching."""
+    value = unicodedata.normalize("NFKD", value or "").casefold()
+    value = "".join(character for character in value if not unicodedata.combining(character))
+    value = value.replace("’", "'")
+    aliases = re.findall(r"\((?:=|or)?\s*([^)]*)\)", value)
+    base = re.sub(r"\([^)]*\)", "", value)
+    forms = [base, *aliases]
+    return {
+        " ".join(re.sub(r"[^a-z0-9]+", " ", form).split())
+        for form in forms
+        if re.sub(r"[^a-z0-9]+", " ", form).strip()
+    }
+
+
+def normalize_sentence(value: str) -> str:
+    value = unicodedata.normalize("NFKD", value or "").casefold()
+    value = "".join(character for character in value if not unicodedata.combining(character))
     value = value.replace("’", "'")
     value = re.sub(r"[^a-z0-9]+", " ", value)
     return " ".join(value.split())
@@ -56,40 +73,113 @@ def load_audio_records(root: Path) -> dict[int, list[dict[str, Any]]]:
     return dict(chapters)
 
 
+def _find_anchor(word: dict[str, Any], audio_records: list[dict[str, Any]], start: int) -> tuple[int, str] | None:
+    sentence = normalize_sentence(str(word.get("example_en", "")))
+    if sentence:
+        for candidate_index in range(start, min(len(audio_records), start + ALIGNMENT_LOOKAHEAD)):
+            if sentence == normalize_sentence(str(audio_records[candidate_index].get("sentence", ""))):
+                return candidate_index, "sentence"
+
+    forms = normalize_word_forms(str(word.get("headword", "")))
+    for candidate_index in range(start, min(len(audio_records), start + ALIGNMENT_LOOKAHEAD)):
+        if forms & normalize_word_forms(str(audio_records[candidate_index].get("headword", ""))):
+            return candidate_index, "headword"
+    return None
+
+
+def _clear_alignment(word: dict[str, Any]) -> None:
+    for key in ("stable_id", "item_uuid", "audio_position", "audio_headword", "alignment_status", "alignment_evidence", "sentence_match"):
+        word.pop(key, None)
+
+
+def _assign(word: dict[str, Any], audio: dict[str, Any], status: str, evidence: str) -> None:
+    word["stable_id"] = audio["stable_id"]
+    word["item_uuid"] = audio["item_uuid"]
+    word["audio_position"] = audio["position"]
+    word["audio_headword"] = audio["headword"]
+    word["alignment_status"] = status
+    word["alignment_evidence"] = evidence
+    book_sentence = str(word.get("example_en", ""))
+    audio_sentence = str(audio.get("sentence", ""))
+    if book_sentence.strip() == audio_sentence.strip():
+        word["sentence_match"] = "exact"
+    elif normalize_sentence(book_sentence) == normalize_sentence(audio_sentence):
+        word["sentence_match"] = "normalized"
+    else:
+        word["sentence_match"] = "different"
+
+
 def align_chapter(ocr_words: list[dict[str, Any]], audio_records: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    expected_index = 0
-    aligned: list[dict[str, Any]] = []
-    gaps: list[dict[str, Any]] = []
-    unexpected: list[dict[str, Any]] = []
+    """Align OCR and audio in order, using only bounded, evidence-backed gaps.
+
+    Exact sentence and headword/alias matches create monotonic anchors. A gap is
+    filled by order only when the OCR and audio sides contain the same number of
+    records between two anchors. This is what lets a reliable book word repair
+    an ASR spelling such as ``Plato.`` -> ``plateau`` without shifting every
+    later item when a page contains an extra or missing entry.
+    """
     for word in ocr_words:
-        target = normalize_word(word["headword"])
-        matched_index: int | None = None
-        for candidate_index in range(expected_index, min(len(audio_records), expected_index + 8)):
-            if normalize_word(audio_records[candidate_index]["headword"].rstrip(".")) == target:
-                matched_index = candidate_index
-                break
-        if matched_index is None:
-            unexpected.append({"ocr_word_id": word["book_word_id"], "headword": word["headword"]})
-            word["alignment_status"] = "unmatched_ocr_word"
-            aligned.append(word)
+        _clear_alignment(word)
+
+    anchors: list[tuple[int, int, str]] = []
+    cursor = 0
+    for ocr_index, word in enumerate(ocr_words):
+        anchor = _find_anchor(word, audio_records, cursor)
+        if anchor is None:
             continue
-        if matched_index > expected_index:
-            for missing in audio_records[expected_index:matched_index]:
-                gaps.append({"stable_id": missing["stable_id"], "headword": missing["headword"], "position": missing["position"]})
-        audio = audio_records[matched_index]
-        word["stable_id"] = audio["stable_id"]
-        word["item_uuid"] = audio["item_uuid"]
-        word["audio_position"] = audio["position"]
-        word["audio_headword"] = audio["headword"]
-        word["alignment_status"] = "matched_headword"
+        audio_index, evidence = anchor
+        anchors.append((ocr_index, audio_index, evidence))
+        cursor = audio_index + 1
+
+    assigned_audio: set[int] = set()
+    assigned_ocr: set[int] = set()
+    matched_by_evidence = {"headword": 0, "sentence": 0, "order": 0}
+    for ocr_index, audio_index, evidence in anchors:
+        word = ocr_words[ocr_index]
+        audio = audio_records[audio_index]
+        status = "matched_headword" if evidence == "headword" else "matched_sentence"
+        _assign(word, audio, status, evidence)
+        assigned_ocr.add(ocr_index)
+        assigned_audio.add(audio_index)
+        matched_by_evidence[evidence] += 1
+
+    boundaries = [(-1, -1, "start"), *anchors, (len(ocr_words), len(audio_records), "end")]
+    previous_ocr = -1
+    previous_audio = -1
+    for next_ocr, next_audio, _ in boundaries[1:]:
+        ocr_indices = list(range(previous_ocr + 1, next_ocr))
+        audio_indices = list(range(previous_audio + 1, next_audio))
+        if len(ocr_indices) == len(audio_indices):
+            for ocr_index, audio_index in zip(ocr_indices, audio_indices):
+                if ocr_index in assigned_ocr or audio_index in assigned_audio:
+                    continue
+                _assign(ocr_words[ocr_index], audio_records[audio_index], "matched_order", "order")
+                assigned_ocr.add(ocr_index)
+                assigned_audio.add(audio_index)
+                matched_by_evidence["order"] += 1
+        previous_ocr = next_ocr
+        previous_audio = next_audio
+
+    aligned: list[dict[str, Any]] = []
+    unexpected: list[dict[str, Any]] = []
+    for index, word in enumerate(ocr_words):
+        if index not in assigned_ocr:
+            word["alignment_status"] = "unmatched_ocr_word"
+            unexpected.append({"ocr_word_id": word["book_word_id"], "headword": word["headword"]})
         aligned.append(word)
-        expected_index = matched_index + 1
-    for missing in audio_records[expected_index:]:
-        gaps.append({"stable_id": missing["stable_id"], "headword": missing["headword"], "position": missing["position"]})
+
+    gaps = [
+        {"stable_id": audio["stable_id"], "headword": audio["headword"], "position": audio["position"]}
+        for index, audio in enumerate(audio_records)
+        if index not in assigned_audio
+    ]
     return aligned, {
         "expected_audio_words": len(audio_records),
         "ocr_words": len(ocr_words),
-        "matched_words": sum(item.get("alignment_status") == "matched_headword" for item in aligned),
+        "matched_words": len(assigned_ocr),
+        "matched_by_headword": matched_by_evidence["headword"],
+        "matched_by_sentence": matched_by_evidence["sentence"],
+        "matched_by_order": matched_by_evidence["order"],
         "missing_audio_words": gaps,
         "unexpected_ocr_words": unexpected,
     }
