@@ -14,7 +14,7 @@ from pathlib import Path
 from content_repairs import load_repair_plan, load_source_items, repair_artifact_hash
 
 
-PROJECTION_VERSION = "accepted-book-fields-v3"
+PROJECTION_VERSION = "accepted-book-fields-v4-order-review"
 BOOK_WORD_ALIGNMENTS = {"matched_headword", "matched_sentence"}
 BOOK_SENTENCE_MATCHES = {"exact", "normalized"}
 
@@ -173,6 +173,10 @@ def load_book_references(path: Path, selected: list[dict]) -> dict[str, dict]:
         if stable_id in references:
             raise SystemExit(f"duplicate book reference for audio item: {stable_id}")
         source = record.get("source") or {}
+        alignment_status = str(record.get("alignment_status", ""))
+        review_reasons = list(record.get("review_reasons") or [])
+        if alignment_status == "matched_order" and "order_only_alignment" not in review_reasons:
+            review_reasons.append("order_only_alignment")
         references[stable_id] = {
             "book_word_id": str(record.get("book_word_id", "")),
             "headword": str(record.get("headword", "")),
@@ -188,11 +192,11 @@ def load_book_references(path: Path, selected: list[dict]) -> dict[str, dict]:
             "pdf_page": int(record.get("pdf_page", 0)),
             "printed_page": record.get("printed_page"),
             "position_on_page": int(record.get("position_on_page", 0)),
-            "alignment_status": str(record.get("alignment_status", "")),
+            "alignment_status": alignment_status,
             "alignment_evidence": str(record.get("alignment_evidence", "")),
             "sentence_match": str(record.get("sentence_match", "")),
-            "needs_review": int(bool(record.get("needs_review"))),
-            "review_reasons": json.dumps(record.get("review_reasons") or [], ensure_ascii=False),
+            "needs_review": int(bool(record.get("needs_review")) or alignment_status == "matched_order"),
+            "review_reasons": json.dumps(review_reasons, ensure_ascii=False),
         }
     return references
 

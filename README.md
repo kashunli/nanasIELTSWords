@@ -143,3 +143,12 @@ precedence over ASR for display only after a source-backed alignment is
 available; it must preserve the existing `bv1at4y1579f-chNN-NNNN` IDs and
 UUIDs. Keep raw ASR, OCR evidence, alignment status, and review reasons
 available for later audit.
+
+The web service exposes the unresolved order-only queue directly. The study
+wall shows an `Order-only 85` filter (the count comes from SQLite), and the
+selected card compares the reviewed-book word/example with the audio-side
+word/sentence while the normal word and sentence player remains available.
+The corresponding runtime request is
+`GET /api/items?book_alignment=order_only`; it reads the projected
+`book_references` table and does not load the audit JSON or source audio during
+a learner request.

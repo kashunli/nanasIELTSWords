@@ -9,6 +9,7 @@ export interface Summary {
   items: number;
   transcript_review_items: number;
   book_reference_items: number;
+  book_order_review_items: number;
 }
 
 export interface Chapter {

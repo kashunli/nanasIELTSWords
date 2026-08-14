@@ -31,6 +31,11 @@ pub fn summary(connection: &Connection) -> Result<Summary, AppError> {
     )?;
     let book_reference_items =
         connection.query_row("SELECT COUNT(*) FROM book_references", [], |row| row.get(0))?;
+    let book_order_review_items = connection.query_row(
+        "SELECT COUNT(*) FROM book_references WHERE alignment_status='matched_order' AND needs_review=1",
+        [],
+        |row| row.get(0),
+    )?;
     Ok(Summary {
         collection_code: row.0,
         title: row.1,
@@ -39,6 +44,7 @@ pub fn summary(connection: &Connection) -> Result<Summary, AppError> {
         items,
         transcript_review_items: review,
         book_reference_items,
+        book_order_review_items,
     })
 }
 
@@ -119,6 +125,11 @@ fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
 
 pub fn items(connection: &Connection, query: &ItemQuery) -> Result<Vec<ItemSummary>, AppError> {
     let mut sql = format!("SELECT {} {} WHERE 1=1", ITEM_COLUMNS, ITEM_FROM);
+    match query.book_alignment.as_deref() {
+        Some("order_only") => sql.push_str(" AND b.alignment_status='matched_order' AND b.needs_review=1"),
+        Some(value) => return Err(AppError::BadRequest(format!("Unsupported book alignment filter: {value}"))),
+        None => {}
+    }
     if query.chapter.is_some() {
         sql.push_str(" AND w.chapter_number=?");
     }

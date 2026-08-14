@@ -126,10 +126,20 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 .source-card .section-heading > strong { color: #35465c; }
 .source-card p { margin: 12px 0 5px; color: #526477; }
 .source-card small { color: #6e7d91; overflow-wrap: anywhere; line-height: 1.45; }
+.order-review-card { margin-top: 25px; padding: 18px 19px; border: 1px solid #e1c48d; border-left: 4px solid #b87931; border-radius: 13px; background: #fff8e9; }
+.order-review-card .section-heading > span { color: #9a6a2d; }
+.order-review-card .section-heading > strong { color: #57452e; }
+.order-review-intro { margin: 12px 0 0; color: #69583e; line-height: 1.5; }
+.order-review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 17px; margin-top: 16px; padding-top: 14px; border-top: 1px solid #ead8b3; }
+.order-review-grid > div { min-width: 0; }
+.order-review-grid span { color: #9a6a2d; font-size: 10px; font-weight: 850; letter-spacing: .14em; }
+.order-review-grid strong { display: block; margin-top: 7px; color: #57452e; font-size: 20px; overflow-wrap: anywhere; }
+.order-review-grid p { margin: 7px 0 0; color: #69583e; line-height: 1.5; }
+.order-review-card > small { display: block; margin-top: 15px; color: #8b7351; line-height: 1.45; overflow-wrap: anywhere; }
 .item-row small { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 @media (max-width: 760px) {
-  .meaning-grid, .usage-grid, .evidence-grid { grid-template-columns: 1fr; }
+  .meaning-grid, .usage-grid, .evidence-grid, .order-review-grid { grid-template-columns: 1fr; }
   .meaning-card { min-height: auto; }
   .example-en { font-size: 22px; }
   .source-card small { display: block; }

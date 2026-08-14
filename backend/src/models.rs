@@ -9,6 +9,7 @@ pub struct Summary {
     pub items: i64,
     pub transcript_review_items: i64,
     pub book_reference_items: i64,
+    pub book_order_review_items: i64,
 }
 
 #[derive(Debug, Serialize)]
@@ -80,6 +81,7 @@ pub struct ItemDetail {
 pub struct ItemQuery {
     pub chapter: Option<i64>,
     pub search: Option<String>,
+    pub book_alignment: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]

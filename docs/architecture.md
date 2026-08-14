@@ -87,3 +87,11 @@ exactly, without deleting the raw transcript artifact.
 Sentence confirmation remains a separate, reversible browser-local decision.
 It is included in the local progress backup and remains keyed by stable item
 ID; it does not rewrite SQLite, raw ASR, or OCR review reasons.
+
+The web service exposes the equal-length order-only gaps as a separate review
+queue. `GET /api/items?book_alignment=order_only` reads
+`book_references.alignment_status='matched_order'`; the build projection marks
+all such records as `needs_review`, even when an older OCR record omitted that
+flag. The React study wall displays the queue count, labels each row
+`order-only`, and places the book word/example beside the audio-side
+word/sentence for manual listening review.
