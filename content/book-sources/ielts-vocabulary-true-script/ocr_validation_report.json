@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T03:40:00.788251+00:00",
+  "generated_at": "2026-08-14T03:49:06.991751+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -513,33 +513,51 @@
     },
     {
       "pdf_page": 68,
+      "book_page": 57,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 69,
+      "book_page": 58,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 70,
+      "book_page": 59,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 71,
+      "book_page": 60,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 72,
+      "book_page": 61,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 73,
+      "book_page": 62,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 74,
@@ -1887,12 +1905,6 @@
     25,
     35,
     36,
-    68,
-    69,
-    70,
-    71,
-    72,
-    73,
     74,
     75,
     76,
@@ -2853,8 +2865,8 @@
     },
     "5": {
       "expected_audio_words": 399,
-      "ocr_words": 39,
-      "matched_words": 34,
+      "ocr_words": 114,
+      "matched_words": 101,
       "missing_audio_words": [
         {
           "stable_id": "bv1at4y1579f-ch05-0025",
@@ -2882,11 +2894,6 @@
           "position": 30
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0040",
-          "headword": "Clever",
-          "position": 40
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0041",
           "headword": "Smart This",
           "position": 41
@@ -2897,274 +2904,9 @@
           "position": 42
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0043",
-          "headword": "Genius.",
-          "position": 43
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0044",
-          "headword": "Elite.",
-          "position": 44
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0045",
-          "headword": "Idiot.",
-          "position": 45
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0046",
-          "headword": "Wisdom.",
-          "position": 46
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0047",
-          "headword": "Wit.",
-          "position": 47
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0048",
-          "headword": "Aptitude.",
-          "position": 48
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0049",
-          "headword": "Capable.",
-          "position": 49
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0050",
-          "headword": "Excellent.",
-          "position": 50
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0051",
-          "headword": "Outstanding.",
-          "position": 51
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0052",
-          "headword": "Brilliant.",
-          "position": 52
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0053",
-          "headword": "Prestige.",
-          "position": 53
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0054",
-          "headword": "Reputation.",
-          "position": 54
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0055",
-          "headword": "Eminent.",
-          "position": 55
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0056",
-          "headword": "notorious",
-          "position": 56
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0057",
-          "headword": "esteem",
-          "position": 57
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0058",
-          "headword": "respect",
-          "position": 58
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0059",
-          "headword": "Diligent.",
-          "position": 59
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0060",
-          "headword": "Painstaking.",
-          "position": 60
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0061",
-          "headword": "Skill.",
-          "position": 61
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0062",
-          "headword": "Approach.",
-          "position": 62
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0063",
-          "headword": "Scheme.",
-          "position": 63
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0064",
-          "headword": "Headmaster.",
-          "position": 64
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0065",
-          "headword": "Principal.",
-          "position": 65
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0066",
-          "headword": "Dean.",
-          "position": 66
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0067",
-          "headword": "Faculty.",
-          "position": 67
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0068",
-          "headword": "Professor.",
-          "position": 68
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0069",
-          "headword": "Scholar.",
-          "position": 69
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0070",
-          "headword": "scientist.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0071",
-          "headword": "Mentor.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0072",
-          "headword": "Tutor.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0073",
-          "headword": "Lecturer.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0074",
-          "headword": "Assistant.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0075",
-          "headword": "Candidate.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0076",
-          "headword": "Degree.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0077",
-          "headword": "Qualify.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0078",
-          "headword": "Certify.",
-          "position": 78
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0079",
           "headword": "Licence.",
           "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0080",
-          "headword": "Permit.",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0081",
-          "headword": "Diploma.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0082",
-          "headword": "diplomat.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0083",
-          "headword": "Ambassador.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0084",
-          "headword": "Pupil.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0085",
-          "headword": "graduate",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0086",
-          "headword": "Bachelor",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0087",
-          "headword": "Master.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0088",
-          "headword": "Doctor.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0089",
-          "headword": "Fresher.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0090",
-          "headword": "Sophomore.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0091",
-          "headword": "Junior.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0092",
-          "headword": "Senior.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0093",
-          "headword": "Alumni.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0094",
-          "headword": "Campus.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0095",
-          "headword": "Orientation.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0096",
-          "headword": "Platform.",
-          "position": 96
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0097",
@@ -3172,24 +2914,9 @@
           "position": 97
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0098",
-          "headword": "Register.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0099",
-          "headword": "roster.",
-          "position": 99
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0100",
           "headword": "Enroll.",
           "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0101",
-          "headword": "Matriculation.",
-          "position": 101
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0102",
@@ -3197,59 +2924,9 @@
           "position": 102
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0103",
-          "headword": "Dorm.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0104",
-          "headword": "Dining hall.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0105",
-          "headword": "Canteen.",
-          "position": 105
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0106",
           "headword": "laboratory.",
           "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0107",
-          "headword": "experiment.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0108",
-          "headword": "data.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0109",
-          "headword": "quantity.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0110",
-          "headword": "Quality.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0111",
-          "headword": "Library.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0112",
-          "headword": "Literature.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0113",
-          "headword": "article.",
-          "position": 113
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0114",
@@ -4702,10 +4379,42 @@
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-04",
           "headword": "inspire"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0068-02",
+          "headword": "smart"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0068-03",
+          "headword": "all-round (= all-around)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0071-04",
+          "headword": "license (= licence)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0071-11",
+          "headword": "ceremony"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0072-09",
+          "headword": "coed (= co-educational)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0072-12",
+          "headword": "enrol (= enroll)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0073-01",
+          "headword": "accommodation"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0073-05",
+          "headword": "laboratory (= lab)"
         }
       ]
     }
   },
-  "word_count": 653,
+  "word_count": 728,
   "index_entry_count": 0
 }
