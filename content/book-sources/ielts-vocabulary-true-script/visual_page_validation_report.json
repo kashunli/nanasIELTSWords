@@ -3,7 +3,7 @@
   "manifest": "content\\book-sources\\ielts-vocabulary-true-script\\book_manifest.json",
   "ocr_dir": "content\\book-sources\\ielts-vocabulary-true-script\\page-ocr",
   "expected_pages": 336,
-  "completed_pages": 324,
+  "completed_pages": 327,
   "needs_review_pages": [
     15,
     25,
@@ -26,10 +26,7 @@
     "page 59: external or unknown OCR method 'qwen3.7-flash'",
     "page 60: external or unknown OCR method 'qwen3.7-flash'",
     "page 61: external or unknown OCR method 'qwen3.7-flash'",
-    "page 62: external or unknown OCR method 'qwen3.7-flash'",
-    "page 334: missing record",
-    "page 335: missing record",
-    "page 336: missing record"
+    "page 62: external or unknown OCR method 'qwen3.7-flash'"
   ],
   "valid": false
 }

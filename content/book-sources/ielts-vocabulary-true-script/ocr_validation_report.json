@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T12:09:10.559977+00:00",
+  "generated_at": "2026-08-14T12:14:38.333530+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2605,18 +2605,24 @@
     },
     {
       "pdf_page": 334,
+      "book_page": 323,
       "page_type": "index",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 335,
+      "book_page": 324,
       "page_type": "index",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 336,
+      "book_page": null,
       "page_type": "back_cover",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     }
   ],
   "pages_with_issues": [
@@ -2632,10 +2638,7 @@
     15,
     25,
     35,
-    36,
-    334,
-    335,
-    336
+    36
   ],
   "chapter_alignment": {
     "1": {
@@ -2967,5 +2970,5 @@
     }
   },
   "word_count": 3674,
-  "index_entry_count": 3290
+  "index_entry_count": 3665
 }
