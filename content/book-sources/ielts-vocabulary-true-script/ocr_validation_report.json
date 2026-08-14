@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T07:29:16.816101+00:00",
+  "generated_at": "2026-08-14T07:35:44.120750+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1374,23 +1374,35 @@
     },
     {
       "pdf_page": 177,
+      "book_page": 166,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 178,
+      "book_page": 167,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 179,
+      "book_page": 168,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 180,
+      "book_page": 169,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 5
     },
     {
       "pdf_page": 181,
@@ -1401,8 +1413,10 @@
     },
     {
       "pdf_page": 182,
+      "book_page": 171,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 183,
@@ -2197,11 +2211,6 @@
     25,
     35,
     36,
-    177,
-    178,
-    179,
-    180,
-    182,
     183,
     184,
     185,
@@ -2517,251 +2526,15 @@
     },
     "13": {
       "expected_audio_words": 134,
-      "ocr_words": 87,
-      "matched_words": 87,
-      "matched_by_headword": 7,
-      "matched_by_sentence": 76,
-      "matched_by_order": 4,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch13-0088",
-          "headword": "expanse.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0089",
-          "headword": "plaza.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0090",
-          "headword": "Castle.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0091",
-          "headword": "Carpenter.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0092",
-          "headword": "Mason.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0093",
-          "headword": "Tile.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0094",
-          "headword": "Brickwork.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0095",
-          "headword": "Suspension.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0096",
-          "headword": "Hook.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0097",
-          "headword": "Lever.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0098",
-          "headword": "The hut is",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0099",
-          "headword": "Scaffold.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0100",
-          "headword": "Infrastructure.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0101",
-          "headword": "Apparatus.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0102",
-          "headword": "Crane.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0103",
-          "headword": "Malfunction.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0104",
-          "headword": "Maintain.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0105",
-          "headword": "Fix.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0106",
-          "headword": "Mend.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0107",
-          "headword": "Modify.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0108",
-          "headword": "Trim.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0109",
-          "headword": "Weld.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0110",
-          "headword": "Saw. The electric saw whined when my uncle used to cut the fallen tree.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0111",
-          "headword": "Screw.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0112",
-          "headword": "Drill.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0113",
-          "headword": "Plum.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0114",
-          "headword": "Viaduct.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0115",
-          "headword": "Span.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0116",
-          "headword": "Dam.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0117",
-          "headword": "Assemble.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0118",
-          "headword": "Install.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0119",
-          "headword": "Furnish.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0120",
-          "headword": "Placement.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0121",
-          "headword": "Layout.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0122",
-          "headword": "Design.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0123",
-          "headword": "Entrance.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0124",
-          "headword": "Entry.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0125",
-          "headword": "Enter.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0126",
-          "headword": "Exit.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0127",
-          "headword": "Outside.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0128",
-          "headword": "Outward.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0129",
-          "headword": "Exterior.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0130",
-          "headword": "External.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0131",
-          "headword": "Inner.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0132",
-          "headword": "Interior.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0133",
-          "headword": "Inward.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch13-0134",
-          "headword": "Internal.",
-          "position": 134
-        }
-      ],
+      "ocr_words": 134,
+      "matched_words": 134,
+      "matched_by_headword": 12,
+      "matched_by_sentence": 116,
+      "matched_by_order": 6,
+      "missing_audio_words": [],
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1985,
+  "word_count": 2032,
   "index_entry_count": 0
 }
