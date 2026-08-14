@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T11:26:14.722219+00:00",
+  "generated_at": "2026-08-14T11:33:37.292862+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2520,13 +2520,18 @@
     },
     {
       "pdf_page": 322,
+      "book_page": 311,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 6
     },
     {
       "pdf_page": 323,
+      "book_page": 312,
       "page_type": "index",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 324,
@@ -2608,8 +2613,6 @@
     25,
     35,
     36,
-    322,
-    323,
     324,
     325,
     326,
@@ -2944,56 +2947,15 @@
     },
     "22": {
       "expected_audio_words": 52,
-      "ocr_words": 46,
-      "matched_words": 45,
+      "ocr_words": 52,
+      "matched_words": 52,
       "matched_by_headword": 10,
-      "matched_by_sentence": 33,
-      "matched_by_order": 2,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch22-0046",
-          "headword": "permanent we",
-          "position": 46
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch22-0047",
-          "headword": "punctual he",
-          "position": 47
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch22-0048",
-          "headword": "Duration.",
-          "position": 48
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch22-0049",
-          "headword": "Consecutive.",
-          "position": 49
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch22-0050",
-          "headword": "Periodically.",
-          "position": 50
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch22-0051",
-          "headword": "Imminent.",
-          "position": 51
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch22-0052",
-          "headword": "Incidentally.",
-          "position": 52
-        }
-      ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0321-17",
-          "headword": "permanent"
-        }
-      ]
+      "matched_by_sentence": 39,
+      "matched_by_order": 3,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
     }
   },
-  "word_count": 3668,
-  "index_entry_count": 0
+  "word_count": 3674,
+  "index_entry_count": 267
 }
