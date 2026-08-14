@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T09:39:22.935363+00:00",
+  "generated_at": "2026-08-14T09:47:19.196078+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2004,33 +2004,51 @@
     },
     {
       "pdf_page": 257,
+      "book_page": 246,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 258,
+      "book_page": 247,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 259,
+      "book_page": 248,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 260,
+      "book_page": 249,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 261,
+      "book_page": 250,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 262,
+      "book_page": 251,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 6
     },
     {
       "pdf_page": 263,
@@ -2419,12 +2437,6 @@
     25,
     35,
     36,
-    257,
-    258,
-    259,
-    260,
-    261,
-    262,
     264,
     265,
     266,
@@ -2758,351 +2770,30 @@
     },
     "19": {
       "expected_audio_words": 120,
-      "ocr_words": 53,
-      "matched_words": 53,
-      "matched_by_headword": 5,
-      "matched_by_sentence": 47,
-      "matched_by_order": 1,
+      "ocr_words": 121,
+      "matched_words": 119,
+      "matched_by_headword": 19,
+      "matched_by_sentence": 98,
+      "matched_by_order": 2,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch19-0054",
-          "headword": "Client.",
-          "position": 54
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0055",
-          "headword": "Encounter.",
-          "position": 55
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0056",
-          "headword": "Chase.",
-          "position": 56
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0057",
-          "headword": "Miss.",
-          "position": 57
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0058",
-          "headword": "Appointment.",
-          "position": 58
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0059",
-          "headword": "company she",
-          "position": 59
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0060",
-          "headword": "dependent",
-          "position": 60
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0061",
-          "headword": "propose",
-          "position": 61
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0062",
-          "headword": "engagement.",
-          "position": 62
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0063",
-          "headword": "Marry.",
-          "position": 63
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0064",
-          "headword": "Wedding.",
-          "position": 64
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0065",
-          "headword": "Honeymoon.",
-          "position": 65
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0066",
-          "headword": "Kiss.",
-          "position": 66
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0067",
-          "headword": "Divorce.",
-          "position": 67
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0068",
-          "headword": "Separate.",
-          "position": 68
-        },
         {
           "stable_id": "bv1at4y1579f-ch19-0069",
           "headword": "Soul.",
           "position": 69
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0070",
-          "headword": "Respective.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0071",
-          "headword": "Each.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0072",
-          "headword": "individual.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0073",
-          "headword": "commuter.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0074",
-          "headword": "neighborhood.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0075",
-          "headword": "member.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0076",
-          "headword": "boss.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0077",
-          "headword": "manager.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0078",
-          "headword": "Supervisor.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0079",
-          "headword": "Subordinate.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0080",
-          "headword": "Partner.",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0081",
-          "headword": "Mate.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0082",
-          "headword": "Colleague.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0083",
-          "headword": "Comrade.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0084",
-          "headword": "Acquaintance.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0085",
-          "headword": "Friendship.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0086",
-          "headword": "Affection.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0087",
-          "headword": "Stranger.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0088",
-          "headword": "Apprentice.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0089",
-          "headword": "Deputy.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0090",
-          "headword": "Hero.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0091",
-          "headword": "Heroine.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0092",
-          "headword": "Actress.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0093",
-          "headword": "Chancellor.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0094",
-          "headword": "Commander,",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0095",
-          "headword": "Director,",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0096",
-          "headword": "Proponent,",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0097",
-          "headword": "Committee,",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0098",
-          "headword": "Council.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0099",
-          "headword": "Delegate.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0100",
-          "headword": "Specialist.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0101",
-          "headword": "Consultant.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0102",
-          "headword": "Veterinary.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0103",
-          "headword": "Counselor.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0104",
-          "headword": "Solicitor.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0105",
-          "headword": "Attorney.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0106",
-          "headword": "Umpire.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0107",
-          "headword": "Cashier.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0108",
-          "headword": "fireman.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0109",
-          "headword": "nurse.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0110",
-          "headword": "gardener.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0111",
-          "headword": "barber.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0112",
-          "headword": "Haircut.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0113",
-          "headword": "Fisherman.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0114",
-          "headword": "Butcher.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0115",
-          "headword": "Groom.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0116",
-          "headword": "hostage.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0117",
-          "headword": "toil.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0118",
-          "headword": "beggar.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0119",
-          "headword": "slave.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch19-0120",
-          "headword": "Coward.",
-          "position": 120
         }
       ],
-      "unexpected_ocr_words": []
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0258-05",
+          "headword": "single"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0258-06",
+          "headword": "sole"
+        }
+      ]
     }
   },
-  "word_count": 2869,
+  "word_count": 2937,
   "index_entry_count": 0
 }
