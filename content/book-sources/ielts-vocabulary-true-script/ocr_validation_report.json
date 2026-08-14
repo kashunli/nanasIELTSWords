@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T11:17:49.893462+00:00",
+  "generated_at": "2026-08-14T11:26:14.722219+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2473,33 +2473,50 @@
     },
     {
       "pdf_page": 316,
+      "book_page": 305,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 317,
+      "book_page": 306,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 4
     },
     {
       "pdf_page": 318,
+      "book_page": 307,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 319,
+      "book_page": 308,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 320,
+      "book_page": 309,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 321,
+      "book_page": 310,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 322,
@@ -2591,12 +2608,6 @@
     25,
     35,
     36,
-    316,
-    317,
-    318,
-    319,
-    320,
-    321,
     322,
     323,
     324,
@@ -2923,106 +2934,66 @@
     },
     "21": {
       "expected_audio_words": 417,
-      "ocr_words": 399,
-      "matched_words": 399,
+      "ocr_words": 417,
+      "matched_words": 417,
       "matched_by_headword": 36,
-      "matched_by_sentence": 349,
+      "matched_by_sentence": 367,
       "matched_by_order": 14,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
+    },
+    "22": {
+      "expected_audio_words": 52,
+      "ocr_words": 46,
+      "matched_words": 45,
+      "matched_by_headword": 10,
+      "matched_by_sentence": 33,
+      "matched_by_order": 2,
       "missing_audio_words": [
         {
-          "stable_id": "bv1at4y1579f-ch21-0400",
-          "headword": "Sly.",
-          "position": 400
+          "stable_id": "bv1at4y1579f-ch22-0046",
+          "headword": "permanent we",
+          "position": 46
         },
         {
-          "stable_id": "bv1at4y1579f-ch21-0401",
-          "headword": "Cunning.",
-          "position": 401
+          "stable_id": "bv1at4y1579f-ch22-0047",
+          "headword": "punctual he",
+          "position": 47
         },
         {
-          "stable_id": "bv1at4y1579f-ch21-0402",
-          "headword": "Arbitrary.",
-          "position": 402
+          "stable_id": "bv1at4y1579f-ch22-0048",
+          "headword": "Duration.",
+          "position": 48
         },
         {
-          "stable_id": "bv1at4y1579f-ch21-0403",
-          "headword": "Ridiculous.",
-          "position": 403
+          "stable_id": "bv1at4y1579f-ch22-0049",
+          "headword": "Consecutive.",
+          "position": 49
         },
         {
-          "stable_id": "bv1at4y1579f-ch21-0404",
-          "headword": "Stupid.",
-          "position": 404
+          "stable_id": "bv1at4y1579f-ch22-0050",
+          "headword": "Periodically.",
+          "position": 50
         },
         {
-          "stable_id": "bv1at4y1579f-ch21-0405",
-          "headword": "Awkward.",
-          "position": 405
+          "stable_id": "bv1at4y1579f-ch22-0051",
+          "headword": "Imminent.",
+          "position": 51
         },
         {
-          "stable_id": "bv1at4y1579f-ch21-0406",
-          "headword": "Clumsy.",
-          "position": 406
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0407",
-          "headword": "careless.",
-          "position": 407
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0408",
-          "headword": "oblivious.",
-          "position": 408
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0409",
-          "headword": "naughty.",
-          "position": 409
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0410",
-          "headword": "greedy.",
-          "position": 410
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0411",
-          "headword": "Obtrusive.",
-          "position": 411
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0412",
-          "headword": "Slothful.",
-          "position": 412
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0413",
-          "headword": "Sluggish.",
-          "position": 413
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0414",
-          "headword": "Impulse.",
-          "position": 414
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0415",
-          "headword": "Rigid.",
-          "position": 415
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0416",
-          "headword": "Stubborn.",
-          "position": 416
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0417",
-          "headword": "Stereotype.",
-          "position": 417
+          "stable_id": "bv1at4y1579f-ch22-0052",
+          "headword": "Incidentally.",
+          "position": 52
         }
       ],
-      "unexpected_ocr_words": []
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0321-17",
+          "headword": "permanent"
+        }
+      ]
     }
   },
-  "word_count": 3604,
+  "word_count": 3668,
   "index_entry_count": 0
 }
