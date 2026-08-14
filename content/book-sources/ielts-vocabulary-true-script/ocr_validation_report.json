@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T08:45:21.593112+00:00",
+  "generated_at": "2026-08-14T08:56:02.323067+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1758,38 +1758,59 @@
     },
     {
       "pdf_page": 226,
+      "book_page": 215,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 227,
+      "book_page": 216,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 228,
+      "book_page": 217,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 229,
+      "book_page": 218,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 230,
+      "book_page": 219,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
     },
     {
       "pdf_page": 231,
+      "book_page": 220,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 232,
+      "book_page": 221,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 233,
@@ -2328,13 +2349,6 @@
     25,
     35,
     36,
-    226,
-    227,
-    228,
-    229,
-    230,
-    231,
-    232,
     233,
     234,
     235,
@@ -2678,472 +2692,12 @@
     },
     "17": {
       "expected_audio_words": 117,
-      "ocr_words": 13,
-      "matched_words": 13,
-      "matched_by_headword": 0,
-      "matched_by_sentence": 13,
+      "ocr_words": 105,
+      "matched_words": 105,
+      "matched_by_headword": 3,
+      "matched_by_sentence": 102,
       "matched_by_order": 0,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch17-0014",
-          "headword": "Permit.",
-          "position": 14
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0015",
-          "headword": "Allow.",
-          "position": 15
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0016",
-          "headword": "Admission.",
-          "position": 16
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0017",
-          "headword": "Perform.",
-          "position": 17
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0018",
-          "headword": "Enforce.",
-          "position": 18
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0019",
-          "headword": "Default.",
-          "position": 19
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0020",
-          "headword": "Reject.",
-          "position": 20
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0021",
-          "headword": "Constraint.",
-          "position": 21
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0022",
-          "headword": "Official.",
-          "position": 22
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0023",
-          "headword": "Mandatory.",
-          "position": 23
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0024",
-          "headword": "Potent.",
-          "position": 24
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0025",
-          "headword": "Bound.",
-          "position": 25
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0026",
-          "headword": "Obligation.",
-          "position": 26
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0027",
-          "headword": "Court.",
-          "position": 27
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0028",
-          "headword": "Supreme.",
-          "position": 28
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0029",
-          "headword": "Inact.",
-          "position": 29
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0030",
-          "headword": "Legislate.",
-          "position": 30
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0031",
-          "headword": "Equity.",
-          "position": 31
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0032",
-          "headword": "Fair.",
-          "position": 32
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0033",
-          "headword": "Just.",
-          "position": 33
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0034",
-          "headword": "Prejudice.",
-          "position": 34
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0035",
-          "headword": "Discrimination.",
-          "position": 35
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0036",
-          "headword": "Accused.",
-          "position": 36
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0037",
-          "headword": "Sue.",
-          "position": 37
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0038",
-          "headword": "Prosecute.",
-          "position": 38
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0039",
-          "headword": "Condemn.",
-          "position": 39
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0040",
-          "headword": "complain",
-          "position": 40
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0041",
-          "headword": "boycott",
-          "position": 41
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0042",
-          "headword": "session",
-          "position": 42
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0043",
-          "headword": "Mediate.",
-          "position": 43
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0044",
-          "headword": "Plee.",
-          "position": 44
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0045",
-          "headword": "Appeal.",
-          "position": 45
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0046",
-          "headword": "Contradict.",
-          "position": 46
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0047",
-          "headword": "Pursuade.",
-          "position": 47
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0048",
-          "headword": "Controversy.",
-          "position": 48
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0049",
-          "headword": "Whisper.",
-          "position": 49
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0050",
-          "headword": "mutter.",
-          "position": 50
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0051",
-          "headword": "murmur.",
-          "position": 51
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0052",
-          "headword": "silent.",
-          "position": 52
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0053",
-          "headword": "mute.",
-          "position": 53
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0054",
-          "headword": "Investigate.",
-          "position": 54
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0055",
-          "headword": "Witness.",
-          "position": 55
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0056",
-          "headword": "Justify.",
-          "position": 56
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0057",
-          "headword": "Reasonable.",
-          "position": 57
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0058",
-          "headword": "Suitable.",
-          "position": 58
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0059",
-          "headword": "Judge.",
-          "position": 59
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0060",
-          "headword": "jury.",
-          "position": 60
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0061",
-          "headword": "Trial.",
-          "position": 61
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0062",
-          "headword": "Suspect.",
-          "position": 62
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0063",
-          "headword": "sentence.",
-          "position": 63
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0064",
-          "headword": "Arrest.",
-          "position": 64
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0065",
-          "headword": "Jail.",
-          "position": 65
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0066",
-          "headword": "Prison.",
-          "position": 66
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0067",
-          "headword": "Confine.",
-          "position": 67
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0068",
-          "headword": "Oversee.",
-          "position": 68
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0069",
-          "headword": "Supervise.",
-          "position": 69
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0070",
-          "headword": "Restrict.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0071",
-          "headword": "Restrain.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0072",
-          "headword": "Commit.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0073",
-          "headword": "Sin.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0074",
-          "headword": "Crime.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0075",
-          "headword": "vice",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0076",
-          "headword": "bribe",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0077",
-          "headword": "Rob.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0078",
-          "headword": "Pirate.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0079",
-          "headword": "Steel.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0080",
-          "headword": "Thief.",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0081",
-          "headword": "Murder.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0082",
-          "headword": "Suicide.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0083",
-          "headword": "Deceive.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0084",
-          "headword": "Cheat.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0085",
-          "headword": "fraud.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0086",
-          "headword": "Liar.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0087",
-          "headword": "Trap.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0088",
-          "headword": "Trick.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0089",
-          "headword": "Pretend.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0090",
-          "headword": "Fool.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0091",
-          "headword": "Stigma.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0092",
-          "headword": "Confess.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0093",
-          "headword": "conform.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0094",
-          "headword": "reconcile.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0095",
-          "headword": "obey.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0096",
-          "headword": "Succumb.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0097",
-          "headword": "Penalty.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0098",
-          "headword": "Fine.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0099",
-          "headword": "mortgage.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0100",
-          "headword": "ownership.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0101",
-          "headword": "copyright.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0102",
-          "headword": "privilege.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0103",
-          "headword": "A credit.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0104",
-          "headword": "Clue.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch17-0105",
-          "headword": "Access.",
-          "position": 105
-        },
         {
           "stable_id": "bv1at4y1579f-ch17-0106",
           "headword": "Anonymous.",
@@ -3208,6 +2762,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 2499,
+  "word_count": 2591,
   "index_entry_count": 0
 }
