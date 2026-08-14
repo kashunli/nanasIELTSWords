@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T10:31:16.614878+00:00",
+  "generated_at": "2026-08-14T10:39:29.067398+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2234,33 +2234,50 @@
     },
     {
       "pdf_page": 286,
+      "book_page": 275,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 287,
+      "book_page": 276,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 288,
+      "book_page": 277,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 289,
+      "book_page": 278,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 290,
+      "book_page": 279,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 291,
+      "book_page": 280,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 292,
@@ -2502,12 +2519,6 @@
     25,
     35,
     36,
-    286,
-    287,
-    288,
-    289,
-    290,
-    291,
     292,
     293,
     294,
@@ -2861,8 +2872,1759 @@
           "headword": "attract"
         }
       ]
+    },
+    "21": {
+      "expected_audio_words": 417,
+      "ocr_words": 69,
+      "matched_words": 69,
+      "matched_by_headword": 7,
+      "matched_by_sentence": 60,
+      "matched_by_order": 2,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch21-0070",
+          "headword": "Hormone.",
+          "position": 70
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0071",
+          "headword": "Immune.",
+          "position": 71
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0072",
+          "headword": "Stimulus.",
+          "position": 72
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0073",
+          "headword": "Biorhythm.",
+          "position": 73
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0074",
+          "headword": "Lifestyle.",
+          "position": 74
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0075",
+          "headword": "Habit.",
+          "position": 75
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0076",
+          "headword": "Sense.",
+          "position": 76
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0077",
+          "headword": "Sight.",
+          "position": 77
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0078",
+          "headword": "Eye sight.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0079",
+          "headword": "View.",
+          "position": 79
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0080",
+          "headword": "Visual.",
+          "position": 80
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0081",
+          "headword": "Visible.",
+          "position": 81
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0082",
+          "headword": "Vague.",
+          "position": 82
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0083",
+          "headword": "blind.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0084",
+          "headword": "Dumb.",
+          "position": 84
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0085",
+          "headword": "Oral.",
+          "position": 85
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0086",
+          "headword": "Dental.",
+          "position": 86
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0087",
+          "headword": "awake.",
+          "position": 87
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0088",
+          "headword": "yawn.",
+          "position": 88
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0089",
+          "headword": "nap.",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0090",
+          "headword": "doze.",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0091",
+          "headword": "quiet.",
+          "position": 91
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0092",
+          "headword": "A sleep.",
+          "position": 92
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0093",
+          "headword": "Cripple.",
+          "position": 93
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0094",
+          "headword": "Lame.",
+          "position": 94
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0095",
+          "headword": "Dwarf.",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0096",
+          "headword": "Pregnancy.",
+          "position": 96
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0097",
+          "headword": "Born.",
+          "position": 97
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0098",
+          "headword": "Condom.",
+          "position": 98
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0099",
+          "headword": "Clone.",
+          "position": 99
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0100",
+          "headword": "Symptom.",
+          "position": 100
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0101",
+          "headword": "Disease.",
+          "position": 101
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0102",
+          "headword": "Illness.",
+          "position": 102
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0103",
+          "headword": "Moan.",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0104",
+          "headword": "Infection.",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0105",
+          "headword": "Detriment.",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0106",
+          "headword": "Broken.",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0107",
+          "headword": "Disabled.",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0108",
+          "headword": "Invalid.",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0109",
+          "headword": "Patient.",
+          "position": 109
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0110",
+          "headword": "Dysfunction.",
+          "position": 110
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0111",
+          "headword": "Diabetes.",
+          "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0112",
+          "headword": "Obesity.",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0113",
+          "headword": "Overweight.",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0114",
+          "headword": "Hypertension.",
+          "position": 114
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0115",
+          "headword": "Paralyze.",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0116",
+          "headword": "Dizzy.",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0117",
+          "headword": "Insane.",
+          "position": 117
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0118",
+          "headword": "Insomnia.",
+          "position": 118
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0119",
+          "headword": "Allergy.",
+          "position": 119
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0120",
+          "headword": "Heart attack.",
+          "position": 120
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0121",
+          "headword": "Cancer.",
+          "position": 121
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0122",
+          "headword": "Arthritis.",
+          "position": 122
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0123",
+          "headword": "Pimple.",
+          "position": 123
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0124",
+          "headword": "Stroke.",
+          "position": 124
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0125",
+          "headword": "Plague.",
+          "position": 125
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0126",
+          "headword": "flu.",
+          "position": 126
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0127",
+          "headword": "fever.",
+          "position": 127
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0128",
+          "headword": "headache.",
+          "position": 128
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0129",
+          "headword": "swell.",
+          "position": 129
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0130",
+          "headword": "Choke.",
+          "position": 130
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0131",
+          "headword": "Injure.",
+          "position": 131
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0132",
+          "headword": "Injury.",
+          "position": 132
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0133",
+          "headword": "Hurt.",
+          "position": 133
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0134",
+          "headword": "Bleed.",
+          "position": 134
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0135",
+          "headword": "Bruise.",
+          "position": 135
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0136",
+          "headword": "Scar.",
+          "position": 136
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0137",
+          "headword": "Wound.",
+          "position": 137
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0138",
+          "headword": "Trauma.",
+          "position": 138
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0139",
+          "headword": "Lump.",
+          "position": 139
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0140",
+          "headword": "Pain.",
+          "position": 140
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0141",
+          "headword": "Death.",
+          "position": 141
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0142",
+          "headword": "mortal.",
+          "position": 142
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0143",
+          "headword": "demise.",
+          "position": 143
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0144",
+          "headword": "doom.",
+          "position": 144
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0145",
+          "headword": "fatal.",
+          "position": 145
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0146",
+          "headword": "lethal",
+          "position": 146
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0147",
+          "headword": "corpus he",
+          "position": 147
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0148",
+          "headword": "overwork",
+          "position": 148
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0149",
+          "headword": "tire my",
+          "position": 149
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0150",
+          "headword": "Exhaust.",
+          "position": 150
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0151",
+          "headword": "Fatigue.",
+          "position": 151
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0152",
+          "headword": "Faint.",
+          "position": 152
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0153",
+          "headword": "Feeble.",
+          "position": 153
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0154",
+          "headword": "weary.",
+          "position": 154
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0155",
+          "headword": "Weaken.",
+          "position": 155
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0156",
+          "headword": "Uncomfortable.",
+          "position": 156
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0157",
+          "headword": "Unconscious.",
+          "position": 157
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0158",
+          "headword": "Chronic.",
+          "position": 158
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0159",
+          "headword": "Acute.",
+          "position": 159
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0160",
+          "headword": "saw",
+          "position": 160
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0161",
+          "headword": "sorrow he",
+          "position": 161
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0162",
+          "headword": "suffering inward",
+          "position": 162
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0163",
+          "headword": "Lament.",
+          "position": 163
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0164",
+          "headword": "Hospital.",
+          "position": 164
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0165",
+          "headword": "Therapy.",
+          "position": 165
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0166",
+          "headword": "Healthcare.",
+          "position": 166
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0167",
+          "headword": "Sanitary.",
+          "position": 167
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0168",
+          "headword": "Medical.",
+          "position": 168
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0169",
+          "headword": "Curative.",
+          "position": 169
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0170",
+          "headword": "Hygiene.",
+          "position": 170
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0171",
+          "headword": "Fitness.",
+          "position": 171
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0172",
+          "headword": "Clinic.",
+          "position": 172
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0173",
+          "headword": "Physician.",
+          "position": 173
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0174",
+          "headword": "surgeon.",
+          "position": 174
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0175",
+          "headword": "operation.",
+          "position": 175
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0176",
+          "headword": "cure.",
+          "position": 176
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0177",
+          "headword": "heal.",
+          "position": 177
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0178",
+          "headword": "Treatment.",
+          "position": 178
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0179",
+          "headword": "Check.",
+          "position": 179
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0180",
+          "headword": "Prescription.",
+          "position": 180
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0181",
+          "headword": "transplant.",
+          "position": 181
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0182",
+          "headword": "X-ray.",
+          "position": 182
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0183",
+          "headword": "Injection.",
+          "position": 183
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0184",
+          "headword": "Precaution.",
+          "position": 184
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0185",
+          "headword": "Vaccinate.",
+          "position": 185
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0186",
+          "headword": "Quarantine.",
+          "position": 186
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0187",
+          "headword": "Segregate.",
+          "position": 187
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0188",
+          "headword": "Isolate.",
+          "position": 188
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0189",
+          "headword": "pharmacy",
+          "position": 189
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0190",
+          "headword": "medicine I",
+          "position": 190
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0191",
+          "headword": "remedy your",
+          "position": 191
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0192",
+          "headword": "Drug.",
+          "position": 192
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0193",
+          "headword": "Pill.",
+          "position": 193
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0194",
+          "headword": "Antibiotic.",
+          "position": 194
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0195",
+          "headword": "acupuncture.",
+          "position": 195
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0196",
+          "headword": "Penicillin.",
+          "position": 196
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0197",
+          "headword": "Morphin",
+          "position": 197
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0198",
+          "headword": "Dose.",
+          "position": 198
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0199",
+          "headword": "Recovery.",
+          "position": 199
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0200",
+          "headword": "Refresh.",
+          "position": 200
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0201",
+          "headword": "Relief.",
+          "position": 201
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0202",
+          "headword": "Relief.",
+          "position": 202
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0203",
+          "headword": "Alleviate.",
+          "position": 203
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0204",
+          "headword": "Resume.",
+          "position": 204
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0205",
+          "headword": "Ease.",
+          "position": 205
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0206",
+          "headword": "Relax.",
+          "position": 206
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0207",
+          "headword": "Normal.",
+          "position": 207
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0208",
+          "headword": "Common.",
+          "position": 208
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0209",
+          "headword": "Usual.",
+          "position": 209
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0210",
+          "headword": "Optimistic.",
+          "position": 210
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0211",
+          "headword": "Pessimistic.",
+          "position": 211
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0212",
+          "headword": "Positive.",
+          "position": 212
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0213",
+          "headword": "negative",
+          "position": 213
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0214",
+          "headword": "passive",
+          "position": 214
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0215",
+          "headword": "enthusiastic",
+          "position": 215
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0216",
+          "headword": "Indifferent.",
+          "position": 216
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0217",
+          "headword": "Apathetic.",
+          "position": 217
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0218",
+          "headword": "Negligible.",
+          "position": 218
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0219",
+          "headword": "Happiness.",
+          "position": 219
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0220",
+          "headword": "Delight.",
+          "position": 220
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0221",
+          "headword": "Merry.",
+          "position": 221
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0222",
+          "headword": "Fun.",
+          "position": 222
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0223",
+          "headword": "Joke.",
+          "position": 223
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0224",
+          "headword": "Laughter.",
+          "position": 224
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0225",
+          "headword": "Joy.",
+          "position": 225
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0226",
+          "headword": "Please.",
+          "position": 226
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0227",
+          "headword": "Rejoice.",
+          "position": 227
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0228",
+          "headword": "Thrill.",
+          "position": 228
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0229",
+          "headword": "Cheer.",
+          "position": 229
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0230",
+          "headword": "Pleasure.",
+          "position": 230
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0231",
+          "headword": "Agreeable.",
+          "position": 231
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0232",
+          "headword": "Exhilarate.",
+          "position": 232
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0233",
+          "headword": "Satisfactory.",
+          "position": 233
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0234",
+          "headword": "Desirable.",
+          "position": 234
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0235",
+          "headword": "Exciting.",
+          "position": 235
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0236",
+          "headword": "Keen.",
+          "position": 236
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0237",
+          "headword": "Zeal.",
+          "position": 237
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0238",
+          "headword": "Lively.",
+          "position": 238
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0239",
+          "headword": "Lovely.",
+          "position": 239
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0240",
+          "headword": "fond a",
+          "position": 240
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0241",
+          "headword": "favor",
+          "position": 241
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0242",
+          "headword": "surprising",
+          "position": 242
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0243",
+          "headword": "startle",
+          "position": 243
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0244",
+          "headword": "Amazing.",
+          "position": 244
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0245",
+          "headword": "Astound.",
+          "position": 245
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0246",
+          "headword": "Hectic.",
+          "position": 246
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0247",
+          "headword": "Liberal.",
+          "position": 247
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0248",
+          "headword": "Generous.",
+          "position": 248
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0249",
+          "headword": "Gentle.",
+          "position": 249
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0250",
+          "headword": "Humble.",
+          "position": 250
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0251",
+          "headword": "Modest.",
+          "position": 251
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0252",
+          "headword": "Humorous.",
+          "position": 252
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0253",
+          "headword": "Polite.",
+          "position": 253
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0254",
+          "headword": "Frank. A",
+          "position": 254
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0255",
+          "headword": "Mysterious.",
+          "position": 255
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0256",
+          "headword": "Curious.",
+          "position": 256
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0257",
+          "headword": "Daring.",
+          "position": 257
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0258",
+          "headword": "Manly.",
+          "position": 258
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0259",
+          "headword": "Direct.",
+          "position": 259
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0260",
+          "headword": "Ernest.",
+          "position": 260
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0261",
+          "headword": "Honesty.",
+          "position": 261
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0262",
+          "headword": "Proud.",
+          "position": 262
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0263",
+          "headword": "Rational.",
+          "position": 263
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0264",
+          "headword": "Seriously.",
+          "position": 264
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0265",
+          "headword": "Stern.",
+          "position": 265
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0266",
+          "headword": "Friendly.",
+          "position": 266
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0267",
+          "headword": "Hospital.",
+          "position": 267
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0268",
+          "headword": "Romantic.",
+          "position": 268
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0269",
+          "headword": "Freedom.",
+          "position": 269
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0270",
+          "headword": "Careful.",
+          "position": 270
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0271",
+          "headword": "Concern.",
+          "position": 271
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0272",
+          "headword": "Confidence. I",
+          "position": 272
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0273",
+          "headword": "Considerate.",
+          "position": 273
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0274",
+          "headword": "Thoughtful.",
+          "position": 274
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0275",
+          "headword": "Sympathetic.",
+          "position": 275
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0276",
+          "headword": "ready.",
+          "position": 276
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0277",
+          "headword": "Apologize.",
+          "position": 277
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0278",
+          "headword": "Apology.",
+          "position": 278
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0279",
+          "headword": "Mercy.",
+          "position": 279
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0280",
+          "headword": "Admire.",
+          "position": 280
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0281",
+          "headword": "Remarkable.",
+          "position": 281
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0282",
+          "headword": "Grateful.",
+          "position": 282
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0283",
+          "headword": "Gratitude.",
+          "position": 283
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0284",
+          "headword": "Eager.",
+          "position": 284
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0285",
+          "headword": "Sound.",
+          "position": 285
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0286",
+          "headword": "Picturesque.",
+          "position": 286
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0287",
+          "headword": "Promising.",
+          "position": 287
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0288",
+          "headword": "Prominent.",
+          "position": 288
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0289",
+          "headword": "Awesome.",
+          "position": 289
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0290",
+          "headword": "Arduous.",
+          "position": 290
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0291",
+          "headword": "Tough.",
+          "position": 291
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0292",
+          "headword": "Robust.",
+          "position": 292
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0293",
+          "headword": "sturdy.",
+          "position": 293
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0294",
+          "headword": "steadfast.",
+          "position": 294
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0295",
+          "headword": "tender.",
+          "position": 295
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0296",
+          "headword": "temperate.",
+          "position": 296
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0297",
+          "headword": "Delicate.",
+          "position": 297
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0298",
+          "headword": "Mundane.",
+          "position": 298
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0299",
+          "headword": "Naive.",
+          "position": 299
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0300",
+          "headword": "Childish.",
+          "position": 300
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0301",
+          "headword": "Sincere.",
+          "position": 301
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0302",
+          "headword": "Liable.",
+          "position": 302
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0303",
+          "headword": "Trustworthy.",
+          "position": 303
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0304",
+          "headword": "Enterprising.",
+          "position": 304
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0305",
+          "headword": "Sane.",
+          "position": 305
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0306",
+          "headword": "Strenuous.",
+          "position": 306
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0307",
+          "headword": "Rigorous.",
+          "position": 307
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0308",
+          "headword": "Strict.",
+          "position": 308
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0309",
+          "headword": "Severe.",
+          "position": 309
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0310",
+          "headword": "Mutual.",
+          "position": 310
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0311",
+          "headword": "resemble.",
+          "position": 311
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0312",
+          "headword": "similar.",
+          "position": 312
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0313",
+          "headword": "familiar.",
+          "position": 313
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0314",
+          "headword": "Naked.",
+          "position": 314
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0315",
+          "headword": "Bear.",
+          "position": 315
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0316",
+          "headword": "Private.",
+          "position": 316
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0317",
+          "headword": "Intuition.",
+          "position": 317
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0318",
+          "headword": "spontaneous.",
+          "position": 318
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0319",
+          "headword": "Implicit.",
+          "position": 319
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0320",
+          "headword": "Illusion.",
+          "position": 320
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0321",
+          "headword": "Imaginary.",
+          "position": 321
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0322",
+          "headword": "Fancy.",
+          "position": 322
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0323",
+          "headword": "Fate.",
+          "position": 323
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0324",
+          "headword": "Fortune.",
+          "position": 324
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0325",
+          "headword": "Agony.",
+          "position": 325
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0326",
+          "headword": "Grief.",
+          "position": 326
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0327",
+          "headword": "Grief.",
+          "position": 327
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0328",
+          "headword": "Miserable.",
+          "position": 328
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0329",
+          "headword": "Distress.",
+          "position": 329
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0330",
+          "headword": "Sadness.",
+          "position": 330
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0331",
+          "headword": "Gloomy.",
+          "position": 331
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0332",
+          "headword": "Disappoint.",
+          "position": 332
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0333",
+          "headword": "Discourage.",
+          "position": 333
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0334",
+          "headword": "Wretched.",
+          "position": 334
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0335",
+          "headword": "Frustrating.",
+          "position": 335
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0336",
+          "headword": "Mourn.",
+          "position": 336
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0337",
+          "headword": "Anger.",
+          "position": 337
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0338",
+          "headword": "Furious.",
+          "position": 338
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0339",
+          "headword": "Frown.",
+          "position": 339
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0340",
+          "headword": "Rage.",
+          "position": 340
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0341",
+          "headword": "Irritate.",
+          "position": 341
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0342",
+          "headword": "hate they",
+          "position": 342
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0343",
+          "headword": "hatred his",
+          "position": 343
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0344",
+          "headword": "nuisance",
+          "position": 344
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0345",
+          "headword": "disgust",
+          "position": 345
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0346",
+          "headword": "vex",
+          "position": 346
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0347",
+          "headword": "vexed",
+          "position": 347
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0348",
+          "headword": "vexed",
+          "position": 348
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0349",
+          "headword": "vexed",
+          "position": 349
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0350",
+          "headword": "vexed vexed",
+          "position": 350
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0351",
+          "headword": "Awful.",
+          "position": 351
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0352",
+          "headword": "Unpleasant.",
+          "position": 352
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0353",
+          "headword": "Adverse.",
+          "position": 353
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0354",
+          "headword": "Hostile.",
+          "position": 354
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0355",
+          "headword": "Indignant.",
+          "position": 355
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0356",
+          "headword": "Radical.",
+          "position": 356
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0357",
+          "headword": "Mad.",
+          "position": 357
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0358",
+          "headword": "crazy",
+          "position": 358
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0359",
+          "headword": "wicked it",
+          "position": 359
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0360",
+          "headword": "vicious",
+          "position": 360
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0361",
+          "headword": "vulgar",
+          "position": 361
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0362",
+          "headword": "Mean.",
+          "position": 362
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0363",
+          "headword": "ego",
+          "position": 363
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0364",
+          "headword": "selfish he",
+          "position": 364
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0365",
+          "headword": "Nasty.",
+          "position": 365
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0366",
+          "headword": "Rash.",
+          "position": 366
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0367",
+          "headword": "Volatile.",
+          "position": 367
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0368",
+          "headword": "Weird.",
+          "position": 368
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0369",
+          "headword": "Excessive.",
+          "position": 369
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0370",
+          "headword": "Anxiety.",
+          "position": 370
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0371",
+          "headword": "Restless.",
+          "position": 371
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0372",
+          "headword": "Uneasy.",
+          "position": 372
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0373",
+          "headword": "fear",
+          "position": 373
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0374",
+          "headword": "timid",
+          "position": 374
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0375",
+          "headword": "fuss",
+          "position": 375
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0376",
+          "headword": "Insult.",
+          "position": 376
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0377",
+          "headword": "Unkind.",
+          "position": 377
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0378",
+          "headword": "Envy.",
+          "position": 378
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0379",
+          "headword": "Jealous.",
+          "position": 379
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0380",
+          "headword": "Doubt.",
+          "position": 380
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0381",
+          "headword": "Suspicion.",
+          "position": 381
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0382",
+          "headword": "Skeptical.",
+          "position": 382
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0383",
+          "headword": "Unsatisfactory.",
+          "position": 383
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0384",
+          "headword": "Unstable.",
+          "position": 384
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0385",
+          "headword": "Unsuitable.",
+          "position": 385
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0386",
+          "headword": "Unwilling.",
+          "position": 386
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0387",
+          "headword": "Reluctant.",
+          "position": 387
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0388",
+          "headword": "Hesitate.",
+          "position": 388
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0389",
+          "headword": "Confuse.",
+          "position": 389
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0390",
+          "headword": "Guilty.",
+          "position": 390
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0391",
+          "headword": "Embarrassed.",
+          "position": 391
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0392",
+          "headword": "Regret.",
+          "position": 392
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0393",
+          "headword": "Repent.",
+          "position": 393
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0394",
+          "headword": "Ashamed.",
+          "position": 394
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0395",
+          "headword": "Si,",
+          "position": 395
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0396",
+          "headword": "Weep,",
+          "position": 396
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0397",
+          "headword": "Tolerance,",
+          "position": 397
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0398",
+          "headword": "Ignorant,",
+          "position": 398
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0399",
+          "headword": "Endure.",
+          "position": 399
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0400",
+          "headword": "Sly.",
+          "position": 400
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0401",
+          "headword": "Cunning.",
+          "position": 401
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0402",
+          "headword": "Arbitrary.",
+          "position": 402
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0403",
+          "headword": "Ridiculous.",
+          "position": 403
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0404",
+          "headword": "Stupid.",
+          "position": 404
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0405",
+          "headword": "Awkward.",
+          "position": 405
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0406",
+          "headword": "Clumsy.",
+          "position": 406
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0407",
+          "headword": "careless.",
+          "position": 407
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0408",
+          "headword": "oblivious.",
+          "position": 408
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0409",
+          "headword": "naughty.",
+          "position": 409
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0410",
+          "headword": "greedy.",
+          "position": 410
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0411",
+          "headword": "Obtrusive.",
+          "position": 411
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0412",
+          "headword": "Slothful.",
+          "position": 412
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0413",
+          "headword": "Sluggish.",
+          "position": 413
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0414",
+          "headword": "Impulse.",
+          "position": 414
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0415",
+          "headword": "Rigid.",
+          "position": 415
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0416",
+          "headword": "Stubborn.",
+          "position": 416
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch21-0417",
+          "headword": "Stereotype.",
+          "position": 417
+        }
+      ],
+      "unexpected_ocr_words": []
     }
   },
-  "word_count": 3205,
+  "word_count": 3274,
   "index_entry_count": 0
 }
