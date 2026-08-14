@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T05:07:21.276644+00:00",
+  "generated_at": "2026-08-14T05:52:32.403693+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -940,13 +940,19 @@
     },
     {
       "pdf_page": 122,
+      "book_page": 111,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 123,
+      "book_page": 112,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 124,
@@ -2042,8 +2048,6 @@
     25,
     35,
     36,
-    122,
-    123,
     124,
     125,
     126,
@@ -2353,142 +2357,12 @@
     },
     "9": {
       "expected_audio_words": 176,
-      "ocr_words": 13,
-      "matched_words": 13,
+      "ocr_words": 39,
+      "matched_words": 39,
       "matched_by_headword": 3,
-      "matched_by_sentence": 10,
-      "matched_by_order": 0,
+      "matched_by_sentence": 34,
+      "matched_by_order": 2,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch09-0014",
-          "headword": "Propaganda.",
-          "position": 14
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0015",
-          "headword": "Publish.",
-          "position": 15
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0016",
-          "headword": "Disseminate.",
-          "position": 16
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0017",
-          "headword": "4. See.",
-          "position": 17
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0018",
-          "headword": "Anticipate.",
-          "position": 18
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0019",
-          "headword": "Expect.",
-          "position": 19
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0020",
-          "headword": "A wait.",
-          "position": 20
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0021",
-          "headword": "Pastime.",
-          "position": 21
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0022",
-          "headword": "Entertain.",
-          "position": 22
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0023",
-          "headword": "Recreation.",
-          "position": 23
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0024",
-          "headword": "Amuse.",
-          "position": 24
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0025",
-          "headword": "Gossip.",
-          "position": 25
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0026",
-          "headword": "Rumour.",
-          "position": 26
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0027",
-          "headword": "Consensus.",
-          "position": 27
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0028",
-          "headword": "Festival.",
-          "position": 28
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0029",
-          "headword": "Feast.",
-          "position": 29
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0030",
-          "headword": "program.",
-          "position": 30
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0031",
-          "headword": "rehearsal.",
-          "position": 31
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0032",
-          "headword": "perform.",
-          "position": 32
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0033",
-          "headword": "imitate.",
-          "position": 33
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0034",
-          "headword": "mimic he",
-          "position": 34
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0035",
-          "headword": "simulate we",
-          "position": 35
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0036",
-          "headword": "circus last",
-          "position": 36
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0037",
-          "headword": "magic the",
-          "position": 37
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0038",
-          "headword": "Drama.",
-          "position": 38
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0039",
-          "headword": "Concert.",
-          "position": 39
-        },
         {
           "stable_id": "bv1at4y1579f-ch09-0040",
           "headword": "Symphony.",
@@ -3178,6 +3052,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1297,
+  "word_count": 1323,
   "index_entry_count": 0
 }
