@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T08:05:27.875628+00:00",
+  "generated_at": "2026-08-14T08:15:11.406362+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1562,33 +1562,51 @@
     },
     {
       "pdf_page": 201,
+      "book_page": 190,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 202,
+      "book_page": 191,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
     },
     {
       "pdf_page": 203,
+      "book_page": 192,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 204,
+      "book_page": 193,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 205,
+      "book_page": 194,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 18
     },
     {
       "pdf_page": 206,
+      "book_page": 195,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 3
     },
     {
       "pdf_page": 207,
@@ -2261,12 +2279,6 @@
     25,
     35,
     36,
-    201,
-    202,
-    203,
-    204,
-    205,
-    206,
     208,
     209,
     210,
@@ -2598,376 +2610,16 @@
     },
     "15": {
       "expected_audio_words": 149,
-      "ocr_words": 77,
-      "matched_words": 76,
-      "matched_by_headword": 11,
-      "matched_by_sentence": 64,
+      "ocr_words": 149,
+      "matched_words": 148,
+      "matched_by_headword": 21,
+      "matched_by_sentence": 126,
       "matched_by_order": 1,
       "missing_audio_words": [
         {
           "stable_id": "bv1at4y1579f-ch15-0010",
           "headword": "Democracy.",
           "position": 10
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0078",
-          "headword": "Slum.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0079",
-          "headword": "Refuge.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0080",
-          "headword": "Asylum.",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0081",
-          "headword": "Population.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0082",
-          "headword": "Demographic.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0083",
-          "headword": "citizen.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0084",
-          "headword": "resident.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0085",
-          "headword": "ethnic.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0086",
-          "headword": "racial.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0087",
-          "headword": "Clan.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0088",
-          "headword": "Franchise.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0089",
-          "headword": "Entitle.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0090",
-          "headword": "Preference.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0091",
-          "headword": "VOTE",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0092",
-          "headword": "ELECT They",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0093",
-          "headword": "RESPONDENT",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0094",
-          "headword": "poll.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0095",
-          "headword": "Ambition.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0096",
-          "headword": "Nominate.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0097",
-          "headword": "Checklist.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0098",
-          "headword": "Succession.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0099",
-          "headword": "Safety.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0100",
-          "headword": "Welfare.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0101",
-          "headword": "well-being.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0102",
-          "headword": "Harmony.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0103",
-          "headword": "Steady.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0104",
-          "headword": "Flourish.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0105",
-          "headword": "Succeed.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0106",
-          "headword": "Prospect.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0107",
-          "headword": "Perspective.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0108",
-          "headword": "Viewpoint.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0109",
-          "headword": "Standpoint.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0110",
-          "headword": "Outlook.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0111",
-          "headword": "Guideline.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0112",
-          "headword": "Ethic.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0113",
-          "headword": "Suggest.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0114",
-          "headword": "Advise.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0115",
-          "headword": "Proposal.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0116",
-          "headword": "Hint.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0117",
-          "headword": "Declare.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0118",
-          "headword": "Affirm.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0119",
-          "headword": "Claim.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0120",
-          "headword": "Proclaim.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0121",
-          "headword": "State.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0122",
-          "headword": "Announce.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0123",
-          "headword": "Clarify.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0124",
-          "headword": "Assist.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0125",
-          "headword": "Aid.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0126",
-          "headword": "Encourage.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0127",
-          "headword": "Implement.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0128",
-          "headword": "Monitor.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0129",
-          "headword": "Admit.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0130",
-          "headword": "African.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0131",
-          "headword": "European.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0132",
-          "headword": "Latin.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0133",
-          "headword": "Jewish.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0134",
-          "headword": "Arabian.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0135",
-          "headword": "Portuguese.",
-          "position": 135
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0136",
-          "headword": "Roman.",
-          "position": 136
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0137",
-          "headword": "Russian.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0138",
-          "headword": "Spanish.",
-          "position": 138
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0139",
-          "headword": "Swiss.",
-          "position": 139
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0140",
-          "headword": "Greek.",
-          "position": 140
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0141",
-          "headword": "Italian.",
-          "position": 141
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0142",
-          "headword": "Soviet.",
-          "position": 142
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0143",
-          "headword": "Indian.",
-          "position": 143
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0144",
-          "headword": "Australia.",
-          "position": 144
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0145",
-          "headword": "New Zealand.",
-          "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0146",
-          "headword": "Canada.",
-          "position": 146
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0147",
-          "headword": "Britain.",
-          "position": 147
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0148",
-          "headword": "France.",
-          "position": 148
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch15-0149",
-          "headword": "Germany.",
-          "position": 149
         }
       ],
       "unexpected_ocr_words": [
@@ -2978,6 +2630,6 @@
       ]
     }
   },
-  "word_count": 2243,
+  "word_count": 2315,
   "index_entry_count": 0
 }
