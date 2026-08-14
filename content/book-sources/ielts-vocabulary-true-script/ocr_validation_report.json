@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T04:20:31.635590+00:00",
+  "generated_at": "2026-08-14T04:28:46.688373+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -705,33 +705,50 @@
     },
     {
       "pdf_page": 92,
+      "book_page": 81,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 93,
+      "book_page": 82,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 94,
+      "book_page": 83,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 95,
+      "book_page": 84,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 96,
+      "book_page": 85,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 97,
+      "book_page": 86,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 98,
@@ -1959,12 +1976,6 @@
     25,
     35,
     36,
-    92,
-    93,
-    94,
-    95,
-    96,
-    97,
     98,
     99,
     100,
@@ -2901,8 +2912,8 @@
     },
     "5": {
       "expected_audio_words": 399,
-      "ocr_words": 352,
-      "matched_words": 312,
+      "ocr_words": 401,
+      "matched_words": 355,
       "missing_audio_words": [
         {
           "stable_id": "bv1at4y1579f-ch05-0025",
@@ -3100,159 +3111,14 @@
           "position": 347
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0352",
-          "headword": "Contrast.",
-          "position": 352
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0353",
-          "headword": "Overlap.",
-          "position": 353
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0354",
-          "headword": "Contradiction.",
-          "position": 354
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0355",
-          "headword": "Disagree.",
-          "position": 355
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0356",
-          "headword": "Differ.",
-          "position": 356
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0357",
-          "headword": "Diverse.",
-          "position": 357
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0358",
-          "headword": "Nuance.",
-          "position": 358
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0359",
-          "headword": "Inductive",
-          "position": 359
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0360",
-          "headword": "Detail –",
-          "position": 360
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0361",
-          "headword": "Thorough –",
-          "position": 361
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0362",
-          "headword": "Example",
-          "position": 362
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0363",
-          "headword": "Instance",
-          "position": 363
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0364",
-          "headword": "Confirm",
-          "position": 364
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0365",
-          "headword": "Demonstrate",
-          "position": 365
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0366",
           "headword": "Illustrate the",
           "position": 366
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0367",
-          "headword": "Manifest.",
-          "position": 367
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0368",
-          "headword": "Prove.",
-          "position": 368
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0369",
-          "headword": "Determine.",
-          "position": 369
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0370",
-          "headword": "Decide.",
-          "position": 370
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0371",
-          "headword": "Resolve.",
-          "position": 371
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0372",
-          "headword": "Survey.",
-          "position": 372
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0373",
-          "headword": "Observe.",
-          "position": 373
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0374",
           "headword": "Inquire.",
           "position": 374
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0375",
-          "headword": "Query.",
-          "position": 375
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0376",
-          "headword": "Questionnaire.",
-          "position": 376
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0377",
-          "headword": "Achieve.",
-          "position": 377
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0378",
-          "headword": "Accomplish.",
-          "position": 378
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0379",
-          "headword": "Attain.",
-          "position": 379
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0380",
-          "headword": "Credit.",
-          "position": 380
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0381",
-          "headword": "Score.",
-          "position": 381
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0382",
-          "headword": "Mark.",
-          "position": 382
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0383",
@@ -3268,76 +3134,6 @@
           "stable_id": "bv1at4y1579f-ch05-0385",
           "headword": "Row A",
           "position": 385
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0386",
-          "headword": "Queue",
-          "position": 386
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0387",
-          "headword": "Grant.",
-          "position": 387
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0388",
-          "headword": "Praise.",
-          "position": 388
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0389",
-          "headword": "Appreciate.",
-          "position": 389
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0390",
-          "headword": "feedback.",
-          "position": 390
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0391",
-          "headword": "underestimate.",
-          "position": 391
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0392",
-          "headword": "overestimate.",
-          "position": 392
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0393",
-          "headword": "Apply.",
-          "position": 393
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0394",
-          "headword": "Fellowship.",
-          "position": 394
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0395",
-          "headword": "Scholarship.",
-          "position": 395
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0396",
-          "headword": "Reward.",
-          "position": 396
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0397",
-          "headword": "Award.",
-          "position": 397
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0398",
-          "headword": "Prize.",
-          "position": 398
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0399",
-          "headword": "Fee.",
-          "position": 399
         }
       ],
       "unexpected_ocr_words": [
@@ -3500,10 +3296,601 @@
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0091-07",
           "headword": "infer"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0093-01",
+          "headword": "illustrate"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0093-08",
+          "headword": "research"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0093-10",
+          "headword": "inquire (= enquire)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0094-06",
+          "headword": "grade"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0094-07",
+          "headword": "rank"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0094-08",
+          "headword": "row"
+        }
+      ]
+    },
+    "6": {
+      "expected_audio_words": 122,
+      "ocr_words": 14,
+      "matched_words": 12,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch06-0004",
+          "headword": "Engineering.",
+          "position": 4
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0011",
+          "headword": "Device.",
+          "position": 11
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0015",
+          "headword": "Reveal.",
+          "position": 15
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0016",
+          "headword": "Uncover.",
+          "position": 16
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0017",
+          "headword": "Expose.",
+          "position": 17
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0018",
+          "headword": "Domain.",
+          "position": 18
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0019",
+          "headword": "Field.",
+          "position": 19
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0020",
+          "headword": "Realm.",
+          "position": 20
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0021",
+          "headword": "Foundation.",
+          "position": 21
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0022",
+          "headword": "Specialise.",
+          "position": 22
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0023",
+          "headword": "Absorb.",
+          "position": 23
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0024",
+          "headword": "Concentrate.",
+          "position": 24
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0025",
+          "headword": "Focus.",
+          "position": 25
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0026",
+          "headword": "Utilize.",
+          "position": 26
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0027",
+          "headword": "Usage.",
+          "position": 27
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0028",
+          "headword": "Tester.",
+          "position": 28
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0029",
+          "headword": "Apply.",
+          "position": 29
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0030",
+          "headword": "Device.",
+          "position": 30
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0031",
+          "headword": "Appliance.",
+          "position": 31
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0032",
+          "headword": "Facility.",
+          "position": 32
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0033",
+          "headword": "Equipment.",
+          "position": 33
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0034",
+          "headword": "Instrument.",
+          "position": 34
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0035",
+          "headword": "Tool.",
+          "position": 35
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0036",
+          "headword": "Gauge.",
+          "position": 36
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0037",
+          "headword": "Measure.",
+          "position": 37
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0038",
+          "headword": "Calculate.",
+          "position": 38
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0039",
+          "headword": "Compute.",
+          "position": 39
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0040",
+          "headword": "Count.",
+          "position": 40
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0041",
+          "headword": "Estimate.",
+          "position": 41
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0042",
+          "headword": "assess",
+          "position": 42
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0043",
+          "headword": "evaluate",
+          "position": 43
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0044",
+          "headword": "Accessory Car",
+          "position": 44
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0045",
+          "headword": "Byproduct",
+          "position": 45
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0046",
+          "headword": "Auxiliary",
+          "position": 46
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0047",
+          "headword": "Versatile Plastics",
+          "position": 47
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0048",
+          "headword": "Add.",
+          "position": 48
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0049",
+          "headword": "Accumulate.",
+          "position": 49
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0050",
+          "headword": "Assemble.",
+          "position": 50
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0051",
+          "headword": "Gather.",
+          "position": 51
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0052",
+          "headword": "Attach.",
+          "position": 52
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0053",
+          "headword": "Belong.",
+          "position": 53
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0054",
+          "headword": "Optics",
+          "position": 54
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0055",
+          "headword": "Microscope",
+          "position": 55
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0056",
+          "headword": "Lens",
+          "position": 56
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0057",
+          "headword": "Radar.",
+          "position": 57
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0058",
+          "headword": "Echo.",
+          "position": 58
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0059",
+          "headword": "Sensor.",
+          "position": 59
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0060",
+          "headword": "Multimedia.",
+          "position": 60
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0061",
+          "headword": "Network.",
+          "position": 61
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0062",
+          "headword": "Browser.",
+          "position": 62
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0063",
+          "headword": "dial.",
+          "position": 63
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0064",
+          "headword": "Microcomputer.",
+          "position": 64
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0065",
+          "headword": "Laptop.",
+          "position": 65
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0066",
+          "headword": "Software.",
+          "position": 66
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0067",
+          "headword": "Keyboard.",
+          "position": 67
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0068",
+          "headword": "Screen.",
+          "position": 68
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0069",
+          "headword": "Loudspeaker.",
+          "position": 69
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0070",
+          "headword": "microphone.",
+          "position": 70
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0071",
+          "headword": "cassette.",
+          "position": 71
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0072",
+          "headword": "tape.",
+          "position": 72
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0073",
+          "headword": "binary.",
+          "position": 73
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0074",
+          "headword": "Digital.",
+          "position": 74
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0075",
+          "headword": "Wireless.",
+          "position": 75
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0076",
+          "headword": "High Definition.",
+          "position": 76
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0077",
+          "headword": "Audio.",
+          "position": 77
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0078",
+          "headword": "Vision.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0079",
+          "headword": "Fantasy.",
+          "position": 79
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0080",
+          "headword": "Science fiction.",
+          "position": 80
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0081",
+          "headword": "Pump.",
+          "position": 81
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0082",
+          "headword": "Generator.",
+          "position": 82
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0083",
+          "headword": "gear.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0084",
+          "headword": "Pivot.",
+          "position": 84
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0085",
+          "headword": "Hydraulic.",
+          "position": 85
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0086",
+          "headword": "Drainage.",
+          "position": 86
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0087",
+          "headword": "Sewage.",
+          "position": 87
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0088",
+          "headword": "Ventilation.",
+          "position": 88
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0089",
+          "headword": "Compressed.",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0090",
+          "headword": "Condense.",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0091",
+          "headword": "Refine.",
+          "position": 91
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0092",
+          "headword": "Simplify.",
+          "position": 92
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0093",
+          "headword": "Purify.",
+          "position": 93
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0094",
+          "headword": "Filter.",
+          "position": 94
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0095",
+          "headword": "Distill.",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0096",
+          "headword": "mode.",
+          "position": 96
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0097",
+          "headword": "mold.",
+          "position": 97
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0098",
+          "headword": "prototype.",
+          "position": 98
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0099",
+          "headword": "Framework.",
+          "position": 99
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0100",
+          "headword": "Aspect.",
+          "position": 100
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0101",
+          "headword": "Phase.",
+          "position": 101
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0102",
+          "headword": "Operate.",
+          "position": 102
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0103",
+          "headword": "Facilitate.",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0104",
+          "headword": "Transform.",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0105",
+          "headword": "Convert.",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0106",
+          "headword": "alter",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0107",
+          "headword": "Shift.",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0108",
+          "headword": "turn",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0109",
+          "headword": "adapt",
+          "position": 109
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0110",
+          "headword": "Adjust.",
+          "position": 110
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0111",
+          "headword": "Pinpoint.",
+          "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0112",
+          "headword": "Accurate.",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0113",
+          "headword": "Precis.",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0114",
+          "headword": "Correct.",
+          "position": 114
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0115",
+          "headword": "Error.",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0116",
+          "headword": "Mistake.",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0117",
+          "headword": "Floor.",
+          "position": 117
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0118",
+          "headword": "Wrong.",
+          "position": 118
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0119",
+          "headword": "Fault.",
+          "position": 119
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0120",
+          "headword": "Stumble.",
+          "position": 120
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0121",
+          "headword": "Contingency.",
+          "position": 121
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch06-0122",
+          "headword": "Circumstance.",
+          "position": 122
+        }
+      ],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0097-04",
+          "headword": "engineer"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0097-11",
+          "headword": "devise"
         }
       ]
     }
   },
-  "word_count": 966,
+  "word_count": 1029,
   "index_entry_count": 0
 }
