@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T10:23:41.489860+00:00",
+  "generated_at": "2026-08-14T10:31:16.614878+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2194,28 +2194,43 @@
     },
     {
       "pdf_page": 281,
+      "book_page": 270,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 282,
+      "book_page": 271,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 283,
+      "book_page": 272,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 284,
+      "book_page": 273,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
     },
     {
       "pdf_page": 285,
+      "book_page": 274,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 6
     },
     {
       "pdf_page": 286,
@@ -2487,11 +2502,6 @@
     25,
     35,
     36,
-    281,
-    282,
-    283,
-    284,
-    285,
     286,
     287,
     288,
@@ -2828,11 +2838,11 @@
     },
     "20": {
       "expected_audio_words": 269,
-      "ocr_words": 210,
-      "matched_words": 209,
-      "matched_by_headword": 21,
-      "matched_by_sentence": 187,
-      "matched_by_order": 1,
+      "ocr_words": 268,
+      "matched_words": 267,
+      "matched_by_headword": 29,
+      "matched_by_sentence": 236,
+      "matched_by_order": 2,
       "missing_audio_words": [
         {
           "stable_id": "bv1at4y1579f-ch20-0102",
@@ -2843,296 +2853,6 @@
           "stable_id": "bv1at4y1579f-ch20-0103",
           "headword": "Obsess.",
           "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0212",
-          "headword": "evacuate the",
-          "position": 212
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0213",
-          "headword": "trench",
-          "position": 213
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0214",
-          "headword": "Saturate",
-          "position": 214
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0215",
-          "headword": "Excuse",
-          "position": 215
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0216",
-          "headword": "Forgive",
-          "position": 216
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0217",
-          "headword": "Contain The",
-          "position": 217
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0218",
-          "headword": "Regard.",
-          "position": 218
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0219",
-          "headword": "Flatter.",
-          "position": 219
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0220",
-          "headword": "Worship.",
-          "position": 220
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0221",
-          "headword": "Cause.",
-          "position": 221
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0222",
-          "headword": "SAKE.",
-          "position": 222
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0223",
-          "headword": "PURPOSE.",
-          "position": 223
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0224",
-          "headword": "objective",
-          "position": 224
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0225",
-          "headword": "arouse the",
-          "position": 225
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0226",
-          "headword": "trigger he",
-          "position": 226
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0227",
-          "headword": "seek they",
-          "position": 227
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0228",
-          "headword": "Retrieve.",
-          "position": 228
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0229",
-          "headword": "Testify.",
-          "position": 229
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0230",
-          "headword": "Verify.",
-          "position": 230
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0231",
-          "headword": "Specify.",
-          "position": 231
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0232",
-          "headword": "Enlighten.",
-          "position": 232
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0233",
-          "headword": "Impart.",
-          "position": 233
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0234",
-          "headword": "Deserve.",
-          "position": 234
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0235",
-          "headword": "Drop.",
-          "position": 235
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0236",
-          "headword": "Sink.",
-          "position": 236
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0237",
-          "headword": "Plummet.",
-          "position": 237
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0238",
-          "headword": "Muffle.",
-          "position": 238
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0239",
-          "headword": "Overshadowed.",
-          "position": 239
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0240",
-          "headword": "Invite.",
-          "position": 240
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0241",
-          "headword": "Welcome.",
-          "position": 241
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0242",
-          "headword": "Greet.",
-          "position": 242
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0243",
-          "headword": "Salute.",
-          "position": 243
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0244",
-          "headword": "Celebrate.",
-          "position": 244
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0245",
-          "headword": "Congratulate.",
-          "position": 245
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0246",
-          "headword": "Bless.",
-          "position": 246
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0247",
-          "headword": "Participate.",
-          "position": 247
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0248",
-          "headword": "Farewell.",
-          "position": 248
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0249",
-          "headword": "Assort.",
-          "position": 249
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0250",
-          "headword": "Correspond.",
-          "position": 250
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0251",
-          "headword": "Accord.",
-          "position": 251
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0252",
-          "headword": "attribute",
-          "position": 252
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0253",
-          "headword": "recall",
-          "position": 253
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0254",
-          "headword": "recollect",
-          "position": 254
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0255",
-          "headword": "Remind.",
-          "position": 255
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0256",
-          "headword": "Retail.",
-          "position": 256
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0257",
-          "headword": "Repeat.",
-          "position": 257
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0258",
-          "headword": "Retrospect.",
-          "position": 258
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0259",
-          "headword": "Impress.",
-          "position": 259
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0260",
-          "headword": "Summount.",
-          "position": 260
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0261",
-          "headword": "Mortify.",
-          "position": 261
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0262",
-          "headword": "Pervade.",
-          "position": 262
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0263",
-          "headword": "Replace.",
-          "position": 263
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0264",
-          "headword": "Substitute.",
-          "position": 264
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0265",
-          "headword": "Distinguish.",
-          "position": 265
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0266",
-          "headword": "Differentiate.",
-          "position": 266
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0267",
-          "headword": "Incline.",
-          "position": 267
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0268",
-          "headword": "Lean.",
-          "position": 268
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0269",
-          "headword": "Sideways.",
-          "position": 269
         }
       ],
       "unexpected_ocr_words": [
@@ -3143,6 +2863,6 @@
       ]
     }
   },
-  "word_count": 3147,
+  "word_count": 3205,
   "index_entry_count": 0
 }
