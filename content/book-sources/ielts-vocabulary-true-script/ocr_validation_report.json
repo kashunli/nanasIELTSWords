@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T05:58:20.999583+00:00",
+  "generated_at": "2026-08-14T06:09:20.942085+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -988,33 +988,51 @@
     },
     {
       "pdf_page": 128,
+      "book_page": 117,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
     },
     {
       "pdf_page": 129,
+      "book_page": 118,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 130,
+      "book_page": 119,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 131,
+      "book_page": 120,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 132,
+      "book_page": 121,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 133,
+      "book_page": 122,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 4
     },
     {
       "pdf_page": 134,
@@ -2060,12 +2078,6 @@
     25,
     35,
     36,
-    128,
-    129,
-    130,
-    131,
-    132,
-    133,
     134,
     135,
     136,
@@ -2365,406 +2377,15 @@
     },
     "9": {
       "expected_audio_words": 176,
-      "ocr_words": 98,
-      "matched_words": 98,
-      "matched_by_headword": 9,
-      "matched_by_sentence": 85,
+      "ocr_words": 176,
+      "matched_words": 176,
+      "matched_by_headword": 19,
+      "matched_by_sentence": 153,
       "matched_by_order": 4,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch09-0099",
-          "headword": "Athlete.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0100",
-          "headword": "Champion.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0101",
-          "headword": "Spectator.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0102",
-          "headword": "Volunteer.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0103",
-          "headword": "Famous.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0104",
-          "headword": "Well known.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0105",
-          "headword": "Energetic.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0106",
-          "headword": "Vigorous.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0107",
-          "headword": "Stadium.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0108",
-          "headword": "gym.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0109",
-          "headword": "training.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0110",
-          "headword": "exercise.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0111",
-          "headword": "indoor.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0112",
-          "headword": "outdoor.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0113",
-          "headword": "motion.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0114",
-          "headword": "mobile.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0115",
-          "headword": "movement.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0116",
-          "headword": "yoga.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0117",
-          "headword": "sprawl.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0118",
-          "headword": "stretch.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0119",
-          "headword": "Strain.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0120",
-          "headword": "Chess.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0121",
-          "headword": "Badminton.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0122",
-          "headword": "Golf.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0123",
-          "headword": "Billiards.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0124",
-          "headword": "Soccer.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0125",
-          "headword": "Tennis.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0126",
-          "headword": "Volleyball.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0127",
-          "headword": "Hockey.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0128",
-          "headword": "Cricket.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0129",
-          "headword": "Goal.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0130",
-          "headword": "Bat.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0131",
-          "headword": "Racket.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0132",
-          "headword": "Kick.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0133",
-          "headword": "Knock.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0134",
-          "headword": "Flip.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0135",
-          "headword": "Pitch.",
-          "position": 135
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0136",
-          "headword": "Throw.",
-          "position": 136
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0137",
-          "headword": "Toss.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0138",
-          "headword": "Slide.",
-          "position": 138
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0139",
-          "headword": "Slip.",
-          "position": 139
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0140",
-          "headword": "Glide.",
-          "position": 140
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0141",
-          "headword": "tumble.",
-          "position": 141
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0142",
-          "headword": "ski.",
-          "position": 142
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0143",
-          "headword": "skate.",
-          "position": 143
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0144",
-          "headword": "cycling. He",
-          "position": 144
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0145",
-          "headword": "Dive.",
-          "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0146",
-          "headword": "Drift.",
-          "position": 146
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0147",
-          "headword": "Jump.",
-          "position": 147
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0148",
-          "headword": "Leap.",
-          "position": 148
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0149",
-          "headword": "Plunge.",
-          "position": 149
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0150",
-          "headword": "Spring.",
-          "position": 150
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0151",
-          "headword": "Hop.",
-          "position": 151
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0152",
-          "headword": "Bounce.",
-          "position": 152
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0153",
-          "headword": "Tent.",
-          "position": 153
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0154",
-          "headword": "Camp.",
-          "position": 154
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0155",
-          "headword": "Picnic.",
-          "position": 155
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0156",
-          "headword": "hunt.",
-          "position": 156
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0157",
-          "headword": "Race.",
-          "position": 157
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0158",
-          "headword": "Marathon.",
-          "position": 158
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0159",
-          "headword": "Pedestrian.",
-          "position": 159
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0160",
-          "headword": "pace.",
-          "position": 160
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0161",
-          "headword": "step.",
-          "position": 161
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0162",
-          "headword": "excursion.",
-          "position": 162
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0163",
-          "headword": "cruise.",
-          "position": 163
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0164",
-          "headword": "trip.",
-          "position": 164
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0165",
-          "headword": "vacation.",
-          "position": 165
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0166",
-          "headword": "hike.",
-          "position": 166
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0167",
-          "headword": "jog.",
-          "position": 167
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0168",
-          "headword": "Stride.",
-          "position": 168
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0169",
-          "headword": "Wander.",
-          "position": 169
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0170",
-          "headword": "Linger.",
-          "position": 170
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0171",
-          "headword": "Lag.",
-          "position": 171
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0172",
-          "headword": "Climb.",
-          "position": 172
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0173",
-          "headword": "Pull.",
-          "position": 173
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0174",
-          "headword": "Drag.",
-          "position": 174
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0175",
-          "headword": "Bend.",
-          "position": 175
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0176",
-          "headword": "Bao,",
-          "position": 176
-        }
-      ],
+      "missing_audio_words": [],
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1382,
+  "word_count": 1460,
   "index_entry_count": 0
 }
