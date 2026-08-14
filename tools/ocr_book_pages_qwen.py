@@ -15,7 +15,7 @@ import dashscope
 
 
 MODEL = "qwen3.7-flash"
-PROMPT_VERSION = "qwen3.7-flash-book-page-v1"
+PROMPT_VERSION = "qwen3.7-flash-book-page-v2-exact-schema"
 API_BASE_URL = "https://dashscope.aliyuncs.com/api/v1"
 
 
@@ -88,11 +88,16 @@ def prompt(page: dict[str, Any]) -> str:
         )
     return f"""Transcribe this scanned IELTS vocabulary book page exactly.
 Return one valid JSON object only, with no commentary and no Markdown fences.
+Use exactly one top-level key named entries for vocabulary items. Do not add content, footer, or duplicate entries keys.
+Every visible vocabulary item must be an object in entries, including an item after a continuation fragment.
+Every entry must contain all nine requested keys; use an empty string when a field is not printed, but never omit part_of_speech.
 PDF page {page['pdf_page']}; printed page {page['book_page']}; chapter {page['chapter']} {page['chapter_title']}.
 {layout}
 {shape}
 Pictures may be omitted, but printed labels must be retained separately.
-Do not silently correct spelling, grammar, or Chinese. Use [unclear] only for genuinely unreadable text.
+Copy the visible wording literally. Do not infer, paraphrase, normalize, or improve a sentence even when it seems grammatically incomplete or semantically unusual.
+Do not add Markdown bold markers around headwords in examples. Use [unclear] only for genuinely unreadable text.
+If an example or note continues onto another page, preserve the visible fragment and explain the continuation in page_notes; do not drop the entry or invent the missing part.
 Keep page_notes for layout or cross-page continuation facts."""
 
 
