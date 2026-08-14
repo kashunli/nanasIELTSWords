@@ -109,6 +109,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--batch", type=int, help="generate only this 1-based batch")
+    parser.add_argument("--start-batch", type=int, default=1, help="first 1-based batch for a range")
+    parser.add_argument("--end-batch", type=int, help="exclusive end of a batch range")
     parser.add_argument("--timeout", type=int, default=900)
     parser.add_argument("--retries", type=int, default=2)
     parser.add_argument("--force", action="store_true", help="regenerate existing accepted batches")
@@ -126,6 +128,15 @@ def main() -> int:
         input_paths = [input_dir / f"batch-{args.batch:04d}.json"]
         if not input_paths[0].exists():
             raise SystemExit(f"missing batch: {input_paths[0]}")
+    else:
+        start_batch = max(1, args.start_batch)
+        end_batch = args.end_batch if args.end_batch is not None else len(input_paths) + 1
+        if end_batch <= start_batch:
+            raise SystemExit(f"invalid batch range {start_batch}:{end_batch}")
+        input_paths = [input_dir / f"batch-{number:04d}.json" for number in range(start_batch, end_batch)]
+        missing = [path for path in input_paths if not path.exists()]
+        if missing:
+            raise SystemExit(f"missing batch: {missing[0]}")
 
     for index, input_path in enumerate(input_paths, start=1):
         batch_number = int(input_path.stem.split("-")[-1])
