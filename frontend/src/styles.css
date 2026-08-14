@@ -34,3 +34,20 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 .player-settings { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 14px 3px; color: #687871; font-size: 13px; } .player-settings select { margin-left: 6px; border: 1px solid #cdd6ce; border-radius: 8px; padding: 7px; } .player-settings span { margin-left: auto; }
 .toast { position: fixed; right: 20px; bottom: 20px; max-width: 420px; padding: 12px 15px; border-radius: 11px; background: #fff; border: 1px solid #c7d4c9; box-shadow: 0 12px 30px #0002; } .toast.error { color: #a24e32; }
 @media (max-width: 760px) { .app-shell { padding: 19px 10px 150px; } .topbar { align-items: center; } .study-layout { grid-template-columns: 1fr; } .item-list { max-height: 240px; order: 2; } .focus { order: 1; } .toolbar .export { margin-left: 0; } .player-controls span, .player-settings span { margin-left: 0; width: 100%; } h2 { font-size: 56px; } }
+
+/* The player uses the same decoded-PCM wavebar interaction as the listening
+   projects: the hidden range input keeps the SVG keyboard- and pointer-seekable. */
+.player .line-waveform { position: relative; width: 100%; height: 68px; margin-top: 14px; overflow: hidden; border: 1px solid #8b9b91; border-radius: 4px; background: #f8f4e9; }
+.player .line-waveform svg { display: block; width: 100%; height: 100%; }
+.player .line-waveform input[type="range"] { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: crosshair; }
+.player .line-waveform:focus-within { border-color: #e4b36f; box-shadow: 0 0 0 3px rgba(228, 179, 111, .2); }
+.player .waveform-unplayed { fill: #85988b; }
+.player .waveform-played { fill: #c86d46; }
+.player .waveform-silence-gap { fill: #d3b87a; opacity: .42; }
+.player .waveform-vad-silence { fill: #b7d2dc; opacity: .38; }
+.player .waveform-cursor { stroke: #a95135; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.player .line-waveform.is-loading .waveform-unplayed { opacity: .42; }
+.player-controls .audio-time { flex: 0 0 auto; margin-left: 0; color: #e5bd76; white-space: nowrap; }
+.player-controls button.selected { background: #e4b36f; color: #273b35; }
+.player-controls button:disabled { cursor: not-allowed; opacity: .45; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

@@ -1,13 +1,19 @@
-export function buildSequence(item, mode) {
-  if (mode === "words") return [{item, phase: "word"}];
-  if (mode === "sentences") return [{item, phase: "sentence"}];
-  return [{item, phase: "word"}, {item, phase: "sentence"}];
-}
-
-export function nextIndex(items, currentIndex, mode, phase) {
-  const sequence = buildSequence(items[currentIndex], mode);
-  const phaseIndex = sequence.findIndex(target => target.phase === phase);
-  if (phaseIndex >= 0 && phaseIndex + 1 < sequence.length) return {index: currentIndex, phase: sequence[phaseIndex + 1].phase};
-  if (currentIndex + 1 >= items.length) return null;
-  return {index: currentIndex + 1, phase: mode === "sentences" ? "sentence" : "word"};
+/**
+ * Keep the transport mode separate from the content mode.
+ *
+ * Content mode chooses which clip is focused. Transport mode decides whether
+ * an ended clip stops or continues through the visible list. This is the same
+ * contract used by the other study players, and it makes the UI state testable
+ * without depending on an AudioContext or a browser event.
+ */
+export function nextPlaybackStep({
+  playbackMode,
+  playbackRunMode,
+  phase,
+  hasSentence,
+  hasNextEntry,
+}) {
+  if (playbackRunMode === "single") return "stop";
+  if (playbackMode === "both" && phase === "word" && hasSentence) return "sentence";
+  return hasNextEntry ? "next-entry" : "stop";
 }
