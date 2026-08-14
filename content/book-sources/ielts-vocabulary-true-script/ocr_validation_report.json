@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T07:11:41.658725+00:00",
+  "generated_at": "2026-08-14T07:19:50.482226+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1279,33 +1279,50 @@
     },
     {
       "pdf_page": 165,
+      "book_page": 154,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 166,
+      "book_page": 155,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 167,
+      "book_page": 156,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 168,
+      "book_page": 157,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 169,
+      "book_page": 158,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 1
     },
     {
       "pdf_page": 170,
+      "book_page": 159,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 171,
@@ -2162,12 +2179,6 @@
     25,
     35,
     36,
-    165,
-    166,
-    167,
-    168,
-    169,
-    170,
     171,
     172,
     173,
@@ -2471,303 +2482,12 @@
     },
     "12": {
       "expected_audio_words": 170,
-      "ocr_words": 114,
-      "matched_words": 112,
-      "matched_by_headword": 9,
-      "matched_by_sentence": 99,
-      "matched_by_order": 4,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch12-0113",
-          "headword": "sandwich.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0114",
-          "headword": "hamburger.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0115",
-          "headword": "Loaf.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0116",
-          "headword": "Pie.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0117",
-          "headword": "Pizza.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0118",
-          "headword": "Pasta.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0119",
-          "headword": "Spaghetti.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0120",
-          "headword": "Soup.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0121",
-          "headword": "Pudding.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0122",
-          "headword": "Biscuit.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0123",
-          "headword": "Jam.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0124",
-          "headword": "Nut.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0125",
-          "headword": "Chocolate.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0126",
-          "headword": "Ice cream.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0127",
-          "headword": "Vanilla.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0128",
-          "headword": "mustard.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0129",
-          "headword": "wasabi.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0130",
-          "headword": "pepper.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0131",
-          "headword": "ginger.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0132",
-          "headword": "Garlic.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0133",
-          "headword": "Scallion.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0134",
-          "headword": "Vinegar.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0135",
-          "headword": "Salt.",
-          "position": 135
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0136",
-          "headword": "sugar.",
-          "position": 136
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0137",
-          "headword": "candy.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0138",
-          "headword": "honey.",
-          "position": 138
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0139",
-          "headword": "flavor.",
-          "position": 139
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0140",
-          "headword": "sour.",
-          "position": 140
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0141",
-          "headword": "sweet.",
-          "position": 141
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0142",
-          "headword": "bitter.",
-          "position": 142
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0143",
-          "headword": "spicy.",
-          "position": 143
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0144",
-          "headword": "delicious.",
-          "position": 144
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0145",
-          "headword": "yummy.",
-          "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0146",
-          "headword": "tasty.",
-          "position": 146
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0147",
-          "headword": "hunger.",
-          "position": 147
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0148",
-          "headword": "Thirsty.",
-          "position": 148
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0149",
-          "headword": "Spice.",
-          "position": 149
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0150",
-          "headword": "Sauce.",
-          "position": 150
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0151",
-          "headword": "Ketchup.",
-          "position": 151
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0152",
-          "headword": "perfume.",
-          "position": 152
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0153",
-          "headword": "ingredient.",
-          "position": 153
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0154",
-          "headword": "supplement.",
-          "position": 154
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0155",
-          "headword": "Cook.",
-          "position": 155
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0156",
-          "headword": "bake",
-          "position": 156
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0157",
-          "headword": "fry",
-          "position": 157
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0158",
-          "headword": "roast",
-          "position": 158
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0159",
-          "headword": "Toast.",
-          "position": 159
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0160",
-          "headword": "Suck.",
-          "position": 160
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0161",
-          "headword": "Swallow.",
-          "position": 161
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0162",
-          "headword": "Lick.",
-          "position": 162
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0163",
-          "headword": "Chew.",
-          "position": 163
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0164",
-          "headword": "gum would",
-          "position": 164
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0165",
-          "headword": "soak I",
-          "position": 165
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0166",
-          "headword": "dip",
-          "position": 166
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0167",
-          "headword": "squeeze",
-          "position": 167
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0168",
-          "headword": "Stir.",
-          "position": 168
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0169",
-          "headword": "Grind.",
-          "position": 169
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch12-0170",
-          "headword": "Slice.",
-          "position": 170
-        }
-      ],
+      "ocr_words": 173,
+      "matched_words": 170,
+      "matched_by_headword": 15,
+      "matched_by_sentence": 148,
+      "matched_by_order": 7,
+      "missing_audio_words": [],
       "unexpected_ocr_words": [
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0163-06",
@@ -2776,10 +2496,14 @@
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0163-07",
           "headword": "flour"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0167-17",
+          "headword": "digest"
         }
       ]
     }
   },
-  "word_count": 1839,
+  "word_count": 1898,
   "index_entry_count": 0
 }
