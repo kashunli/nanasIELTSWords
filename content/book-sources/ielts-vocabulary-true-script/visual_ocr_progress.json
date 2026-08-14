@@ -4,12 +4,17 @@
   "ocr_method": "mixed-book-ocr",
   "prompt_version": "gpt-book-ocr-v1 (native default); qwen3.7-flash-book-page-v3-ipa-continuations (historical PDF 56-62)",
   "outside_api_used": true,
-  "updated_at": "2026-08-14T12:14:51.2057424Z",
+  "updated_at": "2026-08-14T12:19:49.5328267Z",
   "requested_range": [
     1,
     336
   ],
   "completed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
     9,
     11,
     12,
@@ -354,11 +359,6 @@
     263
   ],
   "pending_visual_pages": [
-    1,
-    2,
-    3,
-    4,
-    5,
     6,
     7,
     8,

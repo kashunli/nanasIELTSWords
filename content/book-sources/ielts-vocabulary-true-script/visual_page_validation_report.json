@@ -3,7 +3,7 @@
   "manifest": "content\\book-sources\\ielts-vocabulary-true-script\\book_manifest.json",
   "ocr_dir": "content\\book-sources\\ielts-vocabulary-true-script\\page-ocr",
   "expected_pages": 336,
-  "completed_pages": 327,
+  "completed_pages": 332,
   "needs_review_pages": [
     15,
     25,
@@ -11,11 +11,6 @@
     36
   ],
   "issues": [
-    "page 1: missing record",
-    "page 2: missing record",
-    "page 3: missing record",
-    "page 4: missing record",
-    "page 5: missing record",
     "page 6: missing record",
     "page 7: missing record",
     "page 8: missing record",
