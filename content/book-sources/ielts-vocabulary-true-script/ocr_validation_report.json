@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T10:50:45.473416+00:00",
+  "generated_at": "2026-08-14T10:59:16.362075+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2329,33 +2329,51 @@
     },
     {
       "pdf_page": 298,
+      "book_page": 287,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 299,
+      "book_page": 288,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 300,
+      "book_page": 289,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 301,
+      "book_page": 290,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 302,
+      "book_page": 291,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 303,
+      "book_page": 292,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 304,
@@ -2537,12 +2555,6 @@
     25,
     35,
     36,
-    298,
-    299,
-    300,
-    301,
-    302,
-    303,
     304,
     305,
     306,
@@ -2887,432 +2899,12 @@
     },
     "21": {
       "expected_audio_words": 417,
-      "ocr_words": 149,
-      "matched_words": 149,
-      "matched_by_headword": 14,
-      "matched_by_sentence": 130,
-      "matched_by_order": 5,
+      "ocr_words": 233,
+      "matched_words": 233,
+      "matched_by_headword": 23,
+      "matched_by_sentence": 202,
+      "matched_by_order": 8,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch21-0150",
-          "headword": "Exhaust.",
-          "position": 150
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0151",
-          "headword": "Fatigue.",
-          "position": 151
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0152",
-          "headword": "Faint.",
-          "position": 152
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0153",
-          "headword": "Feeble.",
-          "position": 153
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0154",
-          "headword": "weary.",
-          "position": 154
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0155",
-          "headword": "Weaken.",
-          "position": 155
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0156",
-          "headword": "Uncomfortable.",
-          "position": 156
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0157",
-          "headword": "Unconscious.",
-          "position": 157
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0158",
-          "headword": "Chronic.",
-          "position": 158
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0159",
-          "headword": "Acute.",
-          "position": 159
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0160",
-          "headword": "saw",
-          "position": 160
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0161",
-          "headword": "sorrow he",
-          "position": 161
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0162",
-          "headword": "suffering inward",
-          "position": 162
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0163",
-          "headword": "Lament.",
-          "position": 163
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0164",
-          "headword": "Hospital.",
-          "position": 164
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0165",
-          "headword": "Therapy.",
-          "position": 165
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0166",
-          "headword": "Healthcare.",
-          "position": 166
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0167",
-          "headword": "Sanitary.",
-          "position": 167
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0168",
-          "headword": "Medical.",
-          "position": 168
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0169",
-          "headword": "Curative.",
-          "position": 169
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0170",
-          "headword": "Hygiene.",
-          "position": 170
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0171",
-          "headword": "Fitness.",
-          "position": 171
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0172",
-          "headword": "Clinic.",
-          "position": 172
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0173",
-          "headword": "Physician.",
-          "position": 173
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0174",
-          "headword": "surgeon.",
-          "position": 174
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0175",
-          "headword": "operation.",
-          "position": 175
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0176",
-          "headword": "cure.",
-          "position": 176
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0177",
-          "headword": "heal.",
-          "position": 177
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0178",
-          "headword": "Treatment.",
-          "position": 178
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0179",
-          "headword": "Check.",
-          "position": 179
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0180",
-          "headword": "Prescription.",
-          "position": 180
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0181",
-          "headword": "transplant.",
-          "position": 181
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0182",
-          "headword": "X-ray.",
-          "position": 182
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0183",
-          "headword": "Injection.",
-          "position": 183
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0184",
-          "headword": "Precaution.",
-          "position": 184
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0185",
-          "headword": "Vaccinate.",
-          "position": 185
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0186",
-          "headword": "Quarantine.",
-          "position": 186
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0187",
-          "headword": "Segregate.",
-          "position": 187
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0188",
-          "headword": "Isolate.",
-          "position": 188
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0189",
-          "headword": "pharmacy",
-          "position": 189
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0190",
-          "headword": "medicine I",
-          "position": 190
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0191",
-          "headword": "remedy your",
-          "position": 191
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0192",
-          "headword": "Drug.",
-          "position": 192
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0193",
-          "headword": "Pill.",
-          "position": 193
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0194",
-          "headword": "Antibiotic.",
-          "position": 194
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0195",
-          "headword": "acupuncture.",
-          "position": 195
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0196",
-          "headword": "Penicillin.",
-          "position": 196
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0197",
-          "headword": "Morphin",
-          "position": 197
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0198",
-          "headword": "Dose.",
-          "position": 198
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0199",
-          "headword": "Recovery.",
-          "position": 199
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0200",
-          "headword": "Refresh.",
-          "position": 200
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0201",
-          "headword": "Relief.",
-          "position": 201
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0202",
-          "headword": "Relief.",
-          "position": 202
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0203",
-          "headword": "Alleviate.",
-          "position": 203
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0204",
-          "headword": "Resume.",
-          "position": 204
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0205",
-          "headword": "Ease.",
-          "position": 205
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0206",
-          "headword": "Relax.",
-          "position": 206
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0207",
-          "headword": "Normal.",
-          "position": 207
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0208",
-          "headword": "Common.",
-          "position": 208
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0209",
-          "headword": "Usual.",
-          "position": 209
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0210",
-          "headword": "Optimistic.",
-          "position": 210
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0211",
-          "headword": "Pessimistic.",
-          "position": 211
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0212",
-          "headword": "Positive.",
-          "position": 212
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0213",
-          "headword": "negative",
-          "position": 213
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0214",
-          "headword": "passive",
-          "position": 214
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0215",
-          "headword": "enthusiastic",
-          "position": 215
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0216",
-          "headword": "Indifferent.",
-          "position": 216
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0217",
-          "headword": "Apathetic.",
-          "position": 217
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0218",
-          "headword": "Negligible.",
-          "position": 218
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0219",
-          "headword": "Happiness.",
-          "position": 219
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0220",
-          "headword": "Delight.",
-          "position": 220
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0221",
-          "headword": "Merry.",
-          "position": 221
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0222",
-          "headword": "Fun.",
-          "position": 222
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0223",
-          "headword": "Joke.",
-          "position": 223
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0224",
-          "headword": "Laughter.",
-          "position": 224
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0225",
-          "headword": "Joy.",
-          "position": 225
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0226",
-          "headword": "Please.",
-          "position": 226
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0227",
-          "headword": "Rejoice.",
-          "position": 227
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0228",
-          "headword": "Thrill.",
-          "position": 228
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0229",
-          "headword": "Cheer.",
-          "position": 229
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0230",
-          "headword": "Pleasure.",
-          "position": 230
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0231",
-          "headword": "Agreeable.",
-          "position": 231
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0232",
-          "headword": "Exhilarate.",
-          "position": 232
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0233",
-          "headword": "Satisfactory.",
-          "position": 233
-        },
         {
           "stable_id": "bv1at4y1579f-ch21-0234",
           "headword": "Desirable.",
@@ -4237,6 +3829,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 3354,
+  "word_count": 3438,
   "index_entry_count": 0
 }
