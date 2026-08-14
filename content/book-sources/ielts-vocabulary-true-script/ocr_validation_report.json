@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T09:18:54.968100+00:00",
+  "generated_at": "2026-08-14T09:27:54.512823+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1909,33 +1909,51 @@
     },
     {
       "pdf_page": 245,
+      "book_page": 234,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 246,
+      "book_page": 235,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 247,
+      "book_page": 236,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 248,
+      "book_page": 237,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 249,
+      "book_page": 238,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 250,
+      "book_page": 239,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 251,
@@ -2384,12 +2402,6 @@
     25,
     35,
     36,
-    245,
-    246,
-    247,
-    248,
-    249,
-    250,
     251,
     252,
     253,
@@ -2725,407 +2737,12 @@
     },
     "18": {
       "expected_audio_words": 213,
-      "ocr_words": 129,
-      "matched_words": 129,
-      "matched_by_headword": 12,
-      "matched_by_sentence": 115,
-      "matched_by_order": 2,
+      "ocr_words": 208,
+      "matched_words": 208,
+      "matched_by_headword": 20,
+      "matched_by_sentence": 184,
+      "matched_by_order": 4,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch18-0130",
-          "headword": "matter.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0131",
-          "headword": "Happen.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0132",
-          "headword": "Occur.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0133",
-          "headword": "savage.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0134",
-          "headword": "reckless.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0135",
-          "headword": "fierce.",
-          "position": 135
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0136",
-          "headword": "foul.",
-          "position": 136
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0137",
-          "headword": "Evil.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0138",
-          "headword": "Devil.",
-          "position": 138
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0139",
-          "headword": "Punishment.",
-          "position": 139
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0140",
-          "headword": "Execute.",
-          "position": 140
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0141",
-          "headword": "Hang.",
-          "position": 141
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0142",
-          "headword": "Sacrifice.",
-          "position": 142
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0143",
-          "headword": "Casualty.",
-          "position": 143
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0144",
-          "headword": "Berry.",
-          "position": 144
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0145",
-          "headword": "Funeral.",
-          "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0146",
-          "headword": "Grave.",
-          "position": 146
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0147",
-          "headword": "Tomb.",
-          "position": 147
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0148",
-          "headword": "Hell.",
-          "position": 148
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0149",
-          "headword": "Maritime.",
-          "position": 149
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0150",
-          "headword": "Naval.",
-          "position": 150
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0151",
-          "headword": "Fleet.",
-          "position": 151
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0152",
-          "headword": "Troop.",
-          "position": 152
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0153",
-          "headword": "Landing.",
-          "position": 153
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0154",
-          "headword": "Hover.",
-          "position": 154
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0155",
-          "headword": "Proceed.",
-          "position": 155
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0156",
-          "headword": "Progress.",
-          "position": 156
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0157",
-          "headword": "Military.",
-          "position": 157
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0158",
-          "headword": "Nuclear.",
-          "position": 158
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0159",
-          "headword": "Poison.",
-          "position": 159
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0160",
-          "headword": "Devastate.",
-          "position": 160
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0161",
-          "headword": "Risk.",
-          "position": 161
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0162",
-          "headword": "Adventure.",
-          "position": 162
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0163",
-          "headword": "Peril.",
-          "position": 163
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0164",
-          "headword": "catastrophe.",
-          "position": 164
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0165",
-          "headword": "Collapse.",
-          "position": 165
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0166",
-          "headword": "Torture.",
-          "position": 166
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0167",
-          "headword": "Humiliate.",
-          "position": 167
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0168",
-          "headword": "Damage.",
-          "position": 168
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0169",
-          "headword": "Harmful.",
-          "position": 169
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0170",
-          "headword": "Mislead.",
-          "position": 170
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0171",
-          "headword": "Disturb.",
-          "position": 171
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0172",
-          "headword": "Interfere.",
-          "position": 172
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0173",
-          "headword": "Interrupt.",
-          "position": 173
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0174",
-          "headword": "Retreat.",
-          "position": 174
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0175",
-          "headword": "Shrink.",
-          "position": 175
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0176",
-          "headword": "Withdraw.",
-          "position": 176
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0177",
-          "headword": "Withstand.",
-          "position": 177
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0178",
-          "headword": "Compromise.",
-          "position": 178
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0179",
-          "headword": "Surrender.",
-          "position": 179
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0180",
-          "headword": "Escape.",
-          "position": 180
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0181",
-          "headword": "Avoid.",
-          "position": 181
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0182",
-          "headword": "Quit.",
-          "position": 182
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0183",
-          "headword": "Abandon.",
-          "position": 183
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0184",
-          "headword": "Forgo.",
-          "position": 184
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0185",
-          "headword": "discard",
-          "position": 185
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0186",
-          "headword": "Rid.",
-          "position": 186
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0187",
-          "headword": "Defend.",
-          "position": 187
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0188",
-          "headword": "Safeguard.",
-          "position": 188
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0189",
-          "headword": "Defeat.",
-          "position": 189
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0190",
-          "headword": "Resist.",
-          "position": 190
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0191",
-          "headword": "Capture.",
-          "position": 191
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0192",
-          "headword": "Victory.",
-          "position": 192
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0193",
-          "headword": "Triumph.",
-          "position": 193
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0194",
-          "headword": "conquer",
-          "position": 194
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0195",
-          "headword": "monument this",
-          "position": 195
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0196",
-          "headword": "tablet the",
-          "position": 196
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0197",
-          "headword": "statue the",
-          "position": 197
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0198",
-          "headword": "Medal.",
-          "position": 198
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0199",
-          "headword": "Honor.",
-          "position": 199
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0200",
-          "headword": "Glorious.",
-          "position": 200
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0201",
-          "headword": "Contribute.",
-          "position": 201
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0202",
-          "headword": "Devote.",
-          "position": 202
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0203",
-          "headword": "Oh,",
-          "position": 203
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0204",
-          "headword": "Patrol.",
-          "position": 204
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0205",
-          "headword": "Guard.",
-          "position": 205
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0206",
-          "headword": "Camouflage.",
-          "position": 206
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0207",
-          "headword": "Obstacle.",
-          "position": 207
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0208",
-          "headword": "burrow",
-          "position": 208
-        },
         {
           "stable_id": "bv1at4y1579f-ch18-0209",
           "headword": "spy",
@@ -3155,6 +2772,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 2732,
+  "word_count": 2811,
   "index_entry_count": 0
 }
