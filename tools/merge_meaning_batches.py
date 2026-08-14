@@ -2,8 +2,13 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def main() -> int:
@@ -22,6 +27,9 @@ def main() -> int:
         if not accepted_path.exists():
             raise SystemExit(f"missing accepted meaning batch: {accepted_path}")
         payload = json.loads(accepted_path.read_text(encoding="utf-8"))
+        expected_digest = sha256(input_path)
+        if payload.get("input_sha256") != expected_digest:
+            raise SystemExit(f"meaning input digest mismatch: {accepted_path}")
         expected = {item["stable_id"] for item in json.loads(input_path.read_text(encoding="utf-8"))["items"]}
         actual = {item.get("stable_id") for item in payload.get("items", [])}
         if expected != actual: raise SystemExit(f"meaning ID mismatch: {accepted_path}")

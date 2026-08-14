@@ -9,6 +9,7 @@ can resume without touching completed batches.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -28,6 +29,10 @@ def extract_json(stdout: str) -> dict:
         if isinstance(value, dict):
             return value
     raise ValueError("model output did not contain one JSON object")
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def validate_payload(payload: dict, expected: dict[str, dict], batch_number: int) -> dict:
@@ -126,16 +131,21 @@ def main() -> int:
         batch_number = int(input_path.stem.split("-")[-1])
         output_path = output_dir / input_path.name
         payload = json.loads(input_path.read_text(encoding="utf-8"))
+        input_digest = sha256(input_path)
         expected = {item["stable_id"]: item for item in payload.get("items", [])}
         if not expected:
             raise SystemExit(f"empty input batch: {input_path}")
         if output_path.exists() and not args.force:
             try:
-                validate_payload(json.loads(output_path.read_text(encoding="utf-8")), expected, batch_number)
+                accepted = json.loads(output_path.read_text(encoding="utf-8"))
+                validate_payload(accepted, expected, batch_number)
+                if accepted.get("input_sha256") != input_digest:
+                    raise ValueError("accepted batch was generated from an older input digest")
             except (OSError, ValueError, json.JSONDecodeError) as exc:
-                raise SystemExit(f"existing accepted batch is invalid; use --force: {output_path}: {exc}") from exc
-            print(f"[{index}/{len(input_paths)}] kept {output_path.name}", flush=True)
-            continue
+                print(f"[{index}/{len(input_paths)}] regenerating {output_path.name}: {exc}", file=sys.stderr, flush=True)
+            else:
+                print(f"[{index}/{len(input_paths)}] kept {output_path.name}", flush=True)
+                continue
 
         prompt_path = prompt_dir / f"batch-{batch_number:04d}.txt"
         prompt_path.write_text(build_prompt(payload), encoding="utf-8")
@@ -144,7 +154,7 @@ def main() -> int:
             try:
                 raw = run_qwen(prompt_path, args.timeout)
                 normalized = validate_payload(extract_json(raw), expected, batch_number)
-                accepted_payload = {"schema_version": 1, "batch": batch_number, "items": list(normalized.values())}
+                accepted_payload = {"schema_version": 1, "batch": batch_number, "input_sha256": input_digest, "items": list(normalized.values())}
                 temporary = output_path.with_suffix(output_path.suffix + ".tmp")
                 temporary.write_text(json.dumps(accepted_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
                 temporary.replace(output_path)
