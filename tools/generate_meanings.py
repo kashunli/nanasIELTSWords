@@ -91,7 +91,7 @@ def run_qwen(prompt_path: Path, timeout: int) -> str:
     literal_path = str(prompt_path).replace("'", "''")
     command = f"$prompt = [IO.File]::ReadAllText('{literal_path}'); qwen -p $prompt"
     completed = subprocess.run(
-        ["powershell.exe", "-NoLogo", "-NonInteractive", "-Command", command],
+        ["pwsh.exe", "-NoLogo", "-NonInteractive", "-Command", command],
         cwd=prompt_path.parents[3],
         capture_output=True,
         text=True,
