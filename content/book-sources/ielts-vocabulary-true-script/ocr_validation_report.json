@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T09:14:06.123535+00:00",
+  "generated_at": "2026-08-14T09:18:54.968100+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1877,23 +1877,35 @@
     },
     {
       "pdf_page": 241,
+      "book_page": 230,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 242,
+      "book_page": 231,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 243,
+      "book_page": 232,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 244,
+      "book_page": 233,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 245,
@@ -2372,10 +2384,6 @@
     25,
     35,
     36,
-    241,
-    242,
-    243,
-    244,
     245,
     246,
     247,
@@ -2717,257 +2725,12 @@
     },
     "18": {
       "expected_audio_words": 213,
-      "ocr_words": 80,
-      "matched_words": 80,
-      "matched_by_headword": 6,
-      "matched_by_sentence": 73,
-      "matched_by_order": 1,
+      "ocr_words": 129,
+      "matched_words": 129,
+      "matched_by_headword": 12,
+      "matched_by_sentence": 115,
+      "matched_by_order": 2,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch18-0081",
-          "headword": "Prevent.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0082",
-          "headword": "Revolt.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0083",
-          "headword": "Betray.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0084",
-          "headword": "Treason.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0085",
-          "headword": "Rebel.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0086",
-          "headword": "Traitor.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0087",
-          "headword": "Patriot.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0088",
-          "headword": "Blame.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0089",
-          "headword": "Reproach.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0090",
-          "headword": "Evidence.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0091",
-          "headword": "Proof.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0092",
-          "headword": "Terror.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0093",
-          "headword": "Terrible.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0094",
-          "headword": "Terrific.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0095",
-          "headword": "Horrible.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0096",
-          "headword": "Alarm.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0097",
-          "headword": "Dread.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0098",
-          "headword": "Frighten.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0099",
-          "headword": "Tension.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0100",
-          "headword": "Turbulent.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0101",
-          "headword": "Turmoil.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0102",
-          "headword": "Scenario.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0103",
-          "headword": "Occasion.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0104",
-          "headword": "Limit.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0105",
-          "headword": "Boundary.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0106",
-          "headword": "Rain.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0107",
-          "headword": "Compete.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0108",
-          "headword": "Contest.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0109",
-          "headword": "Contend.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0110",
-          "headword": "Rival.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0111",
-          "headword": "Competitor.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0112",
-          "headword": "Enemy.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0113",
-          "headword": "Strategy.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0114",
-          "headword": "Tactic.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0115",
-          "headword": "Maneuver.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0116",
-          "headword": "Blueprint.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0117",
-          "headword": "Warn.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0118",
-          "headword": "compel.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0119",
-          "headword": "oblige.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0120",
-          "headword": "order.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0121",
-          "headword": "protest",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0122",
-          "headword": "refute",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0123",
-          "headword": "might",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0124",
-          "headword": "Force.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0125",
-          "headword": "Reinforce.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0126",
-          "headword": "Impair.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0127",
-          "headword": "Mitigate.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0128",
-          "headword": "Comfort.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0129",
-          "headword": "Event.",
-          "position": 129
-        },
         {
           "stable_id": "bv1at4y1579f-ch18-0130",
           "headword": "matter.",
@@ -3392,6 +3155,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 2683,
+  "word_count": 2732,
   "index_entry_count": 0
 }
