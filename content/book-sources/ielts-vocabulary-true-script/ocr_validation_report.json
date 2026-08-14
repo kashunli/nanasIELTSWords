@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T10:00:33.053489+00:00",
+  "generated_at": "2026-08-14T10:13:36.601842+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2114,23 +2114,35 @@
     },
     {
       "pdf_page": 271,
+      "book_page": 260,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 272,
+      "book_page": 261,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 273,
+      "book_page": 262,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 274,
+      "book_page": 263,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 275,
@@ -2457,10 +2469,6 @@
     25,
     35,
     36,
-    271,
-    272,
-    273,
-    274,
     275,
     276,
     277,
@@ -2808,117 +2816,12 @@
     },
     "20": {
       "expected_audio_words": 269,
-      "ocr_words": 80,
-      "matched_words": 80,
-      "matched_by_headword": 3,
-      "matched_by_sentence": 76,
+      "ocr_words": 129,
+      "matched_words": 128,
+      "matched_by_headword": 11,
+      "matched_by_sentence": 116,
       "matched_by_order": 1,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch20-0081",
-          "headword": "Collide.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0082",
-          "headword": "Contact.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0083",
-          "headword": "Connect.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0084",
-          "headword": "Combine.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0085",
-          "headword": "Bond.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0086",
-          "headword": "Integrate.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0087",
-          "headword": "Wrap.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0088",
-          "headword": "Penetrate.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0089",
-          "headword": "Pierce.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0090",
-          "headword": "Insert.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0091",
-          "headword": "Tilt.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0092",
-          "headword": "Tow.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0093",
-          "headword": "Trail.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0094",
-          "headword": "Arrange.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0095",
-          "headword": "Manipulate.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0096",
-          "headword": "Steer.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0097",
-          "headword": "Baptise.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0098",
-          "headword": "Bet.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0099",
-          "headword": "Stake.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0100",
-          "headword": "Gamble.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0101",
-          "headword": "Promise.",
-          "position": 101
-        },
         {
           "stable_id": "bv1at4y1579f-ch20-0102",
           "headword": "Attract. She",
@@ -2928,141 +2831,6 @@
           "stable_id": "bv1at4y1579f-ch20-0103",
           "headword": "Obsess.",
           "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0104",
-          "headword": "Obsess.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0105",
-          "headword": "Mesmerise.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0106",
-          "headword": "Nightmare.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0107",
-          "headword": "Amaze.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0108",
-          "headword": "Marvel.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0109",
-          "headword": "Astonish.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0110",
-          "headword": "involve.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0111",
-          "headword": "annoy.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0112",
-          "headword": "upset.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0113",
-          "headword": "bewilder.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0114",
-          "headword": "irony.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0115",
-          "headword": "Indignity.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0116",
-          "headword": "Contempt.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0117",
-          "headword": "Neglect.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0118",
-          "headword": "Disregard.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0119",
-          "headword": "Ignorance.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0120",
-          "headword": "Bias.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0121",
-          "headword": "Deviate.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0122",
-          "headword": "Expel.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0123",
-          "headword": "Flee.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0124",
-          "headword": "Bully.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0125",
-          "headword": "Panic.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0126",
-          "headword": "Terrify.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0127",
-          "headword": "Revenge.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0128",
-          "headword": "Kidnap.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0129",
-          "headword": "Hijack.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0130",
-          "headword": "smuggle.",
-          "position": 130
         },
         {
           "stable_id": "bv1at4y1579f-ch20-0131",
@@ -3760,9 +3528,14 @@
           "position": 269
         }
       ],
-      "unexpected_ocr_words": []
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0272-06",
+          "headword": "attract"
+        }
+      ]
     }
   },
-  "word_count": 3017,
+  "word_count": 3066,
   "index_entry_count": 0
 }
