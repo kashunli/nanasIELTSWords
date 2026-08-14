@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T07:35:44.120750+00:00",
+  "generated_at": "2026-08-14T07:45:35.121051+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1420,33 +1420,51 @@
     },
     {
       "pdf_page": 183,
+      "book_page": 172,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 184,
+      "book_page": 173,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 185,
+      "book_page": 174,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 186,
+      "book_page": 175,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 187,
+      "book_page": 176,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 188,
+      "book_page": 177,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 189,
@@ -2211,12 +2229,6 @@
     25,
     35,
     36,
-    183,
-    184,
-    185,
-    186,
-    187,
-    188,
     189,
     190,
     191,
@@ -2533,8 +2545,312 @@
       "matched_by_order": 6,
       "missing_audio_words": [],
       "unexpected_ocr_words": []
+    },
+    "14": {
+      "expected_audio_words": 132,
+      "ocr_words": 79,
+      "matched_words": 76,
+      "matched_by_headword": 13,
+      "matched_by_sentence": 60,
+      "matched_by_order": 3,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch14-0015",
+          "headword": "The airline launched",
+          "position": 15
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0078",
+          "headword": "Submerge.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0079",
+          "headword": "Sailor.",
+          "position": 79
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0080",
+          "headword": "Seaman.",
+          "position": 80
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0081",
+          "headword": "Carrier.",
+          "position": 81
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0082",
+          "headword": "steamer.",
+          "position": 82
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0083",
+          "headword": "liner.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0084",
+          "headword": "vessel.",
+          "position": 84
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0085",
+          "headword": "ferry.",
+          "position": 85
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0086",
+          "headword": "sail.",
+          "position": 86
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0087",
+          "headword": "raft.",
+          "position": 87
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0088",
+          "headword": "canoe.",
+          "position": 88
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0089",
+          "headword": "ore.",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0090",
+          "headword": "deck.",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0091",
+          "headword": "turbine.",
+          "position": 91
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0092",
+          "headword": "propeller.",
+          "position": 92
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0093",
+          "headword": "Stern.",
+          "position": 93
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0094",
+          "headword": "A board.",
+          "position": 94
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0095",
+          "headword": "Embark.",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0096",
+          "headword": "Channel.",
+          "position": 96
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0097",
+          "headword": "Canal.",
+          "position": 97
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0098",
+          "headword": "Ditch.",
+          "position": 98
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0099",
+          "headword": "Railroad.",
+          "position": 99
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0100",
+          "headword": "Railway.",
+          "position": 100
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0101",
+          "headword": "Locomotive.",
+          "position": 101
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0102",
+          "headword": "Subway.",
+          "position": 102
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0103",
+          "headword": "Underground.",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0104",
+          "headword": "Tunnel.",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0105",
+          "headword": "rail.",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0106",
+          "headword": "depart.",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0107",
+          "headword": "arrive.",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0108",
+          "headword": "destination.",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0109",
+          "headword": "Delay.",
+          "position": 109
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0110",
+          "headword": "Post-Pone.",
+          "position": 110
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0111",
+          "headword": "Defer.",
+          "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0112",
+          "headword": "Lull.",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0113",
+          "headword": "expire",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0114",
+          "headword": "To you.",
+          "position": 114
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0115",
+          "headword": "postage",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0116",
+          "headword": "stamp",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0117",
+          "headword": "envelope.",
+          "position": 117
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0118",
+          "headword": "Mail.",
+          "position": 118
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0119",
+          "headword": "Packet.",
+          "position": 119
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0120",
+          "headword": "Package.",
+          "position": 120
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0121",
+          "headword": "Bind.",
+          "position": 121
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0122",
+          "headword": "Parcel.",
+          "position": 122
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0123",
+          "headword": "Load.",
+          "position": 123
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0124",
+          "headword": "Burden.",
+          "position": 124
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0125",
+          "headword": "transfer the",
+          "position": 125
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0126",
+          "headword": "transmit",
+          "position": 126
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0127",
+          "headword": "transit",
+          "position": 127
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0128",
+          "headword": "Deliver.",
+          "position": 128
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0129",
+          "headword": "Convey.",
+          "position": 129
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0130",
+          "headword": "Speed.",
+          "position": 130
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0131",
+          "headword": "Velocity.",
+          "position": 131
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch14-0132",
+          "headword": "Swift",
+          "position": 132
+        }
+      ],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0184-03",
+          "headword": "airline"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0184-04",
+          "headword": "airplane"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0184-05",
+          "headword": "helicopter"
+        }
+      ]
     }
   },
-  "word_count": 2032,
+  "word_count": 2111,
   "index_entry_count": 0
 }
