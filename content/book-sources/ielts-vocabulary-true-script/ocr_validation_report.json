@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T06:40:54.072586+00:00",
+  "generated_at": "2026-08-14T06:50:33.947361+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1177,18 +1177,27 @@
     },
     {
       "pdf_page": 152,
+      "book_page": 141,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 153,
+      "book_page": 142,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 154,
+      "book_page": 143,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 2
     },
     {
       "pdf_page": 155,
@@ -1199,18 +1208,26 @@
     },
     {
       "pdf_page": 156,
+      "book_page": 145,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 157,
+      "book_page": 146,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 158,
+      "book_page": 147,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 159,
@@ -2127,12 +2144,6 @@
     25,
     35,
     36,
-    152,
-    153,
-    154,
-    156,
-    157,
-    158,
     159,
     160,
     161,
@@ -2429,166 +2440,755 @@
     },
     "11": {
       "expected_audio_words": 111,
-      "ocr_words": 81,
-      "matched_words": 81,
-      "matched_by_headword": 4,
-      "matched_by_sentence": 74,
+      "ocr_words": 113,
+      "matched_words": 111,
+      "matched_by_headword": 9,
+      "matched_by_sentence": 97,
+      "matched_by_order": 5,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0152-02",
+          "headword": "string"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0152-03",
+          "headword": "thread"
+        }
+      ]
+    },
+    "12": {
+      "expected_audio_words": 170,
+      "ocr_words": 26,
+      "matched_words": 26,
+      "matched_by_headword": 2,
+      "matched_by_sentence": 21,
       "matched_by_order": 3,
       "missing_audio_words": [
         {
-          "stable_id": "bv1at4y1579f-ch11-0082",
-          "headword": "pin.",
+          "stable_id": "bv1at4y1579f-ch12-0027",
+          "headword": "Cutlery.",
+          "position": 27
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0028",
+          "headword": "Silver.",
+          "position": 28
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0029",
+          "headword": "Ceramic.",
+          "position": 29
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0030",
+          "headword": "Porcelain.",
+          "position": 30
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0031",
+          "headword": "Bowl.",
+          "position": 31
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0032",
+          "headword": "Dish.",
+          "position": 32
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0033",
+          "headword": "Saucer.",
+          "position": 33
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0034",
+          "headword": "Tray.",
+          "position": 34
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0035",
+          "headword": "Fork.",
+          "position": 35
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0036",
+          "headword": "Knife.",
+          "position": 36
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0037",
+          "headword": "Spoon.",
+          "position": 37
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0038",
+          "headword": "Glass.",
+          "position": 38
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0039",
+          "headword": "mug.",
+          "position": 39
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0040",
+          "headword": "Kettle.",
+          "position": 40
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0041",
+          "headword": "Pan.",
+          "position": 41
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0042",
+          "headword": "Pot.",
+          "position": 42
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0043",
+          "headword": "Stove.",
+          "position": 43
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0044",
+          "headword": "Furnace.",
+          "position": 44
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0045",
+          "headword": "Oven.",
+          "position": 45
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0046",
+          "headword": "Tin.",
+          "position": 46
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0047",
+          "headword": "Lid.",
+          "position": 47
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0048",
+          "headword": "Drink.",
+          "position": 48
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0049",
+          "headword": "Beverage.",
+          "position": 49
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0050",
+          "headword": "Juice.",
+          "position": 50
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0051",
+          "headword": "Soda.",
+          "position": 51
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0052",
+          "headword": "Coffee.",
+          "position": 52
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0053",
+          "headword": "Alcohol.",
+          "position": 53
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0054",
+          "headword": "Liquor.",
+          "position": 54
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0055",
+          "headword": "Whiskey.",
+          "position": 55
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0056",
+          "headword": "Brandy.",
+          "position": 56
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0057",
+          "headword": "Drunk.",
+          "position": 57
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0058",
+          "headword": "Tobacco.",
+          "position": 58
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0059",
+          "headword": "Cigarette.",
+          "position": 59
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0060",
+          "headword": "Sober.",
+          "position": 60
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0061",
+          "headword": "vegetable.",
+          "position": 61
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0062",
+          "headword": "Tomato.",
+          "position": 62
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0063",
+          "headword": "Potato.",
+          "position": 63
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0064",
+          "headword": "Pea.",
+          "position": 64
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0065",
+          "headword": "Bean.",
+          "position": 65
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0066",
+          "headword": "Cucumber.",
+          "position": 66
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0067",
+          "headword": "Cabbage.",
+          "position": 67
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0068",
+          "headword": "Onion.",
+          "position": 68
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0069",
+          "headword": "Mushroom.",
+          "position": 69
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0070",
+          "headword": "Eggplant.",
+          "position": 70
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0071",
+          "headword": "Carrot.",
+          "position": 71
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0072",
+          "headword": "Turnip.",
+          "position": 72
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0073",
+          "headword": "Radish,",
+          "position": 73
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0074",
+          "headword": "Fruit,",
+          "position": 74
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0075",
+          "headword": "Peel,",
+          "position": 75
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0076",
+          "headword": "Strip,",
+          "position": 76
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0077",
+          "headword": "Core,",
+          "position": 77
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0078",
+          "headword": "Hull.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0079",
+          "headword": "Cherry.",
+          "position": 79
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0080",
+          "headword": "Berry.",
+          "position": 80
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0081",
+          "headword": "Grape.",
+          "position": 81
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0082",
+          "headword": "Papaya,",
           "position": 82
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0083",
-          "headword": "Strap.",
+          "stable_id": "bv1at4y1579f-ch12-0083",
+          "headword": "Peach,",
           "position": 83
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0084",
-          "headword": "Stripe.",
+          "stable_id": "bv1at4y1579f-ch12-0084",
+          "headword": "Pear,",
           "position": 84
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0085",
-          "headword": "Ribbon.",
+          "stable_id": "bv1at4y1579f-ch12-0085",
+          "headword": "Plum,",
           "position": 85
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0086",
-          "headword": "Belt.",
+          "stable_id": "bv1at4y1579f-ch12-0086",
+          "headword": "Orange.",
           "position": 86
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0087",
-          "headword": "Chain.",
+          "stable_id": "bv1at4y1579f-ch12-0087",
+          "headword": "Melon.",
           "position": 87
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0088",
-          "headword": "Bracelet.",
+          "stable_id": "bv1at4y1579f-ch12-0088",
+          "headword": "Lemon.",
           "position": 88
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0089",
-          "headword": "Necklace.",
+          "stable_id": "bv1at4y1579f-ch12-0089",
+          "headword": "Kiwi.",
           "position": 89
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0090",
-          "headword": "Bead.",
+          "stable_id": "bv1at4y1579f-ch12-0090",
+          "headword": "Crop.",
           "position": 90
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0091",
-          "headword": "Textile.",
+          "stable_id": "bv1at4y1579f-ch12-0091",
+          "headword": "Corn.",
           "position": 91
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0092",
-          "headword": "Velvet.",
+          "stable_id": "bv1at4y1579f-ch12-0092",
+          "headword": "Grain.",
           "position": 92
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0093",
-          "headword": "Wool.",
+          "stable_id": "bv1at4y1579f-ch12-0093",
+          "headword": "Wheat.",
           "position": 93
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0094",
-          "headword": "Patch.",
+          "stable_id": "bv1at4y1579f-ch12-0094",
+          "headword": "Porridge.",
           "position": 94
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0095",
-          "headword": "Rag.",
+          "stable_id": "bv1at4y1579f-ch12-0095",
+          "headword": "Paste.",
           "position": 95
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0096",
-          "headword": "Shabby.",
+          "stable_id": "bv1at4y1579f-ch12-0096",
+          "headword": "livestock",
           "position": 96
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0097",
-          "headword": "Tight.",
+          "stable_id": "bv1at4y1579f-ch12-0097",
+          "headword": "chicken",
           "position": 97
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0098",
-          "headword": "Color.",
+          "stable_id": "bv1at4y1579f-ch12-0098",
+          "headword": "turkey",
           "position": 98
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0099",
-          "headword": "White.",
+          "stable_id": "bv1at4y1579f-ch12-0099",
+          "headword": "beef",
           "position": 99
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0100",
-          "headword": "Yellow.",
+          "stable_id": "bv1at4y1579f-ch12-0100",
+          "headword": "pork",
           "position": 100
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0101",
-          "headword": "Brown.",
+          "stable_id": "bv1at4y1579f-ch12-0101",
+          "headword": "mutton",
           "position": 101
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0102",
-          "headword": "Gray.",
+          "stable_id": "bv1at4y1579f-ch12-0102",
+          "headword": "sausage",
           "position": 102
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0103",
-          "headword": "Pink.",
+          "stable_id": "bv1at4y1579f-ch12-0103",
+          "headword": "fish",
           "position": 103
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0104",
-          "headword": "Purple.",
+          "stable_id": "bv1at4y1579f-ch12-0104",
+          "headword": "pond",
           "position": 104
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0105",
-          "headword": "Tan.",
+          "stable_id": "bv1at4y1579f-ch12-0105",
+          "headword": "rod",
           "position": 105
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0106",
-          "headword": "Fade.",
+          "stable_id": "bv1at4y1579f-ch12-0106",
+          "headword": "Dairy.",
           "position": 106
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0107",
-          "headword": "Stain.",
+          "stable_id": "bv1at4y1579f-ch12-0107",
+          "headword": "Milk.",
           "position": 107
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0108",
-          "headword": "Blot.",
+          "stable_id": "bv1at4y1579f-ch12-0108",
+          "headword": "Yogurt.",
           "position": 108
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0109",
-          "headword": "Figure.",
+          "stable_id": "bv1at4y1579f-ch12-0109",
+          "headword": "Cream.",
           "position": 109
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0110",
-          "headword": "Slender.",
+          "stable_id": "bv1at4y1579f-ch12-0110",
+          "headword": "Cheese.",
           "position": 110
         },
         {
-          "stable_id": "bv1at4y1579f-ch11-0111",
-          "headword": "Slight.",
+          "stable_id": "bv1at4y1579f-ch12-0111",
+          "headword": "butter.",
           "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0112",
+          "headword": "salad.",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0113",
+          "headword": "sandwich.",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0114",
+          "headword": "hamburger.",
+          "position": 114
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0115",
+          "headword": "Loaf.",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0116",
+          "headword": "Pie.",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0117",
+          "headword": "Pizza.",
+          "position": 117
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0118",
+          "headword": "Pasta.",
+          "position": 118
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0119",
+          "headword": "Spaghetti.",
+          "position": 119
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0120",
+          "headword": "Soup.",
+          "position": 120
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0121",
+          "headword": "Pudding.",
+          "position": 121
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0122",
+          "headword": "Biscuit.",
+          "position": 122
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0123",
+          "headword": "Jam.",
+          "position": 123
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0124",
+          "headword": "Nut.",
+          "position": 124
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0125",
+          "headword": "Chocolate.",
+          "position": 125
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0126",
+          "headword": "Ice cream.",
+          "position": 126
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0127",
+          "headword": "Vanilla.",
+          "position": 127
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0128",
+          "headword": "mustard.",
+          "position": 128
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0129",
+          "headword": "wasabi.",
+          "position": 129
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0130",
+          "headword": "pepper.",
+          "position": 130
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0131",
+          "headword": "ginger.",
+          "position": 131
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0132",
+          "headword": "Garlic.",
+          "position": 132
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0133",
+          "headword": "Scallion.",
+          "position": 133
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0134",
+          "headword": "Vinegar.",
+          "position": 134
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0135",
+          "headword": "Salt.",
+          "position": 135
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0136",
+          "headword": "sugar.",
+          "position": 136
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0137",
+          "headword": "candy.",
+          "position": 137
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0138",
+          "headword": "honey.",
+          "position": 138
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0139",
+          "headword": "flavor.",
+          "position": 139
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0140",
+          "headword": "sour.",
+          "position": 140
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0141",
+          "headword": "sweet.",
+          "position": 141
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0142",
+          "headword": "bitter.",
+          "position": 142
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0143",
+          "headword": "spicy.",
+          "position": 143
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0144",
+          "headword": "delicious.",
+          "position": 144
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0145",
+          "headword": "yummy.",
+          "position": 145
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0146",
+          "headword": "tasty.",
+          "position": 146
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0147",
+          "headword": "hunger.",
+          "position": 147
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0148",
+          "headword": "Thirsty.",
+          "position": 148
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0149",
+          "headword": "Spice.",
+          "position": 149
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0150",
+          "headword": "Sauce.",
+          "position": 150
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0151",
+          "headword": "Ketchup.",
+          "position": 151
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0152",
+          "headword": "perfume.",
+          "position": 152
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0153",
+          "headword": "ingredient.",
+          "position": 153
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0154",
+          "headword": "supplement.",
+          "position": 154
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0155",
+          "headword": "Cook.",
+          "position": 155
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0156",
+          "headword": "bake",
+          "position": 156
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0157",
+          "headword": "fry",
+          "position": 157
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0158",
+          "headword": "roast",
+          "position": 158
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0159",
+          "headword": "Toast.",
+          "position": 159
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0160",
+          "headword": "Suck.",
+          "position": 160
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0161",
+          "headword": "Swallow.",
+          "position": 161
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0162",
+          "headword": "Lick.",
+          "position": 162
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0163",
+          "headword": "Chew.",
+          "position": 163
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0164",
+          "headword": "gum would",
+          "position": 164
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0165",
+          "headword": "soak I",
+          "position": 165
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0166",
+          "headword": "dip",
+          "position": 166
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0167",
+          "headword": "squeeze",
+          "position": 167
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0168",
+          "headword": "Stir.",
+          "position": 168
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0169",
+          "headword": "Grind.",
+          "position": 169
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch12-0170",
+          "headword": "Slice.",
+          "position": 170
         }
       ],
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1693,
+  "word_count": 1751,
   "index_entry_count": 0
 }
