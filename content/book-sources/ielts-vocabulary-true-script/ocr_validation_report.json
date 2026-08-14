@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T11:46:11.168862+00:00",
+  "generated_at": "2026-08-14T11:53:10.642163+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2563,13 +2563,17 @@
     },
     {
       "pdf_page": 328,
+      "book_page": 317,
       "page_type": "index",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 329,
+      "book_page": 318,
       "page_type": "index",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 330,
@@ -2621,8 +2625,6 @@
     25,
     35,
     36,
-    328,
-    329,
     330,
     331,
     332,
@@ -2961,5 +2963,5 @@
     }
   },
   "word_count": 3674,
-  "index_entry_count": 1485
+  "index_entry_count": 2080
 }
