@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T03:58:46.537277+00:00",
+  "generated_at": "2026-08-14T04:11:28.899031+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -609,33 +609,51 @@
     },
     {
       "pdf_page": 80,
+      "book_page": 69,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 81,
+      "book_page": 70,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 82,
+      "book_page": 71,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 83,
+      "book_page": 72,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 84,
+      "book_page": 73,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 85,
+      "book_page": 74,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 86,
@@ -1923,12 +1941,6 @@
     25,
     35,
     36,
-    80,
-    81,
-    82,
-    83,
-    84,
-    85,
     86,
     87,
     88,
@@ -2877,8 +2889,8 @@
     },
     "5": {
       "expected_audio_words": 399,
-      "ocr_words": 194,
-      "matched_words": 174,
+      "ocr_words": 271,
+      "matched_words": 241,
       "missing_audio_words": [
         {
           "stable_id": "bv1at4y1579f-ch05-0025",
@@ -2976,16 +2988,6 @@
           "position": 176
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0194",
-          "headword": "triple",
-          "position": 194
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0195",
-          "headword": "quadruple",
-          "position": 195
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0196",
           "headword": "multiple 18",
           "position": 196
@@ -2996,139 +2998,9 @@
           "position": 197
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0198",
-          "headword": "Minimum.",
-          "position": 198
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0199",
-          "headword": "Approximately.",
-          "position": 199
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0200",
-          "headword": "Chart.",
-          "position": 200
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0201",
-          "headword": "Graph.",
-          "position": 201
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0202",
-          "headword": "Diagram.",
-          "position": 202
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0203",
-          "headword": "Table.",
-          "position": 203
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0204",
-          "headword": "Matrix.",
-          "position": 204
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0205",
-          "headword": "Rectangle.",
-          "position": 205
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0206",
-          "headword": "Cube.",
-          "position": 206
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0207",
-          "headword": "Angle.",
-          "position": 207
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0208",
-          "headword": "Triangle.",
-          "position": 208
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0209",
-          "headword": "Diagonal.",
-          "position": 209
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0210",
-          "headword": "Straight.",
-          "position": 210
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0211",
-          "headword": "Circle.",
-          "position": 211
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0212",
-          "headword": "Round.",
-          "position": 212
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0213",
-          "headword": "Dot.",
-          "position": 213
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0214",
-          "headword": "Sphere.",
-          "position": 214
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0215",
-          "headword": "Cone.",
-          "position": 215
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0216",
-          "headword": "Extent.",
-          "position": 216
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0217",
-          "headword": "Width.",
-          "position": 217
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0218",
-          "headword": "Length.",
-          "position": 218
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0219",
-          "headword": "Decimal.",
-          "position": 219
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0220",
           "headword": "Percent.",
           "position": 220
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0221",
-          "headword": "Proportion.",
-          "position": 221
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0222",
-          "headword": "Rate.",
-          "position": 222
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0223",
-          "headword": "Ratio.",
-          "position": 223
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0224",
-          "headword": "Fraction.",
-          "position": 224
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0225",
@@ -3141,149 +3013,9 @@
           "position": 226
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0227",
-          "headword": "Density.",
-          "position": 227
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0228",
-          "headword": "Fahrenheit.",
-          "position": 228
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0229",
-          "headword": "Mercury.",
-          "position": 229
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0230",
-          "headword": "Battery.",
-          "position": 230
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0231",
-          "headword": "Volt.",
-          "position": 231
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0232",
-          "headword": "radiate",
-          "position": 232
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0233",
-          "headword": "emit",
-          "position": 233
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0234",
-          "headword": "transparent",
-          "position": 234
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0235",
-          "headword": "hollow",
-          "position": 235
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0236",
-          "headword": "Ozone.",
-          "position": 236
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0237",
-          "headword": "Gravity.",
-          "position": 237
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0238",
-          "headword": "Friction.",
-          "position": 238
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0239",
-          "headword": "eccentric",
-          "position": 239
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0240",
-          "headword": "displace",
-          "position": 240
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0241",
-          "headword": "boil",
-          "position": 241
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0242",
           "headword": "Melts.",
           "position": 242
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0243",
-          "headword": "Dissolve.",
-          "position": 243
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0244",
-          "headword": "Rust.",
-          "position": 244
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0245",
-          "headword": "Ferment.",
-          "position": 245
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0246",
-          "headword": "dilute.",
-          "position": 246
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0247",
-          "headword": "Acid.",
-          "position": 247
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0248",
-          "headword": "Noxious.",
-          "position": 248
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0249",
-          "headword": "Static.",
-          "position": 249
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0250",
-          "headword": "Inert.",
-          "position": 250
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0251",
-          "headword": "Inherent.",
-          "position": 251
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0252",
-          "headword": "formula.",
-          "position": 252
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0253",
-          "headword": "component.",
-          "position": 253
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0254",
-          "headword": "compose.",
-          "position": 254
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0255",
-          "headword": "Mixture",
-          "position": 255
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0256",
@@ -3301,64 +3033,9 @@
           "position": 258
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0259",
-          "headword": "Practical",
-          "position": 259
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0260",
-          "headword": "Doctrine",
-          "position": 260
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0261",
           "headword": "Principle A",
           "position": 261
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0262",
-          "headword": "Discipline",
-          "position": 262
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0263",
-          "headword": "Term.",
-          "position": 263
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0264",
-          "headword": "Semester.",
-          "position": 264
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0265",
-          "headword": "Timetable.",
-          "position": 265
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0266",
-          "headword": "Schedule.",
-          "position": 266
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0267",
-          "headword": "Deadline.",
-          "position": 267
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0268",
-          "headword": "Course.",
-          "position": 268
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0269",
-          "headword": "Lesson.",
-          "position": 269
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0270",
-          "headword": "Curriculum.",
-          "position": 270
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0271",
@@ -4086,10 +3763,50 @@
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0078-10",
           "headword": "sum"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0080-03",
+          "headword": "multiple"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0080-04",
+          "headword": "maximum"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0081-13",
+          "headword": "per cent (= percent)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0082-05",
+          "headword": "scale"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0082-06",
+          "headword": "ounce"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0083-11",
+          "headword": "melt"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0084-10",
+          "headword": "blend"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0084-11",
+          "headword": "theory"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0085-01",
+          "headword": "empirical"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0085-04",
+          "headword": "principle"
         }
       ]
     }
   },
-  "word_count": 808,
+  "word_count": 885,
   "index_entry_count": 0
 }
