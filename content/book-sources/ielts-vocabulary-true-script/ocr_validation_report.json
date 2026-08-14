@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T02:04:02.964314+00:00",
+  "generated_at": "2026-08-14T02:20:59.853783+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -227,68 +227,109 @@
     },
     {
       "pdf_page": 32,
+      "book_page": 21,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 33,
+      "book_page": 22,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 34,
+      "book_page": 23,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 35,
+      "book_page": 24,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "needs_review",
+      "review_reasons": [
+        "The plough headword and pronunciation are not visible in the page image; the entry is identified by the visible example and footer index."
+      ],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 36,
+      "book_page": 25,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "needs_review",
+      "review_reasons": [
+        "The page begins with only the continuation of the burgeoning-market example; the missing preceding English words are not visible in this page image."
+      ],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 37,
+      "book_page": 26,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 38,
+      "book_page": 27,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 39,
+      "book_page": 28,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 40,
+      "book_page": 29,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 41,
+      "book_page": 30,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 42,
+      "book_page": 31,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 43,
+      "book_page": 32,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 44,
+      "book_page": 33,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 45,
@@ -1783,19 +1824,8 @@
     10,
     15,
     25,
-    32,
-    33,
-    34,
     35,
     36,
-    37,
-    38,
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
     45,
     46,
     47,
@@ -2362,8 +2392,920 @@
           "headword": "gas"
         }
       ]
+    },
+    "2": {
+      "expected_audio_words": 130,
+      "ocr_words": 130,
+      "matched_words": 110,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch02-0001",
+          "headword": "2. Photosynthesis.",
+          "position": 1
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0015",
+          "headword": "Variation Variation",
+          "position": 15
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0016",
+          "headword": "Diversity This",
+          "position": 16
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0017",
+          "headword": "Hybridization Somatic",
+          "position": 17
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0024",
+          "headword": "So,",
+          "position": 24
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0031",
+          "headword": "Plough.",
+          "position": 31
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0038",
+          "headword": "Vars.",
+          "position": 38
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0043",
+          "headword": "Mold.",
+          "position": 43
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0044",
+          "headword": "Pollan.",
+          "position": 44
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0073",
+          "headword": "bow.",
+          "position": 73
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0089",
+          "headword": "reef the",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0090",
+          "headword": "alga some",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0095",
+          "headword": "Absorb Dry",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0104",
+          "headword": "protect we",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0105",
+          "headword": "preserve it",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0106",
+          "headword": "conservation some",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0107",
+          "headword": "bush fire the",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0108",
+          "headword": "extinguish they",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0111",
+          "headword": "Parish.",
+          "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch02-0121",
+          "headword": "Favorable.",
+          "position": 121
+        }
+      ],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0033-01",
+          "headword": "photosynthesis"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-02",
+          "headword": "variation"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-03",
+          "headword": "diversity"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-04",
+          "headword": "hybridisation (= hybridization)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0034-11",
+          "headword": "sow"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0035-07",
+          "headword": "plough (= plow)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0035-14",
+          "headword": "vase"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0036-05",
+          "headword": "mould (= mold)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0036-06",
+          "headword": "pollen"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0038-02",
+          "headword": "bough"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0039-05",
+          "headword": "reef"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0039-06",
+          "headword": "alga"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0039-11",
+          "headword": "absorb"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-05",
+          "headword": "protect"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-06",
+          "headword": "preserve"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-07",
+          "headword": "conservation"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-08",
+          "headword": "bush fire"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-09",
+          "headword": "extinguish"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0040-12",
+          "headword": "perish"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0041-08",
+          "headword": "favourable (= favorable)"
+        }
+      ]
+    },
+    "3": {
+      "expected_audio_words": 168,
+      "ocr_words": 27,
+      "matched_words": 26,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch03-0016",
+          "headword": "Species species,",
+          "position": 16
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0028",
+          "headword": "Ancestor.",
+          "position": 28
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0029",
+          "headword": "Descendant.",
+          "position": 29
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0030",
+          "headword": "Offspring.",
+          "position": 30
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0031",
+          "headword": "subgroup.",
+          "position": 31
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0032",
+          "headword": "feed.",
+          "position": 32
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0033",
+          "headword": "breed.",
+          "position": 33
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0034",
+          "headword": "interbreed.",
+          "position": 34
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0035",
+          "headword": "hybridize.",
+          "position": 35
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0036",
+          "headword": "proliferate.",
+          "position": 36
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0037",
+          "headword": "sterility.",
+          "position": 37
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0038",
+          "headword": "mate.",
+          "position": 38
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0039",
+          "headword": "courtship.",
+          "position": 39
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0040",
+          "headword": "lay.",
+          "position": 40
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0041",
+          "headword": "hatch.",
+          "position": 41
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0042",
+          "headword": "brood.",
+          "position": 42
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0043",
+          "headword": "Spawn.",
+          "position": 43
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0044",
+          "headword": "Mature.",
+          "position": 44
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0045",
+          "headword": "Skin.",
+          "position": 45
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0046",
+          "headword": "Claw.",
+          "position": 46
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0047",
+          "headword": "Poor.",
+          "position": 47
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0048",
+          "headword": "Beak.",
+          "position": 48
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0049",
+          "headword": "Fin.",
+          "position": 49
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0050",
+          "headword": "wing",
+          "position": 50
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0051",
+          "headword": "plume this",
+          "position": 51
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0052",
+          "headword": "feather a",
+          "position": 52
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0053",
+          "headword": "fur.",
+          "position": 53
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0054",
+          "headword": "Bristle.",
+          "position": 54
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0055",
+          "headword": "Curl.",
+          "position": 55
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0056",
+          "headword": "Insect.",
+          "position": 56
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0057",
+          "headword": "Worm.",
+          "position": 57
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0058",
+          "headword": "Pest.",
+          "position": 58
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0059",
+          "headword": "Parasite.",
+          "position": 59
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0060",
+          "headword": "Spiders.",
+          "position": 60
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0061",
+          "headword": "Butterfly.",
+          "position": 61
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0062",
+          "headword": "Mosquito.",
+          "position": 62
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0063",
+          "headword": "Cricket.",
+          "position": 63
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0064",
+          "headword": "Penguin.",
+          "position": 64
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0065",
+          "headword": "Seal.",
+          "position": 65
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0066",
+          "headword": "Tortoise.",
+          "position": 66
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0067",
+          "headword": "Turtle.",
+          "position": 67
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0068",
+          "headword": "Whale.",
+          "position": 68
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0069",
+          "headword": "Kangaroo.",
+          "position": 69
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0070",
+          "headword": "Camel.",
+          "position": 70
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0071",
+          "headword": "Panda.",
+          "position": 71
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0072",
+          "headword": "Elephant.",
+          "position": 72
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0073",
+          "headword": "Trunk.",
+          "position": 73
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0074",
+          "headword": "Ivory.",
+          "position": 74
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0075",
+          "headword": "Horn.",
+          "position": 75
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0076",
+          "headword": "Bear.",
+          "position": 76
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0077",
+          "headword": "Wolf.",
+          "position": 77
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0078",
+          "headword": "Dragon.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0079",
+          "headword": "fucks.",
+          "position": 79
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0080",
+          "headword": "Cub.",
+          "position": 80
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0081",
+          "headword": "Carth.",
+          "position": 81
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0082",
+          "headword": "Pup.",
+          "position": 82
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0083",
+          "headword": "Lam.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0084",
+          "headword": "Cattle.",
+          "position": 84
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0085",
+          "headword": "Ox.",
+          "position": 85
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0086",
+          "headword": "Bull.",
+          "position": 86
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0087",
+          "headword": "Buffalo.",
+          "position": 87
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0088",
+          "headword": "Horse.",
+          "position": 88
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0089",
+          "headword": "Zebra.",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0090",
+          "headword": "Donkey.",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0091",
+          "headword": "Saddle.",
+          "position": 91
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0092",
+          "headword": "Harness.",
+          "position": 92
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0093",
+          "headword": "Falcon.",
+          "position": 93
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0094",
+          "headword": "Hawke,",
+          "position": 94
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0095",
+          "headword": "Eagle,",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0096",
+          "headword": "Owl,",
+          "position": 96
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0097",
+          "headword": "Swallow,",
+          "position": 97
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0098",
+          "headword": "Sparrow.",
+          "position": 98
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0099",
+          "headword": "Pigeon.",
+          "position": 99
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0100",
+          "headword": "Crow.",
+          "position": 100
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0101",
+          "headword": "swan",
+          "position": 101
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0102",
+          "headword": "goose",
+          "position": 102
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0103",
+          "headword": "cock",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0104",
+          "headword": "mouse The",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0105",
+          "headword": "rat Now",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0106",
+          "headword": "Squirrel.",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0107",
+          "headword": "Hair.",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0108",
+          "headword": "Frog.",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0109",
+          "headword": "behavior.",
+          "position": 109
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0110",
+          "headword": "bite.",
+          "position": 110
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0111",
+          "headword": "sting.",
+          "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0112",
+          "headword": "bark.",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0113",
+          "headword": "Raw.",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0114",
+          "headword": "Rub.",
+          "position": 114
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0115",
+          "headword": "Creep.",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0116",
+          "headword": "Crawl.",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0117",
+          "headword": "Habitat.",
+          "position": 117
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0118",
+          "headword": "Nest.",
+          "position": 118
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0119",
+          "headword": "Hive.",
+          "position": 119
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0120",
+          "headword": "Cell.",
+          "position": 120
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0121",
+          "headword": "cage.",
+          "position": 121
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0122",
+          "headword": "stable.",
+          "position": 122
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0123",
+          "headword": "barn.",
+          "position": 123
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0124",
+          "headword": "hedge.",
+          "position": 124
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0125",
+          "headword": "Barrier.",
+          "position": 125
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0126",
+          "headword": "Bar.",
+          "position": 126
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0127",
+          "headword": "Anatomy.",
+          "position": 127
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0128",
+          "headword": "Epidemic.",
+          "position": 128
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0129",
+          "headword": "Gene.",
+          "position": 129
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0130",
+          "headword": "Jam.",
+          "position": 130
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0131",
+          "headword": "Bacteria.",
+          "position": 131
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0132",
+          "headword": "virus.",
+          "position": 132
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0133",
+          "headword": "Microbe.",
+          "position": 133
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0134",
+          "headword": "Metabolism.",
+          "position": 134
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0135",
+          "headword": "Protein.",
+          "position": 135
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0136",
+          "headword": "Vitamin.",
+          "position": 136
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0137",
+          "headword": "Secret.",
+          "position": 137
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0138",
+          "headword": "Excrete.",
+          "position": 138
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0139",
+          "headword": "Devour.",
+          "position": 139
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0140",
+          "headword": "Instinct.",
+          "position": 140
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0141",
+          "headword": "Intuitive.",
+          "position": 141
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0142",
+          "headword": "Potential.",
+          "position": 142
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0143",
+          "headword": "Intelligence.",
+          "position": 143
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0144",
+          "headword": "Functional.",
+          "position": 144
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0145",
+          "headword": "Sensitive.",
+          "position": 145
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0146",
+          "headword": "Flexible.",
+          "position": 146
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0147",
+          "headword": "Acoustic.",
+          "position": 147
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0148",
+          "headword": "Optical.",
+          "position": 148
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0149",
+          "headword": "Nocturnal.",
+          "position": 149
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0150",
+          "headword": "Dorment.",
+          "position": 150
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0151",
+          "headword": "Hibernation.",
+          "position": 151
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0152",
+          "headword": "Track.",
+          "position": 152
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0153",
+          "headword": "Trace.",
+          "position": 153
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0154",
+          "headword": "Alternate",
+          "position": 154
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0155",
+          "headword": "Pray",
+          "position": 155
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0156",
+          "headword": "Predator",
+          "position": 156
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0157",
+          "headword": "Victim.",
+          "position": 157
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0158",
+          "headword": "Captive.",
+          "position": 158
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0159",
+          "headword": "Defensive.",
+          "position": 159
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0160",
+          "headword": "Undergo.",
+          "position": 160
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0161",
+          "headword": "Suffer.",
+          "position": 161
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0162",
+          "headword": "Vulnerable.",
+          "position": 162
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0163",
+          "headword": "Subsistence.",
+          "position": 163
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0164",
+          "headword": "Exist.",
+          "position": 164
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0165",
+          "headword": "Exterminate.",
+          "position": 165
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0166",
+          "headword": "Tame.",
+          "position": 166
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0167",
+          "headword": "keeper.",
+          "position": 167
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch03-0168",
+          "headword": "shepherd.",
+          "position": 168
+        }
+      ],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0044-05",
+          "headword": "species"
+        }
+      ]
     }
   },
-  "word_count": 241,
+  "word_count": 398,
   "index_entry_count": 0
 }
