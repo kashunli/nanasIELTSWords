@@ -51,14 +51,15 @@ being guessed. The generated `book_words.json` retains alignment status,
 evidence, page provenance, and review reasons.
 
 `tools/build_content.py` projects matched OCR records into the separate
-`book_references` table. It does not overwrite canonical ASR fields in
-`word_items` or `examples`. The API returns both layers, and the React study
-wall uses the reviewed-book headword, meaning, translation, IPA, example,
-collocations, word-formation notes, and page provenance as the learner-facing
-dossier while keeping the raw ASR word and sentence visible as evidence. For
-example, an audio ASR result of `Plato.` can display the OCR-backed book word
-`plateau` because the book example contains `plateau` and the sentence aligns
-exactly.
+`book_references` table and selects learner-facing fields independently. A
+book headword or sentence alignment replaces the corresponding `word_items`
+or `examples` field and records `accepted_*_source='book'`; unmatched fields
+retain `accepted_*_source='asr'`. The API still returns the separate book
+reference and keeps raw review reasons available for audit, while the React
+study wall only surfaces ASR for unmatched learner-facing fields. For example,
+an audio ASR result of `Plato.` uses the OCR-backed book word `plateau` when
+the book example and audio sentence align exactly, without deleting the raw
+transcript artifact.
 
 Sentence confirmation remains a separate, reversible browser-local decision.
 It is included in the local progress backup and remains keyed by stable item

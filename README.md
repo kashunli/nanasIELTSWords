@@ -7,9 +7,10 @@ The application uses the recordings as primary evidence. Whisper supplies the
 initial headword and example sentence transcript; Luna/Codex-generated English
 and Simplified Chinese meanings are stored as clearly labeled draft metadata.
 The reviewed book/PDF layer is now imported separately from the ASR layer: when
-its page order and sentence evidence align to an audio item, it supplies the
-learner-facing word dossier without changing stable audio-based item IDs or
-browser study progress. Raw ASR remains visible as evidence.
+its word or sentence evidence aligns to an audio item, it supplies the
+learner-facing field without changing stable audio-based item IDs or browser
+study progress. Raw ASR remains preserved in preparation artifacts and is only
+shown for learner-facing fields that still lack a reliable book match.
 
 ## Current source
 
@@ -100,8 +101,11 @@ The runtime API reads the resulting `book_references` table, not OCR files or
 model caches. A matched reference may add the reviewed-book headword, IPA,
 English meaning, Chinese translation, translated example, collocations,
 word-formation notes, source page, and alignment evidence to a word card. The
-canonical ASR word and sentence remain available alongside those fields so a
-learner can distinguish what was heard from what the book source reports.
+runtime projection chooses the reviewed-book word when alignment is by book
+headword or sentence, and chooses the reviewed-book sentence after an exact or
+normalized sentence match. Only unmatched fields continue to surface ASR in
+the learner-facing card; raw ASR and review reasons remain in preparation and
+runtime audit data.
 
 ## Learner state
 

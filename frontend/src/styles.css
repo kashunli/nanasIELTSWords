@@ -109,6 +109,7 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 .evidence-card .section-heading > span { color: #a75135; }
 .evidence-card .section-heading > strong { color: #4c3a32; }
 .evidence-grid { display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.3fr); gap: 16px; margin-top: 15px; padding-top: 14px; border-top: 1px solid #ead1c3; }
+.evidence-grid > div:only-child { grid-column: 1 / -1; }
 .evidence-grid > div { min-width: 0; }
 .evidence-grid span { color: #a75135; }
 .evidence-grid code { display: block; margin-top: 8px; color: #573e34; font-size: 18px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
