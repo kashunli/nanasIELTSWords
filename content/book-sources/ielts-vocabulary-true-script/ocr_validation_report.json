@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T10:39:29.067398+00:00",
+  "generated_at": "2026-08-14T10:50:45.473416+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2281,33 +2281,51 @@
     },
     {
       "pdf_page": 292,
+      "book_page": 281,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 293,
+      "book_page": 282,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 294,
+      "book_page": 283,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 295,
+      "book_page": 284,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 296,
+      "book_page": 285,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 297,
+      "book_page": 286,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 298,
@@ -2519,12 +2537,6 @@
     25,
     35,
     36,
-    292,
-    293,
-    294,
-    295,
-    296,
-    297,
     298,
     299,
     300,
@@ -2875,412 +2887,12 @@
     },
     "21": {
       "expected_audio_words": 417,
-      "ocr_words": 69,
-      "matched_words": 69,
-      "matched_by_headword": 7,
-      "matched_by_sentence": 60,
-      "matched_by_order": 2,
+      "ocr_words": 149,
+      "matched_words": 149,
+      "matched_by_headword": 14,
+      "matched_by_sentence": 130,
+      "matched_by_order": 5,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch21-0070",
-          "headword": "Hormone.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0071",
-          "headword": "Immune.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0072",
-          "headword": "Stimulus.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0073",
-          "headword": "Biorhythm.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0074",
-          "headword": "Lifestyle.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0075",
-          "headword": "Habit.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0076",
-          "headword": "Sense.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0077",
-          "headword": "Sight.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0078",
-          "headword": "Eye sight.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0079",
-          "headword": "View.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0080",
-          "headword": "Visual.",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0081",
-          "headword": "Visible.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0082",
-          "headword": "Vague.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0083",
-          "headword": "blind.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0084",
-          "headword": "Dumb.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0085",
-          "headword": "Oral.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0086",
-          "headword": "Dental.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0087",
-          "headword": "awake.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0088",
-          "headword": "yawn.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0089",
-          "headword": "nap.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0090",
-          "headword": "doze.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0091",
-          "headword": "quiet.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0092",
-          "headword": "A sleep.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0093",
-          "headword": "Cripple.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0094",
-          "headword": "Lame.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0095",
-          "headword": "Dwarf.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0096",
-          "headword": "Pregnancy.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0097",
-          "headword": "Born.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0098",
-          "headword": "Condom.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0099",
-          "headword": "Clone.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0100",
-          "headword": "Symptom.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0101",
-          "headword": "Disease.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0102",
-          "headword": "Illness.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0103",
-          "headword": "Moan.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0104",
-          "headword": "Infection.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0105",
-          "headword": "Detriment.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0106",
-          "headword": "Broken.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0107",
-          "headword": "Disabled.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0108",
-          "headword": "Invalid.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0109",
-          "headword": "Patient.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0110",
-          "headword": "Dysfunction.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0111",
-          "headword": "Diabetes.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0112",
-          "headword": "Obesity.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0113",
-          "headword": "Overweight.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0114",
-          "headword": "Hypertension.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0115",
-          "headword": "Paralyze.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0116",
-          "headword": "Dizzy.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0117",
-          "headword": "Insane.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0118",
-          "headword": "Insomnia.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0119",
-          "headword": "Allergy.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0120",
-          "headword": "Heart attack.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0121",
-          "headword": "Cancer.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0122",
-          "headword": "Arthritis.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0123",
-          "headword": "Pimple.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0124",
-          "headword": "Stroke.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0125",
-          "headword": "Plague.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0126",
-          "headword": "flu.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0127",
-          "headword": "fever.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0128",
-          "headword": "headache.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0129",
-          "headword": "swell.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0130",
-          "headword": "Choke.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0131",
-          "headword": "Injure.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0132",
-          "headword": "Injury.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0133",
-          "headword": "Hurt.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0134",
-          "headword": "Bleed.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0135",
-          "headword": "Bruise.",
-          "position": 135
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0136",
-          "headword": "Scar.",
-          "position": 136
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0137",
-          "headword": "Wound.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0138",
-          "headword": "Trauma.",
-          "position": 138
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0139",
-          "headword": "Lump.",
-          "position": 139
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0140",
-          "headword": "Pain.",
-          "position": 140
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0141",
-          "headword": "Death.",
-          "position": 141
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0142",
-          "headword": "mortal.",
-          "position": 142
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0143",
-          "headword": "demise.",
-          "position": 143
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0144",
-          "headword": "doom.",
-          "position": 144
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0145",
-          "headword": "fatal.",
-          "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0146",
-          "headword": "lethal",
-          "position": 146
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0147",
-          "headword": "corpus he",
-          "position": 147
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0148",
-          "headword": "overwork",
-          "position": 148
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0149",
-          "headword": "tire my",
-          "position": 149
-        },
         {
           "stable_id": "bv1at4y1579f-ch21-0150",
           "headword": "Exhaust.",
@@ -4625,6 +4237,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 3274,
+  "word_count": 3354,
   "index_entry_count": 0
 }
