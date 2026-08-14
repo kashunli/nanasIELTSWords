@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T03:31:32.693478+00:00",
+  "generated_at": "2026-08-14T03:40:00.788251+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -482,23 +482,34 @@
     },
     {
       "pdf_page": 64,
+      "book_page": 53,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 65,
+      "book_page": 54,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 66,
+      "book_page": 55,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 67,
+      "book_page": 56,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 68,
@@ -1876,10 +1887,6 @@
     25,
     35,
     36,
-    64,
-    65,
-    66,
-    67,
     68,
     69,
     70,
@@ -2843,8 +2850,1862 @@
           "headword": "cataclysmic"
         }
       ]
+    },
+    "5": {
+      "expected_audio_words": 399,
+      "ocr_words": 39,
+      "matched_words": 34,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch05-0025",
+          "headword": "instill.",
+          "position": 25
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0027",
+          "headword": "Emphasize",
+          "position": 27
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0028",
+          "headword": "Enhance A",
+          "position": 28
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0029",
+          "headword": "Enable This",
+          "position": 29
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0030",
+          "headword": "Inspire Our",
+          "position": 30
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0040",
+          "headword": "Clever",
+          "position": 40
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0041",
+          "headword": "Smart This",
+          "position": 41
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0042",
+          "headword": "All-round.",
+          "position": 42
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0043",
+          "headword": "Genius.",
+          "position": 43
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0044",
+          "headword": "Elite.",
+          "position": 44
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0045",
+          "headword": "Idiot.",
+          "position": 45
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0046",
+          "headword": "Wisdom.",
+          "position": 46
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0047",
+          "headword": "Wit.",
+          "position": 47
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0048",
+          "headword": "Aptitude.",
+          "position": 48
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0049",
+          "headword": "Capable.",
+          "position": 49
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0050",
+          "headword": "Excellent.",
+          "position": 50
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0051",
+          "headword": "Outstanding.",
+          "position": 51
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0052",
+          "headword": "Brilliant.",
+          "position": 52
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0053",
+          "headword": "Prestige.",
+          "position": 53
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0054",
+          "headword": "Reputation.",
+          "position": 54
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0055",
+          "headword": "Eminent.",
+          "position": 55
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0056",
+          "headword": "notorious",
+          "position": 56
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0057",
+          "headword": "esteem",
+          "position": 57
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0058",
+          "headword": "respect",
+          "position": 58
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0059",
+          "headword": "Diligent.",
+          "position": 59
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0060",
+          "headword": "Painstaking.",
+          "position": 60
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0061",
+          "headword": "Skill.",
+          "position": 61
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0062",
+          "headword": "Approach.",
+          "position": 62
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0063",
+          "headword": "Scheme.",
+          "position": 63
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0064",
+          "headword": "Headmaster.",
+          "position": 64
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0065",
+          "headword": "Principal.",
+          "position": 65
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0066",
+          "headword": "Dean.",
+          "position": 66
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0067",
+          "headword": "Faculty.",
+          "position": 67
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0068",
+          "headword": "Professor.",
+          "position": 68
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0069",
+          "headword": "Scholar.",
+          "position": 69
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0070",
+          "headword": "scientist.",
+          "position": 70
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0071",
+          "headword": "Mentor.",
+          "position": 71
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0072",
+          "headword": "Tutor.",
+          "position": 72
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0073",
+          "headword": "Lecturer.",
+          "position": 73
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0074",
+          "headword": "Assistant.",
+          "position": 74
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0075",
+          "headword": "Candidate.",
+          "position": 75
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0076",
+          "headword": "Degree.",
+          "position": 76
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0077",
+          "headword": "Qualify.",
+          "position": 77
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0078",
+          "headword": "Certify.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0079",
+          "headword": "Licence.",
+          "position": 79
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0080",
+          "headword": "Permit.",
+          "position": 80
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0081",
+          "headword": "Diploma.",
+          "position": 81
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0082",
+          "headword": "diplomat.",
+          "position": 82
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0083",
+          "headword": "Ambassador.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0084",
+          "headword": "Pupil.",
+          "position": 84
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0085",
+          "headword": "graduate",
+          "position": 85
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0086",
+          "headword": "Bachelor",
+          "position": 86
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0087",
+          "headword": "Master.",
+          "position": 87
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0088",
+          "headword": "Doctor.",
+          "position": 88
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0089",
+          "headword": "Fresher.",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0090",
+          "headword": "Sophomore.",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0091",
+          "headword": "Junior.",
+          "position": 91
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0092",
+          "headword": "Senior.",
+          "position": 92
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0093",
+          "headword": "Alumni.",
+          "position": 93
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0094",
+          "headword": "Campus.",
+          "position": 94
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0095",
+          "headword": "Orientation.",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0096",
+          "headword": "Platform.",
+          "position": 96
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0097",
+          "headword": "Coed.",
+          "position": 97
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0098",
+          "headword": "Register.",
+          "position": 98
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0099",
+          "headword": "roster.",
+          "position": 99
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0100",
+          "headword": "Enroll.",
+          "position": 100
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0101",
+          "headword": "Matriculation.",
+          "position": 101
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0102",
+          "headword": "Accommodation. The",
+          "position": 102
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0103",
+          "headword": "Dorm.",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0104",
+          "headword": "Dining hall.",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0105",
+          "headword": "Canteen.",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0106",
+          "headword": "laboratory.",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0107",
+          "headword": "experiment.",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0108",
+          "headword": "data.",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0109",
+          "headword": "quantity.",
+          "position": 109
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0110",
+          "headword": "Quality.",
+          "position": 110
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0111",
+          "headword": "Library.",
+          "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0112",
+          "headword": "Literature.",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0113",
+          "headword": "article.",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0114",
+          "headword": "author.",
+          "position": 114
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0115",
+          "headword": "tale.",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0116",
+          "headword": "fiction.",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0117",
+          "headword": "Story.",
+          "position": 117
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0118",
+          "headword": "Diary.",
+          "position": 118
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0119",
+          "headword": "Poetry.",
+          "position": 119
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0120",
+          "headword": "Magazine.",
+          "position": 120
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0121",
+          "headword": "Journal.",
+          "position": 121
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0122",
+          "headword": "Coverage.",
+          "position": 122
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0123",
+          "headword": "Bibliography.",
+          "position": 123
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0124",
+          "headword": "Encyclopedia.",
+          "position": 124
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0125",
+          "headword": "Biography.",
+          "position": 125
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0126",
+          "headword": "Documentary.",
+          "position": 126
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0127",
+          "headword": "Series.",
+          "position": 127
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0128",
+          "headword": "Record.",
+          "position": 128
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0129",
+          "headword": "File.",
+          "position": 129
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0130",
+          "headword": "Profile.",
+          "position": 130
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0131",
+          "headword": "draft.",
+          "position": 131
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0132",
+          "headword": "sketch.",
+          "position": 132
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0133",
+          "headword": "brochure.",
+          "position": 133
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0134",
+          "headword": "manual.",
+          "position": 134
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0135",
+          "headword": "Frame.",
+          "position": 135
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0136",
+          "headword": "Index.",
+          "position": 136
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0137",
+          "headword": "Catalog.",
+          "position": 137
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0138",
+          "headword": "Category.",
+          "position": 138
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0139",
+          "headword": "Inventory.",
+          "position": 139
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0140",
+          "headword": "Content.",
+          "position": 140
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0141",
+          "headword": "Context.",
+          "position": 141
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0142",
+          "headword": "List.",
+          "position": 142
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0143",
+          "headword": "Chapter.",
+          "position": 143
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0144",
+          "headword": "Volume.",
+          "position": 144
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0145",
+          "headword": "Real.",
+          "position": 145
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0146",
+          "headword": "subject",
+          "position": 146
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0147",
+          "headword": "Object",
+          "position": 147
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0148",
+          "headword": "major she",
+          "position": 148
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0149",
+          "headword": "Minor.",
+          "position": 149
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0150",
+          "headword": "Sociology.",
+          "position": 150
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0151",
+          "headword": "Politics.",
+          "position": 151
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0152",
+          "headword": "Economics.",
+          "position": 152
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0153",
+          "headword": "Marketing.",
+          "position": 153
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0154",
+          "headword": "Accounting.",
+          "position": 154
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0155",
+          "headword": "Audit.",
+          "position": 155
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0156",
+          "headword": "Statistics.",
+          "position": 156
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0157",
+          "headword": "Psychology.",
+          "position": 157
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0158",
+          "headword": "Philosophy.",
+          "position": 158
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0159",
+          "headword": "Logic.",
+          "position": 159
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0160",
+          "headword": "Biology.",
+          "position": 160
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0161",
+          "headword": "Physics.",
+          "position": 161
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0162",
+          "headword": "Logistics Chemistry",
+          "position": 162
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0163",
+          "headword": "Agriculture",
+          "position": 163
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0164",
+          "headword": "Logistics",
+          "position": 164
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0165",
+          "headword": "Geography",
+          "position": 165
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0166",
+          "headword": "History.",
+          "position": 166
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0167",
+          "headword": "Engineering.",
+          "position": 167
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0168",
+          "headword": "Mechanics.",
+          "position": 168
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0169",
+          "headword": "Electronics.",
+          "position": 169
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0170",
+          "headword": "Maths.",
+          "position": 170
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0171",
+          "headword": "Arithmetic.",
+          "position": 171
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0172",
+          "headword": "Geometry.",
+          "position": 172
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0173",
+          "headword": "Algebra.",
+          "position": 173
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0174",
+          "headword": "Calculus.",
+          "position": 174
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0175",
+          "headword": "Plus,",
+          "position": 175
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0176",
+          "headword": "Some,",
+          "position": 176
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0177",
+          "headword": "Total.",
+          "position": 177
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0178",
+          "headword": "Merger.",
+          "position": 178
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0179",
+          "headword": "Equation.",
+          "position": 179
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0180",
+          "headword": "Identical.",
+          "position": 180
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0181",
+          "headword": "Minus.",
+          "position": 181
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0182",
+          "headword": "Subtract.",
+          "position": 182
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0183",
+          "headword": "multiply.",
+          "position": 183
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0184",
+          "headword": "Divide.",
+          "position": 184
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0185",
+          "headword": "Dividend.",
+          "position": 185
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0186",
+          "headword": "Remainder.",
+          "position": 186
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0187",
+          "headword": "Rational.",
+          "position": 187
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0188",
+          "headword": "Parameter.",
+          "position": 188
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0189",
+          "headword": "Variable.",
+          "position": 189
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0190",
+          "headword": "Even.",
+          "position": 190
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0191",
+          "headword": "Odd.",
+          "position": 191
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0192",
+          "headword": "Mean.",
+          "position": 192
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0193",
+          "headword": "Double.",
+          "position": 193
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0194",
+          "headword": "triple",
+          "position": 194
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0195",
+          "headword": "quadruple",
+          "position": 195
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0196",
+          "headword": "multiple 18",
+          "position": 196
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0197",
+          "headword": "maximum the",
+          "position": 197
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0198",
+          "headword": "Minimum.",
+          "position": 198
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0199",
+          "headword": "Approximately.",
+          "position": 199
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0200",
+          "headword": "Chart.",
+          "position": 200
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0201",
+          "headword": "Graph.",
+          "position": 201
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0202",
+          "headword": "Diagram.",
+          "position": 202
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0203",
+          "headword": "Table.",
+          "position": 203
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0204",
+          "headword": "Matrix.",
+          "position": 204
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0205",
+          "headword": "Rectangle.",
+          "position": 205
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0206",
+          "headword": "Cube.",
+          "position": 206
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0207",
+          "headword": "Angle.",
+          "position": 207
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0208",
+          "headword": "Triangle.",
+          "position": 208
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0209",
+          "headword": "Diagonal.",
+          "position": 209
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0210",
+          "headword": "Straight.",
+          "position": 210
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0211",
+          "headword": "Circle.",
+          "position": 211
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0212",
+          "headword": "Round.",
+          "position": 212
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0213",
+          "headword": "Dot.",
+          "position": 213
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0214",
+          "headword": "Sphere.",
+          "position": 214
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0215",
+          "headword": "Cone.",
+          "position": 215
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0216",
+          "headword": "Extent.",
+          "position": 216
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0217",
+          "headword": "Width.",
+          "position": 217
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0218",
+          "headword": "Length.",
+          "position": 218
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0219",
+          "headword": "Decimal.",
+          "position": 219
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0220",
+          "headword": "Percent.",
+          "position": 220
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0221",
+          "headword": "Proportion.",
+          "position": 221
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0222",
+          "headword": "Rate.",
+          "position": 222
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0223",
+          "headword": "Ratio.",
+          "position": 223
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0224",
+          "headword": "Fraction.",
+          "position": 224
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0225",
+          "headword": "Scales.",
+          "position": 225
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0226",
+          "headword": "Ounces.",
+          "position": 226
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0227",
+          "headword": "Density.",
+          "position": 227
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0228",
+          "headword": "Fahrenheit.",
+          "position": 228
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0229",
+          "headword": "Mercury.",
+          "position": 229
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0230",
+          "headword": "Battery.",
+          "position": 230
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0231",
+          "headword": "Volt.",
+          "position": 231
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0232",
+          "headword": "radiate",
+          "position": 232
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0233",
+          "headword": "emit",
+          "position": 233
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0234",
+          "headword": "transparent",
+          "position": 234
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0235",
+          "headword": "hollow",
+          "position": 235
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0236",
+          "headword": "Ozone.",
+          "position": 236
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0237",
+          "headword": "Gravity.",
+          "position": 237
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0238",
+          "headword": "Friction.",
+          "position": 238
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0239",
+          "headword": "eccentric",
+          "position": 239
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0240",
+          "headword": "displace",
+          "position": 240
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0241",
+          "headword": "boil",
+          "position": 241
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0242",
+          "headword": "Melts.",
+          "position": 242
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0243",
+          "headword": "Dissolve.",
+          "position": 243
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0244",
+          "headword": "Rust.",
+          "position": 244
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0245",
+          "headword": "Ferment.",
+          "position": 245
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0246",
+          "headword": "dilute.",
+          "position": 246
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0247",
+          "headword": "Acid.",
+          "position": 247
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0248",
+          "headword": "Noxious.",
+          "position": 248
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0249",
+          "headword": "Static.",
+          "position": 249
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0250",
+          "headword": "Inert.",
+          "position": 250
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0251",
+          "headword": "Inherent.",
+          "position": 251
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0252",
+          "headword": "formula.",
+          "position": 252
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0253",
+          "headword": "component.",
+          "position": 253
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0254",
+          "headword": "compose.",
+          "position": 254
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0255",
+          "headword": "Mixture",
+          "position": 255
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0256",
+          "headword": "Blend His",
+          "position": 256
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0257",
+          "headword": "Theory There",
+          "position": 257
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0258",
+          "headword": "Empirical His",
+          "position": 258
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0259",
+          "headword": "Practical",
+          "position": 259
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0260",
+          "headword": "Doctrine",
+          "position": 260
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0261",
+          "headword": "Principle A",
+          "position": 261
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0262",
+          "headword": "Discipline",
+          "position": 262
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0263",
+          "headword": "Term.",
+          "position": 263
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0264",
+          "headword": "Semester.",
+          "position": 264
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0265",
+          "headword": "Timetable.",
+          "position": 265
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0266",
+          "headword": "Schedule.",
+          "position": 266
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0267",
+          "headword": "Deadline.",
+          "position": 267
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0268",
+          "headword": "Course.",
+          "position": 268
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0269",
+          "headword": "Lesson.",
+          "position": 269
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0270",
+          "headword": "Curriculum.",
+          "position": 270
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0271",
+          "headword": "Seminar.",
+          "position": 271
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0272",
+          "headword": "Forum.",
+          "position": 272
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0273",
+          "headword": "Syllabus.",
+          "position": 273
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0274",
+          "headword": "System.",
+          "position": 274
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0275",
+          "headword": "Rudimentary.",
+          "position": 275
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0276",
+          "headword": "Basic.",
+          "position": 276
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0277",
+          "headword": "fundamental.",
+          "position": 277
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0278",
+          "headword": "elementary.",
+          "position": 278
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0279",
+          "headword": "profound.",
+          "position": 279
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0280",
+          "headword": "Superficial.",
+          "position": 280
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0281",
+          "headword": "Surface.",
+          "position": 281
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0282",
+          "headword": "Compulsory.",
+          "position": 282
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0283",
+          "headword": "Pre-requisite.",
+          "position": 283
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0284",
+          "headword": "Selective.",
+          "position": 284
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0285",
+          "headword": "Elective.",
+          "position": 285
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0286",
+          "headword": "Assignment.",
+          "position": 286
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0287",
+          "headword": "Submit.",
+          "position": 287
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0288",
+          "headword": "Preview.",
+          "position": 288
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0289",
+          "headword": "Review.",
+          "position": 289
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0290",
+          "headword": "Revise.",
+          "position": 290
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0291",
+          "headword": "Inspect.",
+          "position": 291
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0292",
+          "headword": "Consult.",
+          "position": 292
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0293",
+          "headword": "Skim.",
+          "position": 293
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0294",
+          "headword": "Scan.",
+          "position": 294
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0295",
+          "headword": "Scrutinize.",
+          "position": 295
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0296",
+          "headword": "Recite.",
+          "position": 296
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0297",
+          "headword": "Dictate.",
+          "position": 297
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0298",
+          "headword": "Examination.",
+          "position": 298
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0299",
+          "headword": "Test.",
+          "position": 299
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0300",
+          "headword": "Quiz.",
+          "position": 300
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0301",
+          "headword": "Presentation.",
+          "position": 301
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0302",
+          "headword": "plagiarise.",
+          "position": 302
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0303",
+          "headword": "Copy.",
+          "position": 303
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0304",
+          "headword": "Print.",
+          "position": 304
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0305",
+          "headword": "Thesis.",
+          "position": 305
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0306",
+          "headword": "essay.",
+          "position": 306
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0307",
+          "headword": "Paper.",
+          "position": 307
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0308",
+          "headword": "Dissertation.",
+          "position": 308
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0309",
+          "headword": "Project.",
+          "position": 309
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0310",
+          "headword": "Heading.",
+          "position": 310
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0311",
+          "headword": "Outset.",
+          "position": 311
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0312",
+          "headword": "Outline.",
+          "position": 312
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0313",
+          "headword": "Point.",
+          "position": 313
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0314",
+          "headword": "Gist.",
+          "position": 314
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0315",
+          "headword": "Opinion.",
+          "position": 315
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0316",
+          "headword": "Introduce.",
+          "position": 316
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0317",
+          "headword": "Reference.",
+          "position": 317
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0318",
+          "headword": "Site.",
+          "position": 318
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0319",
+          "headword": "Elicit.",
+          "position": 319
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0320",
+          "headword": "Quote.",
+          "position": 320
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0321",
+          "headword": "Extract.",
+          "position": 321
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0322",
+          "headword": "Abstract.",
+          "position": 322
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0323",
+          "headword": "Summary.",
+          "position": 323
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0324",
+          "headword": "Assume.",
+          "position": 324
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0325",
+          "headword": "Presume.",
+          "position": 325
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0326",
+          "headword": "Suppose.",
+          "position": 326
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0327",
+          "headword": "Hypothesis.",
+          "position": 327
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0328",
+          "headword": "Postulate.",
+          "position": 328
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0329",
+          "headword": "Speculate.",
+          "position": 329
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0330",
+          "headword": "Predict.",
+          "position": 330
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0331",
+          "headword": "Perceive.",
+          "position": 331
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0332",
+          "headword": "Detect.",
+          "position": 332
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0333",
+          "headword": "Dissern.",
+          "position": 333
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0334",
+          "headword": "Recognize.",
+          "position": 334
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0335",
+          "headword": "Conscious.",
+          "position": 335
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0336",
+          "headword": "Reckon.",
+          "position": 336
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0337",
+          "headword": "Deem.",
+          "position": 337
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0338",
+          "headword": "Imply.",
+          "position": 338
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0339",
+          "headword": "Deliberate.",
+          "position": 339
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0340",
+          "headword": "Represent.",
+          "position": 340
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0341",
+          "headword": "Insist.",
+          "position": 341
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0342",
+          "headword": "Pursist.",
+          "position": 342
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0343",
+          "headword": "Understand.",
+          "position": 343
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0344",
+          "headword": "Comprehend.",
+          "position": 344
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0345",
+          "headword": "Analyze.",
+          "position": 345
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0346",
+          "headword": "Diagnose.",
+          "position": 346
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0347",
+          "headword": "In fur,",
+          "position": 347
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0348",
+          "headword": "Deduce.",
+          "position": 348
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0349",
+          "headword": "Conclude.",
+          "position": 349
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0350",
+          "headword": "Analogy.",
+          "position": 350
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0351",
+          "headword": "Compare.",
+          "position": 351
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0352",
+          "headword": "Contrast.",
+          "position": 352
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0353",
+          "headword": "Overlap.",
+          "position": 353
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0354",
+          "headword": "Contradiction.",
+          "position": 354
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0355",
+          "headword": "Disagree.",
+          "position": 355
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0356",
+          "headword": "Differ.",
+          "position": 356
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0357",
+          "headword": "Diverse.",
+          "position": 357
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0358",
+          "headword": "Nuance.",
+          "position": 358
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0359",
+          "headword": "Inductive",
+          "position": 359
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0360",
+          "headword": "Detail –",
+          "position": 360
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0361",
+          "headword": "Thorough –",
+          "position": 361
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0362",
+          "headword": "Example",
+          "position": 362
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0363",
+          "headword": "Instance",
+          "position": 363
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0364",
+          "headword": "Confirm",
+          "position": 364
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0365",
+          "headword": "Demonstrate",
+          "position": 365
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0366",
+          "headword": "Illustrate the",
+          "position": 366
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0367",
+          "headword": "Manifest.",
+          "position": 367
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0368",
+          "headword": "Prove.",
+          "position": 368
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0369",
+          "headword": "Determine.",
+          "position": 369
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0370",
+          "headword": "Decide.",
+          "position": 370
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0371",
+          "headword": "Resolve.",
+          "position": 371
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0372",
+          "headword": "Survey.",
+          "position": 372
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0373",
+          "headword": "Observe.",
+          "position": 373
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0374",
+          "headword": "Inquire.",
+          "position": 374
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0375",
+          "headword": "Query.",
+          "position": 375
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0376",
+          "headword": "Questionnaire.",
+          "position": 376
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0377",
+          "headword": "Achieve.",
+          "position": 377
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0378",
+          "headword": "Accomplish.",
+          "position": 378
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0379",
+          "headword": "Attain.",
+          "position": 379
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0380",
+          "headword": "Credit.",
+          "position": 380
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0381",
+          "headword": "Score.",
+          "position": 381
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0382",
+          "headword": "Mark.",
+          "position": 382
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0383",
+          "headword": "Rank This",
+          "position": 383
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0384",
+          "headword": "Rank There",
+          "position": 384
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0385",
+          "headword": "Row A",
+          "position": 385
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0386",
+          "headword": "Queue",
+          "position": 386
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0387",
+          "headword": "Grant.",
+          "position": 387
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0388",
+          "headword": "Praise.",
+          "position": 388
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0389",
+          "headword": "Appreciate.",
+          "position": 389
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0390",
+          "headword": "feedback.",
+          "position": 390
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0391",
+          "headword": "underestimate.",
+          "position": 391
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0392",
+          "headword": "overestimate.",
+          "position": 392
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0393",
+          "headword": "Apply.",
+          "position": 393
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0394",
+          "headword": "Fellowship.",
+          "position": 394
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0395",
+          "headword": "Scholarship.",
+          "position": 395
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0396",
+          "headword": "Reward.",
+          "position": 396
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0397",
+          "headword": "Award.",
+          "position": 397
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0398",
+          "headword": "Prize.",
+          "position": 398
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch05-0399",
+          "headword": "Fee.",
+          "position": 399
+        }
+      ],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0066-12",
+          "headword": "instil (= instill)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-01",
+          "headword": "emphasise (= emphasize)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-02",
+          "headword": "enhance"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-03",
+          "headword": "enable"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0067-04",
+          "headword": "inspire"
+        }
+      ]
     }
   },
-  "word_count": 614,
+  "word_count": 653,
   "index_entry_count": 0
 }
