@@ -17,11 +17,18 @@ def normalize(value: str) -> str:
 
 
 def score(record: dict) -> tuple[int, int, float]:
+    """Rank safer candidates first, then prefer the less uncertain decode.
+
+    ``avg_logprob`` is higher for a more confident Whisper decode.  The
+    selector uses ``min`` so the final component is negated; returning the
+    raw value here would accidentally choose the *lowest* confidence pair
+    whenever two candidates had the same review flags.
+    """
     reasons = record.get("review_reasons", [])
     fatal = sum("blank_" in reason or "high_no_speech" in reason for reason in reasons)
     word_lp = record.get("word", {}).get("avg_logprob") or -10.0
     sentence_lp = record.get("sentence", {}).get("avg_logprob") or -10.0
-    return fatal, len(reasons), word_lp + sentence_lp
+    return fatal, len(reasons), -(word_lp + sentence_lp)
 
 
 def main() -> int:
