@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T11:08:57.452397+00:00",
+  "generated_at": "2026-08-14T11:17:49.893462+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2425,33 +2425,51 @@
     },
     {
       "pdf_page": 310,
+      "book_page": 299,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 311,
+      "book_page": 300,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 312,
+      "book_page": 301,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 313,
+      "book_page": 302,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 314,
+      "book_page": 303,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 315,
+      "book_page": 304,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 316,
@@ -2573,12 +2591,6 @@
     25,
     35,
     36,
-    310,
-    311,
-    312,
-    313,
-    314,
-    315,
     316,
     317,
     318,
@@ -2911,427 +2923,12 @@
     },
     "21": {
       "expected_audio_words": 417,
-      "ocr_words": 316,
-      "matched_words": 316,
-      "matched_by_headword": 31,
-      "matched_by_sentence": 276,
-      "matched_by_order": 9,
+      "ocr_words": 399,
+      "matched_words": 399,
+      "matched_by_headword": 36,
+      "matched_by_sentence": 349,
+      "matched_by_order": 14,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch21-0317",
-          "headword": "Intuition.",
-          "position": 317
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0318",
-          "headword": "spontaneous.",
-          "position": 318
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0319",
-          "headword": "Implicit.",
-          "position": 319
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0320",
-          "headword": "Illusion.",
-          "position": 320
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0321",
-          "headword": "Imaginary.",
-          "position": 321
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0322",
-          "headword": "Fancy.",
-          "position": 322
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0323",
-          "headword": "Fate.",
-          "position": 323
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0324",
-          "headword": "Fortune.",
-          "position": 324
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0325",
-          "headword": "Agony.",
-          "position": 325
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0326",
-          "headword": "Grief.",
-          "position": 326
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0327",
-          "headword": "Grief.",
-          "position": 327
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0328",
-          "headword": "Miserable.",
-          "position": 328
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0329",
-          "headword": "Distress.",
-          "position": 329
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0330",
-          "headword": "Sadness.",
-          "position": 330
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0331",
-          "headword": "Gloomy.",
-          "position": 331
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0332",
-          "headword": "Disappoint.",
-          "position": 332
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0333",
-          "headword": "Discourage.",
-          "position": 333
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0334",
-          "headword": "Wretched.",
-          "position": 334
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0335",
-          "headword": "Frustrating.",
-          "position": 335
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0336",
-          "headword": "Mourn.",
-          "position": 336
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0337",
-          "headword": "Anger.",
-          "position": 337
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0338",
-          "headword": "Furious.",
-          "position": 338
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0339",
-          "headword": "Frown.",
-          "position": 339
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0340",
-          "headword": "Rage.",
-          "position": 340
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0341",
-          "headword": "Irritate.",
-          "position": 341
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0342",
-          "headword": "hate they",
-          "position": 342
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0343",
-          "headword": "hatred his",
-          "position": 343
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0344",
-          "headword": "nuisance",
-          "position": 344
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0345",
-          "headword": "disgust",
-          "position": 345
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0346",
-          "headword": "vex",
-          "position": 346
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0347",
-          "headword": "vexed",
-          "position": 347
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0348",
-          "headword": "vexed",
-          "position": 348
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0349",
-          "headword": "vexed",
-          "position": 349
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0350",
-          "headword": "vexed vexed",
-          "position": 350
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0351",
-          "headword": "Awful.",
-          "position": 351
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0352",
-          "headword": "Unpleasant.",
-          "position": 352
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0353",
-          "headword": "Adverse.",
-          "position": 353
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0354",
-          "headword": "Hostile.",
-          "position": 354
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0355",
-          "headword": "Indignant.",
-          "position": 355
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0356",
-          "headword": "Radical.",
-          "position": 356
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0357",
-          "headword": "Mad.",
-          "position": 357
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0358",
-          "headword": "crazy",
-          "position": 358
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0359",
-          "headword": "wicked it",
-          "position": 359
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0360",
-          "headword": "vicious",
-          "position": 360
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0361",
-          "headword": "vulgar",
-          "position": 361
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0362",
-          "headword": "Mean.",
-          "position": 362
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0363",
-          "headword": "ego",
-          "position": 363
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0364",
-          "headword": "selfish he",
-          "position": 364
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0365",
-          "headword": "Nasty.",
-          "position": 365
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0366",
-          "headword": "Rash.",
-          "position": 366
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0367",
-          "headword": "Volatile.",
-          "position": 367
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0368",
-          "headword": "Weird.",
-          "position": 368
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0369",
-          "headword": "Excessive.",
-          "position": 369
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0370",
-          "headword": "Anxiety.",
-          "position": 370
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0371",
-          "headword": "Restless.",
-          "position": 371
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0372",
-          "headword": "Uneasy.",
-          "position": 372
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0373",
-          "headword": "fear",
-          "position": 373
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0374",
-          "headword": "timid",
-          "position": 374
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0375",
-          "headword": "fuss",
-          "position": 375
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0376",
-          "headword": "Insult.",
-          "position": 376
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0377",
-          "headword": "Unkind.",
-          "position": 377
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0378",
-          "headword": "Envy.",
-          "position": 378
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0379",
-          "headword": "Jealous.",
-          "position": 379
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0380",
-          "headword": "Doubt.",
-          "position": 380
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0381",
-          "headword": "Suspicion.",
-          "position": 381
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0382",
-          "headword": "Skeptical.",
-          "position": 382
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0383",
-          "headword": "Unsatisfactory.",
-          "position": 383
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0384",
-          "headword": "Unstable.",
-          "position": 384
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0385",
-          "headword": "Unsuitable.",
-          "position": 385
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0386",
-          "headword": "Unwilling.",
-          "position": 386
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0387",
-          "headword": "Reluctant.",
-          "position": 387
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0388",
-          "headword": "Hesitate.",
-          "position": 388
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0389",
-          "headword": "Confuse.",
-          "position": 389
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0390",
-          "headword": "Guilty.",
-          "position": 390
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0391",
-          "headword": "Embarrassed.",
-          "position": 391
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0392",
-          "headword": "Regret.",
-          "position": 392
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0393",
-          "headword": "Repent.",
-          "position": 393
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0394",
-          "headword": "Ashamed.",
-          "position": 394
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0395",
-          "headword": "Si,",
-          "position": 395
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0396",
-          "headword": "Weep,",
-          "position": 396
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0397",
-          "headword": "Tolerance,",
-          "position": 397
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0398",
-          "headword": "Ignorant,",
-          "position": 398
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch21-0399",
-          "headword": "Endure.",
-          "position": 399
-        },
         {
           "stable_id": "bv1at4y1579f-ch21-0400",
           "headword": "Sly.",
@@ -3426,6 +3023,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 3521,
+  "word_count": 3604,
   "index_entry_count": 0
 }
