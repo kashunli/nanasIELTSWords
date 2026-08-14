@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T06:22:56.951185+00:00",
+  "generated_at": "2026-08-14T06:31:20.243780+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1083,28 +1083,43 @@
     },
     {
       "pdf_page": 140,
+      "book_page": 129,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 141,
+      "book_page": 130,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 142,
+      "book_page": 131,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 143,
+      "book_page": 132,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 144,
+      "book_page": 133,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 145,
@@ -2095,11 +2110,6 @@
     25,
     35,
     36,
-    140,
-    141,
-    142,
-    143,
-    144,
     146,
     147,
     148,
@@ -2398,406 +2408,15 @@
     },
     "10": {
       "expected_audio_words": 152,
-      "ocr_words": 74,
-      "matched_words": 74,
-      "matched_by_headword": 8,
-      "matched_by_sentence": 63,
-      "matched_by_order": 3,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch10-0075",
-          "headword": "Factor.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0076",
-          "headword": "Section.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0077",
-          "headword": "Tag.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0078",
-          "headword": "Label.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0079",
-          "headword": "Badge.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0080",
-          "headword": "Bolt.",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0081",
-          "headword": "Knob.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0082",
-          "headword": "Handle.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0083",
-          "headword": "Shutter.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0084",
-          "headword": "Curtain.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0085",
-          "headword": "Pain.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0086",
-          "headword": "Opacity.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0087",
-          "headword": "Jar.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0088",
-          "headword": "Barrel.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0089",
-          "headword": "Bucket.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0090",
-          "headword": "pail.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0091",
-          "headword": "phone.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0092",
-          "headword": "bell.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0093",
-          "headword": "camera.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0094",
-          "headword": "Portable.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0095",
-          "headword": "Spotlight.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0096",
-          "headword": "Lantern.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0097",
-          "headword": "Bulb.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0098",
-          "headword": "Flashlight.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0099",
-          "headword": "Refrigerator.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0100",
-          "headword": "Fridge.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0101",
-          "headword": "Vacuum.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0102",
-          "headword": "Fan.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0103",
-          "headword": "Switch.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0104",
-          "headword": "Hurdle.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0105",
-          "headword": "Fence.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0106",
-          "headword": "Pedal.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0107",
-          "headword": "Shelf.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0108",
-          "headword": "Ladder",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0109",
-          "headword": "Lift.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0110",
-          "headword": "Stool.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0111",
-          "headword": "Draw.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0112",
-          "headword": "Umbrella.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0113",
-          "headword": "Raincoat.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0114",
-          "headword": "Dredge.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0115",
-          "headword": "Can.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0116",
-          "headword": "Mill.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0117",
-          "headword": "Forge.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0118",
-          "headword": "Alloy.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0119",
-          "headword": "Metal.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0120",
-          "headword": "Iron.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0121",
-          "headword": "Lead.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0122",
-          "headword": "Brass.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0123",
-          "headword": "Bronze.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0124",
-          "headword": "Cement.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0125",
-          "headword": "Pitch.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0126",
-          "headword": "Lime.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0127",
-          "headword": "Plaster.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0128",
-          "headword": "Leather.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0129",
-          "headword": "Plastic.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0130",
-          "headword": "Fiber.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0131",
-          "headword": "Fabric.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0132",
-          "headword": "knit.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0133",
-          "headword": "weave.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0134",
-          "headword": "canvas.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0135",
-          "headword": "linen.",
-          "position": 135
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0136",
-          "headword": "Cotten.",
-          "position": 136
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0137",
-          "headword": "Nylon.",
-          "position": 137
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0138",
-          "headword": "Lumber.",
-          "position": 138
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0139",
-          "headword": "wooden.",
-          "position": 139
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0140",
-          "headword": "mine.",
-          "position": 140
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0141",
-          "headword": "pit.",
-          "position": 141
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0142",
-          "headword": "fuel.",
-          "position": 142
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0143",
-          "headword": "Lubricate.",
-          "position": 143
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0144",
-          "headword": "Diamond.",
-          "position": 144
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0145",
-          "headword": "Crystal.",
-          "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0146",
-          "headword": "Inferior.",
-          "position": 146
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0147",
-          "headword": "counterfeit it",
-          "position": 147
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0148",
-          "headword": "fake",
-          "position": 148
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0149",
-          "headword": "fragile",
-          "position": 149
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0150",
-          "headword": "miniature",
-          "position": 150
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0151",
-          "headword": "available.",
-          "position": 151
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch10-0152",
-          "headword": "Durable.",
-          "position": 152
-        }
-      ],
+      "ocr_words": 152,
+      "matched_words": 152,
+      "matched_by_headword": 12,
+      "matched_by_sentence": 136,
+      "matched_by_order": 4,
+      "missing_audio_words": [],
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1534,
+  "word_count": 1612,
   "index_entry_count": 0
 }
