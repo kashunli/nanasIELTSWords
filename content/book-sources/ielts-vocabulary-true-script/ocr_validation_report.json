@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T04:57:22.492193+00:00",
+  "generated_at": "2026-08-14T05:07:21.276644+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -893,33 +893,50 @@
     },
     {
       "pdf_page": 116,
+      "book_page": 105,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 117,
+      "book_page": 106,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 18
     },
     {
       "pdf_page": 118,
+      "book_page": 107,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 119,
+      "book_page": 108,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 7
     },
     {
       "pdf_page": 120,
+      "book_page": 109,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 121,
+      "book_page": 110,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 122,
@@ -2025,12 +2042,6 @@
     25,
     35,
     36,
-    116,
-    117,
-    118,
-    119,
-    120,
-    121,
     122,
     123,
     124,
@@ -2332,271 +2343,841 @@
     },
     "8": {
       "expected_audio_words": 68,
-      "ocr_words": 17,
-      "matched_words": 17,
-      "matched_by_headword": 1,
-      "matched_by_sentence": 16,
+      "ocr_words": 68,
+      "matched_words": 68,
+      "matched_by_headword": 7,
+      "matched_by_sentence": 59,
+      "matched_by_order": 2,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
+    },
+    "9": {
+      "expected_audio_words": 176,
+      "ocr_words": 13,
+      "matched_words": 13,
+      "matched_by_headword": 3,
+      "matched_by_sentence": 10,
       "matched_by_order": 0,
       "missing_audio_words": [
         {
-          "stable_id": "bv1at4y1579f-ch08-0018",
-          "headword": "accent.",
+          "stable_id": "bv1at4y1579f-ch09-0014",
+          "headword": "Propaganda.",
+          "position": 14
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0015",
+          "headword": "Publish.",
+          "position": 15
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0016",
+          "headword": "Disseminate.",
+          "position": 16
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0017",
+          "headword": "4. See.",
+          "position": 17
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0018",
+          "headword": "Anticipate.",
           "position": 18
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0019",
-          "headword": "utterance.",
+          "stable_id": "bv1at4y1579f-ch09-0019",
+          "headword": "Expect.",
           "position": 19
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0020",
-          "headword": "Aural.",
+          "stable_id": "bv1at4y1579f-ch09-0020",
+          "headword": "A wait.",
           "position": 20
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0021",
-          "headword": "Verbal.",
+          "stable_id": "bv1at4y1579f-ch09-0021",
+          "headword": "Pastime.",
           "position": 21
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0022",
-          "headword": "Cillable.",
+          "stable_id": "bv1at4y1579f-ch09-0022",
+          "headword": "Entertain.",
           "position": 22
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0023",
-          "headword": "Finanime.",
+          "stable_id": "bv1at4y1579f-ch09-0023",
+          "headword": "Recreation.",
           "position": 23
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0024",
-          "headword": "Val.",
+          "stable_id": "bv1at4y1579f-ch09-0024",
+          "headword": "Amuse.",
           "position": 24
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0025",
-          "headword": "Consonant.",
+          "stable_id": "bv1at4y1579f-ch09-0025",
+          "headword": "Gossip.",
           "position": 25
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0026",
-          "headword": "Alphabet.",
+          "stable_id": "bv1at4y1579f-ch09-0026",
+          "headword": "Rumour.",
           "position": 26
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0027",
-          "headword": "logogram.",
+          "stable_id": "bv1at4y1579f-ch09-0027",
+          "headword": "Consensus.",
           "position": 27
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0028",
-          "headword": "Vocabulary.",
+          "stable_id": "bv1at4y1579f-ch09-0028",
+          "headword": "Festival.",
           "position": 28
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0029",
-          "headword": "Dictionary.",
+          "stable_id": "bv1at4y1579f-ch09-0029",
+          "headword": "Feast.",
           "position": 29
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0030",
-          "headword": "Idiom.",
+          "stable_id": "bv1at4y1579f-ch09-0030",
+          "headword": "program.",
           "position": 30
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0031",
-          "headword": "Phrase.",
+          "stable_id": "bv1at4y1579f-ch09-0031",
+          "headword": "rehearsal.",
           "position": 31
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0032",
-          "headword": "Clause.",
+          "stable_id": "bv1at4y1579f-ch09-0032",
+          "headword": "perform.",
           "position": 32
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0033",
-          "headword": "Expression.",
+          "stable_id": "bv1at4y1579f-ch09-0033",
+          "headword": "imitate.",
           "position": 33
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0034",
-          "headword": "tense,",
+          "stable_id": "bv1at4y1579f-ch09-0034",
+          "headword": "mimic he",
           "position": 34
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0035",
-          "headword": "root,",
+          "stable_id": "bv1at4y1579f-ch09-0035",
+          "headword": "simulate we",
           "position": 35
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0036",
-          "headword": "prefix,",
+          "stable_id": "bv1at4y1579f-ch09-0036",
+          "headword": "circus last",
           "position": 36
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0037",
-          "headword": "Suffix.",
+          "stable_id": "bv1at4y1579f-ch09-0037",
+          "headword": "magic the",
           "position": 37
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0038",
-          "headword": "Abbreviation.",
+          "stable_id": "bv1at4y1579f-ch09-0038",
+          "headword": "Drama.",
           "position": 38
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0039",
-          "headword": "Synonym.",
+          "stable_id": "bv1at4y1579f-ch09-0039",
+          "headword": "Concert.",
           "position": 39
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0040",
-          "headword": "antonym.",
+          "stable_id": "bv1at4y1579f-ch09-0040",
+          "headword": "Symphony.",
           "position": 40
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0041",
-          "headword": "noun.",
+          "stable_id": "bv1at4y1579f-ch09-0041",
+          "headword": "Orchestra.",
           "position": 41
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0042",
-          "headword": "singular.",
+          "stable_id": "bv1at4y1579f-ch09-0042",
+          "headword": "Ballet.",
           "position": 42
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0043",
-          "headword": "plural.",
+          "stable_id": "bv1at4y1579f-ch09-0043",
+          "headword": "Opera.",
           "position": 43
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0044",
-          "headword": "pronoun.",
+          "stable_id": "bv1at4y1579f-ch09-0044",
+          "headword": "Comedy.",
           "position": 44
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0045",
-          "headword": "Verb.",
+          "stable_id": "bv1at4y1579f-ch09-0045",
+          "headword": "Tragedy.",
           "position": 45
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0046",
-          "headword": "Adjective.",
+          "stable_id": "bv1at4y1579f-ch09-0046",
+          "headword": "Animation.",
           "position": 46
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0047",
-          "headword": "Adverb.",
+          "stable_id": "bv1at4y1579f-ch09-0047",
+          "headword": "Film.",
           "position": 47
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0048",
-          "headword": "preposition.",
+          "stable_id": "bv1at4y1579f-ch09-0048",
+          "headword": "movie.",
           "position": 48
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0049",
-          "headword": "conjunction.",
+          "stable_id": "bv1at4y1579f-ch09-0049",
+          "headword": "X-rated.",
           "position": 49
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0050",
-          "headword": "consistent.",
+          "stable_id": "bv1at4y1579f-ch09-0050",
+          "headword": "Artist.",
           "position": 50
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0051",
-          "headword": "complicated.",
+          "stable_id": "bv1at4y1579f-ch09-0051",
+          "headword": "Craftsman.",
           "position": 51
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0052",
-          "headword": "Complex.",
+          "stable_id": "bv1at4y1579f-ch09-0052",
+          "headword": "Painter.",
           "position": 52
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0053",
-          "headword": "Compile.",
+          "stable_id": "bv1at4y1579f-ch09-0053",
+          "headword": "Role.",
           "position": 53
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0054",
-          "headword": "Version.",
+          "stable_id": "bv1at4y1579f-ch09-0054",
+          "headword": "Scene.",
           "position": 54
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0055",
-          "headword": "Translate.",
+          "stable_id": "bv1at4y1579f-ch09-0055",
+          "headword": "Stage.",
           "position": 55
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0056",
-          "headword": "Paraphrase.",
+          "stable_id": "bv1at4y1579f-ch09-0056",
+          "headword": "Gallery.",
           "position": 56
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0057",
-          "headword": "Interpret.",
+          "stable_id": "bv1at4y1579f-ch09-0057",
+          "headword": "Exhibition.",
           "position": 57
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0058",
-          "headword": "Norate.",
+          "stable_id": "bv1at4y1579f-ch09-0058",
+          "headword": "Aesthetic.",
           "position": 58
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0059",
-          "headword": "Illuminate.",
+          "stable_id": "bv1at4y1579f-ch09-0059",
+          "headword": "Collect.",
           "position": 59
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0060",
-          "headword": "Decipher.",
+          "stable_id": "bv1at4y1579f-ch09-0060",
+          "headword": "Select.",
           "position": 60
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0061",
-          "headword": "Eloquence.",
+          "stable_id": "bv1at4y1579f-ch09-0061",
+          "headword": "Opt.",
           "position": 61
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0062",
-          "headword": "Communicate.",
+          "stable_id": "bv1at4y1579f-ch09-0062",
+          "headword": "Photograph.",
           "position": 62
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0063",
-          "headword": "Discussion.",
+          "stable_id": "bv1at4y1579f-ch09-0063",
+          "headword": "Portrait.",
           "position": 63
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0064",
-          "headword": "Brainstorm",
+          "stable_id": "bv1at4y1579f-ch09-0064",
+          "headword": "Painting.",
           "position": 64
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0065",
-          "headword": "Debate.",
+          "stable_id": "bv1at4y1579f-ch09-0065",
+          "headword": "Sculpture.",
           "position": 65
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0066",
-          "headword": "Commentary.",
+          "stable_id": "bv1at4y1579f-ch09-0066",
+          "headword": "Draw.",
           "position": 66
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0067",
-          "headword": "Negotiate.",
+          "stable_id": "bv1at4y1579f-ch09-0067",
+          "headword": "sketch",
           "position": 67
         },
         {
-          "stable_id": "bv1at4y1579f-ch08-0068",
-          "headword": "Contention.",
+          "stable_id": "bv1at4y1579f-ch09-0068",
+          "headword": "depict in",
           "position": 68
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0069",
+          "headword": "describe",
+          "position": 69
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0070",
+          "headword": "Carve.",
+          "position": 70
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0071",
+          "headword": "Improvise.",
+          "position": 71
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0072",
+          "headword": "Musical.",
+          "position": 72
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0073",
+          "headword": "classical.",
+          "position": 73
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0074",
+          "headword": "Jazz.",
+          "position": 74
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0075",
+          "headword": "Rock.",
+          "position": 75
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0076",
+          "headword": "Hip hop.",
+          "position": 76
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0077",
+          "headword": "Pop.",
+          "position": 77
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0078",
+          "headword": "Lyric.",
+          "position": 78
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0079",
+          "headword": "band the",
+          "position": 79
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0080",
+          "headword": "solo she",
+          "position": 80
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0081",
+          "headword": "melody I",
+          "position": 81
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0082",
+          "headword": "rhythm I",
+          "position": 82
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0083",
+          "headword": "Tone.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0084",
+          "headword": "Tune.",
+          "position": 84
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0085",
+          "headword": "Disc.",
+          "position": 85
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0086",
+          "headword": "Piano.",
+          "position": 86
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0087",
+          "headword": "Violin.",
+          "position": 87
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0088",
+          "headword": "Cello.",
+          "position": 88
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0089",
+          "headword": "Guitar.",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0090",
+          "headword": "Harmonica.",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0091",
+          "headword": "trumpet.",
+          "position": 91
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0092",
+          "headword": "drum.",
+          "position": 92
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0093",
+          "headword": "flute.",
+          "position": 93
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0094",
+          "headword": "competition.",
+          "position": 94
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0095",
+          "headword": "tournament.",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0096",
+          "headword": "Olympic.",
+          "position": 96
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0097",
+          "headword": "Sponsor.",
+          "position": 97
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0098",
+          "headword": "Patron.",
+          "position": 98
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0099",
+          "headword": "Athlete.",
+          "position": 99
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0100",
+          "headword": "Champion.",
+          "position": 100
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0101",
+          "headword": "Spectator.",
+          "position": 101
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0102",
+          "headword": "Volunteer.",
+          "position": 102
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0103",
+          "headword": "Famous.",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0104",
+          "headword": "Well known.",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0105",
+          "headword": "Energetic.",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0106",
+          "headword": "Vigorous.",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0107",
+          "headword": "Stadium.",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0108",
+          "headword": "gym.",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0109",
+          "headword": "training.",
+          "position": 109
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0110",
+          "headword": "exercise.",
+          "position": 110
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0111",
+          "headword": "indoor.",
+          "position": 111
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0112",
+          "headword": "outdoor.",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0113",
+          "headword": "motion.",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0114",
+          "headword": "mobile.",
+          "position": 114
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0115",
+          "headword": "movement.",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0116",
+          "headword": "yoga.",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0117",
+          "headword": "sprawl.",
+          "position": 117
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0118",
+          "headword": "stretch.",
+          "position": 118
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0119",
+          "headword": "Strain.",
+          "position": 119
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0120",
+          "headword": "Chess.",
+          "position": 120
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0121",
+          "headword": "Badminton.",
+          "position": 121
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0122",
+          "headword": "Golf.",
+          "position": 122
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0123",
+          "headword": "Billiards.",
+          "position": 123
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0124",
+          "headword": "Soccer.",
+          "position": 124
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0125",
+          "headword": "Tennis.",
+          "position": 125
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0126",
+          "headword": "Volleyball.",
+          "position": 126
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0127",
+          "headword": "Hockey.",
+          "position": 127
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0128",
+          "headword": "Cricket.",
+          "position": 128
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0129",
+          "headword": "Goal.",
+          "position": 129
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0130",
+          "headword": "Bat.",
+          "position": 130
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0131",
+          "headword": "Racket.",
+          "position": 131
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0132",
+          "headword": "Kick.",
+          "position": 132
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0133",
+          "headword": "Knock.",
+          "position": 133
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0134",
+          "headword": "Flip.",
+          "position": 134
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0135",
+          "headword": "Pitch.",
+          "position": 135
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0136",
+          "headword": "Throw.",
+          "position": 136
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0137",
+          "headword": "Toss.",
+          "position": 137
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0138",
+          "headword": "Slide.",
+          "position": 138
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0139",
+          "headword": "Slip.",
+          "position": 139
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0140",
+          "headword": "Glide.",
+          "position": 140
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0141",
+          "headword": "tumble.",
+          "position": 141
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0142",
+          "headword": "ski.",
+          "position": 142
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0143",
+          "headword": "skate.",
+          "position": 143
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0144",
+          "headword": "cycling. He",
+          "position": 144
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0145",
+          "headword": "Dive.",
+          "position": 145
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0146",
+          "headword": "Drift.",
+          "position": 146
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0147",
+          "headword": "Jump.",
+          "position": 147
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0148",
+          "headword": "Leap.",
+          "position": 148
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0149",
+          "headword": "Plunge.",
+          "position": 149
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0150",
+          "headword": "Spring.",
+          "position": 150
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0151",
+          "headword": "Hop.",
+          "position": 151
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0152",
+          "headword": "Bounce.",
+          "position": 152
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0153",
+          "headword": "Tent.",
+          "position": 153
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0154",
+          "headword": "Camp.",
+          "position": 154
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0155",
+          "headword": "Picnic.",
+          "position": 155
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0156",
+          "headword": "hunt.",
+          "position": 156
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0157",
+          "headword": "Race.",
+          "position": 157
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0158",
+          "headword": "Marathon.",
+          "position": 158
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0159",
+          "headword": "Pedestrian.",
+          "position": 159
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0160",
+          "headword": "pace.",
+          "position": 160
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0161",
+          "headword": "step.",
+          "position": 161
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0162",
+          "headword": "excursion.",
+          "position": 162
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0163",
+          "headword": "cruise.",
+          "position": 163
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0164",
+          "headword": "trip.",
+          "position": 164
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0165",
+          "headword": "vacation.",
+          "position": 165
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0166",
+          "headword": "hike.",
+          "position": 166
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0167",
+          "headword": "jog.",
+          "position": 167
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0168",
+          "headword": "Stride.",
+          "position": 168
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0169",
+          "headword": "Wander.",
+          "position": 169
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0170",
+          "headword": "Linger.",
+          "position": 170
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0171",
+          "headword": "Lag.",
+          "position": 171
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0172",
+          "headword": "Climb.",
+          "position": 172
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0173",
+          "headword": "Pull.",
+          "position": 173
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0174",
+          "headword": "Drag.",
+          "position": 174
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0175",
+          "headword": "Bend.",
+          "position": 175
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch09-0176",
+          "headword": "Bao,",
+          "position": 176
         }
       ],
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1233,
+  "word_count": 1297,
   "index_entry_count": 0
 }
