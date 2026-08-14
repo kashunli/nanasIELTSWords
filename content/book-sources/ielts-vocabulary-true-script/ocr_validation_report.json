@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T04:47:00.392438+00:00",
+  "generated_at": "2026-08-14T04:57:22.492193+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -847,18 +847,27 @@
     },
     {
       "pdf_page": 110,
+      "book_page": 99,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 111,
+      "book_page": 100,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 112,
+      "book_page": 101,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 113,
@@ -869,13 +878,18 @@
     },
     {
       "pdf_page": 114,
+      "book_page": 103,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 115,
+      "book_page": 104,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 116,
@@ -2011,11 +2025,6 @@
     25,
     35,
     36,
-    110,
-    111,
-    112,
-    114,
-    115,
     116,
     117,
     118,
@@ -2313,226 +2322,281 @@
     },
     "7": {
       "expected_audio_words": 79,
-      "ocr_words": 37,
-      "matched_words": 37,
-      "matched_by_headword": 5,
-      "matched_by_sentence": 32,
+      "ocr_words": 79,
+      "matched_words": 79,
+      "matched_by_headword": 9,
+      "matched_by_sentence": 70,
+      "matched_by_order": 0,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
+    },
+    "8": {
+      "expected_audio_words": 68,
+      "ocr_words": 17,
+      "matched_words": 17,
+      "matched_by_headword": 1,
+      "matched_by_sentence": 16,
       "matched_by_order": 0,
       "missing_audio_words": [
         {
-          "stable_id": "bv1at4y1579f-ch07-0038",
-          "headword": "Sacred.",
+          "stable_id": "bv1at4y1579f-ch08-0018",
+          "headword": "accent.",
+          "position": 18
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0019",
+          "headword": "utterance.",
+          "position": 19
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0020",
+          "headword": "Aural.",
+          "position": 20
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0021",
+          "headword": "Verbal.",
+          "position": 21
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0022",
+          "headword": "Cillable.",
+          "position": 22
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0023",
+          "headword": "Finanime.",
+          "position": 23
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0024",
+          "headword": "Val.",
+          "position": 24
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0025",
+          "headword": "Consonant.",
+          "position": 25
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0026",
+          "headword": "Alphabet.",
+          "position": 26
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0027",
+          "headword": "logogram.",
+          "position": 27
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0028",
+          "headword": "Vocabulary.",
+          "position": 28
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0029",
+          "headword": "Dictionary.",
+          "position": 29
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0030",
+          "headword": "Idiom.",
+          "position": 30
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0031",
+          "headword": "Phrase.",
+          "position": 31
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0032",
+          "headword": "Clause.",
+          "position": 32
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0033",
+          "headword": "Expression.",
+          "position": 33
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0034",
+          "headword": "tense,",
+          "position": 34
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0035",
+          "headword": "root,",
+          "position": 35
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0036",
+          "headword": "prefix,",
+          "position": 36
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0037",
+          "headword": "Suffix.",
+          "position": 37
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch08-0038",
+          "headword": "Abbreviation.",
           "position": 38
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0039",
-          "headword": "Hallowed.",
+          "stable_id": "bv1at4y1579f-ch08-0039",
+          "headword": "Synonym.",
           "position": 39
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0040",
-          "headword": "Holy.",
+          "stable_id": "bv1at4y1579f-ch08-0040",
+          "headword": "antonym.",
           "position": 40
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0041",
-          "headword": "Pope.",
+          "stable_id": "bv1at4y1579f-ch08-0041",
+          "headword": "noun.",
           "position": 41
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0042",
-          "headword": "Bishop.",
+          "stable_id": "bv1at4y1579f-ch08-0042",
+          "headword": "singular.",
           "position": 42
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0043",
-          "headword": "Missionary.",
+          "stable_id": "bv1at4y1579f-ch08-0043",
+          "headword": "plural.",
           "position": 43
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0044",
-          "headword": "Priest.",
+          "stable_id": "bv1at4y1579f-ch08-0044",
+          "headword": "pronoun.",
           "position": 44
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0045",
-          "headword": "Bible.",
+          "stable_id": "bv1at4y1579f-ch08-0045",
+          "headword": "Verb.",
           "position": 45
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0046",
-          "headword": "Church.",
+          "stable_id": "bv1at4y1579f-ch08-0046",
+          "headword": "Adjective.",
           "position": 46
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0047",
-          "headword": "Cathedral.",
+          "stable_id": "bv1at4y1579f-ch08-0047",
+          "headword": "Adverb.",
           "position": 47
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0048",
-          "headword": "Choir.",
+          "stable_id": "bv1at4y1579f-ch08-0048",
+          "headword": "preposition.",
           "position": 48
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0049",
-          "headword": "Monk.",
+          "stable_id": "bv1at4y1579f-ch08-0049",
+          "headword": "conjunction.",
           "position": 49
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0050",
-          "headword": "Temple.",
+          "stable_id": "bv1at4y1579f-ch08-0050",
+          "headword": "consistent.",
           "position": 50
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0051",
-          "headword": "Pagoda.",
+          "stable_id": "bv1at4y1579f-ch08-0051",
+          "headword": "complicated.",
           "position": 51
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0052",
-          "headword": "Empire.",
+          "stable_id": "bv1at4y1579f-ch08-0052",
+          "headword": "Complex.",
           "position": 52
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0053",
-          "headword": "Imperial.",
+          "stable_id": "bv1at4y1579f-ch08-0053",
+          "headword": "Compile.",
           "position": 53
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0054",
-          "headword": "Royal.",
+          "stable_id": "bv1at4y1579f-ch08-0054",
+          "headword": "Version.",
           "position": 54
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0055",
-          "headword": "Dynasty.",
+          "stable_id": "bv1at4y1579f-ch08-0055",
+          "headword": "Translate.",
           "position": 55
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0056",
-          "headword": "Chronology.",
+          "stable_id": "bv1at4y1579f-ch08-0056",
+          "headword": "Paraphrase.",
           "position": 56
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0057",
-          "headword": "Emperor.",
+          "stable_id": "bv1at4y1579f-ch08-0057",
+          "headword": "Interpret.",
           "position": 57
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0058",
-          "headword": "King.",
+          "stable_id": "bv1at4y1579f-ch08-0058",
+          "headword": "Norate.",
           "position": 58
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0059",
-          "headword": "Queen.",
+          "stable_id": "bv1at4y1579f-ch08-0059",
+          "headword": "Illuminate.",
           "position": 59
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0060",
-          "headword": "Prince.",
+          "stable_id": "bv1at4y1579f-ch08-0060",
+          "headword": "Decipher.",
           "position": 60
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0061",
-          "headword": "Princess.",
+          "stable_id": "bv1at4y1579f-ch08-0061",
+          "headword": "Eloquence.",
           "position": 61
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0062",
-          "headword": "Majesty.",
+          "stable_id": "bv1at4y1579f-ch08-0062",
+          "headword": "Communicate.",
           "position": 62
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0063",
-          "headword": "Nobility.",
+          "stable_id": "bv1at4y1579f-ch08-0063",
+          "headword": "Discussion.",
           "position": 63
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0064",
-          "headword": "Lord.",
+          "stable_id": "bv1at4y1579f-ch08-0064",
+          "headword": "Brainstorm",
           "position": 64
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0065",
-          "headword": "Knight.",
+          "stable_id": "bv1at4y1579f-ch08-0065",
+          "headword": "Debate.",
           "position": 65
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0066",
-          "headword": "Guardian.",
+          "stable_id": "bv1at4y1579f-ch08-0066",
+          "headword": "Commentary.",
           "position": 66
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0067",
-          "headword": "Nostalgia.",
+          "stable_id": "bv1at4y1579f-ch08-0067",
+          "headword": "Negotiate.",
           "position": 67
         },
         {
-          "stable_id": "bv1at4y1579f-ch07-0068",
-          "headword": "Homesick.",
+          "stable_id": "bv1at4y1579f-ch08-0068",
+          "headword": "Contention.",
           "position": 68
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0069",
-          "headword": "Celebrity.",
-          "position": 69
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0070",
-          "headword": "status.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0071",
-          "headword": "Background.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0072",
-          "headword": "Experience.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0073",
-          "headword": "Anecdote.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0074",
-          "headword": "Accident.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0075",
-          "headword": "Incident.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0076",
-          "headword": "Thrive.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0077",
-          "headword": "Prosperity.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0078",
-          "headword": "Setback.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch07-0079",
-          "headword": "Adversity.",
-          "position": 79
         }
       ],
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1174,
+  "word_count": 1233,
   "index_entry_count": 0
 }
