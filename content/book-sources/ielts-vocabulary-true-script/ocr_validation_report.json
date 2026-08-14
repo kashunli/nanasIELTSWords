@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T08:26:25.803365+00:00",
+  "generated_at": "2026-08-14T08:38:13.185136+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1664,33 +1664,51 @@
     },
     {
       "pdf_page": 214,
+      "book_page": 203,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 215,
+      "book_page": 204,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 216,
+      "book_page": 205,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 217,
+      "book_page": 206,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
     },
     {
       "pdf_page": 218,
+      "book_page": 207,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 219,
+      "book_page": 208,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 220,
@@ -2296,12 +2314,6 @@
     25,
     35,
     36,
-    214,
-    215,
-    216,
-    217,
-    218,
-    219,
     220,
     221,
     222,
@@ -2642,372 +2654,12 @@
     },
     "16": {
       "expected_audio_words": 170,
-      "ocr_words": 63,
-      "matched_words": 63,
-      "matched_by_headword": 9,
-      "matched_by_sentence": 54,
-      "matched_by_order": 0,
+      "ocr_words": 135,
+      "matched_words": 135,
+      "matched_by_headword": 20,
+      "matched_by_sentence": 114,
+      "matched_by_order": 1,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch16-0064",
-          "headword": "Spare.",
-          "position": 64
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0065",
-          "headword": "Saving.",
-          "position": 65
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0066",
-          "headword": "Redundant.",
-          "position": 66
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0067",
-          "headword": "Lack –",
-          "position": 67
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0068",
-          "headword": "Company –",
-          "position": 68
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0069",
-          "headword": "Firm –",
-          "position": 69
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0070",
-          "headword": "Enterprise.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0071",
-          "headword": "Agent.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0072",
-          "headword": "Entity.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0073",
-          "headword": "Invest.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0074",
-          "headword": "Input.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0075",
-          "headword": "Product.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0076",
-          "headword": "Acquisition.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0077",
-          "headword": "Goods.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0078",
-          "headword": "Cargo.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0079",
-          "headword": "Ensure.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0080",
-          "headword": "Guarantee.",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0081",
-          "headword": "Reliable.",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0082",
-          "headword": "Negotiation.",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0083",
-          "headword": "Attend.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0084",
-          "headword": "absent.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0085",
-          "headword": "sale.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0086",
-          "headword": "wholesale.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0087",
-          "headword": "auction.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0088",
-          "headword": "Bid.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0089",
-          "headword": "Deal.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0090",
-          "headword": "Transaction.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0091",
-          "headword": "Turnover.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0092",
-          "headword": "Dump.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0093",
-          "headword": "Export.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0094",
-          "headword": "Import.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0095",
-          "headword": "Quota.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0096",
-          "headword": "Share.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0097",
-          "headword": "benefit.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0098",
-          "headword": "Interest.",
-          "position": 98
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0099",
-          "headword": "Dividend.",
-          "position": 99
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0100",
-          "headword": "Stock.",
-          "position": 100
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0101",
-          "headword": "Account.",
-          "position": 101
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0102",
-          "headword": "Deposit.",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0103",
-          "headword": "Installment.",
-          "position": 103
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0104",
-          "headword": "Check.",
-          "position": 104
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0105",
-          "headword": "Cash.",
-          "position": 105
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0106",
-          "headword": "Coin.",
-          "position": 106
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0107",
-          "headword": "Shilling.",
-          "position": 107
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0108",
-          "headword": "Copper.",
-          "position": 108
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0109",
-          "headword": "Treasure.",
-          "position": 109
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0110",
-          "headword": "Wealth.",
-          "position": 110
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0111",
-          "headword": "Estate.",
-          "position": 111
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0112",
-          "headword": "Possess.",
-          "position": 112
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0113",
-          "headword": "Legacy.",
-          "position": 113
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0114",
-          "headword": "Descend.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0115",
-          "headword": "Worthy.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0116",
-          "headword": "Valuable.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0117",
-          "headword": "Cheap.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0118",
-          "headword": "Incentive.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0119",
-          "headword": "Accelerate.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0120",
-          "headword": "Prompt.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0121",
-          "headword": "Salary.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0122",
-          "headword": "Income.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0123",
-          "headword": "Wage.",
-          "position": 123
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0124",
-          "headword": "Payment.",
-          "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0125",
-          "headword": "Refund.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0126",
-          "headword": "Reimburs.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0127",
-          "headword": "Payroll.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0128",
-          "headword": "Remuneration.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0129",
-          "headword": "Subsidy.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0130",
-          "headword": "Earn.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0131",
-          "headword": "Undertaking.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0132",
-          "headword": "Career.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0133",
-          "headword": "Profession.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0134",
-          "headword": "Occupation.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch16-0135",
-          "headword": "Job.",
-          "position": 135
-        },
         {
           "stable_id": "bv1at4y1579f-ch16-0136",
           "headword": "Vocation.",
@@ -3187,6 +2839,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 2378,
+  "word_count": 2450,
   "index_entry_count": 0
 }
