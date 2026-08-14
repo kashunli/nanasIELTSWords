@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T15:48:15.653895+00:00",
+  "generated_at": "2026-08-14T16:01:30.422932+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -2651,19 +2651,14 @@
   ],
   "chapter_alignment": {
     "1": {
-      "expected_audio_words": 240,
+      "expected_audio_words": 241,
       "ocr_words": 241,
-      "matched_words": 240,
-      "matched_by_headword": 26,
-      "matched_by_sentence": 207,
+      "matched_words": 241,
+      "matched_by_headword": 25,
+      "matched_by_sentence": 209,
       "matched_by_order": 7,
       "missing_audio_words": [],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0030-03",
-          "headword": "natural"
-        }
-      ]
+      "unexpected_ocr_words": []
     },
     "2": {
       "expected_audio_words": 130,
@@ -2686,38 +2681,24 @@
       "unexpected_ocr_words": []
     },
     "4": {
-      "expected_audio_words": 74,
+      "expected_audio_words": 75,
       "ocr_words": 75,
-      "matched_words": 74,
-      "matched_by_headword": 6,
-      "matched_by_sentence": 65,
+      "matched_words": 75,
+      "matched_by_headword": 5,
+      "matched_by_sentence": 67,
       "matched_by_order": 3,
       "missing_audio_words": [],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0062-01",
-          "headword": "cataclysmic"
-        }
-      ]
+      "unexpected_ocr_words": []
     },
     "5": {
-      "expected_audio_words": 399,
+      "expected_audio_words": 401,
       "ocr_words": 401,
-      "matched_words": 399,
-      "matched_by_headword": 46,
-      "matched_by_sentence": 348,
+      "matched_words": 401,
+      "matched_by_headword": 44,
+      "matched_by_sentence": 352,
       "matched_by_order": 5,
       "missing_audio_words": [],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0071-11",
-          "headword": "ceremony"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0093-08",
-          "headword": "research"
-        }
-      ]
+      "unexpected_ocr_words": []
     },
     "6": {
       "expected_audio_words": 122,
@@ -2770,46 +2751,24 @@
       "unexpected_ocr_words": []
     },
     "11": {
-      "expected_audio_words": 111,
+      "expected_audio_words": 113,
       "ocr_words": 113,
-      "matched_words": 111,
-      "matched_by_headword": 9,
-      "matched_by_sentence": 97,
+      "matched_words": 113,
+      "matched_by_headword": 8,
+      "matched_by_sentence": 100,
       "matched_by_order": 5,
       "missing_audio_words": [],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0152-02",
-          "headword": "string"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0152-03",
-          "headword": "thread"
-        }
-      ]
+      "unexpected_ocr_words": []
     },
     "12": {
-      "expected_audio_words": 170,
+      "expected_audio_words": 173,
       "ocr_words": 173,
-      "matched_words": 170,
-      "matched_by_headword": 15,
-      "matched_by_sentence": 148,
+      "matched_words": 173,
+      "matched_by_headword": 13,
+      "matched_by_sentence": 153,
       "matched_by_order": 7,
       "missing_audio_words": [],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0163-06",
-          "headword": "reap"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0163-07",
-          "headword": "flour"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0167-17",
-          "headword": "digest"
-        }
-      ]
+      "unexpected_ocr_words": []
     },
     "13": {
       "expected_audio_words": 134,
@@ -2822,77 +2781,42 @@
       "unexpected_ocr_words": []
     },
     "14": {
-      "expected_audio_words": 132,
+      "expected_audio_words": 134,
       "ocr_words": 134,
-      "matched_words": 131,
+      "matched_words": 134,
       "matched_by_headword": 19,
-      "matched_by_sentence": 106,
+      "matched_by_sentence": 109,
       "matched_by_order": 6,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch14-0015",
-          "headword": "The airline launched",
-          "position": 15
-        }
-      ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0184-03",
-          "headword": "airline"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0184-04",
-          "headword": "airplane"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0184-05",
-          "headword": "helicopter"
-        }
-      ]
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
     },
     "15": {
       "expected_audio_words": 149,
       "ocr_words": 149,
-      "matched_words": 148,
-      "matched_by_headword": 21,
-      "matched_by_sentence": 126,
+      "matched_words": 149,
+      "matched_by_headword": 20,
+      "matched_by_sentence": 128,
       "matched_by_order": 1,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch15-0010",
-          "headword": "Democracy.",
-          "position": 10
-        }
-      ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0200-01",
-          "headword": "abroad"
-        }
-      ]
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
     },
     "16": {
-      "expected_audio_words": 170,
+      "expected_audio_words": 171,
       "ocr_words": 171,
-      "matched_words": 170,
-      "matched_by_headword": 24,
-      "matched_by_sentence": 144,
+      "matched_words": 171,
+      "matched_by_headword": 23,
+      "matched_by_sentence": 146,
       "matched_by_order": 2,
       "missing_audio_words": [],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0221-05",
-          "headword": "resign"
-        }
-      ]
+      "unexpected_ocr_words": []
     },
     "17": {
       "expected_audio_words": 117,
       "ocr_words": 117,
       "matched_words": 117,
-      "matched_by_headword": 5,
-      "matched_by_sentence": 111,
-      "matched_by_order": 1,
+      "matched_by_headword": 4,
+      "matched_by_sentence": 113,
+      "matched_by_order": 0,
       "missing_audio_words": [],
       "unexpected_ocr_words": []
     },
@@ -2917,30 +2841,14 @@
       "unexpected_ocr_words": []
     },
     "20": {
-      "expected_audio_words": 269,
+      "expected_audio_words": 268,
       "ocr_words": 268,
-      "matched_words": 267,
+      "matched_words": 268,
       "matched_by_headword": 29,
-      "matched_by_sentence": 236,
+      "matched_by_sentence": 237,
       "matched_by_order": 2,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch20-0102",
-          "headword": "Attract. She",
-          "position": 102
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch20-0103",
-          "headword": "Obsess.",
-          "position": 103
-        }
-      ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0272-06",
-          "headword": "attract"
-        }
-      ]
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
     },
     "21": {
       "expected_audio_words": 417,

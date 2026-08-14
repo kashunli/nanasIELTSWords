@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "source_id": "BV1AT4y1579F",
+  "base_source_manifest_sha256": "a36726953c5c10c756cea3eba556d7351a5287aee4ef8629beef426d4b2bde60",
+  "reason": "The base cut manifest contains several source-audio items whose internal pauses were merged across consecutive book entries. This explicit overlay splits only source-backed entries, preserves the base manifest and raw ASR, and suppresses two duplicate audio records that have no corresponding book entry.",
+  "repairs": [
+    {
+      "repair_id": "bv1at4y1579f-ch01-0234-natural-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\01 - 雅思词汇真经MP3 p01 雅思词汇真经chapter1 [BV1AT4y1579F_p1].m4a",
+      "source_sha256": "cb1214c604f1f55364ae508e7c554e32dc5b4432b16f3fe3a16085d5bcc0e87e",
+      "asr_source_stable_id": "bv1at4y1579f-ch01-0234",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch01-0234",
+        "sentence_audio_path": "BV1AT4y1579F/chapter01/sentences/sentence0234.mp3",
+        "sentence_clip": {"start": 1770.28, "end": 1777.04, "duration": 6.76},
+        "headword": "Nature.",
+        "sentence": "In fact, nature is much better at recycling than we humans are."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch01-0234-natural",
+        "item_uuid": "596e2398-c47d-5b55-beb5-d1128506d397",
+        "position_after_stable_id": "bv1at4y1579f-ch01-0234",
+        "word_audio_path": "BV1AT4y1579F/chapter01/words/word0234-natural.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter01/sentences/sentence0234-natural.mp3",
+        "headword": "Natural.",
+        "sentence": "It is natural that he should fall in love with such a beautiful girl.",
+        "part_of_speech": "adjective",
+        "meaning_en": "existing in nature; not artificial",
+        "meaning_zh": "自然的；天生的",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 235,
+          "stable_id": "repair-item-0235",
+          "raw_start": 1779.1,
+          "raw_end": 1784.821,
+          "word": {"raw_start": 1779.1, "raw_end": 1779.86, "start": 1779.0, "end": 1779.96, "duration": 0.96},
+          "sentence": {"raw_start": 1780.78, "raw_end": 1784.821, "start": 1780.68, "end": 1785.021, "duration": 4.341},
+          "word_sentence_pause": {"start": 1779.86, "end": 1780.78, "duration": 0.92},
+          "item_boundary_pause": {"start": 1776.84, "end": 1779.1, "duration": 2.26},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0030-03",
+      "boundary": {"start": 1776.84, "end": 1779.1, "duration": 2.26, "basis": "Local faster-whisper word timestamps and the clear pause after the complete nature example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch04-0070-cataclysmic-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\04 - 雅思词汇真经MP3 p04 雅思词汇真经chapter4 [BV1AT4y1579F_p4].m4a",
+      "source_sha256": "2babda4310dcb997d468753d96c71e520e2289db877177b6adb8683da95d3460",
+      "asr_source_stable_id": "bv1at4y1579f-ch04-0070",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch04-0070",
+        "sentence_audio_path": "BV1AT4y1579F/chapter04/sentences/sentence0070.mp3",
+        "sentence_clip": {"start": 528.102, "end": 535.537, "duration": 7.435},
+        "headword": "Fragment.",
+        "sentence": "He was still in bad condition and could give only a fragmented account of the accident."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch04-0070-cataclysmic",
+        "item_uuid": "c95f9616-e503-59b4-8cf6-aefc36d0a2f6",
+        "position_after_stable_id": "bv1at4y1579f-ch04-0070",
+        "word_audio_path": "BV1AT4y1579F/chapter04/words/word0070-cataclysmic.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter04/sentences/sentence0070-cataclysmic.mp3",
+        "headword": "Cataclysmic.",
+        "sentence": "One can readily trace the disappearance of dinosaurs to a cataclysmic event.",
+        "part_of_speech": "adjective",
+        "meaning_en": "causing or involving a violent natural disaster or major upheaval",
+        "meaning_zh": "灾难性的；剧变的",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 71,
+          "stable_id": "repair-item-0071",
+          "raw_start": 538.32,
+          "raw_end": 544.787,
+          "word": {"raw_start": 538.32, "raw_end": 539.08, "start": 538.22, "end": 539.18, "duration": 0.96},
+          "sentence": {"raw_start": 539.08, "raw_end": 544.787, "start": 538.98, "end": 544.987, "duration": 6.007},
+          "word_sentence_pause": {"start": 539.08, "end": 539.08, "duration": 0.0},
+          "item_boundary_pause": {"start": 535.337, "end": 538.32, "duration": 2.983},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0062-01",
+      "boundary": {"start": 535.337, "end": 538.32, "duration": 2.983, "basis": "Local faster-whisper timestamps place the cataclysmic headword after the complete fragment example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch05-0085-ceremony-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\05 - 雅思词汇真经MP3 p05 雅思词汇真经chapter5 [BV1AT4y1579F_p5].m4a",
+      "source_sha256": "e41f6c536f26cdb626647d96578f0a0009157ef39e564d9e62cb2a011e726077",
+      "asr_source_stable_id": "bv1at4y1579f-ch05-0085",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch05-0085",
+        "sentence_audio_path": "BV1AT4y1579F/chapter05/sentences/sentence0085.mp3",
+        "sentence_clip": {"start": 607.773, "end": 612.92, "duration": 5.147},
+        "headword": "Graduate.",
+        "sentence": "Preference will be given to graduates in journalism."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch05-0085-ceremony",
+        "item_uuid": "1779123b-b4a2-52f6-93e1-b7b9fa9708d6",
+        "position_after_stable_id": "bv1at4y1579f-ch05-0085",
+        "word_audio_path": "BV1AT4y1579F/chapter05/words/word0085-ceremony.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter05/sentences/sentence0085-ceremony.mp3",
+        "headword": "Ceremony.",
+        "sentence": "What the old headmaster said at the graduation ceremony dwells in my mind.",
+        "part_of_speech": "noun",
+        "meaning_en": "a formal event or ritual",
+        "meaning_zh": "典礼，仪式",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 86,
+          "stable_id": "repair-item-0086",
+          "raw_start": 615.303,
+          "raw_end": 621.505,
+          "word": {"raw_start": 615.303, "raw_end": 616.011, "start": 615.203, "end": 616.211, "duration": 1.008},
+          "sentence": {"raw_start": 616.712, "raw_end": 621.505, "start": 616.612, "end": 621.705, "duration": 5.093},
+          "word_sentence_pause": {"start": 616.011, "end": 616.712, "duration": 0.701},
+          "item_boundary_pause": {"start": 612.839, "end": 615.303, "duration": 2.464},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0071-11",
+      "boundary": {"start": 612.839, "end": 615.303, "duration": 2.464, "basis": "Local word timestamps identify ceremony after the complete graduate example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch05-0372-research-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\05 - 雅思词汇真经MP3 p05 雅思词汇真经chapter5 [BV1AT4y1579F_p5].m4a",
+      "source_sha256": "e41f6c536f26cdb626647d96578f0a0009157ef39e564d9e62cb2a011e726077",
+      "asr_source_stable_id": "bv1at4y1579f-ch05-0372",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch05-0372",
+        "sentence_audio_path": "BV1AT4y1579F/chapter05/sentences/sentence0372.mp3",
+        "sentence_clip": {"start": 2696.591, "end": 2704.78, "duration": 8.189},
+        "headword": "Survey.",
+        "sentence": "A recent survey of public opinions shows that many people are worried about the rising house prices."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch05-0372-research",
+        "item_uuid": "60b86e9e-8db2-554a-ae1f-24105ca485fd",
+        "position_after_stable_id": "bv1at4y1579f-ch05-0372",
+        "word_audio_path": "BV1AT4y1579F/chapter05/words/word0372-research.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter05/sentences/sentence0372-research.mp3",
+        "headword": "Research.",
+        "sentence": "It is a good idea to do some research before you buy a house.",
+        "part_of_speech": "noun; verb",
+        "meaning_en": "careful study to discover facts or information",
+        "meaning_zh": "研究，调查",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 375,
+          "stable_id": "repair-item-0375",
+          "raw_start": 2707.04,
+          "raw_end": 2712.132,
+          "word": {"raw_start": 2707.04, "raw_end": 2707.54, "start": 2706.94, "end": 2707.74, "duration": 0.8},
+          "sentence": {"raw_start": 2707.54, "raw_end": 2712.132, "start": 2707.44, "end": 2712.332, "duration": 4.892},
+          "word_sentence_pause": {"start": 2707.54, "end": 2707.54, "duration": 0.0},
+          "item_boundary_pause": {"start": 2704.664, "end": 2707.04, "duration": 2.376},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0093-08",
+      "boundary": {"start": 2704.664, "end": 2707.04, "duration": 2.376, "basis": "Local word timestamps identify research after the complete survey example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch11-0082-string-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\11 - 雅思词汇真经MP3 p11 雅思词汇真经chapter11 [BV1AT4y1579F_p11].m4a",
+      "source_sha256": "c08ac47095dc2f23c8a060e7a469f2879a96ed5fd67b63d8cc47912283ee1dd9",
+      "asr_source_stable_id": "bv1at4y1579f-ch11-0082",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch11-0082",
+        "sentence_audio_path": "BV1AT4y1579F/chapter11/sentences/sentence0082.mp3",
+        "sentence_clip": {"start": 538.963, "end": 541.73, "duration": 2.767},
+        "headword": "Pin.",
+        "sentence": "Pin the bills together so you won’t lose them."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch11-0082-string",
+        "item_uuid": "f6f219b7-b2e3-5bfe-80b9-931f02acb6a5",
+        "position_after_stable_id": "bv1at4y1579f-ch11-0082",
+        "word_audio_path": "BV1AT4y1579F/chapter11/words/word0082-string.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter11/sentences/sentence0082-string.mp3",
+        "headword": "String.",
+        "sentence": "We have had a string of complaints about the programme.",
+        "part_of_speech": "noun; verb",
+        "meaning_en": "a thin cord; a series of related things",
+        "meaning_zh": "线，细绳；一连串；串起",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 83,
+          "stable_id": "repair-item-0083-string",
+          "raw_start": 544.018,
+          "raw_end": 548.348,
+          "word": {"raw_start": 544.018, "raw_end": 544.847, "start": 543.918, "end": 545.047, "duration": 1.129},
+          "sentence": {"raw_start": 545.177, "raw_end": 548.348, "start": 545.077, "end": 548.548, "duration": 3.471},
+          "word_sentence_pause": {"start": 544.847, "end": 545.177, "duration": 0.33},
+          "item_boundary_pause": {"start": 548.348, "end": 550.938, "duration": 2.59},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0152-02",
+      "boundary": {"start": 541.552, "end": 544.018, "duration": 2.466, "basis": "Local word timestamps identify string after the complete pin example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch11-0082-thread-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\11 - 雅思词汇真经MP3 p11 雅思词汇真经chapter11 [BV1AT4y1579F_p11].m4a",
+      "source_sha256": "c08ac47095dc2f23c8a060e7a469f2879a96ed5fd67b63d8cc47912283ee1dd9",
+      "asr_source_stable_id": "bv1at4y1579f-ch11-0082",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch11-0082-string",
+        "sentence_audio_path": "BV1AT4y1579F/chapter11/sentences/sentence0082-string.mp3",
+        "sentence_clip": {"start": 545.077, "end": 548.548, "duration": 3.471},
+        "headword": "String.",
+        "sentence": "We have had a string of complaints about the programme."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch11-0082-thread",
+        "item_uuid": "414e1710-6a56-54fe-b0d8-84fb9b47a33a",
+        "position_after_stable_id": "bv1at4y1579f-ch11-0082-string",
+        "word_audio_path": "BV1AT4y1579F/chapter11/words/word0082-thread.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter11/sentences/sentence0082-thread.mp3",
+        "headword": "Thread.",
+        "sentence": "She is looking for threads which match the cloth.",
+        "part_of_speech": "noun; verb",
+        "meaning_en": "a thin strand of cotton or other material",
+        "meaning_zh": "线，线状物；穿线",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 84,
+          "stable_id": "repair-item-0084-thread",
+          "raw_start": 550.938,
+          "raw_end": 554.492,
+          "word": {"raw_start": 550.938, "raw_end": 551.378, "start": 550.838, "end": 551.578, "duration": 0.74},
+          "sentence": {"raw_start": 552.111, "raw_end": 554.492, "start": 552.011, "end": 554.692, "duration": 2.681},
+          "word_sentence_pause": {"start": 551.378, "end": 552.111, "duration": 0.733},
+          "item_boundary_pause": {"start": 554.492, "end": 557.002, "duration": 2.51},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0152-03",
+      "boundary": {"start": 548.348, "end": 550.938, "duration": 2.59, "basis": "Local word timestamps identify thread after the complete string example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch12-0093-reap-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\12 - 雅思词汇真经MP3 p12 雅思词汇真经chapter12 [BV1AT4y1579F_p12].m4a",
+      "source_sha256": "6496354bc899721fb6adc37e058d2fc123cedd5d709e7f69e895b2c31b6a33ac",
+      "asr_source_stable_id": "bv1at4y1579f-ch12-0093",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch12-0093",
+        "sentence_audio_path": "BV1AT4y1579F/chapter12/sentences/sentence0093.mp3",
+        "sentence_clip": {"start": 588.069, "end": 591.89, "duration": 3.821},
+        "headword": "Wheat.",
+        "sentence": "This old man is a leading authority on wheat diseases."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch12-0093-reap",
+        "item_uuid": "1c0cba99-a74f-5b01-8990-d17edf4c909c",
+        "position_after_stable_id": "bv1at4y1579f-ch12-0093",
+        "word_audio_path": "BV1AT4y1579F/chapter12/words/word0093-reap.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter12/sentences/sentence0093-reap.mp3",
+        "headword": "Reap.",
+        "sentence": "We reap what we sow.",
+        "part_of_speech": "verb",
+        "meaning_en": "to cut and gather a crop; to receive results",
+        "meaning_zh": "收割；收获",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 94,
+          "stable_id": "repair-item-0094-reap",
+          "raw_start": 594.05,
+          "raw_end": 596.617,
+          "word": {"raw_start": 594.05, "raw_end": 594.77, "start": 593.95, "end": 594.87, "duration": 0.92},
+          "sentence": {"raw_start": 595.25, "raw_end": 596.617, "start": 595.15, "end": 596.817, "duration": 1.567},
+          "word_sentence_pause": {"start": 594.77, "end": 595.25, "duration": 0.48},
+          "item_boundary_pause": {"start": 596.617, "end": 598.79, "duration": 2.173},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0163-06",
+      "boundary": {"start": 591.865, "end": 594.05, "duration": 2.185, "basis": "Local word timestamps identify reap after the complete wheat example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch12-0093-flour-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\12 - 雅思词汇真经MP3 p12 雅思词汇真经chapter12 [BV1AT4y1579F_p12].m4a",
+      "source_sha256": "6496354bc899721fb6adc37e058d2fc123cedd5d709e7f69e895b2c31b6a33ac",
+      "asr_source_stable_id": "bv1at4y1579f-ch12-0093",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch12-0093-reap",
+        "sentence_audio_path": "BV1AT4y1579F/chapter12/sentences/sentence0093-reap.mp3",
+        "sentence_clip": {"start": 595.15, "end": 596.817, "duration": 1.667},
+        "headword": "Reap.",
+        "sentence": "We reap what we sow."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch12-0093-flour",
+        "item_uuid": "5c8af71f-0a2a-5205-9489-39e51a5a4dd5",
+        "position_after_stable_id": "bv1at4y1579f-ch12-0093-reap",
+        "word_audio_path": "BV1AT4y1579F/chapter12/words/word0093-flour.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter12/sentences/sentence0093-flour.mp3",
+        "headword": "Flour.",
+        "sentence": "Bread is chiefly made of flour.",
+        "part_of_speech": "noun",
+        "meaning_en": "a powder made by grinding grain",
+        "meaning_zh": "面粉",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 95,
+          "stable_id": "repair-item-0095-flour",
+          "raw_start": 598.79,
+          "raw_end": 602.255,
+          "word": {"raw_start": 598.79, "raw_end": 599.51, "start": 598.69, "end": 599.61, "duration": 0.92},
+          "sentence": {"raw_start": 600.15, "raw_end": 602.255, "start": 600.05, "end": 602.455, "duration": 2.405},
+          "word_sentence_pause": {"start": 599.51, "end": 600.15, "duration": 0.64},
+          "item_boundary_pause": {"start": 599.189, "end": 600.15, "duration": 0.961},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0163-07",
+      "boundary": {"start": 596.617, "end": 598.79, "duration": 2.173, "basis": "Local word timestamps identify flour after the complete reap example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch12-0154-digest-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\12 - 雅思词汇真经MP3 p12 雅思词汇真经chapter12 [BV1AT4y1579F_p12].m4a",
+      "source_sha256": "6496354bc899721fb6adc37e058d2fc123cedd5d709e7f69e895b2c31b6a33ac",
+      "asr_source_stable_id": "bv1at4y1579f-ch12-0154",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch12-0154",
+        "sentence_audio_path": "BV1AT4y1579F/chapter12/sentences/sentence0154.mp3",
+        "sentence_clip": {"start": 974.11, "end": 979.77, "duration": 5.66},
+        "headword": "Supplement.",
+        "sentence": "John had to get a job to supplement the family income."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch12-0154-digest",
+        "item_uuid": "0e5c78a5-181e-5eb5-b456-7bf920d92e43",
+        "position_after_stable_id": "bv1at4y1579f-ch12-0154",
+        "word_audio_path": "BV1AT4y1579F/chapter12/words/word0154-digest.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter12/sentences/sentence0154-digest.mp3",
+        "headword": "Digest.",
+        "sentence": "Mary can’t digest fat.",
+        "part_of_speech": "verb",
+        "meaning_en": "to break down food in the body",
+        "meaning_zh": "消化",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 156,
+          "stable_id": "repair-item-0156-digest",
+          "raw_start": 982.33,
+          "raw_end": 985.686,
+          "word": {"raw_start": 982.33, "raw_end": 983.19, "start": 982.23, "end": 983.29, "duration": 1.06},
+          "sentence": {"raw_start": 983.19, "raw_end": 985.686, "start": 983.09, "end": 985.886, "duration": 2.696},
+          "word_sentence_pause": {"start": 983.19, "end": 983.19, "duration": 0.0},
+          "item_boundary_pause": {"start": 979.57, "end": 982.33, "duration": 2.76},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0167-17",
+      "boundary": {"start": 979.57, "end": 982.33, "duration": 2.76, "basis": "Local word timestamps identify digest after the complete supplement example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch14-0015-airplane-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\14 - 雅思词汇真经MP3 p14 雅思词汇真经chapter14 [BV1AT4y1579F_p14].m4a",
+      "source_sha256": "0e92c400d851c1e93ba412bd68f6650ce702bacf7ab2c4ad4fc931a50a4bffd5",
+      "asr_source_stable_id": "bv1at4y1579f-ch14-0015",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch14-0015",
+        "sentence_audio_path": "BV1AT4y1579F/chapter14/sentences/sentence0015.mp3",
+        "sentence_clip": {"start": 108.481, "end": 112.05, "duration": 3.569},
+        "headword": "Airline.",
+        "sentence": "The airline launched a European route for the first time."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch14-0015-airplane",
+        "item_uuid": "379b27a3-6b22-5d9e-8cdf-062cb1d13d6e",
+        "position_after_stable_id": "bv1at4y1579f-ch14-0015",
+        "word_audio_path": "BV1AT4y1579F/chapter14/words/word0015-airplane.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter14/sentences/sentence0015-airplane.mp3",
+        "headword": "Airplane.",
+        "sentence": "An airplane engine is a complex mechanism.",
+        "part_of_speech": "noun",
+        "meaning_en": "an aircraft with wings and engines",
+        "meaning_zh": "飞机",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 16,
+          "stable_id": "repair-item-0016-airplane",
+          "raw_start": 113.91,
+          "raw_end": 118.279,
+          "word": {"raw_start": 113.91, "raw_end": 114.79, "start": 113.81, "end": 114.89, "duration": 1.08},
+          "sentence": {"raw_start": 115.37, "raw_end": 118.279, "start": 115.27, "end": 118.479, "duration": 3.209},
+          "word_sentence_pause": {"start": 114.79, "end": 115.37, "duration": 0.58},
+          "item_boundary_pause": {"start": 111.852, "end": 113.91, "duration": 2.058},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0184-04",
+      "boundary": {"start": 111.852, "end": 113.91, "duration": 2.058, "basis": "Local word timestamps identify airplane after the complete airline example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch14-0015-helicopter-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\14 - 雅思词汇真经MP3 p14 雅思词汇真经chapter14 [BV1AT4y1579F_p14].m4a",
+      "source_sha256": "0e92c400d851c1e93ba412bd68f6650ce702bacf7ab2c4ad4fc931a50a4bffd5",
+      "asr_source_stable_id": "bv1at4y1579f-ch14-0015",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch14-0015-airplane",
+        "sentence_audio_path": "BV1AT4y1579F/chapter14/sentences/sentence0015-airplane.mp3",
+        "sentence_clip": {"start": 115.27, "end": 118.479, "duration": 3.209},
+        "headword": "Airplane.",
+        "sentence": "An airplane engine is a complex mechanism."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch14-0015-helicopter",
+        "item_uuid": "e455ec15-6111-5228-ae72-fa0766140841",
+        "position_after_stable_id": "bv1at4y1579f-ch14-0015-airplane",
+        "word_audio_path": "BV1AT4y1579F/chapter14/words/word0015-helicopter.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter14/sentences/sentence0015-helicopter.mp3",
+        "headword": "Helicopter.",
+        "sentence": "The president helicoptered to that city yesterday.",
+        "part_of_speech": "noun; verb",
+        "meaning_en": "an aircraft with rotating blades; to travel by helicopter",
+        "meaning_zh": "直升机；乘直升机飞行",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 17,
+          "stable_id": "repair-item-0017-helicopter",
+          "raw_start": 120.77,
+          "raw_end": 125.219,
+          "word": {"raw_start": 120.77, "raw_end": 121.65, "start": 120.67, "end": 121.75, "duration": 1.08},
+          "sentence": {"raw_start": 122.35, "raw_end": 125.219, "start": 122.25, "end": 125.419, "duration": 3.169},
+          "word_sentence_pause": {"start": 121.65, "end": 122.35, "duration": 0.7},
+          "item_boundary_pause": {"start": 118.279, "end": 120.77, "duration": 2.491},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0184-05",
+      "boundary": {"start": 118.279, "end": 120.77, "duration": 2.491, "basis": "Local word timestamps identify helicopter after the complete airplane example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch15-0066-abroad-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\15 - 雅思词汇真经MP3 p15 雅思词汇真经chapter15 [BV1AT4y1579F_p15].m4a",
+      "source_sha256": "275794195bc29b50818b48632a8a37bbef7a1af25ec556653368088bf17a45b9",
+      "asr_source_stable_id": "bv1at4y1579f-ch15-0066",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch15-0066",
+        "sentence_audio_path": "BV1AT4y1579F/chapter15/sentences/sentence0066.mp3",
+        "sentence_clip": {"start": 492.336, "end": 500.03, "duration": 7.694},
+        "headword": "Overseas.",
+        "sentence": "The overseas students were concerned about the destiny of their motherland."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch15-0066-abroad",
+        "item_uuid": "9c5edfe6-0e18-53f4-a586-e92dcc4e04a6",
+        "position_after_stable_id": "bv1at4y1579f-ch15-0066",
+        "word_audio_path": "BV1AT4y1579F/chapter15/words/word0066-abroad.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter15/sentences/sentence0066-abroad.mp3",
+        "headword": "Abroad.",
+        "sentence": "The news spread abroad.",
+        "part_of_speech": "adverb",
+        "meaning_en": "in or to a foreign country; widely",
+        "meaning_zh": "到国外，在国外；广为流传",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 67,
+          "stable_id": "repair-item-0067-abroad",
+          "raw_start": 502.641,
+          "raw_end": 505.433,
+          "word": {"raw_start": 502.641, "raw_end": 503.173, "start": 502.541, "end": 503.273, "duration": 0.732},
+          "sentence": {"raw_start": 503.861, "raw_end": 505.433, "start": 503.761, "end": 505.633, "duration": 1.872},
+          "word_sentence_pause": {"start": 503.173, "end": 503.861, "duration": 0.688},
+          "item_boundary_pause": {"start": 500.03, "end": 502.641, "duration": 2.611},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0200-01",
+      "boundary": {"start": 499.81, "end": 502.641, "duration": 2.831, "basis": "Local word timestamps and the clear pause after the overseas example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch16-0150-resign-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\16 - 雅思词汇真经MP3 p16 雅思词汇真经chapter16 [BV1AT4y1579F_p16].m4a",
+      "source_sha256": "c56bee627d92b1b3b13ee1748af7a622bedc9e32bd4ec79e0fe4fa0d5506284c",
+      "asr_source_stable_id": "bv1at4y1579f-ch16-0150",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch16-0150",
+        "sentence_audio_path": "BV1AT4y1579F/chapter16/sentences/sentence0150.mp3",
+        "sentence_clip": {"start": 1074.786, "end": 1080.459, "duration": 5.673},
+        "headword": "Discharge.",
+        "sentence": "How long will the discharge of the cargo take?"
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch16-0150-resign",
+        "item_uuid": "70113d1e-10ce-5521-9c20-cff378b902f3",
+        "position_after_stable_id": "bv1at4y1579f-ch16-0150",
+        "word_audio_path": "BV1AT4y1579F/chapter16/words/word0150-resign.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter16/sentences/sentence0150-resign.mp3",
+        "headword": "Resign.",
+        "sentence": "Katherine was forced to resign from the board of directors.",
+        "part_of_speech": "verb",
+        "meaning_en": "to formally leave a job or position",
+        "meaning_zh": "辞去，辞职",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 151,
+          "stable_id": "repair-item-0151-resign",
+          "raw_start": 1082.895,
+          "raw_end": 1087.621,
+          "word": {"raw_start": 1082.895, "raw_end": 1083.426, "start": 1082.795, "end": 1083.526, "duration": 0.731},
+          "sentence": {"raw_start": 1084.317, "raw_end": 1087.621, "start": 1084.217, "end": 1087.821, "duration": 3.604},
+          "word_sentence_pause": {"start": 1083.426, "end": 1084.317, "duration": 0.891},
+          "item_boundary_pause": {"start": 1080.259, "end": 1082.895, "duration": 2.636},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0221-05",
+      "boundary": {"start": 1080.259, "end": 1082.895, "duration": 2.636, "basis": "Local word timestamps identify resign after the complete discharge example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch19-0068-single-v1",
+      "kind": "split_auto_merged_sentence",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\19 - 雅思词汇真经MP3 p19 雅思词汇真经chapter19 [BV1AT4y1579F_p19].m4a",
+      "source_sha256": "aa821b8e11c86afc288c4031cafd50ec44e7131003b609cf90a9c5514d555f95",
+      "asr_source_stable_id": "bv1at4y1579f-ch19-0068",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch19-0068",
+        "sentence_audio_path": "BV1AT4y1579F/chapter19/sentences/sentence0068.mp3",
+        "sentence_clip": {"start": 495.62, "end": 500.079, "duration": 4.459},
+        "headword": "Separate.",
+        "sentence": "The children sleep in separate beds."
+      },
+      "inserted_item": {
+        "stable_id": "bv1at4y1579f-ch19-0068-single",
+        "item_uuid": "f5b9353e-49b8-5846-8ea7-5e0014d76e76",
+        "position_after_stable_id": "bv1at4y1579f-ch19-0068",
+        "word_audio_path": "BV1AT4y1579F/chapter19/words/word0068-single.mp3",
+        "sentence_audio_path": "BV1AT4y1579F/chapter19/sentences/sentence0068-single.mp3",
+        "headword": "Single.",
+        "sentence": "Not a single detail can escape his notice.",
+        "part_of_speech": "adjective",
+        "meaning_en": "only one; not more than one",
+        "meaning_zh": "单一的；单身的",
+        "meaning_status": "ai_draft",
+        "raw_cut": {
+          "item_index": 69,
+          "stable_id": "repair-item-0069",
+          "raw_start": 502.315,
+          "raw_end": 506.791,
+          "word": {"raw_start": 502.315, "raw_end": 502.797, "start": 502.215, "end": 502.997, "duration": 0.782},
+          "sentence": {"raw_start": 503.71, "raw_end": 506.791, "start": 503.61, "end": 506.991, "duration": 3.381},
+          "word_sentence_pause": {"start": 502.797, "end": 503.71, "duration": 0.913},
+          "item_boundary_pause": {"start": 499.879, "end": 502.315, "duration": 2.436},
+          "terminal_item": false,
+          "flags": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"],
+          "status": "needs_human_review"
+        },
+        "review_reasons": ["recovered_from_auto_merged_sentence", "manual_source_audio_split"]
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0258-05",
+      "boundary": {"start": 499.879, "end": 502.315, "duration": 2.436, "basis": "FFmpeg silence detection and local word timestamps identify single after the complete separate example."}
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch17-0113-request-v1",
+      "kind": "source_audio_transcript_override",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\17 - 雅思词汇真经MP3 p17 雅思词汇真经chapter17 [BV1AT4y1579F_p17].m4a",
+      "source_sha256": "b31ffada556d46d117a6fd2140b6d5aaf30625e23a0b88c1da422b49f5faa470",
+      "asr_source_stable_id": "bv1at4y1579f-ch17-0113",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch17-0113",
+        "headword": "Request.",
+        "sentence": "We shall give your request our careful consideration."
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0233-08",
+      "basis": "Local faster-whisper word timestamps recover Request and its complete book example from the existing audio clip; the base ASR record is preserved as raw evidence."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch17-0117-instruct-v1",
+      "kind": "source_audio_transcript_override",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\17 - 雅思词汇真经MP3 p17 雅思词汇真经chapter17 [BV1AT4y1579F_p17].m4a",
+      "source_sha256": "b31ffada556d46d117a6fd2140b6d5aaf30625e23a0b88c1da422b49f5faa470",
+      "asr_source_stable_id": "bv1at4y1579f-ch17-0117",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch17-0117",
+        "headword": "Instruct.",
+        "sentence": "The tour guide instructed the tourists in customs regulations."
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0233-12",
+      "basis": "Local faster-whisper timestamps end the instruct example before the terminal silence; the small-model transcript's trailing Thank-you phrase is an ASR hallucination, not part of the source item."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch20-0102-attract-v1",
+      "kind": "source_audio_transcript_override",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\20 - 雅思词汇真经MP3 p20 雅思词汇真经chapter20 [BV1AT4y1579F_p20].m4a",
+      "source_sha256": "0d1647a5effcdd4ccb6fd4c10504702bc8e68a3f65afe6cf067e07346172e164",
+      "asr_source_stable_id": "bv1at4y1579f-ch20-0102",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch20-0102",
+        "headword": "Attract.",
+        "sentence": "She was attracted by the novel advertisement."
+      },
+      "book_word_id": "ielts-vocabulary-true-script-pdf0272-06",
+      "basis": "Local faster-whisper word timestamps recover Attract and She from the existing clip; no new audio is fabricated and the original ASR candidate remains in selected-transcripts.jsonl."
+    }
+  ],
+  "suppressed_items": [
+    {
+      "stable_id": "bv1at4y1579f-ch15-0010",
+      "reason": "Duplicate Democracy recording. The book has one democracy entry and chapter 15 #0011 is the recording with the complete book example; #0010 is retained only in the immutable base source manifest.",
+      "replacement_stable_id": "bv1at4y1579f-ch15-0011"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch20-0103",
+      "reason": "Duplicate Obsess recording. Chapter 20 #0104 contains the exact book example; #0103 says 'the girl in the red' and has no separate book entry.",
+      "replacement_stable_id": "bv1at4y1579f-ch20-0104"
+    }
+  ]
+}

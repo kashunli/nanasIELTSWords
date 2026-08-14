@@ -11,6 +11,8 @@ import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
+from content_repairs import load_repair_plan, load_source_items, repair_artifact_hash
+
 
 PROJECTION_VERSION = "accepted-book-fields-v3"
 BOOK_WORD_ALIGNMENTS = {"matched_headword", "matched_sentence"}
@@ -203,21 +205,44 @@ def main() -> int:
     root = args.project_root.resolve()
     content = root / "content" / "BV1AT4y1579F"
     source = json.loads((content / "source-manifest.json").read_text(encoding="utf-8"))
+    source_items = load_source_items(content)
+    repair_plan = load_repair_plan(content)
     selected = [json.loads(line) for line in (content / "selected-transcripts.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     meaning_path = content / "meanings.jsonl"
     book_reference_path = root / "content" / "book-sources" / "ielts-vocabulary-true-script" / "book_words.json"
     meanings = {record["stable_id"]: record for record in (json.loads(line) for line in meaning_path.read_text(encoding="utf-8").splitlines() if line.strip())} if meaning_path.exists() else {}
+    repaired_meanings = {
+        repair["inserted_item"]["stable_id"]: {
+            "part_of_speech": repair["inserted_item"]["part_of_speech"],
+            "meaning_en": repair["inserted_item"]["meaning_en"],
+            "meaning_zh": repair["inserted_item"]["meaning_zh"],
+            "meaning_status": repair["inserted_item"].get("meaning_status", "ai_draft"),
+        }
+        for repair in repair_plan.get("repairs", [])
+        if repair.get("inserted_item", {}).get("stable_id")
+    }
+    source_ids = {record["stable_id"] for record in source_items}
+    # The base meanings artifact can still contain records intentionally
+    # suppressed from the runtime projection.  Keep that preparation evidence
+    # intact, but do not require suppressed IDs to appear in the runtime build.
+    effective_meanings = {
+        stable_id: record
+        for stable_id, record in {**repaired_meanings, **meanings}.items()
+        if stable_id in source_ids
+    }
     book_references = load_book_references(book_reference_path, selected)
-    if len(selected) != source["items"]: raise SystemExit(f"selected transcript coverage mismatch: {len(selected)} vs {source['items']}")
-    if not args.allow_missing_meanings and set(meanings) != {record["stable_id"] for record in selected}:
-        raise SystemExit(f"meaning coverage mismatch: {len(meanings)} vs {len(selected)}")
+    selected_ids = {record["stable_id"] for record in selected}
+    if len(selected) != len(source_items) or selected_ids != source_ids:
+        raise SystemExit(f"selected transcript coverage mismatch: {len(selected)} vs {len(source_items)}")
+    if not args.allow_missing_meanings and set(effective_meanings) != selected_ids:
+        raise SystemExit(f"meaning coverage mismatch: {len(effective_meanings)} vs {len(selected)}")
     by_id = {record["stable_id"]: record for record in selected}
     for stable_id, book_reference in book_references.items():
         if not book_reference["sentence_match"]:
             book_reference["sentence_match"] = sentence_match(book_reference["example_en"], by_id[stable_id]["sentence"])
     collection_code = "IELTS_TRUE_VOCAB"
     now = datetime.now(timezone.utc).isoformat()
-    content_version = hashlib.sha256(json.dumps({"projection": PROJECTION_VERSION, "source": source["source_manifest_sha256"], "selected": sha256(content / "selected-transcripts.jsonl"), "meanings": sha256(meaning_path) if meaning_path.exists() else "", "book_words": sha256(book_reference_path) if book_reference_path.exists() else ""}, sort_keys=True).encode()).hexdigest()[:16]
+    content_version = hashlib.sha256(json.dumps({"projection": PROJECTION_VERSION, "source": source["source_manifest_sha256"], "repairs": repair_artifact_hash(content), "selected": sha256(content / "selected-transcripts.jsonl"), "meanings": sha256(meaning_path) if meaning_path.exists() else "", "book_words": sha256(book_reference_path) if book_reference_path.exists() else ""}, sort_keys=True).encode()).hexdigest()[:16]
     database_dir = root / "var" / "content"
     database_dir.mkdir(parents=True, exist_ok=True)
     temp_path = database_dir / ".content.sqlite.tmp"
@@ -234,7 +259,7 @@ def main() -> int:
             connection.execute("INSERT INTO chapters VALUES (?, ?, ?, ?, ?)", (collection_code, number, f"Chapter {number}", len(chapter_items), review_count))
         accepted: list[dict] = []
         for record in selected:
-            meaning = meanings.get(record["stable_id"], {"part_of_speech": "", "meaning_en": "Meaning pending", "meaning_zh": "释义待生成", "meaning_status": "ai_draft"})
+            meaning = effective_meanings.get(record["stable_id"], {"part_of_speech": "", "meaning_en": "Meaning pending", "meaning_zh": "释义待生成", "meaning_status": "ai_draft"})
             if not record["headword"] or not record["sentence"]: raise SystemExit(f"empty selected transcript: {record['stable_id']}")
             word_audio = record["word_audio"]["path"]
             sentence_audio = record["sentence_audio"]["path"]
@@ -256,7 +281,7 @@ def main() -> int:
                 )
             for reason in record["review_reasons"]: connection.execute("INSERT INTO review_reasons VALUES (?, 'asr', ?)", (record["stable_id"], reason))
             if meaning.get("meaning_status") != "reviewed": connection.execute("INSERT INTO review_reasons VALUES (?, 'meaning', 'ai_draft_meaning')", (record["stable_id"],))
-        for artifact, path in (("source_manifest", content / "source-manifest.json"), ("selected_transcripts", content / "selected-transcripts.jsonl"), ("meanings", meaning_path), ("book_words", book_reference_path)):
+        for artifact, path in (("source_manifest", content / "source-manifest.json"), ("audio_repairs", content / "audio-repairs.json"), ("selected_transcripts", content / "selected-transcripts.jsonl"), ("meanings", meaning_path), ("book_words", book_reference_path)):
             if path.exists(): connection.execute("INSERT INTO source_revisions VALUES (?, ?, ?, ?)", (artifact, sha256(path), f"ielts-vocabulary-tools-{PROJECTION_VERSION}", now))
         connection.commit()
         counts = connection.execute("SELECT COUNT(*), COUNT(DISTINCT item_uuid) FROM word_items").fetchone()

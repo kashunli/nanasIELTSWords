@@ -1,0 +1,1903 @@
+{
+  "schema_version": 1,
+  "book_id": "ielts-vocabulary-true-script",
+  "source_id": "BV1AT4y1579F",
+  "generated_at": "2026-08-14T16:08:55.130622+00:00",
+  "book_count": 3674,
+  "runtime_audio_count": 3674,
+  "confirmed_audio_count": 3589,
+  "order_only_count": 85,
+  "no_direct_audio_count": 0,
+  "unassigned_audio_count": 0,
+  "book_audio_order_matches": true,
+  "chapter_reports": {
+    "1": {
+      "book_count": 241,
+      "audio_count": 241,
+      "confirmed_audio_count": 234,
+      "order_only_count": 7,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "2": {
+      "book_count": 130,
+      "audio_count": 130,
+      "confirmed_audio_count": 126,
+      "order_only_count": 4,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "3": {
+      "book_count": 168,
+      "audio_count": 168,
+      "confirmed_audio_count": 167,
+      "order_only_count": 1,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "4": {
+      "book_count": 75,
+      "audio_count": 75,
+      "confirmed_audio_count": 72,
+      "order_only_count": 3,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "5": {
+      "book_count": 401,
+      "audio_count": 401,
+      "confirmed_audio_count": 396,
+      "order_only_count": 5,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "6": {
+      "book_count": 122,
+      "audio_count": 122,
+      "confirmed_audio_count": 120,
+      "order_only_count": 2,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "7": {
+      "book_count": 79,
+      "audio_count": 79,
+      "confirmed_audio_count": 79,
+      "order_only_count": 0,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "8": {
+      "book_count": 68,
+      "audio_count": 68,
+      "confirmed_audio_count": 66,
+      "order_only_count": 2,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "9": {
+      "book_count": 176,
+      "audio_count": 176,
+      "confirmed_audio_count": 172,
+      "order_only_count": 4,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "10": {
+      "book_count": 152,
+      "audio_count": 152,
+      "confirmed_audio_count": 148,
+      "order_only_count": 4,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "11": {
+      "book_count": 113,
+      "audio_count": 113,
+      "confirmed_audio_count": 108,
+      "order_only_count": 5,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "12": {
+      "book_count": 173,
+      "audio_count": 173,
+      "confirmed_audio_count": 166,
+      "order_only_count": 7,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "13": {
+      "book_count": 134,
+      "audio_count": 134,
+      "confirmed_audio_count": 128,
+      "order_only_count": 6,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "14": {
+      "book_count": 134,
+      "audio_count": 134,
+      "confirmed_audio_count": 128,
+      "order_only_count": 6,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "15": {
+      "book_count": 149,
+      "audio_count": 149,
+      "confirmed_audio_count": 148,
+      "order_only_count": 1,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "16": {
+      "book_count": 171,
+      "audio_count": 171,
+      "confirmed_audio_count": 169,
+      "order_only_count": 2,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "17": {
+      "book_count": 117,
+      "audio_count": 117,
+      "confirmed_audio_count": 117,
+      "order_only_count": 0,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "18": {
+      "book_count": 213,
+      "audio_count": 213,
+      "confirmed_audio_count": 209,
+      "order_only_count": 4,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "19": {
+      "book_count": 121,
+      "audio_count": 121,
+      "confirmed_audio_count": 118,
+      "order_only_count": 3,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "20": {
+      "book_count": 268,
+      "audio_count": 268,
+      "confirmed_audio_count": 266,
+      "order_only_count": 2,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "21": {
+      "book_count": 417,
+      "audio_count": 417,
+      "confirmed_audio_count": 403,
+      "order_only_count": 14,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    },
+    "22": {
+      "book_count": 52,
+      "audio_count": 52,
+      "confirmed_audio_count": 49,
+      "order_only_count": 3,
+      "unmatched_book_count": 0,
+      "unassigned_audio_count": 0,
+      "book_audio_order_matches": true
+    }
+  },
+  "no_direct_audio_book_entries": [],
+  "order_only_book_entries": [
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0019-14",
+      "chapter": 1,
+      "printed_page": 8,
+      "pdf_page": 19,
+      "position_on_page": 14,
+      "headword": "stream",
+      "example_en": "On either bank of the stream stand rows of willow trees.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch01-0090",
+        "position": 90,
+        "headword": "stream On",
+        "sentence": "On either bank of the stream stands rows of willow trees.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0020-12",
+      "chapter": 1,
+      "printed_page": 9,
+      "pdf_page": 20,
+      "position_on_page": 12,
+      "headword": "Oceania",
+      "example_en": "Oceania is a separate landmass, but it is separated from Asia by very shallow water.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch01-0103",
+        "position": 103,
+        "headword": "Oceana.",
+        "sentence": "Oceana is a separate landmass, but it is separated from Asia by very shallow water.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0021-05",
+      "chapter": 1,
+      "printed_page": 10,
+      "pdf_page": 21,
+      "position_on_page": 5,
+      "headword": "warm",
+      "example_en": "The blood of a warm-blooded animal remains around the same temperature both on warm and cold days.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch01-0112",
+        "position": 112,
+        "headword": "warm the",
+        "sentence": "the blood of a warm-blooded animal remains around the same temperature both on warm and cold days thermal",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0025-12",
+      "chapter": 1,
+      "printed_page": 14,
+      "pdf_page": 25,
+      "position_on_page": 12,
+      "headword": "geology",
+      "example_en": "He devoted all his life to the research of the agricultural geology.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch01-0176",
+        "position": 176,
+        "headword": "geology he",
+        "sentence": "he devoted all his life to the research of agricultural geology",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0026-12",
+      "chapter": 1,
+      "printed_page": 15,
+      "pdf_page": 26,
+      "position_on_page": 12,
+      "headword": "dramatic",
+      "example_en": "She made a dramatic speech at the meeting.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch01-0189",
+        "position": 189,
+        "headword": "dramatic she",
+        "sentence": "she made a dramatic speech at the meeting wilderness",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0026-13",
+      "chapter": 1,
+      "printed_page": 15,
+      "pdf_page": 26,
+      "position_on_page": 13,
+      "headword": "wilderness",
+      "example_en": "From his attic window, he looked out over a beautiful wilderness.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch01-0190",
+        "position": 190,
+        "headword": "wilderness from",
+        "sentence": "from his attic window he looked out over a beautiful wilderness desert",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0027-06",
+      "chapter": 1,
+      "printed_page": 16,
+      "pdf_page": 27,
+      "position_on_page": 6,
+      "headword": "lunar",
+      "example_en": "All traditional Chinese festivals are lunar calendar festivals.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch01-0197",
+        "position": 197,
+        "headword": "Luna.",
+        "sentence": "All traditional Chinese festivals are Luna calendar festivals.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0034-04",
+      "chapter": 2,
+      "printed_page": 23,
+      "pdf_page": 34,
+      "position_on_page": 4,
+      "headword": "hybridisation (= hybridization)",
+      "example_en": "Somatic cell hybridisation is a very useful technique.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch02-0017",
+        "position": 17,
+        "headword": "Hybridization Somatic",
+        "sentence": "Somatic cell hybridization is a very useful technique.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0038-02",
+      "chapter": 2,
+      "printed_page": 27,
+      "pdf_page": 38,
+      "position_on_page": 2,
+      "headword": "bough",
+      "example_en": "The window of her car was broken by a bough during last night's storm.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch02-0073",
+        "position": 73,
+        "headword": "bow.",
+        "sentence": "The window of her car was broken by a bow during last night's storm.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0040-06",
+      "chapter": 2,
+      "printed_page": 29,
+      "pdf_page": 40,
+      "position_on_page": 6,
+      "headword": "preserve",
+      "example_en": "It is the duty of the police to preserve public order.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch02-0105",
+        "position": 105,
+        "headword": "preserve it",
+        "sentence": "it is the duty of the police to preserve public order conservation",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0040-07",
+      "chapter": 2,
+      "printed_page": 29,
+      "pdf_page": 40,
+      "position_on_page": 7,
+      "headword": "conservation",
+      "example_en": "Some accommodation between conservation and tourism is essential.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch02-0106",
+        "position": 106,
+        "headword": "conservation some",
+        "sentence": "some accommodation between conservation and tourism is essential bush",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0050-01",
+      "chapter": 3,
+      "printed_page": 39,
+      "pdf_page": 50,
+      "position_on_page": 1,
+      "headword": "hare",
+      "example_en": "The hunter watched for the hare to come out of the burrow.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch03-0107",
+        "position": 107,
+        "headword": "Hair.",
+        "sentence": "The hunter watched for the hair to come out of the burrow.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0060-04",
+      "chapter": 4,
+      "printed_page": 49,
+      "pdf_page": 60,
+      "position_on_page": 4,
+      "headword": "ion",
+      "example_en": "Both of these particles can produce ion pairs.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch04-0047",
+        "position": 47,
+        "headword": "Iron.",
+        "sentence": "Both of these particles can produce iron pairs.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0060-06",
+      "chapter": 4,
+      "printed_page": 49,
+      "pdf_page": 60,
+      "position_on_page": 6,
+      "headword": "quantum",
+      "example_en": "In this example, we employed the quantum mechanics principle.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch04-0049",
+        "position": 49,
+        "headword": "In",
+        "sentence": "this example, we employed the Quantum Mechanics principle.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0060-10",
+      "chapter": 4,
+      "printed_page": 49,
+      "pdf_page": 60,
+      "position_on_page": 10,
+      "headword": "synthesise (= synthesize)",
+      "example_en": "Darwinian theory has been synthesised with modern genetics.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch04-0053",
+        "position": 53,
+        "headword": "Synthe size.",
+        "sentence": "Darwinian theory has been synthesized with modern genetics.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0067-04",
+      "chapter": 5,
+      "printed_page": 56,
+      "pdf_page": 67,
+      "position_on_page": 4,
+      "headword": "inspire",
+      "example_en": "Our task is to motivate those voters and inspire them to join our cause.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch05-0030",
+        "position": 30,
+        "headword": "Inspire Our",
+        "sentence": "Our task is to motivate the voters and inspire them to join our cause.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0080-03",
+      "chapter": 5,
+      "printed_page": 69,
+      "pdf_page": 80,
+      "position_on_page": 3,
+      "headword": "multiple",
+      "example_en": "18 is a multiple of 6.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch05-0196",
+        "position": 197,
+        "headword": "multiple 18",
+        "sentence": "18 is a multiple of six maximum",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0080-04",
+      "chapter": 5,
+      "printed_page": 69,
+      "pdf_page": 80,
+      "position_on_page": 4,
+      "headword": "maximum",
+      "example_en": "The maximum load for this truck is ten tonnes.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch05-0197",
+        "position": 198,
+        "headword": "maximum the",
+        "sentence": "the maximum load for this truck is 10 tonnes.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0082-05",
+      "chapter": 5,
+      "printed_page": 71,
+      "pdf_page": 82,
+      "position_on_page": 5,
+      "headword": "scale",
+      "example_en": "A machine for weighing people has a scale from 1 pound to 300 pounds on it.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch05-0225",
+        "position": 226,
+        "headword": "Scales.",
+        "sentence": "A machine for weighing people has a scale from one pound to three hundred pounds on it.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0093-01",
+      "chapter": 5,
+      "printed_page": 82,
+      "pdf_page": 93,
+      "position_on_page": 1,
+      "headword": "illustrate",
+      "example_en": "The book was illustrated with colour photographs.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch05-0366",
+        "position": 367,
+        "headword": "Illustrate the",
+        "sentence": "the book was illustrated with color photographs.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0103-08",
+      "chapter": 6,
+      "printed_page": 92,
+      "pdf_page": 103,
+      "position_on_page": 8,
+      "headword": "compress",
+      "example_en": "Reining in inflation can increase income inequality by compressing wages while allowing asset prices to soar.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch06-0089",
+        "position": 89,
+        "headword": "Compressed.",
+        "sentence": "Raining in inflation can increase income inequality by compressing wages while allowing asset prices to soar.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0105-07",
+      "chapter": 6,
+      "printed_page": 94,
+      "pdf_page": 105,
+      "position_on_page": 7,
+      "headword": "flaw",
+      "example_en": "This flaw makes the vase less valuable.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch06-0117",
+        "position": 117,
+        "headword": "Floor.",
+        "sentence": "This floor makes the vase less valuable.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0116-03",
+      "chapter": 8,
+      "printed_page": 105,
+      "pdf_page": 116,
+      "position_on_page": 3,
+      "headword": "oral",
+      "example_en": "Students of English should have a lot of oral drills.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch08-0020",
+        "position": 20,
+        "headword": "Aural.",
+        "sentence": "Students of English should have a lot of aural drills.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0116-06",
+      "chapter": 8,
+      "printed_page": 105,
+      "pdf_page": 116,
+      "position_on_page": 6,
+      "headword": "phoneme",
+      "example_en": "In actual speech, a phoneme is realised phonetically as a certain phone.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch08-0023",
+        "position": 23,
+        "headword": "Finanime.",
+        "sentence": "In actual speech, a finanime is realised phonetically as a certain phone.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0123-04",
+      "chapter": 9,
+      "printed_page": 112,
+      "pdf_page": 123,
+      "position_on_page": 4,
+      "headword": "programme",
+      "example_en": "There was an interesting programme on TV yesterday.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch09-0030",
+        "position": 30,
+        "headword": "program.",
+        "sentence": "There was an interesting program on TV yesterday.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0123-10",
+      "chapter": 9,
+      "printed_page": 112,
+      "pdf_page": 123,
+      "position_on_page": 10,
+      "headword": "circus",
+      "example_en": "Last Christmas, the circus owner decided to take some presents to a children’s hospital.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch09-0036",
+        "position": 36,
+        "headword": "circus last",
+        "sentence": "last Christmas the circus owner decided to take some presents to a children's hospital magic",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0126-10",
+      "chapter": 9,
+      "printed_page": 115,
+      "pdf_page": 126,
+      "position_on_page": 10,
+      "headword": "band",
+      "example_en": "The band will play on request.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch09-0079",
+        "position": 79,
+        "headword": "band the",
+        "sentence": "the band will play on request solo",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0126-12",
+      "chapter": 9,
+      "printed_page": 115,
+      "pdf_page": 126,
+      "position_on_page": 12,
+      "headword": "melody",
+      "example_en": "I like that song, because its melody is really pleasant.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch09-0081",
+        "position": 81,
+        "headword": "melody I",
+        "sentence": "I like that song because its melody is really pleasant rhythm",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0135-05",
+      "chapter": 10,
+      "printed_page": 124,
+      "pdf_page": 135,
+      "position_on_page": 5,
+      "headword": "artefact",
+      "example_en": "Software is a cultural artefact of the modern world.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch10-0005",
+        "position": 5,
+        "headword": "Artifact.",
+        "sentence": "Software is a cultural artifact of the modern world.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0138-10",
+      "chapter": 10,
+      "printed_page": 127,
+      "pdf_page": 138,
+      "position_on_page": 10,
+      "headword": "cord",
+      "example_en": "Our voices depend on our vocal cords.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch10-0053",
+        "position": 53,
+        "headword": "Chord.",
+        "sentence": "Our voices depend on our vocal chords.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0139-10",
+      "chapter": 10,
+      "printed_page": 128,
+      "pdf_page": 139,
+      "position_on_page": 10,
+      "headword": "ink",
+      "example_en": "If the ink sinks in, it’ll be hard to remove it.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch10-0068",
+        "position": 68,
+        "headword": "ink if",
+        "sentence": "if the ink sinks in it will be hard to remove it",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0143-08",
+      "chapter": 10,
+      "printed_page": 132,
+      "pdf_page": 143,
+      "position_on_page": 8,
+      "headword": "fibre",
+      "example_en": "Scientists are recommending that people eat more fibre.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch10-0130",
+        "position": 130,
+        "headword": "Fiber.",
+        "sentence": "Scientists are recommending that people eat more fiber.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0149-06",
+      "chapter": 11,
+      "printed_page": 138,
+      "pdf_page": 149,
+      "position_on_page": 6,
+      "headword": "make-up",
+      "example_en": "I cannot tell who’s who when the women take off their make-up.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch11-0036",
+        "position": 36,
+        "headword": "Makeup.",
+        "sentence": "I cannot tell who's who when the women take off their makeup.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0150-03",
+      "chapter": 11,
+      "printed_page": 139,
+      "pdf_page": 150,
+      "position_on_page": 3,
+      "headword": "wardrobe",
+      "example_en": "Can you hang these in the wardrobe, please?",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch11-0047",
+        "position": 47,
+        "headword": "wardrobe can",
+        "sentence": "can you hang these in the wardrobe please overall",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0150-04",
+      "chapter": 11,
+      "printed_page": 139,
+      "pdf_page": 150,
+      "position_on_page": 4,
+      "headword": "overall",
+      "example_en": "The shop assistant was wearing a white overall.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch11-0048",
+        "position": 48,
+        "headword": "overall overall",
+        "sentence": "overall the shop assistant was wearing a white overall overcoat",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0153-03",
+      "chapter": 11,
+      "printed_page": 142,
+      "pdf_page": 153,
+      "position_on_page": 3,
+      "headword": "colour",
+      "example_en": "Due to the use of natural pigments, these folk paintings retain their colour well.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch11-0098",
+        "position": 100,
+        "headword": "Color.",
+        "sentence": "Due to the use of natural pigments, these folk paintings retain their color well.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0153-07",
+      "chapter": 11,
+      "printed_page": 142,
+      "pdf_page": 153,
+      "position_on_page": 7,
+      "headword": "grey",
+      "example_en": "He dressed in grey.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch11-0102",
+        "position": 104,
+        "headword": "Gray.",
+        "sentence": "He dressed in gray.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0157-10",
+      "chapter": 12,
+      "printed_page": 146,
+      "pdf_page": 157,
+      "position_on_page": 10,
+      "headword": "refectory",
+      "example_en": "The meal of the school refectory is healthy and delicious.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch12-0010",
+        "position": 10,
+        "headword": "Refactory.",
+        "sentence": "The meal of the school refactory is healthy and delicious.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0158-05",
+      "chapter": 12,
+      "printed_page": 147,
+      "pdf_page": 158,
+      "position_on_page": 5,
+      "headword": "appetiser",
+      "example_en": "We served some crackers and cheese as an appetiser.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch12-0019",
+        "position": 19,
+        "headword": "Appetizer.",
+        "sentence": "We served some crackers and cheese as an appetizer.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0158-09",
+      "chapter": 12,
+      "printed_page": 147,
+      "pdf_page": 158,
+      "position_on_page": 9,
+      "headword": "takeaway",
+      "example_en": "Eat-in or takeaway?",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch12-0023",
+        "position": 23,
+        "headword": "take away eat",
+        "sentence": "eat in or take away",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0160-12",
+      "chapter": 12,
+      "printed_page": 149,
+      "pdf_page": 160,
+      "position_on_page": 12,
+      "headword": "whisky",
+      "example_en": "A great deal of whisky is made in Scotland.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch12-0055",
+        "position": 55,
+        "headword": "Whiskey.",
+        "sentence": "A great deal of whiskey is made in Scotland.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0167-01",
+      "chapter": 12,
+      "printed_page": 156,
+      "pdf_page": 167,
+      "position_on_page": 1,
+      "headword": "flavour",
+      "example_en": "You may choose any one from the six popular flavours!",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch12-0139",
+        "position": 141,
+        "headword": "flavor.",
+        "sentence": "You may choose anyone from the six popular flavors.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0168-10",
+      "chapter": 12,
+      "printed_page": 157,
+      "pdf_page": 168,
+      "position_on_page": 10,
+      "headword": "gum",
+      "example_en": "Would you like some sugarless gum?",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch12-0164",
+        "position": 167,
+        "headword": "gum would",
+        "sentence": "you like some sugars gum soak",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0168-11",
+      "chapter": 12,
+      "printed_page": 157,
+      "pdf_page": 168,
+      "position_on_page": 11,
+      "headword": "soak",
+      "example_en": "I have soaked the beans for 8 hours.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch12-0165",
+        "position": 168,
+        "headword": "soak I",
+        "sentence": "I have soaked the beans for eight hours",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0173-09",
+      "chapter": 13,
+      "printed_page": 162,
+      "pdf_page": 173,
+      "position_on_page": 9,
+      "headword": "aisle",
+      "example_en": "Don’t stand in the aisle.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch13-0039",
+        "position": 39,
+        "headword": "I'll",
+        "sentence": "don't stand in the aisle porch",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0173-14",
+      "chapter": 13,
+      "printed_page": 162,
+      "pdf_page": 173,
+      "position_on_page": 14,
+      "headword": "storey",
+      "example_en": "There’s a nine-storey apartment building next to the park.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch13-0044",
+        "position": 44,
+        "headword": "Story.",
+        "sentence": "There's a nine-story apartment building next to the park.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0175-03",
+      "chapter": 13,
+      "printed_page": 164,
+      "pdf_page": 175,
+      "position_on_page": 3,
+      "headword": "parlour",
+      "example_en": "The parlour has been decorated delicately.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch13-0060",
+        "position": 60,
+        "headword": "Parler.",
+        "sentence": "The parler has been decorated delicately.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0176-10",
+      "chapter": 13,
+      "printed_page": 165,
+      "pdf_page": 176,
+      "position_on_page": 10,
+      "headword": "peripheral",
+      "example_en": "The peripheral parts of the city are poor.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch13-0082",
+        "position": 82,
+        "headword": "are",
+        "sentence": "are",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0177-11",
+      "chapter": 13,
+      "printed_page": 166,
+      "pdf_page": 177,
+      "position_on_page": 11,
+      "headword": "pole",
+      "example_en": "The hut is made of poles covered with grass mats.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch13-0098",
+        "position": 98,
+        "headword": "The hut is",
+        "sentence": "is made of poles covered with grass mats.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0178-09",
+      "chapter": 13,
+      "printed_page": 167,
+      "pdf_page": 178,
+      "position_on_page": 9,
+      "headword": "saw",
+      "example_en": "The electric saw whined when my uncle used it to cut the fallen tree.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch13-0110",
+        "position": 110,
+        "headword": "Saw. The electric saw whined when my uncle used to cut the fallen tree.",
+        "sentence": "The electric saw whined when my uncle used to cut the fallen tree.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0186-09",
+      "chapter": 14,
+      "printed_page": 175,
+      "pdf_page": 186,
+      "position_on_page": 9,
+      "headword": "coach",
+      "example_en": "We went to New York City by coach.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch14-0046",
+        "position": 48,
+        "headword": "coach we",
+        "sentence": "we went to New York City by coach ambulance",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0186-10",
+      "chapter": 14,
+      "printed_page": 175,
+      "pdf_page": 186,
+      "position_on_page": 10,
+      "headword": "ambulance",
+      "example_en": "An ambulance was racing by with its siren wailing.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch14-0047",
+        "position": 49,
+        "headword": "ambulance an",
+        "sentence": "an ambulance was racing by with its siren wailing truck",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0187-10",
+      "chapter": 14,
+      "printed_page": 176,
+      "pdf_page": 187,
+      "position_on_page": 10,
+      "headword": "tyre",
+      "example_en": "My uncle jacked up his car to fix a flat tyre.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch14-0062",
+        "position": 64,
+        "headword": "Tire.",
+        "sentence": "My uncle jacked up his car to fix a flat tire.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0189-12",
+      "chapter": 14,
+      "printed_page": 178,
+      "pdf_page": 189,
+      "position_on_page": 12,
+      "headword": "oar",
+      "example_en": "In dragon boat rowing, each paddler has one oar.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch14-0089",
+        "position": 91,
+        "headword": "ore.",
+        "sentence": "In dragon boat rowing, each paddler has one ore.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0190-15",
+      "chapter": 14,
+      "printed_page": 179,
+      "pdf_page": 190,
+      "position_on_page": 15,
+      "headword": "postpone",
+      "example_en": "The match is postponed from March 5th to March 19th.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch14-0110",
+        "position": 112,
+        "headword": "Post-Pone.",
+        "sentence": "The match was postponed from March 5th to March 19th.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0191-01",
+      "chapter": 14,
+      "printed_page": 180,
+      "pdf_page": 191,
+      "position_on_page": 1,
+      "headword": "due",
+      "example_en": "If you’re going to the library, would you mind returning this book for me? It’s due today.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch14-0114",
+        "position": 116,
+        "headword": "To you.",
+        "sentence": "If you are going to the library, would you mind returning this book for me? It's due today.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0200-05",
+      "chapter": 15,
+      "printed_page": 189,
+      "pdf_page": 200,
+      "position_on_page": 5,
+      "headword": "reign",
+      "example_en": "The reign of Queen Victoria lasted more than sixty years.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch15-0070",
+        "position": 70,
+        "headword": "Rain.",
+        "sentence": "The rain of Queen Victoria lasted more than 60 years.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0215-04",
+      "chapter": 16,
+      "printed_page": 204,
+      "pdf_page": 215,
+      "position_on_page": 4,
+      "headword": "insure",
+      "example_en": "His talent and commitment will insure his success.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch16-0079",
+        "position": 79,
+        "headword": "Ensure.",
+        "sentence": "His talent and commitment will ensure his success.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0220-06",
+      "chapter": 16,
+      "printed_page": 209,
+      "pdf_page": 220,
+      "position_on_page": 6,
+      "headword": "clerk",
+      "example_en": "The clerk was elevated to a managerial position.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch16-0141",
+        "position": 141,
+        "headword": "Clark.",
+        "sentence": "The Clark was elevated to a managerial position.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0237-04",
+      "chapter": 18,
+      "printed_page": 226,
+      "pdf_page": 237,
+      "position_on_page": 4,
+      "headword": "ax",
+      "example_en": "He cut a hole through the wall with an ax.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch18-0032",
+        "position": 32,
+        "headword": "Axe.",
+        "sentence": "He cut a hole through the wall with an axe.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0243-01",
+      "chapter": 18,
+      "printed_page": 232,
+      "pdf_page": 243,
+      "position_on_page": 1,
+      "headword": "rein",
+      "example_en": "The horse responds to the slightest pull on the rein.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch18-0106",
+        "position": 106,
+        "headword": "Rain.",
+        "sentence": "The horse responds to the slightest pull on the rain.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0250-02",
+      "chapter": 18,
+      "printed_page": 239,
+      "pdf_page": 250,
+      "position_on_page": 2,
+      "headword": "monument",
+      "example_en": "This work is one of the great monuments of French literature.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch18-0195",
+        "position": 195,
+        "headword": "monument this",
+        "sentence": "this work is one of the great monuments of French literature tablet",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0250-04",
+      "chapter": 18,
+      "printed_page": 239,
+      "pdf_page": 250,
+      "position_on_page": 4,
+      "headword": "statue",
+      "example_en": "The Statue of Liberty was presented to the United States of America in the nineteenth century by the people of France.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch18-0197",
+        "position": 197,
+        "headword": "statue the",
+        "sentence": "the Statue of Liberty was presented to the United States of America in the 19th century by the people of France.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0253-04",
+      "chapter": 19,
+      "printed_page": 242,
+      "pdf_page": 253,
+      "position_on_page": 4,
+      "headword": "heir",
+      "example_en": "In the UK, it is customary for the next heir to the throne to be regent.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch19-0004",
+        "position": 4,
+        "headword": "air.",
+        "sentence": "In the UK, it is customary for the next air to the throne to be regent.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0257-06",
+      "chapter": 19,
+      "printed_page": 246,
+      "pdf_page": 257,
+      "position_on_page": 6,
+      "headword": "accompany",
+      "example_en": "She accompanied me to the doctor’s.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch19-0059",
+        "position": 59,
+        "headword": "company she",
+        "sentence": "she accompanied me to the doctors",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0258-06",
+      "chapter": 19,
+      "printed_page": 247,
+      "pdf_page": 258,
+      "position_on_page": 6,
+      "headword": "sole",
+      "example_en": "My sole aim was to discover what had happened during that period.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch19-0069",
+        "position": 70,
+        "headword": "Soul.",
+        "sentence": "My soul aim was to discover what had happened during that period.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0266-05",
+      "chapter": 20,
+      "printed_page": 255,
+      "pdf_page": 266,
+      "position_on_page": 5,
+      "headword": "glimpse",
+      "example_en": "I caught a glimpse of our new neighbour.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch20-0018",
+        "position": 18,
+        "headword": "glimps",
+        "sentence": "I caught a glimpse of our new neighbor",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0282-01",
+      "chapter": 20,
+      "printed_page": 271,
+      "pdf_page": 282,
+      "position_on_page": 1,
+      "headword": "arouse",
+      "example_en": "The young man’s behaviour aroused the suspicions of the police.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch20-0225",
+        "position": 224,
+        "headword": "arouse the",
+        "sentence": "the young man's behavior aroused the suspicions of the police trigger",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0290-08",
+      "chapter": 21,
+      "printed_page": 279,
+      "pdf_page": 290,
+      "position_on_page": 8,
+      "headword": "waist",
+      "example_en": "She took in the waist of her dress.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0048",
+        "position": 48,
+        "headword": "Waste.",
+        "sentence": "She took in the waste of her dress.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0291-12",
+      "chapter": 21,
+      "printed_page": 280,
+      "pdf_page": 291,
+      "position_on_page": 12,
+      "headword": "pore",
+      "example_en": "He beamed and laughed, and in the exuberance of his delight sweated at every pore.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0066",
+        "position": 66,
+        "headword": "Poor.",
+        "sentence": "He beamed and laughed and in the exuberance of his delight, sweated at every poor.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0292-09",
+      "chapter": 21,
+      "printed_page": 281,
+      "pdf_page": 292,
+      "position_on_page": 9,
+      "headword": "eyesight",
+      "example_en": "The eye drops will help to improve your eyesight.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0078",
+        "position": 78,
+        "headword": "Eye sight.",
+        "sentence": "The eye drops will help improve your eyesight.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0293-04",
+      "chapter": 21,
+      "printed_page": 282,
+      "pdf_page": 293,
+      "position_on_page": 4,
+      "headword": "aural",
+      "example_en": "The opera was an aural as well as a visual delight.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0085",
+        "position": 85,
+        "headword": "Oral.",
+        "sentence": "The opera was an oral as well as a visual delight.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0294-12",
+      "chapter": 21,
+      "printed_page": 283,
+      "pdf_page": 294,
+      "position_on_page": 12,
+      "headword": "disable",
+      "example_en": "He was disabled in an accident and couldn’t play football any more.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0107",
+        "position": 107,
+        "headword": "Disabled.",
+        "sentence": "He was disabled in an accident and couldn't play football anymore.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0298-11",
+      "chapter": 21,
+      "printed_page": 287,
+      "pdf_page": 298,
+      "position_on_page": 11,
+      "headword": "sore",
+      "example_en": "My legs are sore from all that running yesterday.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0160",
+        "position": 160,
+        "headword": "saw",
+        "sentence": "my legs are sore from all that running yesterday sorrow",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0299-03",
+      "chapter": 21,
+      "printed_page": 288,
+      "pdf_page": 299,
+      "position_on_page": 3,
+      "headword": "health care",
+      "example_en": "I watched a programme about health care.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0166",
+        "position": 166,
+        "headword": "Healthcare.",
+        "sentence": "I watched a program about healthcare. care.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0300-12",
+      "chapter": 21,
+      "printed_page": 289,
+      "pdf_page": 300,
+      "position_on_page": 12,
+      "headword": "medicine",
+      "example_en": "I have a stomachache. May I have some medicine?",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0190",
+        "position": 190,
+        "headword": "medicine I",
+        "sentence": "I have a stomach ache may I have some medicine",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0305-11",
+      "chapter": 21,
+      "printed_page": 294,
+      "pdf_page": 305,
+      "position_on_page": 11,
+      "headword": "earnest",
+      "example_en": "I’m sure he was earnest when he said he would come.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0260",
+        "position": 260,
+        "headword": "Ernest.",
+        "sentence": "I'm sure he was Ernest when he said he would come.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0312-04",
+      "chapter": 21,
+      "printed_page": 301,
+      "pdf_page": 312,
+      "position_on_page": 4,
+      "headword": "harass",
+      "example_en": "A gang of delinquents harassed the storekeeper from time to time.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0347",
+        "position": 347,
+        "headword": "vexed",
+        "sentence": "vexed vexed vexed vexed vexed",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0312-05",
+      "chapter": 21,
+      "printed_page": 301,
+      "pdf_page": 312,
+      "position_on_page": 5,
+      "headword": "bore",
+      "example_en": "Don’t bore me with these boring jokes!",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0348",
+        "position": 348,
+        "headword": "vexed",
+        "sentence": "vexed",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0312-06",
+      "chapter": 21,
+      "printed_page": 301,
+      "pdf_page": 312,
+      "position_on_page": 6,
+      "headword": "bother",
+      "example_en": "We had a lot of bother finding our way to his house.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0349",
+        "position": 349,
+        "headword": "vexed",
+        "sentence": "vexed",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0312-07",
+      "chapter": 21,
+      "printed_page": 301,
+      "pdf_page": 312,
+      "position_on_page": 7,
+      "headword": "troublesome",
+      "example_en": "You must learn to rid yourself of such troublesome thoughts.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0350",
+        "position": 350,
+        "headword": "vexed vexed",
+        "sentence": "vexed ve to rid yourself of such troublesome thoughts.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0313-06",
+      "chapter": 21,
+      "printed_page": 302,
+      "pdf_page": 313,
+      "position_on_page": 6,
+      "headword": "selfish",
+      "example_en": "He is possibly the most selfish man in the town.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch21-0364",
+        "position": 364,
+        "headword": "selfish he",
+        "sentence": "he is probably the most selfish man in town",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0321-06",
+      "chapter": 22,
+      "printed_page": 310,
+      "pdf_page": 321,
+      "position_on_page": 6,
+      "headword": "precedent",
+      "example_en": "They were determined to break with precedent.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch22-0035",
+        "position": 35,
+        "headword": "President.",
+        "sentence": "They were determined to break with President.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0321-11",
+      "chapter": 22,
+      "printed_page": 310,
+      "pdf_page": 321,
+      "position_on_page": 11,
+      "headword": "midst",
+      "example_en": "We’re lucky to have such a man in our midst.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch22-0040",
+        "position": 40,
+        "headword": "Mixt.",
+        "sentence": "We are lucky to have such a man in our mixt.",
+        "sentence_match": "different"
+      }
+    },
+    {
+      "book_word_id": "ielts-vocabulary-true-script-pdf0321-17",
+      "chapter": 22,
+      "printed_page": 310,
+      "pdf_page": 321,
+      "position_on_page": 17,
+      "headword": "permanent",
+      "example_en": "We have no permanent friends or enemies, only interests.",
+      "alignment_status": "matched_order",
+      "alignment_evidence": "order_only",
+      "audio": {
+        "stable_id": "bv1at4y1579f-ch22-0046",
+        "position": 46,
+        "headword": "permanent we",
+        "sentence": "we have no permanent friends or enemies only interests punctual",
+        "sentence_match": "different"
+      }
+    }
+  ],
+  "unassigned_audio_items": [],
+  "source_audio_repairs": [
+    {
+      "repair_id": "bv1at4y1579f-ch01-0234-natural-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch01-0234",
+      "inserted_stable_id": "bv1at4y1579f-ch01-0234-natural",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0030-03",
+      "basis": "Local faster-whisper word timestamps and the clear pause after the complete nature example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch04-0070-cataclysmic-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch04-0070",
+      "inserted_stable_id": "bv1at4y1579f-ch04-0070-cataclysmic",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0062-01",
+      "basis": "Local faster-whisper timestamps place the cataclysmic headword after the complete fragment example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch05-0085-ceremony-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch05-0085",
+      "inserted_stable_id": "bv1at4y1579f-ch05-0085-ceremony",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0071-11",
+      "basis": "Local word timestamps identify ceremony after the complete graduate example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch05-0372-research-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch05-0372",
+      "inserted_stable_id": "bv1at4y1579f-ch05-0372-research",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0093-08",
+      "basis": "Local word timestamps identify research after the complete survey example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch11-0082-string-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch11-0082",
+      "inserted_stable_id": "bv1at4y1579f-ch11-0082-string",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0152-02",
+      "basis": "Local word timestamps identify string after the complete pin example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch11-0082-thread-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch11-0082-string",
+      "inserted_stable_id": "bv1at4y1579f-ch11-0082-thread",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0152-03",
+      "basis": "Local word timestamps identify thread after the complete string example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch12-0093-reap-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch12-0093",
+      "inserted_stable_id": "bv1at4y1579f-ch12-0093-reap",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0163-06",
+      "basis": "Local word timestamps identify reap after the complete wheat example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch12-0093-flour-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch12-0093-reap",
+      "inserted_stable_id": "bv1at4y1579f-ch12-0093-flour",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0163-07",
+      "basis": "Local word timestamps identify flour after the complete reap example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch12-0154-digest-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch12-0154",
+      "inserted_stable_id": "bv1at4y1579f-ch12-0154-digest",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0167-17",
+      "basis": "Local word timestamps identify digest after the complete supplement example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch14-0015-airplane-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch14-0015",
+      "inserted_stable_id": "bv1at4y1579f-ch14-0015-airplane",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0184-04",
+      "basis": "Local word timestamps identify airplane after the complete airline example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch14-0015-helicopter-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch14-0015-airplane",
+      "inserted_stable_id": "bv1at4y1579f-ch14-0015-helicopter",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0184-05",
+      "basis": "Local word timestamps identify helicopter after the complete airplane example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch15-0066-abroad-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch15-0066",
+      "inserted_stable_id": "bv1at4y1579f-ch15-0066-abroad",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0200-01",
+      "basis": "Local word timestamps and the clear pause after the overseas example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch16-0150-resign-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch16-0150",
+      "inserted_stable_id": "bv1at4y1579f-ch16-0150-resign",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0221-05",
+      "basis": "Local word timestamps identify resign after the complete discharge example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch19-0068-single-v1",
+      "kind": "split_auto_merged_sentence",
+      "existing_stable_id": "bv1at4y1579f-ch19-0068",
+      "inserted_stable_id": "bv1at4y1579f-ch19-0068-single",
+      "book_word_id": "ielts-vocabulary-true-script-pdf0258-05",
+      "basis": "FFmpeg silence detection and local word timestamps identify single after the complete separate example."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch17-0113-request-v1",
+      "kind": "source_audio_transcript_override",
+      "existing_stable_id": "bv1at4y1579f-ch17-0113",
+      "inserted_stable_id": null,
+      "book_word_id": "ielts-vocabulary-true-script-pdf0233-08",
+      "basis": "Local faster-whisper word timestamps recover Request and its complete book example from the existing audio clip; the base ASR record is preserved as raw evidence."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch17-0117-instruct-v1",
+      "kind": "source_audio_transcript_override",
+      "existing_stable_id": "bv1at4y1579f-ch17-0117",
+      "inserted_stable_id": null,
+      "book_word_id": "ielts-vocabulary-true-script-pdf0233-12",
+      "basis": "Local faster-whisper timestamps end the instruct example before the terminal silence; the small-model transcript's trailing Thank-you phrase is an ASR hallucination, not part of the source item."
+    },
+    {
+      "repair_id": "bv1at4y1579f-ch20-0102-attract-v1",
+      "kind": "source_audio_transcript_override",
+      "existing_stable_id": "bv1at4y1579f-ch20-0102",
+      "inserted_stable_id": null,
+      "book_word_id": "ielts-vocabulary-true-script-pdf0272-06",
+      "basis": "Local faster-whisper word timestamps recover Attract and She from the existing clip; no new audio is fabricated and the original ASR candidate remains in selected-transcripts.jsonl."
+    }
+  ],
+  "suppressed_audio_items": [
+    {
+      "stable_id": "bv1at4y1579f-ch15-0010",
+      "reason": "Duplicate Democracy recording. The book has one democracy entry and chapter 15 #0011 is the recording with the complete book example; #0010 is retained only in the immutable base source manifest.",
+      "replacement_stable_id": "bv1at4y1579f-ch15-0011"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch20-0103",
+      "reason": "Duplicate Obsess recording. Chapter 20 #0104 contains the exact book example; #0103 says 'the girl in the red' and has no separate book entry.",
+      "replacement_stable_id": "bv1at4y1579f-ch20-0104"
+    }
+  ],
+  "interpretation": {
+    "confirmed_audio": "The book sentence or headword directly matched a source-audio transcript record.",
+    "order_only": "The entry occupies the same monotonic gap in book and audio order, but has no direct sentence/headword match; it must remain reviewable.",
+    "no_direct_audio": "No source-audio record could be assigned without using order-only fallback.",
+    "unassigned_audio": "A source-audio record was not assigned to any book entry."
+  }
+}

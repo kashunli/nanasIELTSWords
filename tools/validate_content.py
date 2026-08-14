@@ -6,6 +6,8 @@ import json
 import sqlite3
 from pathlib import Path
 
+from content_repairs import load_source_items
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -13,14 +15,14 @@ def main() -> int:
     args = parser.parse_args()
     root = args.project_root.resolve()
     content = root / "content" / "BV1AT4y1579F"
-    source = json.loads((content / "source-manifest.json").read_text(encoding="utf-8"))
+    source_items = load_source_items(content)
     database = root / "var" / "content" / "content.sqlite"
-    if source["items"] != 3662: raise SystemExit("source item count is not 3662")
     connection = sqlite3.connect(database)
     try:
         counts = connection.execute("SELECT (SELECT COUNT(*) FROM chapters), (SELECT COUNT(*) FROM word_items), (SELECT COUNT(*) FROM examples), (SELECT COUNT(*) FROM review_reasons), (SELECT COUNT(*) FROM book_references)").fetchone()
         print({"chapters": counts[0], "items": counts[1], "examples": counts[2], "review_reasons": counts[3], "book_references": counts[4]})
-        if counts[0] != 22 or counts[1] != 3662 or counts[2] != 3662: raise SystemExit("runtime count validation failed")
+        expected_items = len(source_items)
+        if counts[0] != 22 or counts[1] != expected_items or counts[2] != expected_items: raise SystemExit(f"runtime count validation failed: expected {expected_items} items")
         if counts[4] < 1000: raise SystemExit("book reference coverage is unexpectedly low")
         accepted_sources = connection.execute("SELECT w.accepted_word_source, e.accepted_sentence_source, COUNT(*) FROM word_items w JOIN examples e ON e.word_stable_id=w.stable_id AND e.position=0 GROUP BY 1, 2 ORDER BY 1, 2").fetchall()
         print({"accepted_sources": accepted_sources})

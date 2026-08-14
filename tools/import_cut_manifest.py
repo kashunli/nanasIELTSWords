@@ -13,6 +13,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import NAMESPACE_URL, uuid5
 
+from apply_audio_repairs import apply_audio_repairs
+
 
 DEFAULT_SOURCE = Path(r"D:\n2Prepare\nanaBeatsListening\var\derived\audio_cuts\bilibili\BV1AT4y1579F")
 
@@ -88,7 +90,9 @@ def main() -> int:
     destination = project_root / "content" / "BV1AT4y1579F" / "source-manifest.json"
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Imported {len(source_records)} items and {len(source_records) * 2} media files")
+    repaired_media = apply_audio_repairs(project_root)
+    print(f"Imported {len(source_records)} base items and {len(source_records) * 2} base media files")
+    print(f"Applied {len(repaired_media)} repaired media clips from content/BV1AT4y1579F/audio-repairs.json")
     print(destination)
     return 0
 
