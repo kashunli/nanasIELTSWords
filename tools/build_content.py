@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECTION_VERSION = "accepted-book-fields-v2"
+PROJECTION_VERSION = "accepted-book-fields-v3"
 BOOK_WORD_ALIGNMENTS = {"matched_headword", "matched_sentence"}
 BOOK_SENTENCE_MATCHES = {"exact", "normalized"}
 
@@ -137,7 +137,10 @@ def book_sentence_matches(reference: dict | None) -> bool:
 
 def accepted_transcript(record: dict, reference: dict | None) -> dict[str, str]:
     word_from_book = book_word_matches(reference, record["headword"])
-    sentence_from_book = book_sentence_matches(reference)
+    # A reliable book-word alignment identifies the whole learner-facing item.
+    # The book example is authoritative even when the audio transcript uses a
+    # different spelling or inflection, such as mould/Mold or moulded/molded.
+    sentence_from_book = word_from_book or book_sentence_matches(reference)
     return {
         "headword": reference["headword"] if word_from_book and reference else record["headword"],
         "sentence": reference["example_en"] if sentence_from_book and reference else record["sentence"],

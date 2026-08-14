@@ -102,10 +102,13 @@ model caches. A matched reference may add the reviewed-book headword, IPA,
 English meaning, Chinese translation, translated example, collocations,
 word-formation notes, source page, and alignment evidence to a word card. The
 runtime projection chooses the reviewed-book word when alignment is by book
-headword or sentence, and chooses the reviewed-book sentence after an exact or
-normalized sentence match. Only unmatched fields continue to surface ASR in
-the learner-facing card; raw ASR and review reasons remain in preparation and
-runtime audit data.
+headword or sentence. A reliable book-word match makes the whole learner-facing
+item book-backed, so the reviewed-book example replaces the audio sentence and
+the item no longer contributes to unresolved ASR counts or review actions—even
+when the audio uses a spelling or inflection such as `Mold` for `mould`. When no
+reliable word match exists, an exact or normalized sentence match can still
+replace the sentence field. Raw ASR and review reasons remain in preparation
+and runtime audit data.
 
 ## Learner state
 

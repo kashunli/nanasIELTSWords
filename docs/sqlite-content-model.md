@@ -12,8 +12,8 @@ ASR, OCR, or browser learner state.
   replace one field without silently replacing the other.
 - Keep book provenance and alignment evidence queryable without making OCR or
   model caches runtime dependencies.
-- Keep raw review reasons available for audit while exposing only unresolved
-  ASR fields in the learner-facing card.
+- Keep raw review reasons available for audit while exposing ASR only for
+  items without an authoritative reviewed-book resolution in the learner-facing card.
 - Leave Known, Flagged, starred-sentence, playback, and review scheduling state
   in browser LocalStorage for this local-first version.
 
@@ -101,18 +101,21 @@ not necessarily raw ASR values. Their source is explicit:
 | Runtime field | Use reviewed-book value when | Otherwise keep | Source column |
 | --- | --- | --- | --- |
 | `word_items.headword` | `alignment_status` is `matched_headword` or `matched_sentence` | selected ASR headword | `accepted_word_source` |
-| `examples.text` | `sentence_match` is `exact` or `normalized` | selected ASR sentence | `accepted_sentence_source` |
+| `examples.text` | reliable book-word alignment, or `sentence_match` is `exact` or `normalized` | selected ASR sentence | `accepted_sentence_source` |
 
 The separate `book_references` row always retains the reviewed-book value,
 alignment method, page provenance, and review reasons. The selected ASR
 artifacts remain outside the runtime projection and are not deleted when a
-book field becomes accepted. A field-level replacement therefore does not
-change `stable_id`, `item_uuid`, media paths, or browser progress keys.
+book field becomes accepted. This projection rule does not change
+`stable_id`, `item_uuid`, media paths, or browser progress keys.
 
-An item remains in the unresolved ASR count when either accepted source is
-`asr`. This makes the summary and chapter counts describe remaining learner
-review work instead of counting ASR reasons that a reliable book field has
-already resolved.
+When a reliable book-word alignment exists, both accepted sources are `book`
+and the whole item is excluded from unresolved ASR counts. Otherwise, an item
+remains in the unresolved ASR count when either accepted source is `asr`. This
+makes the summary and chapter counts describe remaining learner review work
+instead of counting ASR reasons that a reliable book match has already
+resolved. Raw selected transcripts and review reasons remain preparation/audit
+artifacts and are not deleted by this projection rule.
 
 ## Runtime boundary
 

@@ -52,14 +52,18 @@ evidence, page provenance, and review reasons.
 
 `tools/build_content.py` projects matched OCR records into the separate
 `book_references` table and selects learner-facing fields independently. A
-book headword or sentence alignment replaces the corresponding `word_items`
-or `examples` field and records `accepted_*_source='book'`; unmatched fields
-retain `accepted_*_source='asr'`. The API still returns the separate book
-reference and keeps raw review reasons available for audit, while the React
-study wall only surfaces ASR for unmatched learner-facing fields. For example,
-an audio ASR result of `Plato.` uses the OCR-backed book word `plateau` when
-the book example and audio sentence align exactly, without deleting the raw
-transcript artifact.
+reliable book headword alignment is authoritative for the whole item: it
+replaces both the `word_items` and `examples` fields, records both
+`accepted_*_source='book'`, and removes the item from unresolved ASR review
+counts even when the audio sentence differs. This covers spelling variants
+such as `mould`/`Mold`. If there is no reliable word alignment, an exact or
+normalized sentence alignment can still replace the sentence field; otherwise
+the unmatched field retains `accepted_*_source='asr'`. The API still returns
+the separate book reference and keeps raw review reasons available for audit,
+while the React study wall only surfaces ASR for items with no authoritative
+book resolution. For example, an audio ASR result of `Plato.` uses the
+OCR-backed book word `plateau` when the book example and audio sentence align
+exactly, without deleting the raw transcript artifact.
 
 Sentence confirmation remains a separate, reversible browser-local decision.
 It is included in the local progress backup and remains keyed by stable item

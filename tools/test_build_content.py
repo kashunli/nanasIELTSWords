@@ -36,15 +36,27 @@ class ContentProjectionTests(unittest.TestCase):
         self.assertEqual(selected["headword"], "plateau")
         self.assertEqual(selected["accepted_word_source"], "book")
 
-    def test_headword_alignment_replaces_word_but_keeps_different_sentence(self) -> None:
+    def test_headword_alignment_replaces_entire_item_when_sentence_differs(self) -> None:
         reference = book_reference("matched_headword", "different", "plateau")
         record = audio_record(sentence="A different audio sentence.")
         selected = accepted_transcript(record, reference)
 
         self.assertEqual(selected["headword"], "plateau")
-        self.assertEqual(selected["sentence"], record["sentence"])
+        self.assertEqual(selected["sentence"], reference["example_en"])
         self.assertEqual(selected["accepted_word_source"], "book")
-        self.assertEqual(selected["accepted_sentence_source"], "asr")
+        self.assertEqual(selected["accepted_sentence_source"], "book")
+        self.assertFalse(unresolved_asr_review(record, reference))
+
+    def test_book_word_alias_discards_all_asr_review_fields(self) -> None:
+        reference = book_reference("matched_headword", "different", "mould (= mold)")
+        record = audio_record("Mold.", "The walls were black with mold.")
+        selected = accepted_transcript(record, reference)
+
+        self.assertEqual(selected["headword"], reference["headword"])
+        self.assertEqual(selected["sentence"], reference["example_en"])
+        self.assertEqual(selected["accepted_word_source"], "book")
+        self.assertEqual(selected["accepted_sentence_source"], "book")
+        self.assertFalse(unresolved_asr_review(record, reference))
 
     def test_order_alignment_does_not_hide_different_asr_fields(self) -> None:
         reference = book_reference("matched_order", "different")

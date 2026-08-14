@@ -211,13 +211,8 @@ function bookSentenceMatches(reference?: BookReference) {
   return Boolean(reference && (reference.sentence_match === "exact" || reference.sentence_match === "normalized"));
 }
 
-function bookResolvesWordReview(item: Item) {
-  const reference = item.book_reference;
-  return Boolean(reference && item.transcript_status === "needs_review" && (reference.alignment_status === "matched_headword" || reference.alignment_status === "matched_sentence"));
-}
-
-function bookResolvesSentenceReview(item: Item) {
-  return Boolean(item.transcript_status === "needs_review" && bookSentenceMatches(item.book_reference));
+function bookResolvesAsrReview(item: Item) {
+  return Boolean(item.transcript_status === "needs_review" && (bookWordMatches(item) || bookSentenceMatches(item.book_reference)));
 }
 
 function alignmentLabel(reference: BookReference) {
@@ -256,17 +251,18 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
   const displaySentence = book?.example_en || selected.sentence;
   const displayMeaningZh = book?.meaning_zh || selected.meaning_zh;
   const hasUsage = Boolean(book && (book.collocations || book.word_formation || book.notes));
-  const hasAsrWordEvidence = !book || !bookWordMatches(selected);
-  const hasAsrSentenceEvidence = !book || !bookSentenceMatches(book);
-  const hasAsrEvidence = !book || hasAsrWordEvidence || hasAsrSentenceEvidence;
+  const bookWordIsAuthoritative = bookWordMatches(selected);
+  const hasAsrWordEvidence = !book || !bookWordIsAuthoritative;
+  const hasAsrSentenceEvidence = !book || (!bookWordIsAuthoritative && !bookSentenceMatches(book));
+  const hasAsrEvidence = !bookWordIsAuthoritative && (!book || hasAsrWordEvidence || hasAsrSentenceEvidence);
   const sentenceDiffers = hasAsrSentenceEvidence;
-  const wordResolvedByBook = bookResolvesWordReview(selected);
+  const bookResolvedReview = bookResolvesAsrReview(selected);
 
   return <div className="focus-card">
     <div className="focus-meta">
       <span>Chapter {selected.chapter} · #{selected.position}</span>
       {book ? <span className={`source-badge ${book.alignment_status}`}>{alignmentLabel(book)}</span> : <span className="source-badge asr-only">ASR-only record</span>}
-      {wordResolvedByBook ? <span className="confirmed">Word resolved from book sentence</span> : asrPending ? <span className="warning">Sentence ASR review needed</span> : asrConfirmed ? <span className="confirmed">Sentence ASR confirmed in this browser</span> : null}
+      {bookResolvedReview ? <span className="confirmed">Book match is authoritative</span> : asrPending ? <span className="warning">Sentence ASR review needed</span> : asrConfirmed ? <span className="confirmed">Sentence ASR confirmed in this browser</span> : null}
     </div>
 
     <header className="word-hero">
@@ -295,7 +291,7 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
     <section className="example-card" aria-label="Example sentence">
       <div className="section-kicker-row">
         <span>{book ? "BOOK EXAMPLE" : "EXAMPLE"}</span>
-        {book ? <span className={`match-badge ${book.sentence_match}`}>{sentenceMatchLabel(book)}</span> : null}
+        {book && !bookWordIsAuthoritative ? <span className={`match-badge ${book.sentence_match}`}>{sentenceMatchLabel(book)}</span> : null}
       </div>
       <p className="example-en">{displaySentence}</p>
       {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
@@ -321,7 +317,6 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
         <button type="button" className="confirm" onClick={onConfirmSentence}>✓ Confirm sentence audio</button>
         <button type="button" onClick={onKeepSentence}>Keep sentence in review queue</button>
       </div> : asrConfirmed ? <div className="asr-confirmed-actions"><span>Sentence reference confirmed in this browser.</span><button type="button" onClick={onUndoSentence}>Undo sentence confirmation</button></div> : null}
-      {wordResolvedByBook ? <p className="resolution-note">The reviewed-book headword is used because this record has a reliable word alignment. Any unmatched audio fields remain above for review.</p> : null}
       <small>Book-backed fields are shown in the learner-facing card; raw ASR is retained only for unmatched fields and audit artifacts.</small>
     </section> : null}
 
@@ -367,8 +362,8 @@ export default function App() {
   }, [asrReview, study]);
   useEffect(() => { void Promise.all([getSummary(), getChapters()]).then(([nextSummary, nextChapters]) => { setSummary(nextSummary); setChapters(nextChapters); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load corpus.")); }, []);
   useEffect(() => { void getItems(chapter, search).then(nextItems => { setItems(nextItems); setSelectedId(current => current && nextItems.some(item => item.stable_id === current) ? current : nextItems[0]?.stable_id); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load items.")); }, [chapter, search]);
-  const isAsrPending = (item: Item) => item.transcript_status === "needs_review" && !bookResolvesSentenceReview(item) && !asrReview.isConfirmed(item.stable_id);
-  const isAsrConfirmed = (item: Item) => item.transcript_status === "needs_review" && !bookResolvesSentenceReview(item) && asrReview.isConfirmed(item.stable_id);
+  const isAsrPending = (item: Item) => item.transcript_status === "needs_review" && !bookResolvesAsrReview(item) && !asrReview.isConfirmed(item.stable_id);
+  const isAsrConfirmed = (item: Item) => item.transcript_status === "needs_review" && !bookResolvesAsrReview(item) && asrReview.isConfirmed(item.stable_id);
   const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "asr") return isAsrPending(item); if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study, asrReview]);
   const selected = visibleItems.find(item => item.stable_id === selectedId) || visibleItems[0];
   const counts = useMemo(() => ({asr: items.filter(isAsrPending).length, known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study, asrReview]);
@@ -461,7 +456,7 @@ export default function App() {
           const itemBookReference = item.book_reference;
           const itemDisplayWord = itemBookReference?.headword || item.headword;
           const showAsrWord = Boolean(itemBookReference && !bookWordMatches(item));
-          const showAsrSentence = Boolean(itemBookReference && !bookSentenceMatches(itemBookReference));
+          const showAsrSentence = Boolean(itemBookReference && !bookWordMatches(item) && !bookSentenceMatches(itemBookReference));
           return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { setSelectedId(item.stable_id); setPhase("word"); }}>
             <span>{String(item.position).padStart(3, "0")}</span>
             <strong>{itemDisplayWord}</strong>
