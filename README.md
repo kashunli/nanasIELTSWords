@@ -29,17 +29,33 @@ From this repository root:
 # Import the already validated cut manifest and copy media.
 C:\Python313\python.exe tools\import_cut_manifest.py
 
-# Transcribe all clips. The command is resumable.
-C:\Python313\python.exe tools\transcribe_audio.py --pass small
+# Transcribe each chapter once so the word/sentence cuts stay aligned. The
+# chapter command is resumable; rerun an interrupted chapter explicitly.
+C:\Python313\python.exe tools\transcribe_chapters.py --pass small
 
-# Prepare deterministic meaning batches for Luna/Codex.
+# Select the small-model transcript, retaining every review flag.
+C:\Python313\python.exe tools\select_transcripts.py
+
+# Optional: rerun only flagged pairs with the larger review model. These
+# ranges can run in parallel; each output name must be unique.
+C:\Python313\python.exe tools\transcribe_review.py --model medium --start-index 0 --end-index 185 --output-name pass-large.jsonl
+C:\Python313\python.exe tools\transcribe_review.py --model medium --start-index 185 --end-index 369 --output-name pass-large-part2.jsonl
+C:\Python313\python.exe tools\merge_review_asr.py --input pass-large.jsonl --input pass-large-part2.jsonl
+
+# Re-select after the optional review pass and prepare deterministic batches.
+C:\Python313\python.exe tools\select_transcripts.py
 C:\Python313\python.exe tools\prepare_meaning_batches.py
 
-# After meaning batch JSON files are completed, merge them.
+# Generate drafts through the configured local Luna/Codex command. This is
+# resumable; completed accepted batches are validated and skipped.
+C:\Python313\python.exe tools\generate_meanings.py
+
+# Validate and merge the completed meaning batches.
 C:\Python313\python.exe tools\merge_meaning_batches.py
 
 # Build the runtime projection.
 C:\Python313\python.exe tools\build_content.py
+C:\Python313\python.exe tools\validate_content.py
 
 cd frontend
 pnpm install
