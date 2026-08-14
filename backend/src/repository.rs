@@ -26,7 +26,7 @@ pub fn summary(connection: &Connection) -> Result<Summary, AppError> {
     let chapters = connection.query_row("SELECT COUNT(*) FROM chapters", [], |row| row.get(0))?;
     let items = connection.query_row("SELECT COUNT(*) FROM word_items", [], |row| row.get(0))?;
     let review = connection.query_row(
-        "SELECT COUNT(DISTINCT word_stable_id) FROM review_reasons WHERE source IN ('cutter','asr')",
+        "SELECT COUNT(*) FROM word_items WHERE transcript_status='needs_review' AND (accepted_word_source <> 'book' OR accepted_sentence_source <> 'book')",
         [], |row| row.get(0),
     )?;
     let book_reference_items =
