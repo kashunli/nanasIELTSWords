@@ -6,6 +6,12 @@ declare module "*.mjs" {
     version: number;
     updated_at: string;
     confirmed: Record<string, string>;
+    word_confirmed: Record<string, WordConfirmation>;
+  }
+
+  export interface WordConfirmation {
+    candidate: string;
+    confirmed_at: string;
   }
 
   export function emptyReviewSnapshot(): AsrReviewSnapshot;
@@ -16,8 +22,12 @@ declare module "*.mjs" {
     subscribe(listener: () => void): () => void;
     load(): AsrReviewSnapshot;
     isConfirmed(stableId: string): boolean;
+    wordConfirmation(stableId: string): WordConfirmation | undefined;
+    isWordConfirmed(stableId: string): boolean;
     confirm(stableId: string): AsrReviewSnapshot;
     undo(stableId: string): AsrReviewSnapshot;
+    confirmWord(stableId: string, candidate: string): AsrReviewSnapshot;
+    undoWord(stableId: string): AsrReviewSnapshot;
     exportSnapshot(): AsrReviewSnapshot;
     restore(value: unknown): void;
     reset(): void;

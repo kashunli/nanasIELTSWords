@@ -2,11 +2,18 @@ export const ASR_REVIEW_STATE_KEY = "ielts-vocabulary:asr-review:v1";
 export const ASR_REVIEW_STATE_VERSION = 1;
 
 export function emptyReviewSnapshot() {
-  return {version: ASR_REVIEW_STATE_VERSION, updated_at: new Date(0).toISOString(), confirmed: {}};
+  return {version: ASR_REVIEW_STATE_VERSION, updated_at: new Date(0).toISOString(), confirmed: {}, word_confirmed: {}};
 }
 
 function validIso(value) {
   return typeof value === "string" && Number.isFinite(Date.parse(value)) ? new Date(value).toISOString() : undefined;
+}
+
+function normalizedWordConfirmation(value) {
+  if (!value || typeof value !== "object") return undefined;
+  const candidate = typeof value.candidate === "string" ? value.candidate.trim() : "";
+  const confirmedAt = validIso(value.confirmed_at);
+  return candidate && confirmedAt ? {candidate, confirmed_at: confirmedAt} : undefined;
 }
 
 export function normalizeReviewSnapshot(value) {
@@ -16,6 +23,12 @@ export function normalizeReviewSnapshot(value) {
   for (const [stableId, confirmedAt] of Object.entries(value.confirmed)) {
     const normalized = validIso(confirmedAt);
     if (normalized) result.confirmed[stableId] = normalized;
+  }
+  if (value.word_confirmed && typeof value.word_confirmed === "object") {
+    for (const [stableId, confirmation] of Object.entries(value.word_confirmed)) {
+      const normalized = normalizedWordConfirmation(confirmation);
+      if (normalized) result.word_confirmed[stableId] = normalized;
+    }
   }
   return result;
 }
@@ -45,22 +58,36 @@ export class LocalAsrReviewState {
   emit() { for (const listener of this.listeners) listener(this.snapshot); }
   load() { return this.snapshot; }
   isConfirmed(stableId) { return Boolean(this.snapshot.confirmed[stableId]); }
+  wordConfirmation(stableId) { return this.snapshot.word_confirmed[stableId]; }
+  isWordConfirmed(stableId) { return Boolean(this.wordConfirmation(stableId)); }
 
-  commit(confirmed) {
-    this.snapshot = {...this.snapshot, updated_at: this.now().toISOString(), confirmed};
+  commit(changes) {
+    this.snapshot = {...this.snapshot, updated_at: this.now().toISOString(), ...changes};
     this.storage.setItem(ASR_REVIEW_STATE_KEY, JSON.stringify(this.snapshot));
     this.emit();
     return this.snapshot;
   }
 
   confirm(stableId) {
-    return this.commit({...this.snapshot.confirmed, [stableId]: this.now().toISOString()});
+    return this.commit({confirmed: {...this.snapshot.confirmed, [stableId]: this.now().toISOString()}});
   }
 
   undo(stableId) {
     const confirmed = {...this.snapshot.confirmed};
     delete confirmed[stableId];
-    return this.commit(confirmed);
+    return this.commit({confirmed});
+  }
+
+  confirmWord(stableId, candidate) {
+    const normalizedCandidate = typeof candidate === "string" ? candidate.trim() : "";
+    if (!normalizedCandidate) return this.snapshot;
+    return this.commit({word_confirmed: {...this.snapshot.word_confirmed, [stableId]: {candidate: normalizedCandidate, confirmed_at: this.now().toISOString()}}});
+  }
+
+  undoWord(stableId) {
+    const wordConfirmed = {...this.snapshot.word_confirmed};
+    delete wordConfirmed[stableId];
+    return this.commit({word_confirmed: wordConfirmed});
   }
 
   exportSnapshot() { return JSON.parse(JSON.stringify(this.snapshot)); }
