@@ -171,14 +171,12 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
       </div>
       <span className="audio-time" aria-label="Playback time">{progressLabel}</span>
     </div>
-    <div className="player-controls">
-      <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-keyshortcuts="R">Replay</button>
-      <button type="button" onClick={previousManually} disabled={!canPrevious} aria-keyshortcuts="A">Previous</button>
-      <button type="button" onClick={advanceManually} disabled={!canNext} aria-keyshortcuts="D">Next</button>
-      <button type="button" onClick={stop} disabled={!player.audioBuffer} aria-keyshortcuts="S">Stop</button>
-      <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C">{runMode === "single" ? "Single" : "Consecutive"}</button>
-    </div>
-    <div className="player-transport">
+    <div className="player-controls" role="toolbar" aria-label="Playback controls">
+      <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-label="Replay audio" aria-keyshortcuts="R"><span className="button-label-full">Replay</span><span className="button-label-short">Replay</span></button>
+      <button type="button" onClick={previousManually} disabled={!canPrevious} aria-label="Previous audio" aria-keyshortcuts="A"><span className="button-label-full">Previous</span><span className="button-label-short">Prev</span></button>
+      <button type="button" onClick={advanceManually} disabled={!canNext} aria-label="Next audio" aria-keyshortcuts="D"><span className="button-label-full">Next</span><span className="button-label-short">Next</span></button>
+      <button type="button" onClick={stop} disabled={!player.audioBuffer} aria-label="Stop audio" aria-keyshortcuts="S"><span className="button-label-full">Stop</span><span className="button-label-short">Stop</span></button>
+      <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C"><span className="button-label-full">{runMode === "single" ? "Single" : "Consecutive"}</span><span className="button-label-short">{runMode === "single" ? "Single" : "Consec."}</span></button>
       <button
         type="button"
         className="primary play-toggle"
@@ -189,6 +187,8 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
       >
         {player.isPlaying ? "Pause" : "Play"}
       </button>
+    </div>
+    <div className="player-transport">
       <LineWaveform
         audioBuffer={player.audioBuffer}
         loadFailed={player.loadFailed}

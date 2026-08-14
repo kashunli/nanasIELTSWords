@@ -388,3 +388,49 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
     min-height: auto;
   }
 }
+
+/* Keep every transport action in one compact row; the waveform owns the row below. */
+.button-label-short { display: none; }
+
+.player-controls {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.player-controls .player-run-mode { grid-column: auto; }
+
+.player-transport {
+  display: block;
+}
+
+.play-toggle {
+  width: auto;
+  min-height: 37px;
+  border-radius: 9px !important;
+}
+
+@media (max-width: 760px) {
+  .player-controls {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .player-controls button {
+    min-height: 32px;
+    padding: 5px 2px;
+    font-size: 10px;
+  }
+
+  .button-label-full { display: none; }
+  .button-label-short { display: inline; }
+
+  .player-transport {
+    display: block;
+  }
+
+  .play-toggle {
+    width: auto;
+    min-height: 32px;
+    font-size: 10px;
+    border-radius: 9px !important;
+  }
+}
