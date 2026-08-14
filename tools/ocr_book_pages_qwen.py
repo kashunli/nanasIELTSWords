@@ -15,7 +15,7 @@ import dashscope
 
 
 MODEL = "qwen3.7-flash"
-PROMPT_VERSION = "qwen3.7-flash-book-page-v2-exact-schema"
+PROMPT_VERSION = "qwen3.7-flash-book-page-v4-ipa-meaning-layout"
 API_BASE_URL = "https://dashscope.aliyuncs.com/api/v1"
 
 
@@ -86,6 +86,23 @@ def prompt(page: dict[str, Any]) -> str:
             "Use entries with headword, ipa, part_of_speech, meaning_zh, example_en, "
             "example_zh, collocations, word_formation, and notes."
         )
+    page_specific = ""
+    if page["pdf_page"] == 57:
+        page_specific = (
+            "On this page, copy the short Chinese example under galaxy exactly as printed; "
+            "do not add words from the English sentence or from general knowledge."
+        )
+    elif page["pdf_page"] == 61:
+        page_specific = (
+            "On this page, preserve IPA symbols exactly, especially the vowel symbols in "
+            "circuit, discernible, and fragment. The fragment example may end at the page boundary."
+        )
+    elif page["pdf_page"] == 62:
+        page_specific = (
+            "The top lines continue fragment's example from the previous page. They are not a "
+            "new headword: do not create an entry for fragmented. Record only dictionary blocks "
+            "that have their own IPA and part-of-speech line."
+        )
     return f"""Transcribe this scanned IELTS vocabulary book page exactly.
 Return one valid JSON object only, with no commentary and no Markdown fences.
 Use exactly one top-level key named entries for vocabulary items. Do not add content, footer, or duplicate entries keys.
@@ -98,6 +115,9 @@ Pictures may be omitted, but printed labels must be retained separately.
 Copy the visible wording literally. Do not infer, paraphrase, normalize, or improve a sentence even when it seems grammatically incomplete or semantically unusual.
 Do not add Markdown bold markers around headwords in examples. Use [unclear] only for genuinely unreadable text.
 If an example or note continues onto another page, preserve the visible fragment and explain the continuation in page_notes; do not drop the entry or invent the missing part.
+Transcribe IPA with the printed IPA symbols, including stress marks, schwa, length marks, and the rhotic vowel; never replace them with digits or ASCII approximations.
+When an entry has multiple parts of speech, put only the printed abbreviations in part_of_speech and label the corresponding Chinese senses in meaning_zh, for example "n.; adj." with "n. ...；adj. ...". Keep aliases printed on the headword line in headword. Do not attach footer word lists or page metadata to an entry's notes; put them in page_notes.
+{page_specific}
 Keep page_notes for layout or cross-page continuation facts."""
 
 

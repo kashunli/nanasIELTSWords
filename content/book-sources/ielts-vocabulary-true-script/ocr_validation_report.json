@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T02:36:31.365438+00:00",
+  "generated_at": "2026-08-14T03:31:32.693478+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -420,38 +420,58 @@
     },
     {
       "pdf_page": 56,
+      "book_page": 45,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 57,
+      "book_page": 46,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 58,
+      "book_page": 47,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 59,
+      "book_page": 48,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 60,
+      "book_page": 49,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 61,
+      "book_page": 50,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
     },
     {
       "pdf_page": 62,
+      "book_page": 51,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 5
     },
     {
       "pdf_page": 63,
@@ -1856,13 +1876,6 @@
     25,
     35,
     36,
-    56,
-    57,
-    58,
-    59,
-    60,
-    61,
-    62,
     64,
     65,
     66,
@@ -2781,8 +2794,57 @@
           "headword": "prey"
         }
       ]
+    },
+    "4": {
+      "expected_audio_words": 74,
+      "ocr_words": 75,
+      "matched_words": 70,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch04-0047",
+          "headword": "Iron.",
+          "position": 47
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch04-0049",
+          "headword": "In",
+          "position": 49
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch04-0053",
+          "headword": "Synthe size.",
+          "position": 53
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch04-0066",
+          "headword": "discernible night",
+          "position": 66
+        }
+      ],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0060-04",
+          "headword": "ion"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0060-06",
+          "headword": "quantum"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0060-10",
+          "headword": "synthesise (= synthesize)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0061-07",
+          "headword": "discernible"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0062-01",
+          "headword": "cataclysmic"
+        }
+      ]
     }
   },
-  "word_count": 539,
+  "word_count": 614,
   "index_entry_count": 0
 }
