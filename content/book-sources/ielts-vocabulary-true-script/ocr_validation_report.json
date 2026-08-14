@@ -1,0 +1,2369 @@
+{
+  "schema_version": 1,
+  "book_id": "ielts-vocabulary-true-script",
+  "generated_at": "2026-08-14T02:04:02.964314+00:00",
+  "page_count": 336,
+  "page_reports": [
+    {
+      "pdf_page": 1,
+      "page_type": "front_cover",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 2,
+      "page_type": "title_page",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 3,
+      "page_type": "copyright",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 4,
+      "page_type": "preface",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 5,
+      "page_type": "preface",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 6,
+      "page_type": "preface",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 7,
+      "page_type": "preface",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 8,
+      "page_type": "preface",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 9,
+      "book_page": null,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 10,
+      "page_type": "table_of_contents",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 11,
+      "book_page": null,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 12,
+      "book_page": 1,
+      "page_type": "chapter_opener",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 13,
+      "book_page": 2,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
+    },
+    {
+      "pdf_page": 14,
+      "book_page": 3,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 11
+    },
+    {
+      "pdf_page": 15,
+      "book_page": 4,
+      "page_type": "vocabulary",
+      "status": "needs_review",
+      "review_reasons": [
+        "typhoon_note_contains_a_low_confidence_cultural_etymology_phrase"
+      ],
+      "ocr_entry_count": 14
+    },
+    {
+      "pdf_page": 16,
+      "book_page": 5,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
+    },
+    {
+      "pdf_page": 17,
+      "book_page": 6,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
+    },
+    {
+      "pdf_page": 18,
+      "book_page": 7,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
+    },
+    {
+      "pdf_page": 19,
+      "book_page": 8,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
+    },
+    {
+      "pdf_page": 20,
+      "book_page": 9,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
+    },
+    {
+      "pdf_page": 21,
+      "book_page": 10,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
+    },
+    {
+      "pdf_page": 22,
+      "book_page": 11,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
+    },
+    {
+      "pdf_page": 23,
+      "book_page": 12,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
+    },
+    {
+      "pdf_page": 24,
+      "book_page": 13,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
+    },
+    {
+      "pdf_page": 25,
+      "book_page": 14,
+      "page_type": "vocabulary",
+      "status": "needs_review",
+      "review_reasons": [
+        "The printed border example appears to use 'lead' rather than the expected past-tense 'led'; the visible wording is preserved for later review."
+      ],
+      "ocr_entry_count": 13
+    },
+    {
+      "pdf_page": 26,
+      "book_page": 15,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
+    },
+    {
+      "pdf_page": 27,
+      "book_page": 16,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
+    },
+    {
+      "pdf_page": 28,
+      "book_page": 17,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
+    },
+    {
+      "pdf_page": 29,
+      "book_page": 18,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
+    },
+    {
+      "pdf_page": 30,
+      "book_page": 19,
+      "page_type": "vocabulary",
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 9
+    },
+    {
+      "pdf_page": 31,
+      "book_page": 20,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 32,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 33,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 34,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 35,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 36,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 37,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 38,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 39,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 40,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 41,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 42,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 43,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 44,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 45,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 46,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 47,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 48,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 49,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 50,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 51,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 52,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 53,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 54,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 55,
+      "book_page": 44,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 56,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 57,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 58,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 59,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 60,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 61,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 62,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 63,
+      "book_page": 52,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 64,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 65,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 66,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 67,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 68,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 69,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 70,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 71,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 72,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 73,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 74,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 75,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 76,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 77,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 78,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 79,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 80,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 81,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 82,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 83,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 84,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 85,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 86,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 87,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 88,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 89,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 90,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 91,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 92,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 93,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 94,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 95,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 96,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 97,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 98,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 99,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 100,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 101,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 102,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 103,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 104,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 105,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 106,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 107,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 108,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 109,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 110,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 111,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 112,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 113,
+      "book_page": 102,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 114,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 115,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 116,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 117,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 118,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 119,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 120,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 121,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 122,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 123,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 124,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 125,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 126,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 127,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 128,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 129,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 130,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 131,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 132,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 133,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 134,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 135,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 136,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 137,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 138,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 139,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 140,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 141,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 142,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 143,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 144,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 145,
+      "book_page": 134,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 146,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 147,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 148,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 149,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 150,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 151,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 152,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 153,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 154,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 155,
+      "book_page": 144,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 156,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 157,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 158,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 159,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 160,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 161,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 162,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 163,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 164,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 165,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 166,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 167,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 168,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 169,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 170,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 171,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 172,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 173,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 174,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 175,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 176,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 177,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 178,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 179,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 180,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 181,
+      "book_page": 170,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 182,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 183,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 184,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 185,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 186,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 187,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 188,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 189,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 190,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 191,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 192,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 193,
+      "book_page": 182,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 194,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 195,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 196,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 197,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 198,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 199,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 200,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 201,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 202,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 203,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 204,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 205,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 206,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 207,
+      "book_page": 196,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 208,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 209,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 210,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 211,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 212,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 213,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 214,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 215,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 216,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 217,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 218,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 219,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 220,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 221,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 222,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 223,
+      "book_page": 212,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 224,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 225,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 226,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 227,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 228,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 229,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 230,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 231,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 232,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 233,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 234,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 235,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 236,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 237,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 238,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 239,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 240,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 241,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 242,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 243,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 244,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 245,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 246,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 247,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 248,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 249,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 250,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 251,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 252,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 253,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 254,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 255,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 256,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 257,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 258,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 259,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 260,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 261,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 262,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 263,
+      "book_page": 252,
+      "page_type": "blank",
+      "status": "ok",
+      "review_reasons": []
+    },
+    {
+      "pdf_page": 264,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 265,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 266,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 267,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 268,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 269,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 270,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 271,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 272,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 273,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 274,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 275,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 276,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 277,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 278,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 279,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 280,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 281,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 282,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 283,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 284,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 285,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 286,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 287,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 288,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 289,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 290,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 291,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 292,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 293,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 294,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 295,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 296,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 297,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 298,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 299,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 300,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 301,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 302,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 303,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 304,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 305,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 306,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 307,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 308,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 309,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 310,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 311,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 312,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 313,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 314,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 315,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 316,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 317,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 318,
+      "page_type": "chapter_opener",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 319,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 320,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 321,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 322,
+      "page_type": "vocabulary",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 323,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 324,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 325,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 326,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 327,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 328,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 329,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 330,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 331,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 332,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 333,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 334,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 335,
+      "page_type": "index",
+      "status": "missing"
+    },
+    {
+      "pdf_page": 336,
+      "page_type": "back_cover",
+      "status": "missing"
+    }
+  ],
+  "pages_with_issues": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    15,
+    25,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336
+  ],
+  "chapter_alignment": {
+    "1": {
+      "expected_audio_words": 240,
+      "ocr_words": 241,
+      "matched_words": 210,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch01-0019",
+          "headword": "In danger.",
+          "position": 19
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0020",
+          "headword": "Jeopardize.",
+          "position": 20
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0022",
+          "headword": "El Nino.",
+          "position": 22
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0027",
+          "headword": "or this",
+          "position": 27
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0029",
+          "headword": "marble they",
+          "position": 29
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0062",
+          "headword": "Plato.",
+          "position": 62
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0083",
+          "headword": "Golf.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0090",
+          "headword": "stream On",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0103",
+          "headword": "Oceana.",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0112",
+          "headword": "warm the",
+          "position": 112
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0113",
+          "headword": "thermal the",
+          "position": 113
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0115",
+          "headword": "arid it",
+          "position": 115
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0116",
+          "headword": "moist his",
+          "position": 116
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0122",
+          "headword": "Thor.",
+          "position": 122
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0124",
+          "headword": "freeze the",
+          "position": 124
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0136",
+          "headword": "Celcius.",
+          "position": 136
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0149",
+          "headword": "South East.",
+          "position": 149
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0172",
+          "headword": "toxic all",
+          "position": 172
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0175",
+          "headword": "contaminant",
+          "position": 175
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0176",
+          "headword": "geology he",
+          "position": 176
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0180",
+          "headword": "plates. Plate.",
+          "position": 180
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0189",
+          "headword": "dramatic she",
+          "position": 189
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0190",
+          "headword": "wilderness from",
+          "position": 190
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0191",
+          "headword": "desert the",
+          "position": 191
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0193",
+          "headword": "Baron.",
+          "position": 193
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0195",
+          "headword": "Fertilize.",
+          "position": 195
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0197",
+          "headword": "Luna.",
+          "position": 197
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0208",
+          "headword": "vapor.",
+          "position": 208
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0217",
+          "headword": "Poor.",
+          "position": 217
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch01-0238",
+          "headword": "gas there",
+          "position": 238
+        }
+      ],
+      "unexpected_ocr_words": [
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0014-04",
+          "headword": "endanger"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0014-05",
+          "headword": "jeopardise (= jeopardize)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0014-07",
+          "headword": "El Niño"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0015-01",
+          "headword": "ore"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0015-03",
+          "headword": "marble"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0017-12",
+          "headword": "plateau"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0019-07",
+          "headword": "gulf"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0019-14",
+          "headword": "stream"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0020-12",
+          "headword": "Oceania"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-05",
+          "headword": "warm"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-06",
+          "headword": "thermal"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-08",
+          "headword": "arid"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0021-09",
+          "headword": "moist"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0022-02",
+          "headword": "thaw"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0022-04",
+          "headword": "freeze"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0023-03",
+          "headword": "Celsius"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0024-01",
+          "headword": "southeast"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0025-08",
+          "headword": "toxic"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0025-11",
+          "headword": "contaminate"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0025-12",
+          "headword": "geology"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-03",
+          "headword": "plate"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-12",
+          "headword": "dramatic"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-13",
+          "headword": "wilderness"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0026-14",
+          "headword": "desert"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0027-02",
+          "headword": "barren"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0027-04",
+          "headword": "fertilise (= fertilize)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0027-06",
+          "headword": "lunar"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0028-04",
+          "headword": "vapour (= vapor)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0028-13",
+          "headword": "pour"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0030-03",
+          "headword": "natural"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0030-07",
+          "headword": "gas"
+        }
+      ]
+    }
+  },
+  "word_count": 241,
+  "index_entry_count": 0
+}

@@ -1,0 +1,3371 @@
+{
+  "schema_version": 1,
+  "book_id": "ielts-vocabulary-true-script",
+  "ocr_method": "gpt-native-vision",
+  "prompt_version": "gpt-book-ocr-v1",
+  "outside_api_used": false,
+  "instructions": "Use view_image on each local image and author one page record in visual reading order.",
+  "pages": [
+    {
+      "pdf_page": 1,
+      "book_page": null,
+      "page_type": "front_cover",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0001.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0001.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 2,
+      "book_page": null,
+      "page_type": "title_page",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0002.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0002.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 3,
+      "book_page": null,
+      "page_type": "copyright",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0003.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0003.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 4,
+      "book_page": null,
+      "page_type": "preface",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0004.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0004.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 5,
+      "book_page": null,
+      "page_type": "preface",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0005.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0005.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 6,
+      "book_page": null,
+      "page_type": "preface",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0006.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0006.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 7,
+      "book_page": null,
+      "page_type": "preface",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0007.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0007.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 8,
+      "book_page": null,
+      "page_type": "preface",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0008.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0008.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 9,
+      "book_page": null,
+      "page_type": "blank",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0009.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0009.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 10,
+      "book_page": null,
+      "page_type": "table_of_contents",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0010.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0010.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 11,
+      "book_page": null,
+      "page_type": "blank",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0011.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0011.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 12,
+      "book_page": 1,
+      "page_type": "chapter_opener",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0012.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0012.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 13,
+      "book_page": 2,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0013.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0013.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 14,
+      "book_page": 3,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0014.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0014.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 15,
+      "book_page": 4,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0015.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0015.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 16,
+      "book_page": 5,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0016.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0016.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 17,
+      "book_page": 6,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0017.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0017.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 18,
+      "book_page": 7,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0018.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0018.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 19,
+      "book_page": 8,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0019.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0019.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 20,
+      "book_page": 9,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0020.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0020.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 21,
+      "book_page": 10,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0021.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0021.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 22,
+      "book_page": 11,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0022.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0022.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 23,
+      "book_page": 12,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0023.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0023.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 24,
+      "book_page": 13,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0024.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0024.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 25,
+      "book_page": 14,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0025.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0025.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 26,
+      "book_page": 15,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0026.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0026.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 27,
+      "book_page": 16,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0027.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0027.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 28,
+      "book_page": 17,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0028.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0028.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 29,
+      "book_page": 18,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0029.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0029.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 30,
+      "book_page": 19,
+      "page_type": "vocabulary",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0030.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0030.md",
+      "status": "completed"
+    },
+    {
+      "pdf_page": 31,
+      "book_page": 20,
+      "page_type": "blank",
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0031.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0031.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 32,
+      "book_page": 21,
+      "page_type": "chapter_opener",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0032.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0032.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 33,
+      "book_page": 22,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0033.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0033.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 34,
+      "book_page": 23,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0034.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0034.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 35,
+      "book_page": 24,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0035.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0035.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 36,
+      "book_page": 25,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0036.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0036.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 37,
+      "book_page": 26,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0037.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0037.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 38,
+      "book_page": 27,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0038.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0038.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 39,
+      "book_page": 28,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0039.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0039.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 40,
+      "book_page": 29,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0040.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0040.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 41,
+      "book_page": 30,
+      "page_type": "vocabulary",
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0041.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0041.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 42,
+      "book_page": 31,
+      "page_type": "chapter_opener",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0042.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0042.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 43,
+      "book_page": 32,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0043.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0043.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 44,
+      "book_page": 33,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0044.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0044.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 45,
+      "book_page": 34,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0045.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0045.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 46,
+      "book_page": 35,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0046.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0046.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 47,
+      "book_page": 36,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0047.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0047.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 48,
+      "book_page": 37,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0048.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0048.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 49,
+      "book_page": 38,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0049.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0049.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 50,
+      "book_page": 39,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0050.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0050.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 51,
+      "book_page": 40,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0051.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0051.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 52,
+      "book_page": 41,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0052.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0052.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 53,
+      "book_page": 42,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0053.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0053.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 54,
+      "book_page": 43,
+      "page_type": "vocabulary",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0054.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0054.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 55,
+      "book_page": 44,
+      "page_type": "blank",
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0055.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0055.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 56,
+      "book_page": 45,
+      "page_type": "chapter_opener",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0056.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0056.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 57,
+      "book_page": 46,
+      "page_type": "vocabulary",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0057.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0057.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 58,
+      "book_page": 47,
+      "page_type": "vocabulary",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0058.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0058.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 59,
+      "book_page": 48,
+      "page_type": "vocabulary",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0059.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0059.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 60,
+      "book_page": 49,
+      "page_type": "vocabulary",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0060.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0060.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 61,
+      "book_page": 50,
+      "page_type": "vocabulary",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0061.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0061.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 62,
+      "book_page": 51,
+      "page_type": "vocabulary",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0062.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0062.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 63,
+      "book_page": 52,
+      "page_type": "blank",
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0063.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0063.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 64,
+      "book_page": 53,
+      "page_type": "chapter_opener",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0064.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0064.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 65,
+      "book_page": 54,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0065.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0065.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 66,
+      "book_page": 55,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0066.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0066.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 67,
+      "book_page": 56,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0067.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0067.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 68,
+      "book_page": 57,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0068.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0068.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 69,
+      "book_page": 58,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0069.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0069.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 70,
+      "book_page": 59,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0070.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0070.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 71,
+      "book_page": 60,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0071.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0071.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 72,
+      "book_page": 61,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0072.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0072.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 73,
+      "book_page": 62,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0073.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0073.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 74,
+      "book_page": 63,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0074.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0074.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 75,
+      "book_page": 64,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0075.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0075.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 76,
+      "book_page": 65,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0076.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0076.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 77,
+      "book_page": 66,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0077.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0077.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 78,
+      "book_page": 67,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0078.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0078.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 79,
+      "book_page": 68,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0079.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0079.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 80,
+      "book_page": 69,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0080.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0080.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 81,
+      "book_page": 70,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0081.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0081.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 82,
+      "book_page": 71,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0082.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0082.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 83,
+      "book_page": 72,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0083.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0083.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 84,
+      "book_page": 73,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0084.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0084.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 85,
+      "book_page": 74,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0085.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0085.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 86,
+      "book_page": 75,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0086.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0086.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 87,
+      "book_page": 76,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0087.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0087.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 88,
+      "book_page": 77,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0088.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0088.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 89,
+      "book_page": 78,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0089.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0089.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 90,
+      "book_page": 79,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0090.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0090.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 91,
+      "book_page": 80,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0091.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0091.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 92,
+      "book_page": 81,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0092.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0092.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 93,
+      "book_page": 82,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0093.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0093.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 94,
+      "book_page": 83,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0094.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0094.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 95,
+      "book_page": 84,
+      "page_type": "vocabulary",
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0095.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0095.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 96,
+      "book_page": 85,
+      "page_type": "chapter_opener",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0096.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0096.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 97,
+      "book_page": 86,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0097.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0097.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 98,
+      "book_page": 87,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0098.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0098.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 99,
+      "book_page": 88,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0099.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0099.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 100,
+      "book_page": 89,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0100.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0100.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 101,
+      "book_page": 90,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0101.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0101.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 102,
+      "book_page": 91,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0102.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0102.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 103,
+      "book_page": 92,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0103.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0103.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 104,
+      "book_page": 93,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0104.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0104.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 105,
+      "book_page": 94,
+      "page_type": "vocabulary",
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0105.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0105.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 106,
+      "book_page": 95,
+      "page_type": "chapter_opener",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0106.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0106.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 107,
+      "book_page": 96,
+      "page_type": "vocabulary",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0107.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0107.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 108,
+      "book_page": 97,
+      "page_type": "vocabulary",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0108.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0108.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 109,
+      "book_page": 98,
+      "page_type": "vocabulary",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0109.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0109.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 110,
+      "book_page": 99,
+      "page_type": "vocabulary",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0110.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0110.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 111,
+      "book_page": 100,
+      "page_type": "vocabulary",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0111.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0111.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 112,
+      "book_page": 101,
+      "page_type": "vocabulary",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0112.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0112.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 113,
+      "book_page": 102,
+      "page_type": "blank",
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0113.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0113.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 114,
+      "book_page": 103,
+      "page_type": "chapter_opener",
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0114.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0114.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 115,
+      "book_page": 104,
+      "page_type": "vocabulary",
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0115.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0115.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 116,
+      "book_page": 105,
+      "page_type": "vocabulary",
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0116.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0116.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 117,
+      "book_page": 106,
+      "page_type": "vocabulary",
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0117.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0117.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 118,
+      "book_page": 107,
+      "page_type": "vocabulary",
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0118.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0118.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 119,
+      "book_page": 108,
+      "page_type": "vocabulary",
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0119.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0119.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 120,
+      "book_page": 109,
+      "page_type": "chapter_opener",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0120.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0120.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 121,
+      "book_page": 110,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0121.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0121.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 122,
+      "book_page": 111,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0122.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0122.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 123,
+      "book_page": 112,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0123.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0123.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 124,
+      "book_page": 113,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0124.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0124.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 125,
+      "book_page": 114,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0125.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0125.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 126,
+      "book_page": 115,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0126.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0126.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 127,
+      "book_page": 116,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0127.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0127.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 128,
+      "book_page": 117,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0128.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0128.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 129,
+      "book_page": 118,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0129.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0129.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 130,
+      "book_page": 119,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0130.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0130.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 131,
+      "book_page": 120,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0131.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0131.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 132,
+      "book_page": 121,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0132.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0132.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 133,
+      "book_page": 122,
+      "page_type": "vocabulary",
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0133.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0133.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 134,
+      "book_page": 123,
+      "page_type": "chapter_opener",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0134.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0134.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 135,
+      "book_page": 124,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0135.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0135.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 136,
+      "book_page": 125,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0136.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0136.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 137,
+      "book_page": 126,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0137.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0137.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 138,
+      "book_page": 127,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0138.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0138.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 139,
+      "book_page": 128,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0139.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0139.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 140,
+      "book_page": 129,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0140.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0140.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 141,
+      "book_page": 130,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0141.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0141.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 142,
+      "book_page": 131,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0142.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0142.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 143,
+      "book_page": 132,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0143.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0143.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 144,
+      "book_page": 133,
+      "page_type": "vocabulary",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0144.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0144.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 145,
+      "book_page": 134,
+      "page_type": "blank",
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0145.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0145.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 146,
+      "book_page": 135,
+      "page_type": "chapter_opener",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0146.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0146.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 147,
+      "book_page": 136,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0147.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0147.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 148,
+      "book_page": 137,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0148.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0148.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 149,
+      "book_page": 138,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0149.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0149.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 150,
+      "book_page": 139,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0150.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0150.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 151,
+      "book_page": 140,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0151.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0151.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 152,
+      "book_page": 141,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0152.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0152.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 153,
+      "book_page": 142,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0153.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0153.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 154,
+      "book_page": 143,
+      "page_type": "vocabulary",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0154.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0154.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 155,
+      "book_page": 144,
+      "page_type": "blank",
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0155.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0155.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 156,
+      "book_page": 145,
+      "page_type": "chapter_opener",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0156.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0156.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 157,
+      "book_page": 146,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0157.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0157.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 158,
+      "book_page": 147,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0158.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0158.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 159,
+      "book_page": 148,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0159.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0159.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 160,
+      "book_page": 149,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0160.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0160.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 161,
+      "book_page": 150,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0161.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0161.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 162,
+      "book_page": 151,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0162.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0162.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 163,
+      "book_page": 152,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0163.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0163.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 164,
+      "book_page": 153,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0164.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0164.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 165,
+      "book_page": 154,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0165.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0165.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 166,
+      "book_page": 155,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0166.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0166.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 167,
+      "book_page": 156,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0167.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0167.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 168,
+      "book_page": 157,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0168.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0168.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 169,
+      "book_page": 158,
+      "page_type": "vocabulary",
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0169.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0169.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 170,
+      "book_page": 159,
+      "page_type": "chapter_opener",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0170.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0170.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 171,
+      "book_page": 160,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0171.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0171.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 172,
+      "book_page": 161,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0172.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0172.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 173,
+      "book_page": 162,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0173.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0173.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 174,
+      "book_page": 163,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0174.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0174.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 175,
+      "book_page": 164,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0175.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0175.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 176,
+      "book_page": 165,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0176.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0176.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 177,
+      "book_page": 166,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0177.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0177.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 178,
+      "book_page": 167,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0178.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0178.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 179,
+      "book_page": 168,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0179.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0179.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 180,
+      "book_page": 169,
+      "page_type": "vocabulary",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0180.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0180.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 181,
+      "book_page": 170,
+      "page_type": "blank",
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0181.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0181.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 182,
+      "book_page": 171,
+      "page_type": "chapter_opener",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0182.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0182.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 183,
+      "book_page": 172,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0183.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0183.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 184,
+      "book_page": 173,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0184.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0184.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 185,
+      "book_page": 174,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0185.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0185.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 186,
+      "book_page": 175,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0186.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0186.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 187,
+      "book_page": 176,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0187.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0187.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 188,
+      "book_page": 177,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0188.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0188.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 189,
+      "book_page": 178,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0189.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0189.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 190,
+      "book_page": 179,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0190.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0190.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 191,
+      "book_page": 180,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0191.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0191.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 192,
+      "book_page": 181,
+      "page_type": "vocabulary",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0192.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0192.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 193,
+      "book_page": 182,
+      "page_type": "blank",
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0193.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0193.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 194,
+      "book_page": 183,
+      "page_type": "chapter_opener",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0194.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0194.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 195,
+      "book_page": 184,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0195.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0195.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 196,
+      "book_page": 185,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0196.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0196.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 197,
+      "book_page": 186,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0197.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0197.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 198,
+      "book_page": 187,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0198.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0198.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 199,
+      "book_page": 188,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0199.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0199.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 200,
+      "book_page": 189,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0200.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0200.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 201,
+      "book_page": 190,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0201.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0201.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 202,
+      "book_page": 191,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0202.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0202.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 203,
+      "book_page": 192,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0203.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0203.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 204,
+      "book_page": 193,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0204.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0204.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 205,
+      "book_page": 194,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0205.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0205.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 206,
+      "book_page": 195,
+      "page_type": "vocabulary",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0206.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0206.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 207,
+      "book_page": 196,
+      "page_type": "blank",
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0207.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0207.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 208,
+      "book_page": 197,
+      "page_type": "chapter_opener",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0208.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0208.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 209,
+      "book_page": 198,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0209.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0209.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 210,
+      "book_page": 199,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0210.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0210.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 211,
+      "book_page": 200,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0211.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0211.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 212,
+      "book_page": 201,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0212.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0212.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 213,
+      "book_page": 202,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0213.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0213.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 214,
+      "book_page": 203,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0214.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0214.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 215,
+      "book_page": 204,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0215.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0215.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 216,
+      "book_page": 205,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0216.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0216.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 217,
+      "book_page": 206,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0217.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0217.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 218,
+      "book_page": 207,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0218.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0218.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 219,
+      "book_page": 208,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0219.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0219.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 220,
+      "book_page": 209,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0220.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0220.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 221,
+      "book_page": 210,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0221.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0221.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 222,
+      "book_page": 211,
+      "page_type": "vocabulary",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0222.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0222.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 223,
+      "book_page": 212,
+      "page_type": "blank",
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0223.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0223.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 224,
+      "book_page": 213,
+      "page_type": "chapter_opener",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0224.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0224.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 225,
+      "book_page": 214,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0225.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0225.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 226,
+      "book_page": 215,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0226.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0226.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 227,
+      "book_page": 216,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0227.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0227.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 228,
+      "book_page": 217,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0228.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0228.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 229,
+      "book_page": 218,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0229.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0229.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 230,
+      "book_page": 219,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0230.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0230.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 231,
+      "book_page": 220,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0231.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0231.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 232,
+      "book_page": 221,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0232.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0232.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 233,
+      "book_page": 222,
+      "page_type": "vocabulary",
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0233.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0233.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 234,
+      "book_page": 223,
+      "page_type": "chapter_opener",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0234.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0234.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 235,
+      "book_page": 224,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0235.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0235.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 236,
+      "book_page": 225,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0236.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0236.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 237,
+      "book_page": 226,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0237.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0237.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 238,
+      "book_page": 227,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0238.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0238.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 239,
+      "book_page": 228,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0239.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0239.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 240,
+      "book_page": 229,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0240.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0240.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 241,
+      "book_page": 230,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0241.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0241.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 242,
+      "book_page": 231,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0242.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0242.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 243,
+      "book_page": 232,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0243.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0243.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 244,
+      "book_page": 233,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0244.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0244.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 245,
+      "book_page": 234,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0245.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0245.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 246,
+      "book_page": 235,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0246.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0246.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 247,
+      "book_page": 236,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0247.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0247.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 248,
+      "book_page": 237,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0248.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0248.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 249,
+      "book_page": 238,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0249.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0249.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 250,
+      "book_page": 239,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0250.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0250.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 251,
+      "book_page": 240,
+      "page_type": "vocabulary",
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0251.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0251.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 252,
+      "book_page": 241,
+      "page_type": "chapter_opener",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0252.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0252.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 253,
+      "book_page": 242,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0253.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0253.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 254,
+      "book_page": 243,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0254.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0254.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 255,
+      "book_page": 244,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0255.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0255.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 256,
+      "book_page": 245,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0256.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0256.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 257,
+      "book_page": 246,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0257.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0257.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 258,
+      "book_page": 247,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0258.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0258.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 259,
+      "book_page": 248,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0259.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0259.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 260,
+      "book_page": 249,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0260.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0260.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 261,
+      "book_page": 250,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0261.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0261.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 262,
+      "book_page": 251,
+      "page_type": "vocabulary",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0262.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0262.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 263,
+      "book_page": 252,
+      "page_type": "blank",
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0263.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0263.md",
+      "status": "blank"
+    },
+    {
+      "pdf_page": 264,
+      "book_page": 253,
+      "page_type": "chapter_opener",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0264.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0264.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 265,
+      "book_page": 254,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0265.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0265.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 266,
+      "book_page": 255,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0266.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0266.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 267,
+      "book_page": 256,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0267.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0267.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 268,
+      "book_page": 257,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0268.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0268.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 269,
+      "book_page": 258,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0269.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0269.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 270,
+      "book_page": 259,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0270.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0270.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 271,
+      "book_page": 260,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0271.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0271.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 272,
+      "book_page": 261,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0272.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0272.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 273,
+      "book_page": 262,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0273.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0273.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 274,
+      "book_page": 263,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0274.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0274.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 275,
+      "book_page": 264,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0275.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0275.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 276,
+      "book_page": 265,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0276.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0276.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 277,
+      "book_page": 266,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0277.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0277.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 278,
+      "book_page": 267,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0278.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0278.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 279,
+      "book_page": 268,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0279.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0279.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 280,
+      "book_page": 269,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0280.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0280.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 281,
+      "book_page": 270,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0281.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0281.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 282,
+      "book_page": 271,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0282.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0282.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 283,
+      "book_page": 272,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0283.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0283.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 284,
+      "book_page": 273,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0284.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0284.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 285,
+      "book_page": 274,
+      "page_type": "vocabulary",
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0285.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0285.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 286,
+      "book_page": 275,
+      "page_type": "chapter_opener",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0286.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0286.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 287,
+      "book_page": 276,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0287.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0287.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 288,
+      "book_page": 277,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0288.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0288.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 289,
+      "book_page": 278,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0289.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0289.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 290,
+      "book_page": 279,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0290.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0290.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 291,
+      "book_page": 280,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0291.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0291.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 292,
+      "book_page": 281,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0292.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0292.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 293,
+      "book_page": 282,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0293.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0293.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 294,
+      "book_page": 283,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0294.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0294.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 295,
+      "book_page": 284,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0295.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0295.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 296,
+      "book_page": 285,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0296.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0296.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 297,
+      "book_page": 286,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0297.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0297.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 298,
+      "book_page": 287,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0298.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0298.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 299,
+      "book_page": 288,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0299.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0299.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 300,
+      "book_page": 289,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0300.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0300.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 301,
+      "book_page": 290,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0301.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0301.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 302,
+      "book_page": 291,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0302.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0302.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 303,
+      "book_page": 292,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0303.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0303.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 304,
+      "book_page": 293,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0304.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0304.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 305,
+      "book_page": 294,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0305.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0305.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 306,
+      "book_page": 295,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0306.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0306.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 307,
+      "book_page": 296,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0307.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0307.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 308,
+      "book_page": 297,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0308.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0308.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 309,
+      "book_page": 298,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0309.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0309.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 310,
+      "book_page": 299,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0310.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0310.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 311,
+      "book_page": 300,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0311.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0311.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 312,
+      "book_page": 301,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0312.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0312.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 313,
+      "book_page": 302,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0313.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0313.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 314,
+      "book_page": 303,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0314.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0314.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 315,
+      "book_page": 304,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0315.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0315.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 316,
+      "book_page": 305,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0316.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0316.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 317,
+      "book_page": 306,
+      "page_type": "vocabulary",
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0317.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0317.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 318,
+      "book_page": 307,
+      "page_type": "chapter_opener",
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0318.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0318.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 319,
+      "book_page": 308,
+      "page_type": "vocabulary",
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0319.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0319.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 320,
+      "book_page": 309,
+      "page_type": "vocabulary",
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0320.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0320.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 321,
+      "book_page": 310,
+      "page_type": "vocabulary",
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0321.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0321.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 322,
+      "book_page": 311,
+      "page_type": "vocabulary",
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0322.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0322.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 323,
+      "book_page": 312,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0323.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0323.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 324,
+      "book_page": 313,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0324.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0324.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 325,
+      "book_page": 314,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0325.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0325.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 326,
+      "book_page": 315,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0326.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0326.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 327,
+      "book_page": 316,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0327.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0327.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 328,
+      "book_page": 317,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0328.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0328.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 329,
+      "book_page": 318,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0329.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0329.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 330,
+      "book_page": 319,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0330.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0330.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 331,
+      "book_page": 320,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0331.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0331.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 332,
+      "book_page": 321,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0332.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0332.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 333,
+      "book_page": 322,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0333.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0333.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 334,
+      "book_page": 323,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0334.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0334.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 335,
+      "book_page": 324,
+      "page_type": "index",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0335.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0335.md",
+      "status": "pending_visual_transcription"
+    },
+    {
+      "pdf_page": 336,
+      "book_page": null,
+      "page_type": "back_cover",
+      "chapter": null,
+      "chapter_title": null,
+      "image_path": "D:\\n2Prepare\\IELTSVocabulary\\work\\ielts_ocr\\pages_200dpi\\page_0336.png",
+      "output_path": "D:\\n2Prepare\\IELTSVocabulary\\content\\book-sources\\ielts-vocabulary-true-script\\page-ocr\\page_0336.md",
+      "status": "pending_visual_transcription"
+    }
+  ],
+  "generated_at": "2026-08-14T02:03:38.187405+00:00"
+}

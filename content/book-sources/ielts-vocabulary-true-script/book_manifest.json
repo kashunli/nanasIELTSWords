@@ -1,0 +1,3155 @@
+{
+  "schema_version": 1,
+  "book_id": "ielts-vocabulary-true-script",
+  "title": "IELTS雅思词汇真经",
+  "author": "刘洪波",
+  "edition_note": "Foreign Language Teaching and Research Press, 2018.10 (2018.11 reprint)",
+  "source_pdf": {
+    "filename": "IELTS雅思词汇真经 (刘洪波) (z-lib.org).pdf",
+    "relative_path": "IELTS雅思词汇真经 (刘洪波) (z-lib.org).pdf",
+    "sha256": "6a05b86d15bf84ac5f4988320e2fea82186d151dbf7b81e9fa00d9b43a302663",
+    "pdf_page_count": 336,
+    "printed_page_offset": 11
+  },
+  "ocr_policy": {
+    "method": "gpt-native-vision",
+    "prompt_version": "gpt-book-ocr-v1",
+    "render_dpi": 200,
+    "pictures_omitted": true,
+    "preserve_printed_labels": true,
+    "preserve_uncertainty": true
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "自然地理",
+      "printed_start_page": 1,
+      "pdf_start_page": 12,
+      "audio_item_count": 240
+    },
+    {
+      "chapter": 2,
+      "title": "植物研究",
+      "printed_start_page": 21,
+      "pdf_start_page": 32,
+      "audio_item_count": 130
+    },
+    {
+      "chapter": 3,
+      "title": "动物保护",
+      "printed_start_page": 31,
+      "pdf_start_page": 42,
+      "audio_item_count": 168
+    },
+    {
+      "chapter": 4,
+      "title": "太空探索",
+      "printed_start_page": 45,
+      "pdf_start_page": 56,
+      "audio_item_count": 74
+    },
+    {
+      "chapter": 5,
+      "title": "学校教育",
+      "printed_start_page": 53,
+      "pdf_start_page": 64,
+      "audio_item_count": 399
+    },
+    {
+      "chapter": 6,
+      "title": "科技发明",
+      "printed_start_page": 85,
+      "pdf_start_page": 96,
+      "audio_item_count": 122
+    },
+    {
+      "chapter": 7,
+      "title": "文化历史",
+      "printed_start_page": 95,
+      "pdf_start_page": 106,
+      "audio_item_count": 79
+    },
+    {
+      "chapter": 8,
+      "title": "语言演化",
+      "printed_start_page": 103,
+      "pdf_start_page": 114,
+      "audio_item_count": 68
+    },
+    {
+      "chapter": 9,
+      "title": "娱乐运动",
+      "printed_start_page": 109,
+      "pdf_start_page": 120,
+      "audio_item_count": 176
+    },
+    {
+      "chapter": 10,
+      "title": "物品材料",
+      "printed_start_page": 123,
+      "pdf_start_page": 134,
+      "audio_item_count": 152
+    },
+    {
+      "chapter": 11,
+      "title": "时尚潮流",
+      "printed_start_page": 135,
+      "pdf_start_page": 146,
+      "audio_item_count": 111
+    },
+    {
+      "chapter": 12,
+      "title": "饮食健康",
+      "printed_start_page": 145,
+      "pdf_start_page": 156,
+      "audio_item_count": 170
+    },
+    {
+      "chapter": 13,
+      "title": "建筑场所",
+      "printed_start_page": 159,
+      "pdf_start_page": 170,
+      "audio_item_count": 134
+    },
+    {
+      "chapter": 14,
+      "title": "交通旅行",
+      "printed_start_page": 171,
+      "pdf_start_page": 182,
+      "audio_item_count": 132
+    },
+    {
+      "chapter": 15,
+      "title": "国家政府",
+      "printed_start_page": 183,
+      "pdf_start_page": 194,
+      "audio_item_count": 149
+    },
+    {
+      "chapter": 16,
+      "title": "社会经济",
+      "printed_start_page": 197,
+      "pdf_start_page": 208,
+      "audio_item_count": 170
+    },
+    {
+      "chapter": 17,
+      "title": "法律法规",
+      "printed_start_page": 213,
+      "pdf_start_page": 224,
+      "audio_item_count": 117
+    },
+    {
+      "chapter": 18,
+      "title": "沙场争锋",
+      "printed_start_page": 223,
+      "pdf_start_page": 234,
+      "audio_item_count": 213
+    },
+    {
+      "chapter": 19,
+      "title": "社会角色",
+      "printed_start_page": 241,
+      "pdf_start_page": 252,
+      "audio_item_count": 120
+    },
+    {
+      "chapter": 20,
+      "title": "行为动作",
+      "printed_start_page": 253,
+      "pdf_start_page": 264,
+      "audio_item_count": 269
+    },
+    {
+      "chapter": 21,
+      "title": "身心健康",
+      "printed_start_page": 275,
+      "pdf_start_page": 286,
+      "audio_item_count": 417
+    },
+    {
+      "chapter": 22,
+      "title": "时间日期",
+      "printed_start_page": 307,
+      "pdf_start_page": 318,
+      "audio_item_count": 52
+    }
+  ],
+  "page_type_counts": {
+    "back_cover": 1,
+    "blank": 13,
+    "chapter_opener": 22,
+    "copyright": 1,
+    "front_cover": 1,
+    "index": 13,
+    "preface": 5,
+    "table_of_contents": 1,
+    "title_page": 1,
+    "vocabulary": 278
+  },
+  "pages": [
+    {
+      "pdf_page": 1,
+      "book_page": null,
+      "page_type": "front_cover",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 2,
+      "book_page": null,
+      "page_type": "title_page",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 3,
+      "book_page": null,
+      "page_type": "copyright",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 4,
+      "book_page": null,
+      "page_type": "preface",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 5,
+      "book_page": null,
+      "page_type": "preface",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 6,
+      "book_page": null,
+      "page_type": "preface",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 7,
+      "book_page": null,
+      "page_type": "preface",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 8,
+      "book_page": null,
+      "page_type": "preface",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 9,
+      "book_page": null,
+      "page_type": "blank",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 10,
+      "book_page": null,
+      "page_type": "table_of_contents",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 11,
+      "book_page": null,
+      "page_type": "blank",
+      "pictures_omitted": false
+    },
+    {
+      "pdf_page": 12,
+      "book_page": 1,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 1
+    },
+    {
+      "pdf_page": 13,
+      "book_page": 2,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 2
+    },
+    {
+      "pdf_page": 14,
+      "book_page": 3,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 3
+    },
+    {
+      "pdf_page": 15,
+      "book_page": 4,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 4
+    },
+    {
+      "pdf_page": 16,
+      "book_page": 5,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 5
+    },
+    {
+      "pdf_page": 17,
+      "book_page": 6,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 6
+    },
+    {
+      "pdf_page": 18,
+      "book_page": 7,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 7
+    },
+    {
+      "pdf_page": 19,
+      "book_page": 8,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 8
+    },
+    {
+      "pdf_page": 20,
+      "book_page": 9,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 9
+    },
+    {
+      "pdf_page": 21,
+      "book_page": 10,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 10
+    },
+    {
+      "pdf_page": 22,
+      "book_page": 11,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 11
+    },
+    {
+      "pdf_page": 23,
+      "book_page": 12,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 12
+    },
+    {
+      "pdf_page": 24,
+      "book_page": 13,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 13
+    },
+    {
+      "pdf_page": 25,
+      "book_page": 14,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 14
+    },
+    {
+      "pdf_page": 26,
+      "book_page": 15,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 15
+    },
+    {
+      "pdf_page": 27,
+      "book_page": 16,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 16
+    },
+    {
+      "pdf_page": 28,
+      "book_page": 17,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 17
+    },
+    {
+      "pdf_page": 29,
+      "book_page": 18,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 18
+    },
+    {
+      "pdf_page": 30,
+      "book_page": 19,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 19
+    },
+    {
+      "pdf_page": 31,
+      "book_page": 20,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 1,
+      "chapter_title": "自然地理",
+      "printed_page_label": 20
+    },
+    {
+      "pdf_page": 32,
+      "book_page": 21,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 21
+    },
+    {
+      "pdf_page": 33,
+      "book_page": 22,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 22
+    },
+    {
+      "pdf_page": 34,
+      "book_page": 23,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 23
+    },
+    {
+      "pdf_page": 35,
+      "book_page": 24,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 24
+    },
+    {
+      "pdf_page": 36,
+      "book_page": 25,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 25
+    },
+    {
+      "pdf_page": 37,
+      "book_page": 26,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 26
+    },
+    {
+      "pdf_page": 38,
+      "book_page": 27,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 27
+    },
+    {
+      "pdf_page": 39,
+      "book_page": 28,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 28
+    },
+    {
+      "pdf_page": 40,
+      "book_page": 29,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 29
+    },
+    {
+      "pdf_page": 41,
+      "book_page": 30,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 2,
+      "chapter_title": "植物研究",
+      "printed_page_label": 30
+    },
+    {
+      "pdf_page": 42,
+      "book_page": 31,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 31
+    },
+    {
+      "pdf_page": 43,
+      "book_page": 32,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 32
+    },
+    {
+      "pdf_page": 44,
+      "book_page": 33,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 33
+    },
+    {
+      "pdf_page": 45,
+      "book_page": 34,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 34
+    },
+    {
+      "pdf_page": 46,
+      "book_page": 35,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 35
+    },
+    {
+      "pdf_page": 47,
+      "book_page": 36,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 36
+    },
+    {
+      "pdf_page": 48,
+      "book_page": 37,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 37
+    },
+    {
+      "pdf_page": 49,
+      "book_page": 38,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 38
+    },
+    {
+      "pdf_page": 50,
+      "book_page": 39,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 39
+    },
+    {
+      "pdf_page": 51,
+      "book_page": 40,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 40
+    },
+    {
+      "pdf_page": 52,
+      "book_page": 41,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 41
+    },
+    {
+      "pdf_page": 53,
+      "book_page": 42,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 42
+    },
+    {
+      "pdf_page": 54,
+      "book_page": 43,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 43
+    },
+    {
+      "pdf_page": 55,
+      "book_page": 44,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 3,
+      "chapter_title": "动物保护",
+      "printed_page_label": 44
+    },
+    {
+      "pdf_page": 56,
+      "book_page": 45,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 45
+    },
+    {
+      "pdf_page": 57,
+      "book_page": 46,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 46
+    },
+    {
+      "pdf_page": 58,
+      "book_page": 47,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 47
+    },
+    {
+      "pdf_page": 59,
+      "book_page": 48,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 48
+    },
+    {
+      "pdf_page": 60,
+      "book_page": 49,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 49
+    },
+    {
+      "pdf_page": 61,
+      "book_page": 50,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 50
+    },
+    {
+      "pdf_page": 62,
+      "book_page": 51,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 51
+    },
+    {
+      "pdf_page": 63,
+      "book_page": 52,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 4,
+      "chapter_title": "太空探索",
+      "printed_page_label": 52
+    },
+    {
+      "pdf_page": 64,
+      "book_page": 53,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 53
+    },
+    {
+      "pdf_page": 65,
+      "book_page": 54,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 54
+    },
+    {
+      "pdf_page": 66,
+      "book_page": 55,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 55
+    },
+    {
+      "pdf_page": 67,
+      "book_page": 56,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 56
+    },
+    {
+      "pdf_page": 68,
+      "book_page": 57,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 57
+    },
+    {
+      "pdf_page": 69,
+      "book_page": 58,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 58
+    },
+    {
+      "pdf_page": 70,
+      "book_page": 59,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 59
+    },
+    {
+      "pdf_page": 71,
+      "book_page": 60,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 60
+    },
+    {
+      "pdf_page": 72,
+      "book_page": 61,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 61
+    },
+    {
+      "pdf_page": 73,
+      "book_page": 62,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 62
+    },
+    {
+      "pdf_page": 74,
+      "book_page": 63,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 63
+    },
+    {
+      "pdf_page": 75,
+      "book_page": 64,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 64
+    },
+    {
+      "pdf_page": 76,
+      "book_page": 65,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 65
+    },
+    {
+      "pdf_page": 77,
+      "book_page": 66,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 66
+    },
+    {
+      "pdf_page": 78,
+      "book_page": 67,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 67
+    },
+    {
+      "pdf_page": 79,
+      "book_page": 68,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 68
+    },
+    {
+      "pdf_page": 80,
+      "book_page": 69,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 69
+    },
+    {
+      "pdf_page": 81,
+      "book_page": 70,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 70
+    },
+    {
+      "pdf_page": 82,
+      "book_page": 71,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 71
+    },
+    {
+      "pdf_page": 83,
+      "book_page": 72,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 72
+    },
+    {
+      "pdf_page": 84,
+      "book_page": 73,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 73
+    },
+    {
+      "pdf_page": 85,
+      "book_page": 74,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 74
+    },
+    {
+      "pdf_page": 86,
+      "book_page": 75,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 75
+    },
+    {
+      "pdf_page": 87,
+      "book_page": 76,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 76
+    },
+    {
+      "pdf_page": 88,
+      "book_page": 77,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 77
+    },
+    {
+      "pdf_page": 89,
+      "book_page": 78,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 78
+    },
+    {
+      "pdf_page": 90,
+      "book_page": 79,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 79
+    },
+    {
+      "pdf_page": 91,
+      "book_page": 80,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 80
+    },
+    {
+      "pdf_page": 92,
+      "book_page": 81,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 81
+    },
+    {
+      "pdf_page": 93,
+      "book_page": 82,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 82
+    },
+    {
+      "pdf_page": 94,
+      "book_page": 83,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 83
+    },
+    {
+      "pdf_page": 95,
+      "book_page": 84,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 5,
+      "chapter_title": "学校教育",
+      "printed_page_label": 84
+    },
+    {
+      "pdf_page": 96,
+      "book_page": 85,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 85
+    },
+    {
+      "pdf_page": 97,
+      "book_page": 86,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 86
+    },
+    {
+      "pdf_page": 98,
+      "book_page": 87,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 87
+    },
+    {
+      "pdf_page": 99,
+      "book_page": 88,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 88
+    },
+    {
+      "pdf_page": 100,
+      "book_page": 89,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 89
+    },
+    {
+      "pdf_page": 101,
+      "book_page": 90,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 90
+    },
+    {
+      "pdf_page": 102,
+      "book_page": 91,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 91
+    },
+    {
+      "pdf_page": 103,
+      "book_page": 92,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 92
+    },
+    {
+      "pdf_page": 104,
+      "book_page": 93,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 93
+    },
+    {
+      "pdf_page": 105,
+      "book_page": 94,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 6,
+      "chapter_title": "科技发明",
+      "printed_page_label": 94
+    },
+    {
+      "pdf_page": 106,
+      "book_page": 95,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 95
+    },
+    {
+      "pdf_page": 107,
+      "book_page": 96,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 96
+    },
+    {
+      "pdf_page": 108,
+      "book_page": 97,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 97
+    },
+    {
+      "pdf_page": 109,
+      "book_page": 98,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 98
+    },
+    {
+      "pdf_page": 110,
+      "book_page": 99,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 99
+    },
+    {
+      "pdf_page": 111,
+      "book_page": 100,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 100
+    },
+    {
+      "pdf_page": 112,
+      "book_page": 101,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 101
+    },
+    {
+      "pdf_page": 113,
+      "book_page": 102,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 7,
+      "chapter_title": "文化历史",
+      "printed_page_label": 102
+    },
+    {
+      "pdf_page": 114,
+      "book_page": 103,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "printed_page_label": 103
+    },
+    {
+      "pdf_page": 115,
+      "book_page": 104,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "printed_page_label": 104
+    },
+    {
+      "pdf_page": 116,
+      "book_page": 105,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "printed_page_label": 105
+    },
+    {
+      "pdf_page": 117,
+      "book_page": 106,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "printed_page_label": 106
+    },
+    {
+      "pdf_page": 118,
+      "book_page": 107,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "printed_page_label": 107
+    },
+    {
+      "pdf_page": 119,
+      "book_page": 108,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 8,
+      "chapter_title": "语言演化",
+      "printed_page_label": 108
+    },
+    {
+      "pdf_page": 120,
+      "book_page": 109,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 109
+    },
+    {
+      "pdf_page": 121,
+      "book_page": 110,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 110
+    },
+    {
+      "pdf_page": 122,
+      "book_page": 111,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 111
+    },
+    {
+      "pdf_page": 123,
+      "book_page": 112,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 112
+    },
+    {
+      "pdf_page": 124,
+      "book_page": 113,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 113
+    },
+    {
+      "pdf_page": 125,
+      "book_page": 114,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 114
+    },
+    {
+      "pdf_page": 126,
+      "book_page": 115,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 115
+    },
+    {
+      "pdf_page": 127,
+      "book_page": 116,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 116
+    },
+    {
+      "pdf_page": 128,
+      "book_page": 117,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 117
+    },
+    {
+      "pdf_page": 129,
+      "book_page": 118,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 118
+    },
+    {
+      "pdf_page": 130,
+      "book_page": 119,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 119
+    },
+    {
+      "pdf_page": 131,
+      "book_page": 120,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 120
+    },
+    {
+      "pdf_page": 132,
+      "book_page": 121,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 121
+    },
+    {
+      "pdf_page": 133,
+      "book_page": 122,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 9,
+      "chapter_title": "娱乐运动",
+      "printed_page_label": 122
+    },
+    {
+      "pdf_page": 134,
+      "book_page": 123,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 123
+    },
+    {
+      "pdf_page": 135,
+      "book_page": 124,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 124
+    },
+    {
+      "pdf_page": 136,
+      "book_page": 125,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 125
+    },
+    {
+      "pdf_page": 137,
+      "book_page": 126,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 126
+    },
+    {
+      "pdf_page": 138,
+      "book_page": 127,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 127
+    },
+    {
+      "pdf_page": 139,
+      "book_page": 128,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 128
+    },
+    {
+      "pdf_page": 140,
+      "book_page": 129,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 129
+    },
+    {
+      "pdf_page": 141,
+      "book_page": 130,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 130
+    },
+    {
+      "pdf_page": 142,
+      "book_page": 131,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 131
+    },
+    {
+      "pdf_page": 143,
+      "book_page": 132,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 132
+    },
+    {
+      "pdf_page": 144,
+      "book_page": 133,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 133
+    },
+    {
+      "pdf_page": 145,
+      "book_page": 134,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 10,
+      "chapter_title": "物品材料",
+      "printed_page_label": 134
+    },
+    {
+      "pdf_page": 146,
+      "book_page": 135,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 135
+    },
+    {
+      "pdf_page": 147,
+      "book_page": 136,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 136
+    },
+    {
+      "pdf_page": 148,
+      "book_page": 137,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 137
+    },
+    {
+      "pdf_page": 149,
+      "book_page": 138,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 138
+    },
+    {
+      "pdf_page": 150,
+      "book_page": 139,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 139
+    },
+    {
+      "pdf_page": 151,
+      "book_page": 140,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 140
+    },
+    {
+      "pdf_page": 152,
+      "book_page": 141,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 141
+    },
+    {
+      "pdf_page": 153,
+      "book_page": 142,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 142
+    },
+    {
+      "pdf_page": 154,
+      "book_page": 143,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 143
+    },
+    {
+      "pdf_page": 155,
+      "book_page": 144,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 11,
+      "chapter_title": "时尚潮流",
+      "printed_page_label": 144
+    },
+    {
+      "pdf_page": 156,
+      "book_page": 145,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 145
+    },
+    {
+      "pdf_page": 157,
+      "book_page": 146,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 146
+    },
+    {
+      "pdf_page": 158,
+      "book_page": 147,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 147
+    },
+    {
+      "pdf_page": 159,
+      "book_page": 148,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 148
+    },
+    {
+      "pdf_page": 160,
+      "book_page": 149,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 149
+    },
+    {
+      "pdf_page": 161,
+      "book_page": 150,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 150
+    },
+    {
+      "pdf_page": 162,
+      "book_page": 151,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 151
+    },
+    {
+      "pdf_page": 163,
+      "book_page": 152,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 152
+    },
+    {
+      "pdf_page": 164,
+      "book_page": 153,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 153
+    },
+    {
+      "pdf_page": 165,
+      "book_page": 154,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 154
+    },
+    {
+      "pdf_page": 166,
+      "book_page": 155,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 155
+    },
+    {
+      "pdf_page": 167,
+      "book_page": 156,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 156
+    },
+    {
+      "pdf_page": 168,
+      "book_page": 157,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 157
+    },
+    {
+      "pdf_page": 169,
+      "book_page": 158,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 12,
+      "chapter_title": "饮食健康",
+      "printed_page_label": 158
+    },
+    {
+      "pdf_page": 170,
+      "book_page": 159,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 159
+    },
+    {
+      "pdf_page": 171,
+      "book_page": 160,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 160
+    },
+    {
+      "pdf_page": 172,
+      "book_page": 161,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 161
+    },
+    {
+      "pdf_page": 173,
+      "book_page": 162,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 162
+    },
+    {
+      "pdf_page": 174,
+      "book_page": 163,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 163
+    },
+    {
+      "pdf_page": 175,
+      "book_page": 164,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 164
+    },
+    {
+      "pdf_page": 176,
+      "book_page": 165,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 165
+    },
+    {
+      "pdf_page": 177,
+      "book_page": 166,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 166
+    },
+    {
+      "pdf_page": 178,
+      "book_page": 167,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 167
+    },
+    {
+      "pdf_page": 179,
+      "book_page": 168,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 168
+    },
+    {
+      "pdf_page": 180,
+      "book_page": 169,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 169
+    },
+    {
+      "pdf_page": 181,
+      "book_page": 170,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 13,
+      "chapter_title": "建筑场所",
+      "printed_page_label": 170
+    },
+    {
+      "pdf_page": 182,
+      "book_page": 171,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 171
+    },
+    {
+      "pdf_page": 183,
+      "book_page": 172,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 172
+    },
+    {
+      "pdf_page": 184,
+      "book_page": 173,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 173
+    },
+    {
+      "pdf_page": 185,
+      "book_page": 174,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 174
+    },
+    {
+      "pdf_page": 186,
+      "book_page": 175,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 175
+    },
+    {
+      "pdf_page": 187,
+      "book_page": 176,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 176
+    },
+    {
+      "pdf_page": 188,
+      "book_page": 177,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 177
+    },
+    {
+      "pdf_page": 189,
+      "book_page": 178,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 178
+    },
+    {
+      "pdf_page": 190,
+      "book_page": 179,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 179
+    },
+    {
+      "pdf_page": 191,
+      "book_page": 180,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 180
+    },
+    {
+      "pdf_page": 192,
+      "book_page": 181,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 181
+    },
+    {
+      "pdf_page": 193,
+      "book_page": 182,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 14,
+      "chapter_title": "交通旅行",
+      "printed_page_label": 182
+    },
+    {
+      "pdf_page": 194,
+      "book_page": 183,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 183
+    },
+    {
+      "pdf_page": 195,
+      "book_page": 184,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 184
+    },
+    {
+      "pdf_page": 196,
+      "book_page": 185,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 185
+    },
+    {
+      "pdf_page": 197,
+      "book_page": 186,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 186
+    },
+    {
+      "pdf_page": 198,
+      "book_page": 187,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 187
+    },
+    {
+      "pdf_page": 199,
+      "book_page": 188,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 188
+    },
+    {
+      "pdf_page": 200,
+      "book_page": 189,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 189
+    },
+    {
+      "pdf_page": 201,
+      "book_page": 190,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 190
+    },
+    {
+      "pdf_page": 202,
+      "book_page": 191,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 191
+    },
+    {
+      "pdf_page": 203,
+      "book_page": 192,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 192
+    },
+    {
+      "pdf_page": 204,
+      "book_page": 193,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 193
+    },
+    {
+      "pdf_page": 205,
+      "book_page": 194,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 194
+    },
+    {
+      "pdf_page": 206,
+      "book_page": 195,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 195
+    },
+    {
+      "pdf_page": 207,
+      "book_page": 196,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 15,
+      "chapter_title": "国家政府",
+      "printed_page_label": 196
+    },
+    {
+      "pdf_page": 208,
+      "book_page": 197,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 197
+    },
+    {
+      "pdf_page": 209,
+      "book_page": 198,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 198
+    },
+    {
+      "pdf_page": 210,
+      "book_page": 199,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 199
+    },
+    {
+      "pdf_page": 211,
+      "book_page": 200,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 200
+    },
+    {
+      "pdf_page": 212,
+      "book_page": 201,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 201
+    },
+    {
+      "pdf_page": 213,
+      "book_page": 202,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 202
+    },
+    {
+      "pdf_page": 214,
+      "book_page": 203,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 203
+    },
+    {
+      "pdf_page": 215,
+      "book_page": 204,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 204
+    },
+    {
+      "pdf_page": 216,
+      "book_page": 205,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 205
+    },
+    {
+      "pdf_page": 217,
+      "book_page": 206,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 206
+    },
+    {
+      "pdf_page": 218,
+      "book_page": 207,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 207
+    },
+    {
+      "pdf_page": 219,
+      "book_page": 208,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 208
+    },
+    {
+      "pdf_page": 220,
+      "book_page": 209,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 209
+    },
+    {
+      "pdf_page": 221,
+      "book_page": 210,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 210
+    },
+    {
+      "pdf_page": 222,
+      "book_page": 211,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 211
+    },
+    {
+      "pdf_page": 223,
+      "book_page": 212,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 16,
+      "chapter_title": "社会经济",
+      "printed_page_label": 212
+    },
+    {
+      "pdf_page": 224,
+      "book_page": 213,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 213
+    },
+    {
+      "pdf_page": 225,
+      "book_page": 214,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 214
+    },
+    {
+      "pdf_page": 226,
+      "book_page": 215,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 215
+    },
+    {
+      "pdf_page": 227,
+      "book_page": 216,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 216
+    },
+    {
+      "pdf_page": 228,
+      "book_page": 217,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 217
+    },
+    {
+      "pdf_page": 229,
+      "book_page": 218,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 218
+    },
+    {
+      "pdf_page": 230,
+      "book_page": 219,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 219
+    },
+    {
+      "pdf_page": 231,
+      "book_page": 220,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 220
+    },
+    {
+      "pdf_page": 232,
+      "book_page": 221,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 221
+    },
+    {
+      "pdf_page": 233,
+      "book_page": 222,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 17,
+      "chapter_title": "法律法规",
+      "printed_page_label": 222
+    },
+    {
+      "pdf_page": 234,
+      "book_page": 223,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 223
+    },
+    {
+      "pdf_page": 235,
+      "book_page": 224,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 224
+    },
+    {
+      "pdf_page": 236,
+      "book_page": 225,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 225
+    },
+    {
+      "pdf_page": 237,
+      "book_page": 226,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 226
+    },
+    {
+      "pdf_page": 238,
+      "book_page": 227,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 227
+    },
+    {
+      "pdf_page": 239,
+      "book_page": 228,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 228
+    },
+    {
+      "pdf_page": 240,
+      "book_page": 229,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 229
+    },
+    {
+      "pdf_page": 241,
+      "book_page": 230,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 230
+    },
+    {
+      "pdf_page": 242,
+      "book_page": 231,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 231
+    },
+    {
+      "pdf_page": 243,
+      "book_page": 232,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 232
+    },
+    {
+      "pdf_page": 244,
+      "book_page": 233,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 233
+    },
+    {
+      "pdf_page": 245,
+      "book_page": 234,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 234
+    },
+    {
+      "pdf_page": 246,
+      "book_page": 235,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 235
+    },
+    {
+      "pdf_page": 247,
+      "book_page": 236,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 236
+    },
+    {
+      "pdf_page": 248,
+      "book_page": 237,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 237
+    },
+    {
+      "pdf_page": 249,
+      "book_page": 238,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 238
+    },
+    {
+      "pdf_page": 250,
+      "book_page": 239,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 239
+    },
+    {
+      "pdf_page": 251,
+      "book_page": 240,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 18,
+      "chapter_title": "沙场争锋",
+      "printed_page_label": 240
+    },
+    {
+      "pdf_page": 252,
+      "book_page": 241,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 241
+    },
+    {
+      "pdf_page": 253,
+      "book_page": 242,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 242
+    },
+    {
+      "pdf_page": 254,
+      "book_page": 243,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 243
+    },
+    {
+      "pdf_page": 255,
+      "book_page": 244,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 244
+    },
+    {
+      "pdf_page": 256,
+      "book_page": 245,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 245
+    },
+    {
+      "pdf_page": 257,
+      "book_page": 246,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 246
+    },
+    {
+      "pdf_page": 258,
+      "book_page": 247,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 247
+    },
+    {
+      "pdf_page": 259,
+      "book_page": 248,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 248
+    },
+    {
+      "pdf_page": 260,
+      "book_page": 249,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 249
+    },
+    {
+      "pdf_page": 261,
+      "book_page": 250,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 250
+    },
+    {
+      "pdf_page": 262,
+      "book_page": 251,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 251
+    },
+    {
+      "pdf_page": 263,
+      "book_page": 252,
+      "page_type": "blank",
+      "pictures_omitted": false,
+      "chapter": 19,
+      "chapter_title": "社会角色",
+      "printed_page_label": 252
+    },
+    {
+      "pdf_page": 264,
+      "book_page": 253,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 253
+    },
+    {
+      "pdf_page": 265,
+      "book_page": 254,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 254
+    },
+    {
+      "pdf_page": 266,
+      "book_page": 255,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 255
+    },
+    {
+      "pdf_page": 267,
+      "book_page": 256,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 256
+    },
+    {
+      "pdf_page": 268,
+      "book_page": 257,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 257
+    },
+    {
+      "pdf_page": 269,
+      "book_page": 258,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 258
+    },
+    {
+      "pdf_page": 270,
+      "book_page": 259,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 259
+    },
+    {
+      "pdf_page": 271,
+      "book_page": 260,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 260
+    },
+    {
+      "pdf_page": 272,
+      "book_page": 261,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 261
+    },
+    {
+      "pdf_page": 273,
+      "book_page": 262,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 262
+    },
+    {
+      "pdf_page": 274,
+      "book_page": 263,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 263
+    },
+    {
+      "pdf_page": 275,
+      "book_page": 264,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 264
+    },
+    {
+      "pdf_page": 276,
+      "book_page": 265,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 265
+    },
+    {
+      "pdf_page": 277,
+      "book_page": 266,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 266
+    },
+    {
+      "pdf_page": 278,
+      "book_page": 267,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 267
+    },
+    {
+      "pdf_page": 279,
+      "book_page": 268,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 268
+    },
+    {
+      "pdf_page": 280,
+      "book_page": 269,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 269
+    },
+    {
+      "pdf_page": 281,
+      "book_page": 270,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 270
+    },
+    {
+      "pdf_page": 282,
+      "book_page": 271,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 271
+    },
+    {
+      "pdf_page": 283,
+      "book_page": 272,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 272
+    },
+    {
+      "pdf_page": 284,
+      "book_page": 273,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 273
+    },
+    {
+      "pdf_page": 285,
+      "book_page": 274,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 20,
+      "chapter_title": "行为动作",
+      "printed_page_label": 274
+    },
+    {
+      "pdf_page": 286,
+      "book_page": 275,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 275
+    },
+    {
+      "pdf_page": 287,
+      "book_page": 276,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 276
+    },
+    {
+      "pdf_page": 288,
+      "book_page": 277,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 277
+    },
+    {
+      "pdf_page": 289,
+      "book_page": 278,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 278
+    },
+    {
+      "pdf_page": 290,
+      "book_page": 279,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 279
+    },
+    {
+      "pdf_page": 291,
+      "book_page": 280,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 280
+    },
+    {
+      "pdf_page": 292,
+      "book_page": 281,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 281
+    },
+    {
+      "pdf_page": 293,
+      "book_page": 282,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 282
+    },
+    {
+      "pdf_page": 294,
+      "book_page": 283,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 283
+    },
+    {
+      "pdf_page": 295,
+      "book_page": 284,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 284
+    },
+    {
+      "pdf_page": 296,
+      "book_page": 285,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 285
+    },
+    {
+      "pdf_page": 297,
+      "book_page": 286,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 286
+    },
+    {
+      "pdf_page": 298,
+      "book_page": 287,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 287
+    },
+    {
+      "pdf_page": 299,
+      "book_page": 288,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 288
+    },
+    {
+      "pdf_page": 300,
+      "book_page": 289,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 289
+    },
+    {
+      "pdf_page": 301,
+      "book_page": 290,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 290
+    },
+    {
+      "pdf_page": 302,
+      "book_page": 291,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 291
+    },
+    {
+      "pdf_page": 303,
+      "book_page": 292,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 292
+    },
+    {
+      "pdf_page": 304,
+      "book_page": 293,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 293
+    },
+    {
+      "pdf_page": 305,
+      "book_page": 294,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 294
+    },
+    {
+      "pdf_page": 306,
+      "book_page": 295,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 295
+    },
+    {
+      "pdf_page": 307,
+      "book_page": 296,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 296
+    },
+    {
+      "pdf_page": 308,
+      "book_page": 297,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 297
+    },
+    {
+      "pdf_page": 309,
+      "book_page": 298,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 298
+    },
+    {
+      "pdf_page": 310,
+      "book_page": 299,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 299
+    },
+    {
+      "pdf_page": 311,
+      "book_page": 300,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 300
+    },
+    {
+      "pdf_page": 312,
+      "book_page": 301,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 301
+    },
+    {
+      "pdf_page": 313,
+      "book_page": 302,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 302
+    },
+    {
+      "pdf_page": 314,
+      "book_page": 303,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 303
+    },
+    {
+      "pdf_page": 315,
+      "book_page": 304,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 304
+    },
+    {
+      "pdf_page": 316,
+      "book_page": 305,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 305
+    },
+    {
+      "pdf_page": 317,
+      "book_page": 306,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 21,
+      "chapter_title": "身心健康",
+      "printed_page_label": 306
+    },
+    {
+      "pdf_page": 318,
+      "book_page": 307,
+      "page_type": "chapter_opener",
+      "pictures_omitted": true,
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "printed_page_label": 307
+    },
+    {
+      "pdf_page": 319,
+      "book_page": 308,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "printed_page_label": 308
+    },
+    {
+      "pdf_page": 320,
+      "book_page": 309,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "printed_page_label": 309
+    },
+    {
+      "pdf_page": 321,
+      "book_page": 310,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "printed_page_label": 310
+    },
+    {
+      "pdf_page": 322,
+      "book_page": 311,
+      "page_type": "vocabulary",
+      "pictures_omitted": true,
+      "chapter": 22,
+      "chapter_title": "时间日期",
+      "printed_page_label": 311
+    },
+    {
+      "pdf_page": 323,
+      "book_page": 312,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 312
+    },
+    {
+      "pdf_page": 324,
+      "book_page": 313,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 313
+    },
+    {
+      "pdf_page": 325,
+      "book_page": 314,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 314
+    },
+    {
+      "pdf_page": 326,
+      "book_page": 315,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 315
+    },
+    {
+      "pdf_page": 327,
+      "book_page": 316,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 316
+    },
+    {
+      "pdf_page": 328,
+      "book_page": 317,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 317
+    },
+    {
+      "pdf_page": 329,
+      "book_page": 318,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 318
+    },
+    {
+      "pdf_page": 330,
+      "book_page": 319,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 319
+    },
+    {
+      "pdf_page": 331,
+      "book_page": 320,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 320
+    },
+    {
+      "pdf_page": 332,
+      "book_page": 321,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 321
+    },
+    {
+      "pdf_page": 333,
+      "book_page": 322,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 322
+    },
+    {
+      "pdf_page": 334,
+      "book_page": 323,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 323
+    },
+    {
+      "pdf_page": 335,
+      "book_page": 324,
+      "page_type": "index",
+      "pictures_omitted": false,
+      "printed_page_label": 324
+    },
+    {
+      "pdf_page": 336,
+      "book_page": null,
+      "page_type": "back_cover",
+      "pictures_omitted": true
+    }
+  ],
+  "generated_at": "2026-08-14T01:38:53.959595+00:00"
+}
