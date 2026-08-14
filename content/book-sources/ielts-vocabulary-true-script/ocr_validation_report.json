@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T05:52:32.403693+00:00",
+  "generated_at": "2026-08-14T05:58:20.999583+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -956,23 +956,35 @@
     },
     {
       "pdf_page": 124,
+      "book_page": 113,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 125,
+      "book_page": 114,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 126,
+      "book_page": 115,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 127,
+      "book_page": 116,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 16
     },
     {
       "pdf_page": 128,
@@ -2048,10 +2060,6 @@
     25,
     35,
     36,
-    124,
-    125,
-    126,
-    127,
     128,
     129,
     130,
@@ -2357,307 +2365,12 @@
     },
     "9": {
       "expected_audio_words": 176,
-      "ocr_words": 39,
-      "matched_words": 39,
-      "matched_by_headword": 3,
-      "matched_by_sentence": 34,
-      "matched_by_order": 2,
+      "ocr_words": 98,
+      "matched_words": 98,
+      "matched_by_headword": 9,
+      "matched_by_sentence": 85,
+      "matched_by_order": 4,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch09-0040",
-          "headword": "Symphony.",
-          "position": 40
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0041",
-          "headword": "Orchestra.",
-          "position": 41
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0042",
-          "headword": "Ballet.",
-          "position": 42
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0043",
-          "headword": "Opera.",
-          "position": 43
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0044",
-          "headword": "Comedy.",
-          "position": 44
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0045",
-          "headword": "Tragedy.",
-          "position": 45
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0046",
-          "headword": "Animation.",
-          "position": 46
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0047",
-          "headword": "Film.",
-          "position": 47
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0048",
-          "headword": "movie.",
-          "position": 48
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0049",
-          "headword": "X-rated.",
-          "position": 49
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0050",
-          "headword": "Artist.",
-          "position": 50
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0051",
-          "headword": "Craftsman.",
-          "position": 51
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0052",
-          "headword": "Painter.",
-          "position": 52
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0053",
-          "headword": "Role.",
-          "position": 53
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0054",
-          "headword": "Scene.",
-          "position": 54
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0055",
-          "headword": "Stage.",
-          "position": 55
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0056",
-          "headword": "Gallery.",
-          "position": 56
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0057",
-          "headword": "Exhibition.",
-          "position": 57
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0058",
-          "headword": "Aesthetic.",
-          "position": 58
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0059",
-          "headword": "Collect.",
-          "position": 59
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0060",
-          "headword": "Select.",
-          "position": 60
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0061",
-          "headword": "Opt.",
-          "position": 61
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0062",
-          "headword": "Photograph.",
-          "position": 62
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0063",
-          "headword": "Portrait.",
-          "position": 63
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0064",
-          "headword": "Painting.",
-          "position": 64
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0065",
-          "headword": "Sculpture.",
-          "position": 65
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0066",
-          "headword": "Draw.",
-          "position": 66
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0067",
-          "headword": "sketch",
-          "position": 67
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0068",
-          "headword": "depict in",
-          "position": 68
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0069",
-          "headword": "describe",
-          "position": 69
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0070",
-          "headword": "Carve.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0071",
-          "headword": "Improvise.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0072",
-          "headword": "Musical.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0073",
-          "headword": "classical.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0074",
-          "headword": "Jazz.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0075",
-          "headword": "Rock.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0076",
-          "headword": "Hip hop.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0077",
-          "headword": "Pop.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0078",
-          "headword": "Lyric.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0079",
-          "headword": "band the",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0080",
-          "headword": "solo she",
-          "position": 80
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0081",
-          "headword": "melody I",
-          "position": 81
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0082",
-          "headword": "rhythm I",
-          "position": 82
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0083",
-          "headword": "Tone.",
-          "position": 83
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0084",
-          "headword": "Tune.",
-          "position": 84
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0085",
-          "headword": "Disc.",
-          "position": 85
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0086",
-          "headword": "Piano.",
-          "position": 86
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0087",
-          "headword": "Violin.",
-          "position": 87
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0088",
-          "headword": "Cello.",
-          "position": 88
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0089",
-          "headword": "Guitar.",
-          "position": 89
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0090",
-          "headword": "Harmonica.",
-          "position": 90
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0091",
-          "headword": "trumpet.",
-          "position": 91
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0092",
-          "headword": "drum.",
-          "position": 92
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0093",
-          "headword": "flute.",
-          "position": 93
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0094",
-          "headword": "competition.",
-          "position": 94
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0095",
-          "headword": "tournament.",
-          "position": 95
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0096",
-          "headword": "Olympic.",
-          "position": 96
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0097",
-          "headword": "Sponsor.",
-          "position": 97
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch09-0098",
-          "headword": "Patron.",
-          "position": 98
-        },
         {
           "stable_id": "bv1at4y1579f-ch09-0099",
           "headword": "Athlete.",
@@ -3052,6 +2765,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 1323,
+  "word_count": 1382,
   "index_entry_count": 0
 }
