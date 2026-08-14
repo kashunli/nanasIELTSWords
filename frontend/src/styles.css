@@ -134,3 +134,257 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
   .example-en { font-size: 22px; }
   .source-card small { display: block; }
 }
+
+/* Mobile-first player composition ----------------------------------------- */
+@supports (height: 100dvh) {
+  body, .app-shell { height: 100dvh; }
+}
+
+.player-dock {
+  max-height: none;
+  overflow: visible;
+  padding-top: 8px;
+  border-top: 1px solid rgba(137, 154, 143, .22);
+}
+
+.player-dock .player {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px 13px;
+}
+
+.player-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 0;
+}
+
+.player-current {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  min-width: 0;
+}
+
+.player-kicker {
+  flex: 0 0 auto;
+  color: #b6c4bc;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.player-current strong {
+  min-width: 0;
+  overflow: hidden;
+  color: #fffaf3;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-meta .audio-time {
+  flex: 0 0 auto;
+  color: #e5bd76;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.player-controls {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+  align-items: stretch;
+}
+
+.player-controls button {
+  min-width: 0;
+  min-height: 37px;
+  padding: 8px 9px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-controls button:focus-visible,
+.play-toggle:focus-visible,
+.player-settings select:focus-visible {
+  outline: 3px solid rgba(228, 179, 111, .7);
+  outline-offset: 2px;
+}
+
+.player-transport {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.player-transport .line-waveform {
+  min-width: 0;
+}
+
+.play-toggle {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  min-height: 64px;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: #e4b36f !important;
+  color: #273b35 !important;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.play-toggle:disabled { opacity: .48; }
+
+.player-help {
+  min-height: 15px;
+  color: #aebbb4;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.player-settings {
+  padding-top: 8px;
+  padding-bottom: 0;
+}
+
+/* Keep the line readable first, then put the word explanation directly below it. */
+.current-line-card {
+  margin-top: 25px;
+  border-color: #d6dfd4;
+  background: #f8fbf5;
+}
+
+.current-line-card .example-en {
+  margin-top: 13px;
+  color: #243c35;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.32;
+}
+
+.explanation-card {
+  margin-top: 12px;
+  padding: 18px 19px;
+  border: 1px solid #d8e0d6;
+  border-radius: 15px;
+  background: #f1f5ef;
+}
+
+.explanation-card .section-heading > span { color: #4e8065; }
+.explanation-card .section-heading > strong { color: #315741; }
+
+.explanation-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .85fr);
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.explanation-grid .meaning-card {
+  min-height: 112px;
+  background: #fffdf8;
+}
+
+.explanation-grid .meaning-translation {
+  background: #e7f1e7;
+}
+
+@media (max-width: 760px) {
+  .player-dock {
+    padding: 7px 10px calc(7px + env(safe-area-inset-bottom));
+  }
+
+  .player-dock .player {
+    gap: 8px;
+    padding: 12px 12px 11px;
+    border-radius: 16px;
+  }
+
+  .player-meta {
+    align-items: flex-start;
+  }
+
+  .player-current {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .player-current strong { font-size: 14px; }
+  .player-meta .audio-time { padding-top: 1px; font-size: 13px; }
+
+  .player-controls {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .player-controls button {
+    min-height: 34px;
+    padding: 7px 4px;
+    font-size: 12px;
+  }
+
+  .player-controls .player-run-mode { grid-column: span 2; }
+
+  .player-transport {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .play-toggle {
+    width: 58px;
+    min-height: 58px;
+    font-size: 12px;
+  }
+
+  .player .line-waveform {
+    height: 58px;
+    border-radius: 11px;
+  }
+
+  .player-help {
+    display: -webkit-box;
+    max-height: 29px;
+    overflow: hidden;
+    font-size: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .player-dock .player-settings {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 6px 8px;
+    align-items: center;
+    padding: 7px 2px 0;
+    font-size: 12px;
+  }
+
+  .player-dock .player-settings span {
+    grid-column: 1 / -1;
+    margin: 0;
+    width: auto;
+  }
+
+  .current-line-card .example-en { font-size: 22px; }
+
+  .explanation-card {
+    padding: 16px;
+  }
+
+  .explanation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explanation-grid .meaning-card {
+    min-height: auto;
+  }
+}

@@ -164,26 +164,43 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
   if (!item) return <section className="player empty-player">Select an item to begin listening.</section>;
 
   return <section className="player" aria-label="Audio player">
-    <LineWaveform
-      audioBuffer={player.audioBuffer}
-      loadFailed={player.loadFailed}
-      start={0}
-      end={duration}
-      currentTime={player.currentTime}
-      silenceGaps={silenceGaps}
-      vadNonSpeechIntervals={[]}
-      onSeek={(time) => void player.seek(time)}
-    />
-    <div className="player-controls">
+    <div className="player-meta">
+      <div className="player-current">
+        <span className="player-kicker">CURRENT AUDIO</span>
+        <strong>{item.headword}</strong>
+      </div>
       <span className="audio-time" aria-label="Playback time">{progressLabel}</span>
+    </div>
+    <div className="player-controls">
       <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-keyshortcuts="R">Replay</button>
-      <button type="button" className="primary" onClick={toggle} disabled={!player.audioBuffer} aria-keyshortcuts="Space">{player.isPlaying ? "Pause" : "Play"}</button>
       <button type="button" onClick={previousManually} disabled={!canPrevious} aria-keyshortcuts="A">Previous</button>
       <button type="button" onClick={advanceManually} disabled={!canNext} aria-keyshortcuts="D">Next</button>
       <button type="button" onClick={stop} disabled={!player.audioBuffer} aria-keyshortcuts="S">Stop</button>
-      <button type="button" className={runMode === "consecutive" ? "selected" : ""} onClick={toggleRunMode} aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C">{runMode === "single" ? "Single" : "Consecutive"}</button>
-      <span>{playerError || `${phase} · ${runMode === "single" ? "single clip" : "play through list"} · ${mode} · A/D previous/next · Space play/pause`}</span>
+      <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C">{runMode === "single" ? "Single" : "Consecutive"}</button>
     </div>
+    <div className="player-transport">
+      <button
+        type="button"
+        className="primary play-toggle"
+        onClick={toggle}
+        disabled={!player.audioBuffer}
+        aria-label={`${player.isPlaying ? "Pause" : "Play"} ${phase} audio`}
+        aria-keyshortcuts="Space"
+      >
+        {player.isPlaying ? "Pause" : "Play"}
+      </button>
+      <LineWaveform
+        audioBuffer={player.audioBuffer}
+        loadFailed={player.loadFailed}
+        start={0}
+        end={duration}
+        currentTime={player.currentTime}
+        silenceGaps={silenceGaps}
+        vadNonSpeechIntervals={[]}
+        onSeek={(time) => void player.seek(time)}
+      />
+    </div>
+    <div className="player-help">{playerError || `${phase} · ${runMode === "single" ? "single clip" : "play through list"} · ${mode} · A/D previous/next · Space play/pause`}</div>
   </section>;
 }
 
@@ -275,27 +292,30 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
       </div>
     </header>
 
-    <section className="meaning-grid" aria-label="Meaning and translation">
-      <article className="meaning-card meaning-primary">
-        <span>MEANING</span>
-        <p>{selected.meaning_en || "Meaning pending"}</p>
-        <small>{selected.meaning_status === "ai_draft" ? "AI draft English meaning" : "Reviewed English meaning"}</small>
-      </article>
-      <article className="meaning-card meaning-translation">
-        <span>中文释义</span>
-        <p>{displayMeaningZh || "释义待生成"}</p>
-        <small>{book ? "Reviewed book OCR" : "Current runtime meaning"}</small>
-      </article>
-    </section>
-
-    <section className="example-card" aria-label="Example sentence">
+    <section className="example-card current-line-card" aria-label="Current played lyric line" data-current-line>
       <div className="section-kicker-row">
-        <span>{book ? "BOOK EXAMPLE" : "EXAMPLE"}</span>
+        <span>CURRENT LINE</span>
         {book && !bookWordIsAuthoritative ? <span className={`match-badge ${book.sentence_match}`}>{sentenceMatchLabel(book)}</span> : null}
       </div>
       <p className="example-en">{displaySentence}</p>
       {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
       {sentenceDiffers ? <div className="sentence-compare"><span>ASR SENTENCE</span><p>{selected.sentence}</p></div> : null}
+    </section>
+
+    <section className="explanation-card" aria-label="Explanation below current line">
+      <div className="section-heading"><span>EXPLANATION</span><strong>Understand this word in the current line</strong></div>
+      <div className="explanation-grid">
+        <article className="meaning-card meaning-primary">
+          <span>MEANING</span>
+          <p>{selected.meaning_en || "Meaning pending"}</p>
+          <small>{selected.meaning_status === "ai_draft" ? "AI draft English meaning" : "Reviewed English meaning"}</small>
+        </article>
+        <article className="meaning-card meaning-translation">
+          <span>中文释义</span>
+          <p>{displayMeaningZh || "释义待生成"}</p>
+          <small>{book ? "Reviewed book OCR" : "Current runtime meaning"}</small>
+        </article>
+      </div>
     </section>
 
     {hasUsage ? <section className="usage-section" aria-label="Usage information">
