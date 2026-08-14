@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T03:49:06.991751+00:00",
+  "generated_at": "2026-08-14T03:58:46.537277+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -561,33 +561,51 @@
     },
     {
       "pdf_page": 74,
+      "book_page": 63,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 75,
+      "book_page": 64,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 76,
+      "book_page": 65,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 13
     },
     {
       "pdf_page": 77,
+      "book_page": 66,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
     },
     {
       "pdf_page": 78,
+      "book_page": 67,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 12
     },
     {
       "pdf_page": 79,
+      "book_page": 68,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 80,
@@ -1905,12 +1923,6 @@
     25,
     35,
     36,
-    74,
-    75,
-    76,
-    77,
-    78,
-    79,
     80,
     81,
     82,
@@ -2865,8 +2877,8 @@
     },
     "5": {
       "expected_audio_words": 399,
-      "ocr_words": 114,
-      "matched_words": 101,
+      "ocr_words": 194,
+      "matched_words": 174,
       "missing_audio_words": [
         {
           "stable_id": "bv1at4y1579f-ch05-0025",
@@ -2929,119 +2941,9 @@
           "position": 106
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0114",
-          "headword": "author.",
-          "position": 114
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0115",
-          "headword": "tale.",
-          "position": 115
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0116",
-          "headword": "fiction.",
-          "position": 116
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0117",
-          "headword": "Story.",
-          "position": 117
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0118",
-          "headword": "Diary.",
-          "position": 118
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0119",
-          "headword": "Poetry.",
-          "position": 119
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0120",
-          "headword": "Magazine.",
-          "position": 120
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0121",
-          "headword": "Journal.",
-          "position": 121
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0122",
-          "headword": "Coverage.",
-          "position": 122
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0123",
-          "headword": "Bibliography.",
-          "position": 123
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0124",
           "headword": "Encyclopedia.",
           "position": 124
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0125",
-          "headword": "Biography.",
-          "position": 125
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0126",
-          "headword": "Documentary.",
-          "position": 126
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0127",
-          "headword": "Series.",
-          "position": 127
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0128",
-          "headword": "Record.",
-          "position": 128
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0129",
-          "headword": "File.",
-          "position": 129
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0130",
-          "headword": "Profile.",
-          "position": 130
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0131",
-          "headword": "draft.",
-          "position": 131
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0132",
-          "headword": "sketch.",
-          "position": 132
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0133",
-          "headword": "brochure.",
-          "position": 133
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0134",
-          "headword": "manual.",
-          "position": 134
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0135",
-          "headword": "Frame.",
-          "position": 135
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0136",
-          "headword": "Index.",
-          "position": 136
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0137",
@@ -3049,54 +2951,9 @@
           "position": 137
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0138",
-          "headword": "Category.",
-          "position": 138
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0139",
-          "headword": "Inventory.",
-          "position": 139
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0140",
-          "headword": "Content.",
-          "position": 140
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0141",
-          "headword": "Context.",
-          "position": 141
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0142",
-          "headword": "List.",
-          "position": 142
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0143",
-          "headword": "Chapter.",
-          "position": 143
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0144",
-          "headword": "Volume.",
-          "position": 144
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0145",
           "headword": "Real.",
           "position": 145
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0146",
-          "headword": "subject",
-          "position": 146
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0147",
-          "headword": "Object",
-          "position": 147
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0148",
@@ -3104,109 +2961,9 @@
           "position": 148
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0149",
-          "headword": "Minor.",
-          "position": 149
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0150",
-          "headword": "Sociology.",
-          "position": 150
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0151",
-          "headword": "Politics.",
-          "position": 151
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0152",
-          "headword": "Economics.",
-          "position": 152
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0153",
-          "headword": "Marketing.",
-          "position": 153
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0154",
-          "headword": "Accounting.",
-          "position": 154
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0155",
-          "headword": "Audit.",
-          "position": 155
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0156",
-          "headword": "Statistics.",
-          "position": 156
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0157",
-          "headword": "Psychology.",
-          "position": 157
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0158",
-          "headword": "Philosophy.",
-          "position": 158
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0159",
-          "headword": "Logic.",
-          "position": 159
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0160",
-          "headword": "Biology.",
-          "position": 160
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0161",
-          "headword": "Physics.",
-          "position": 161
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0162",
           "headword": "Logistics Chemistry",
           "position": 162
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0163",
-          "headword": "Agriculture",
-          "position": 163
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0164",
-          "headword": "Logistics",
-          "position": 164
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0165",
-          "headword": "Geography",
-          "position": 165
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0166",
-          "headword": "History.",
-          "position": 166
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0167",
-          "headword": "Engineering.",
-          "position": 167
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0168",
-          "headword": "Mechanics.",
-          "position": 168
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0169",
-          "headword": "Electronics.",
-          "position": 169
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0170",
@@ -3214,119 +2971,9 @@
           "position": 170
         },
         {
-          "stable_id": "bv1at4y1579f-ch05-0171",
-          "headword": "Arithmetic.",
-          "position": 171
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0172",
-          "headword": "Geometry.",
-          "position": 172
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0173",
-          "headword": "Algebra.",
-          "position": 173
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0174",
-          "headword": "Calculus.",
-          "position": 174
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0175",
-          "headword": "Plus,",
-          "position": 175
-        },
-        {
           "stable_id": "bv1at4y1579f-ch05-0176",
           "headword": "Some,",
           "position": 176
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0177",
-          "headword": "Total.",
-          "position": 177
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0178",
-          "headword": "Merger.",
-          "position": 178
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0179",
-          "headword": "Equation.",
-          "position": 179
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0180",
-          "headword": "Identical.",
-          "position": 180
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0181",
-          "headword": "Minus.",
-          "position": 181
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0182",
-          "headword": "Subtract.",
-          "position": 182
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0183",
-          "headword": "multiply.",
-          "position": 183
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0184",
-          "headword": "Divide.",
-          "position": 184
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0185",
-          "headword": "Dividend.",
-          "position": 185
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0186",
-          "headword": "Remainder.",
-          "position": 186
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0187",
-          "headword": "Rational.",
-          "position": 187
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0188",
-          "headword": "Parameter.",
-          "position": 188
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0189",
-          "headword": "Variable.",
-          "position": 189
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0190",
-          "headword": "Even.",
-          "position": 190
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0191",
-          "headword": "Odd.",
-          "position": 191
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0192",
-          "headword": "Mean.",
-          "position": 192
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch05-0193",
-          "headword": "Double.",
-          "position": 193
         },
         {
           "stable_id": "bv1at4y1579f-ch05-0194",
@@ -4411,10 +4058,38 @@
         {
           "ocr_word_id": "ielts-vocabulary-true-script-pdf0073-05",
           "headword": "laboratory (= lab)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0074-11",
+          "headword": "encyclopedia (= encyclopaedia)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0075-11",
+          "headword": "catalogue (= catalog)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0076-02",
+          "headword": "reel"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0076-05",
+          "headword": "major"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0077-06",
+          "headword": "chemistry"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0078-04",
+          "headword": "maths (= mathematics)"
+        },
+        {
+          "ocr_word_id": "ielts-vocabulary-true-script-pdf0078-10",
+          "headword": "sum"
         }
       ]
     }
   },
-  "word_count": 728,
+  "word_count": 808,
   "index_entry_count": 0
 }
