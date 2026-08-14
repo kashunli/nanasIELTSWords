@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T06:31:20.243780+00:00",
+  "generated_at": "2026-08-14T06:40:54.072586+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1130,33 +1130,50 @@
     },
     {
       "pdf_page": 146,
+      "book_page": 135,
       "page_type": "chapter_opener",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 147,
+      "book_page": 136,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 148,
+      "book_page": 137,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 15
     },
     {
       "pdf_page": 149,
+      "book_page": 138,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 150,
+      "book_page": 139,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 20
     },
     {
       "pdf_page": 151,
+      "book_page": 140,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 17
     },
     {
       "pdf_page": 152,
@@ -2110,12 +2127,6 @@
     25,
     35,
     36,
-    146,
-    147,
-    148,
-    149,
-    150,
-    151,
     152,
     153,
     154,
@@ -2415,8 +2426,169 @@
       "matched_by_order": 4,
       "missing_audio_words": [],
       "unexpected_ocr_words": []
+    },
+    "11": {
+      "expected_audio_words": 111,
+      "ocr_words": 81,
+      "matched_words": 81,
+      "matched_by_headword": 4,
+      "matched_by_sentence": 74,
+      "matched_by_order": 3,
+      "missing_audio_words": [
+        {
+          "stable_id": "bv1at4y1579f-ch11-0082",
+          "headword": "pin.",
+          "position": 82
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0083",
+          "headword": "Strap.",
+          "position": 83
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0084",
+          "headword": "Stripe.",
+          "position": 84
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0085",
+          "headword": "Ribbon.",
+          "position": 85
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0086",
+          "headword": "Belt.",
+          "position": 86
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0087",
+          "headword": "Chain.",
+          "position": 87
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0088",
+          "headword": "Bracelet.",
+          "position": 88
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0089",
+          "headword": "Necklace.",
+          "position": 89
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0090",
+          "headword": "Bead.",
+          "position": 90
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0091",
+          "headword": "Textile.",
+          "position": 91
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0092",
+          "headword": "Velvet.",
+          "position": 92
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0093",
+          "headword": "Wool.",
+          "position": 93
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0094",
+          "headword": "Patch.",
+          "position": 94
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0095",
+          "headword": "Rag.",
+          "position": 95
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0096",
+          "headword": "Shabby.",
+          "position": 96
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0097",
+          "headword": "Tight.",
+          "position": 97
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0098",
+          "headword": "Color.",
+          "position": 98
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0099",
+          "headword": "White.",
+          "position": 99
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0100",
+          "headword": "Yellow.",
+          "position": 100
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0101",
+          "headword": "Brown.",
+          "position": 101
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0102",
+          "headword": "Gray.",
+          "position": 102
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0103",
+          "headword": "Pink.",
+          "position": 103
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0104",
+          "headword": "Purple.",
+          "position": 104
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0105",
+          "headword": "Tan.",
+          "position": 105
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0106",
+          "headword": "Fade.",
+          "position": 106
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0107",
+          "headword": "Stain.",
+          "position": 107
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0108",
+          "headword": "Blot.",
+          "position": 108
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0109",
+          "headword": "Figure.",
+          "position": 109
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0110",
+          "headword": "Slender.",
+          "position": 110
+        },
+        {
+          "stable_id": "bv1at4y1579f-ch11-0111",
+          "headword": "Slight.",
+          "position": 111
+        }
+      ],
+      "unexpected_ocr_words": []
     }
   },
-  "word_count": 1612,
+  "word_count": 1693,
   "index_entry_count": 0
 }
