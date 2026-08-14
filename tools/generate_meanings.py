@@ -89,7 +89,10 @@ def run_qwen(prompt_path: Path, timeout: int) -> str:
     # PowerShell preserves its configured provider/model without storing any
     # credential in this repository or in the batch artifacts.
     literal_path = str(prompt_path).replace("'", "''")
-    command = f"$prompt = [IO.File]::ReadAllText('{literal_path}'); qwen -p $prompt"
+    # The profile's qwen wrapper is convenient for provider credentials, but
+    # its normal mode enables Claude tools. Meaning generation is a data-only
+    # operation, so explicitly disable all tools to prevent repository edits.
+    command = f"$prompt = [IO.File]::ReadAllText('{literal_path}'); qwen -p $prompt --tools \"\""
     completed = subprocess.run(
         ["pwsh.exe", "-NoLogo", "-NonInteractive", "-Command", command],
         cwd=prompt_path.parents[3],
