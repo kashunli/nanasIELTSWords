@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T09:04:10.914365+00:00",
+  "generated_at": "2026-08-14T09:14:06.123535+00:00",
   "page_count": 336,
   "page_reports": [
     {
@@ -1861,13 +1861,19 @@
     },
     {
       "pdf_page": 239,
+      "book_page": 228,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 10
     },
     {
       "pdf_page": 240,
+      "book_page": 229,
       "page_type": "vocabulary",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": [],
+      "ocr_entry_count": 14
     },
     {
       "pdf_page": 241,
@@ -2366,8 +2372,6 @@
     25,
     35,
     36,
-    239,
-    240,
     241,
     242,
     243,
@@ -2713,132 +2717,12 @@
     },
     "18": {
       "expected_audio_words": 213,
-      "ocr_words": 56,
-      "matched_words": 56,
+      "ocr_words": 80,
+      "matched_words": 80,
       "matched_by_headword": 6,
-      "matched_by_sentence": 49,
+      "matched_by_sentence": 73,
       "matched_by_order": 1,
       "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch18-0057",
-          "headword": "Seize.",
-          "position": 57
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0058",
-          "headword": "Pursue.",
-          "position": 58
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0059",
-          "headword": "Threat.",
-          "position": 59
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0060",
-          "headword": "Offend.",
-          "position": 60
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0061",
-          "headword": "Aggressive.",
-          "position": 61
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0062",
-          "headword": "Invade.",
-          "position": 62
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0063",
-          "headword": "Trespass.",
-          "position": 63
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0064",
-          "headword": "Intrude.",
-          "position": 64
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0065",
-          "headword": "Violate.",
-          "position": 65
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0066",
-          "headword": "Attack.",
-          "position": 66
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0067",
-          "headword": "Assault.",
-          "position": 67
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0068",
-          "headword": "Challenge.",
-          "position": 68
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0069",
-          "headword": "Siege.",
-          "position": 69
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0070",
-          "headword": "Surround.",
-          "position": 70
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0071",
-          "headword": "Enclose.",
-          "position": 71
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0072",
-          "headword": "Pause.",
-          "position": 72
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0073",
-          "headword": "Holt.",
-          "position": 73
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0074",
-          "headword": "Cease.",
-          "position": 74
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0075",
-          "headword": "Oppose.",
-          "position": 75
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0076",
-          "headword": "Oppress.",
-          "position": 76
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0077",
-          "headword": "Counter.",
-          "position": 77
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0078",
-          "headword": "Deter.",
-          "position": 78
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0079",
-          "headword": "Forbid.",
-          "position": 79
-        },
-        {
-          "stable_id": "bv1at4y1579f-ch18-0080",
-          "headword": "Prohibit.",
-          "position": 80
-        },
         {
           "stable_id": "bv1at4y1579f-ch18-0081",
           "headword": "Prevent.",
@@ -3508,6 +3392,6 @@
       "unexpected_ocr_words": []
     }
   },
-  "word_count": 2659,
+  "word_count": 2683,
   "index_entry_count": 0
 }
