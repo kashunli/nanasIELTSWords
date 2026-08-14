@@ -2,9 +2,9 @@
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
   "ocr_method": "mixed-book-ocr",
-  "prompt_version": "gpt-book-ocr-v1 (native default); qwen3.7-flash-book-page-v3-ipa-continuations (historical PDF 56-62)",
+  "prompt_version": "gpt-book-ocr-v1 (native default); qwen3.7-flash-book-page-v4-ipa-meaning-layout (historical PDF 56-59); qwen3.7-flash-book-page-v3-ipa-continuations (historical PDF 60-62)",
   "outside_api_used": true,
-  "updated_at": "2026-08-14T12:22:03.7203599Z",
+  "updated_at": "2026-08-14T15:48:27.4914791Z",
   "requested_range": [
     1,
     336

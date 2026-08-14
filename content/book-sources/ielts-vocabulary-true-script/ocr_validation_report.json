@@ -1,48 +1,64 @@
 {
   "schema_version": 1,
   "book_id": "ielts-vocabulary-true-script",
-  "generated_at": "2026-08-14T12:14:38.333530+00:00",
+  "generated_at": "2026-08-14T15:48:15.653895+00:00",
   "page_count": 336,
   "page_reports": [
     {
       "pdf_page": 1,
+      "book_page": null,
       "page_type": "front_cover",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 2,
+      "book_page": null,
       "page_type": "title_page",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 3,
+      "book_page": null,
       "page_type": "copyright",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 4,
+      "book_page": null,
       "page_type": "preface",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 5,
+      "book_page": null,
       "page_type": "preface",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 6,
+      "book_page": null,
       "page_type": "preface",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 7,
+      "book_page": null,
       "page_type": "preface",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 8,
+      "book_page": null,
       "page_type": "preface",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 9,
@@ -53,8 +69,10 @@
     },
     {
       "pdf_page": 10,
+      "book_page": null,
       "page_type": "table_of_contents",
-      "status": "missing"
+      "status": "ok",
+      "review_reasons": []
     },
     {
       "pdf_page": 11,
@@ -2626,15 +2644,6 @@
     }
   ],
   "pages_with_issues": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    10,
     15,
     25,
     35,
@@ -2898,29 +2907,14 @@
       "unexpected_ocr_words": []
     },
     "19": {
-      "expected_audio_words": 120,
+      "expected_audio_words": 121,
       "ocr_words": 121,
-      "matched_words": 119,
-      "matched_by_headword": 19,
-      "matched_by_sentence": 98,
-      "matched_by_order": 2,
-      "missing_audio_words": [
-        {
-          "stable_id": "bv1at4y1579f-ch19-0069",
-          "headword": "Soul.",
-          "position": 69
-        }
-      ],
-      "unexpected_ocr_words": [
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0258-05",
-          "headword": "single"
-        },
-        {
-          "ocr_word_id": "ielts-vocabulary-true-script-pdf0258-06",
-          "headword": "sole"
-        }
-      ]
+      "matched_words": 121,
+      "matched_by_headword": 18,
+      "matched_by_sentence": 100,
+      "matched_by_order": 3,
+      "missing_audio_words": [],
+      "unexpected_ocr_words": []
     },
     "20": {
       "expected_audio_words": 269,
