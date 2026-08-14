@@ -29,3 +29,9 @@ and uncertainty; runtime requests need only SQLite and media.
 Stable identity is acoustic position (`source/chapter/item`), not ASR text.
 This lets a future book importer replace displayed text without invalidating a
 learner's LocalStorage cards.
+
+The selected transcript is a derived review layer. `docs/asr-tag-review.json`
+contains only explicit, conservative confirmations where a single-word
+headword is supported by a clear inflected or orthographic form in the example
+sentence ASR. It removes that derived warning from the learner-facing status
+while retaining the original ASR record and the resolution evidence.

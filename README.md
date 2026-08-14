@@ -33,7 +33,9 @@ C:\Python313\python.exe tools\import_cut_manifest.py
 # chapter command is resumable; rerun an interrupted chapter explicitly.
 C:\Python313\python.exe tools\transcribe_chapters.py --pass small
 
-# Select the small-model transcript, retaining every review flag.
+# Select the small-model transcript, retaining every unresolved review flag.
+# The selector also applies the explicit sentence-ASR confirmations in
+# docs/asr-tag-review.json; raw ASR review reasons remain in asr-runs.
 C:\Python313\python.exe tools\select_transcripts.py
 
 # Optional: rerun only flagged pairs with the larger review model. These
