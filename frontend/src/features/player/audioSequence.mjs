@@ -33,7 +33,9 @@ function normalizePause(value, fallback) {
   return Math.min(MAX_PAUSE_SECONDS, Math.max(0, number));
 }
 
-export function normalizeAudioSequence(value) {
+export function normalizeAudioSequence(value, options = {}) {
+  const fillMissing = options.fillMissing !== false;
+  const ensurePlayable = options.ensurePlayable !== false;
   const defaults = createDefaultAudioSequence();
   const candidateSteps = value && typeof value === "object" && Array.isArray(value.steps) ? value.steps : [];
   const byElement = new Map();
@@ -52,10 +54,12 @@ export function normalizeAudioSequence(value) {
     const step = byElement.get(element.element);
     if (step && !steps.some(existing => existing.element === step.element)) steps.push(step);
   }
-  for (const step of defaults.steps) {
-    if (!steps.some(existing => existing.element === step.element)) steps.push({...step});
+  if (fillMissing) {
+    for (const step of defaults.steps) {
+      if (!steps.some(existing => existing.element === step.element)) steps.push({...step});
+    }
   }
-  if (!steps.some(step => step.repeatCount > 0)) {
+  if (ensurePlayable && steps.length > 0 && !steps.some(step => step.repeatCount > 0)) {
     steps[0] = {...steps[0], repeatCount: DEFAULT_STEP_VALUES[steps[0].element].repeatCount};
   }
   return {version: AUDIO_SEQUENCE_VERSION, steps};
@@ -84,7 +88,7 @@ export function updateAudioSequenceStep(value, element, patch) {
 }
 
 export function expandPlayableAudioSequence(value, audioUrls) {
-  const sequence = normalizeAudioSequence(value);
+  const sequence = normalizeAudioSequence(value, {fillMissing: false, ensurePlayable: false});
   return sequence.steps.flatMap(step => {
     const url = audioUrls && typeof audioUrls[step.element] === "string" ? audioUrls[step.element] : "";
     if (!url) return [];

@@ -78,6 +78,14 @@ test("expansion omits an element whose global repeat count is zero", () => {
   assert.deepEqual(result.map(cue => cue.element), ["sentence"]);
 });
 
+test("a filtered playback mode does not re-enable its zero-repeat element", () => {
+  const result = expandPlayableAudioSequence({
+    version: 1,
+    steps: [{element: "word", repeatCount: 0, pauseAfterSeconds: 0}],
+  }, {word: "/word.mp3"});
+  assert.deepEqual(result, []);
+});
+
 test("single mode completes the current recipe while consecutive mode can move to the next item", () => {
   assert.equal(nextAudioSequenceStep({cueIndex: 0, cueCount: 4, runMode: "single", hasNextItem: true}), "next-cue");
   assert.equal(nextAudioSequenceStep({cueIndex: 3, cueCount: 4, runMode: "single", hasNextItem: true}), "stop");
