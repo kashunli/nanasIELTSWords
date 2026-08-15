@@ -1,0 +1,19 @@
+[package]
+name = "ielts-vocabulary-launcher"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+[[bin]]
+name = "IELTSVocabulary"
+path = "src/main.rs"
+
+[build-dependencies]
+winres = "0.1.12"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = "s"
+panic = "abort"
+strip = true

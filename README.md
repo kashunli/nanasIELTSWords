@@ -90,6 +90,31 @@ cd ..
 
 Open `http://127.0.0.1:8770/`.
 
+### One-click Windows launcher
+
+After the runtime projection and frontend have been built, create a Windows
+package that starts the local backend and opens the learner UI automatically:
+
+```powershell
+.\tools\build_windows.ps1
+```
+
+The output is written to `dist\IELTSVocabulary\`. Double-click
+`IELTSVocabulary.exe` to reuse an already-running service or start the release
+backend, wait for `/health`, and open the default browser at
+`http://127.0.0.1:8770/`. The executable embeds the same open-book and
+sound-wave mark used by the web page. The launcher writes backend startup
+errors to `var\ielts-vocabulary-service.log` inside the package.
+
+The icon is already checked into the launcher source. If the web-service mark
+changes, regenerate the Windows icon with
+`.\tools\build_windows.ps1 -RefreshIcon`; that optional step uses Pillow.
+
+The package contains the compiled backend and `frontend\dist`; it also copies
+`var\content` when that local runtime directory exists. The source audio,
+preparation caches, and model caches are not read by the launcher or runtime
+service.
+
 The initial content workflow is intentionally resumable. A source hash, clip
 hash, ASR model/settings, and meaning-batch hash are recorded before an output
 is reused.
@@ -133,9 +158,15 @@ alignment badges, or reviewed-book provenance panels.
 
 ## Learner state
 
-Known, Flagged, Starred sentence, playback, and spaced-review state is stored
-under versioned browser LocalStorage keys. The backend never persists learner
-state. Use the settings panel to download or restore a progress backup.
+Known, Flagged, Starred sentence, playback, spaced-review state, and the
+per-word four-element audio recipe are stored under versioned browser
+LocalStorage keys. The recipe editor controls the order, repeat count, and
+pause after each of the English word, English sentence, Chinese word
+translation, and Chinese sentence translation elements. Translation audio is
+optional until those files are added; the editor can configure the rows in
+advance and playback skips only the unavailable files. The backend never
+persists learner state. Use the settings panel to download or restore a
+progress and recipe backup.
 
 ## Future book material
 

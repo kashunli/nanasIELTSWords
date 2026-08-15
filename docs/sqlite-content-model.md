@@ -53,6 +53,7 @@ erDiagram
         text meaning_en
         text meaning_zh
         text word_audio
+        text word_translation_audio nullable
         text transcript_status
         text meaning_status
         text accepted_word_source
@@ -65,6 +66,7 @@ erDiagram
         text kind
         text text
         text sentence_audio
+        text sentence_translation_audio nullable
         text transcript_status
         text accepted_sentence_source
     }
@@ -116,6 +118,14 @@ accepted sources `book`; the 37 previously flagged order-only pairs are handled
 by the same book-backed rule after manual verification. Raw selected
 transcripts and review reasons remain preparation/audit artifacts and are not
 deleted by this projection rule.
+
+Each item may also have two optional translation-audio paths:
+`word_items.word_translation_audio` for the Chinese word translation and
+`examples.sentence_translation_audio` for the Chinese sentence translation.
+They are nullable because the current collection contains only English word
+and sentence clips. When present, the Rust API exposes them as copied-media
+URLs; when absent, the browser recipe keeps the corresponding editable row but
+skips it during playback.
 
 ## Runtime boundary
 

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "test": "node --test src/features/study/studyState.test.mjs src/features/player/playbackSequence.test.mjs src/features/player/waveform.test.mjs"
+    "test": "node --test src/features/study/studyState.test.mjs src/features/player/playbackSequence.test.mjs src/features/player/waveform.test.mjs src/features/player/audioSequence.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "5.0.4",
