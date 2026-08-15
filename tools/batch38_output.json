@@ -1,0 +1,355 @@
+{
+  "batch": 38,
+  "items": [
+    {
+      "stable_id": "bv1at4y1579f-ch12-0132",
+      "part_of_speech": "noun",
+      "meaning_en": "A strong-smelling bulb used as food flavouring",
+      "meaning_zh": "大蒜",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0133",
+      "part_of_speech": "noun",
+      "meaning_en": "A small onion with a long green stem used in cooking",
+      "meaning_zh": "葱",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0134",
+      "part_of_speech": "noun",
+      "meaning_en": "A sour-tasting liquid made from fermented alcohol",
+      "meaning_zh": "醋",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0135",
+      "part_of_speech": "noun",
+      "meaning_en": "A white crystalline mineral used to season or preserve food",
+      "meaning_zh": "盐",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0136",
+      "part_of_speech": "noun",
+      "meaning_en": "A sweet crystalline substance obtained from plants",
+      "meaning_zh": "糖",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0137",
+      "part_of_speech": "noun",
+      "meaning_en": "A sweet food made with sugar or chocolate",
+      "meaning_zh": "糖果",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0138",
+      "part_of_speech": "noun",
+      "meaning_en": "A sweet thick liquid produced by bees",
+      "meaning_zh": "蜂蜜",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0139",
+      "part_of_speech": "noun",
+      "meaning_en": "The distinctive taste of a food or drink",
+      "meaning_zh": "味道",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0140",
+      "part_of_speech": "adjective",
+      "meaning_en": "Having a sharp acidic taste like lemon",
+      "meaning_zh": "酸的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0141",
+      "part_of_speech": "adjective",
+      "meaning_en": "Having the taste of sugar",
+      "meaning_zh": "甜的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0142",
+      "part_of_speech": "adjective",
+      "meaning_en": "Having a sharp unpleasant taste like dark coffee",
+      "meaning_zh": "苦的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0143",
+      "part_of_speech": "adjective",
+      "meaning_en": "Having a strong hot flavour from spices",
+      "meaning_zh": "辛辣的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0144",
+      "part_of_speech": "adjective",
+      "meaning_en": "Having a very pleasant taste",
+      "meaning_zh": "美味的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0145",
+      "part_of_speech": "adjective",
+      "meaning_en": "Very pleasing to taste",
+      "meaning_zh": "好吃的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0146",
+      "part_of_speech": "adjective",
+      "meaning_en": "Having a pleasant appealing flavour",
+      "meaning_zh": "美味的，可口的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0147",
+      "part_of_speech": "noun",
+      "meaning_en": "A feeling of discomfort from lack of food",
+      "meaning_zh": "饥饿",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0148",
+      "part_of_speech": "adjective",
+      "meaning_en": "Having a strong desire for something",
+      "meaning_zh": "渴望的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0149",
+      "part_of_speech": "noun",
+      "meaning_en": "Something that adds interest or excitement",
+      "meaning_zh": "增添趣味的事物",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0150",
+      "part_of_speech": "noun",
+      "meaning_en": "A thick liquid served with food to add flavour",
+      "meaning_zh": "酱汁",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0151",
+      "part_of_speech": "noun",
+      "meaning_en": "A thick red tomato-based condiment",
+      "meaning_zh": "番茄酱",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0152",
+      "part_of_speech": "noun",
+      "meaning_en": "A fragrant liquid worn to give a pleasant smell",
+      "meaning_zh": "香水",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0153",
+      "part_of_speech": "noun",
+      "meaning_en": "One of the parts used to make a dish",
+      "meaning_zh": "原料",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0154",
+      "part_of_speech": "verb",
+      "meaning_en": "To add to something in order to increase it",
+      "meaning_zh": "补充",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0155",
+      "part_of_speech": "verb",
+      "meaning_en": "To prepare food by heating it",
+      "meaning_zh": "烹饪，做饭",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0156",
+      "part_of_speech": "verb",
+      "meaning_en": "To cook food using dry heat in an oven",
+      "meaning_zh": "烘焙",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0157",
+      "part_of_speech": "verb",
+      "meaning_en": "To cook food in hot oil",
+      "meaning_zh": "煎，炸",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0158",
+      "part_of_speech": "noun",
+      "meaning_en": "A joint of meat cooked in an oven",
+      "meaning_zh": "烤肉",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0159",
+      "part_of_speech": "verb",
+      "meaning_en": "To raise glasses and drink in honour of someone",
+      "meaning_zh": "敬酒",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0160",
+      "part_of_speech": "verb",
+      "meaning_en": "To draw into the mouth by contracting the lips",
+      "meaning_zh": "吮吸",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0161",
+      "part_of_speech": "verb",
+      "meaning_en": "To make food pass down the throat",
+      "meaning_zh": "吞下",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0162",
+      "part_of_speech": "verb",
+      "meaning_en": "To pass the tongue over a surface",
+      "meaning_zh": "舔",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0163",
+      "part_of_speech": "verb",
+      "meaning_en": "To crush food with the teeth before swallowing",
+      "meaning_zh": "咀嚼",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0164",
+      "part_of_speech": "noun",
+      "meaning_en": "A sweet rubbery substance chewed but not swallowed",
+      "meaning_zh": "口香糖",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0165",
+      "part_of_speech": "verb",
+      "meaning_en": "To leave something immersed in liquid",
+      "meaning_zh": "浸泡",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0166",
+      "part_of_speech": "verb",
+      "meaning_en": "To put something briefly into liquid",
+      "meaning_zh": "蘸，浸",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0167",
+      "part_of_speech": "verb",
+      "meaning_en": "To press firmly to extract liquid",
+      "meaning_zh": "挤压",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0168",
+      "part_of_speech": "verb",
+      "meaning_en": "To mix by moving in a circular motion",
+      "meaning_zh": "搅拌",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0169",
+      "part_of_speech": "verb",
+      "meaning_en": "To crush into small pieces or powder",
+      "meaning_zh": "磨碎",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch12-0170",
+      "part_of_speech": "verb",
+      "meaning_en": "To cut into thin flat pieces",
+      "meaning_zh": "切片",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0001",
+      "part_of_speech": "noun",
+      "meaning_en": "The art and practice of designing buildings",
+      "meaning_zh": "建筑学",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0002",
+      "part_of_speech": "noun",
+      "meaning_en": "The act of building or constructing a structure",
+      "meaning_zh": "建造",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0003",
+      "part_of_speech": "noun",
+      "meaning_en": "The arrangement and organisation of parts in a whole",
+      "meaning_zh": "结构",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0004",
+      "part_of_speech": "verb",
+      "meaning_en": "To build or form by putting parts together",
+      "meaning_zh": "建造",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0005",
+      "part_of_speech": "verb",
+      "meaning_en": "To block or get in the way of something",
+      "meaning_zh": "阻碍",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0006",
+      "part_of_speech": "verb",
+      "meaning_en": "To set up or create on a firm permanent basis",
+      "meaning_zh": "建立",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0007",
+      "part_of_speech": "verb",
+      "meaning_en": "To create or develop something over time",
+      "meaning_zh": "建设",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0008",
+      "part_of_speech": "verb",
+      "meaning_en": "To create or establish an institution",
+      "meaning_zh": "创立",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0009",
+      "part_of_speech": "noun",
+      "meaning_en": "A hard building material made of cement and aggregate",
+      "meaning_zh": "混凝土",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0010",
+      "part_of_speech": "noun",
+      "meaning_en": "A hard strong alloy of iron and carbon",
+      "meaning_zh": "钢",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch13-0011",
+      "part_of_speech": "noun",
+      "meaning_en": "The state of being steady and unlikely to change",
+      "meaning_zh": "稳定性",
+      "meaning_status": "ai_draft"
+    }
+  ]
+}

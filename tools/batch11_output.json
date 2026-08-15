@@ -1,0 +1,355 @@
+{
+  "batch": 11,
+  "items": [
+    {
+      "stable_id": "bv1at4y1579f-ch03-0131",
+      "part_of_speech": "noun",
+      "meaning_en": "microscopic single-celled organisms, some of which cause disease",
+      "meaning_zh": "细菌",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0132",
+      "part_of_speech": "noun",
+      "meaning_en": "a malicious program that infects a computer system",
+      "meaning_zh": "病毒",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0133",
+      "part_of_speech": "noun",
+      "meaning_en": "a microscopic organism, especially one involved in health or disease",
+      "meaning_zh": "微生物",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0134",
+      "part_of_speech": "noun",
+      "meaning_en": "the chemical processes by which a body converts food into energy",
+      "meaning_zh": "新陈代谢",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0135",
+      "part_of_speech": "noun",
+      "meaning_en": "a nutrient that helps the body grow and repair tissue",
+      "meaning_zh": "蛋白质",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0136",
+      "part_of_speech": "noun",
+      "meaning_en": "an organic compound essential for normal growth and nutrition",
+      "meaning_zh": "维生素",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0137",
+      "part_of_speech": "verb",
+      "meaning_en": "to produce and release a substance from a cell or gland",
+      "meaning_zh": "分泌",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0138",
+      "part_of_speech": "verb",
+      "meaning_en": "to eliminate waste matter from the body",
+      "meaning_zh": "排泄",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0139",
+      "part_of_speech": "verb",
+      "meaning_en": "to eat something quickly and greedily",
+      "meaning_zh": "吞食",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0140",
+      "part_of_speech": "noun",
+      "meaning_en": "a natural impulse or response not based on reasoning",
+      "meaning_zh": "本能",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0141",
+      "part_of_speech": "adjective",
+      "meaning_en": "understood by feeling rather than conscious reasoning",
+      "meaning_zh": "直觉的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0142",
+      "part_of_speech": "noun",
+      "meaning_en": "latent qualities or abilities that may be developed",
+      "meaning_zh": "潜力",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0143",
+      "part_of_speech": "noun",
+      "meaning_en": "the ability to learn, understand, and make sound judgments",
+      "meaning_zh": "智力",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0144",
+      "part_of_speech": "adjective",
+      "meaning_en": "relating to the practical purpose of something rather than appearance",
+      "meaning_zh": "功能性的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0145",
+      "part_of_speech": "adjective",
+      "meaning_en": "easily affected or upset by the opinions of others",
+      "meaning_zh": "敏感的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0146",
+      "part_of_speech": "adjective",
+      "meaning_en": "able to be adapted or changed easily to suit new conditions",
+      "meaning_zh": "灵活的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0147",
+      "part_of_speech": "adjective",
+      "meaning_en": "relating to sound or the sense of hearing",
+      "meaning_zh": "声音的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0148",
+      "part_of_speech": "adjective",
+      "meaning_en": "relating to sight, light, or lenses",
+      "meaning_zh": "光学的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0149",
+      "part_of_speech": "adjective",
+      "meaning_en": "active or occurring during the night",
+      "meaning_zh": "夜行的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0150",
+      "part_of_speech": "adjective",
+      "meaning_en": "inactive and not growing, especially in winter",
+      "meaning_zh": "休眠的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0151",
+      "part_of_speech": "noun",
+      "meaning_en": "a state of prolonged inactivity during winter to conserve energy",
+      "meaning_zh": "冬眠",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0152",
+      "part_of_speech": "noun",
+      "meaning_en": "marks left on the ground by an animal's feet",
+      "meaning_zh": "足迹",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0153",
+      "part_of_speech": "verb",
+      "meaning_en": "to find or follow someone by following signs or clues",
+      "meaning_zh": "追踪",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0154",
+      "part_of_speech": "verb",
+      "meaning_en": "to occur in turns, one after the other repeatedly",
+      "meaning_zh": "交替",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0155",
+      "part_of_speech": "noun",
+      "meaning_en": "an animal that is hunted and eaten by another animal",
+      "meaning_zh": "猎物",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0156",
+      "part_of_speech": "noun",
+      "meaning_en": "an animal that hunts and eats other animals",
+      "meaning_zh": "捕食者",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0157",
+      "part_of_speech": "noun",
+      "meaning_en": "a person harmed, injured, or killed by an event or attack",
+      "meaning_zh": "受害者",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0158",
+      "part_of_speech": "noun",
+      "meaning_en": "a person who has been taken prisoner or confined by force",
+      "meaning_zh": "俘虏",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0159",
+      "part_of_speech": "adjective",
+      "meaning_en": "intended to protect against attack or to avoid criticism",
+      "meaning_zh": "防御性的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0160",
+      "part_of_speech": "verb",
+      "meaning_en": "to experience something difficult, painful, or unpleasant",
+      "meaning_zh": "经历",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0161",
+      "part_of_speech": "verb",
+      "meaning_en": "to experience or be subjected to loss, harm, or hardship",
+      "meaning_zh": "遭受",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0162",
+      "part_of_speech": "adjective",
+      "meaning_en": "easily hurt or harmed physically or emotionally",
+      "meaning_zh": "脆弱的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0163",
+      "part_of_speech": "noun",
+      "meaning_en": "the minimum resources needed to stay alive",
+      "meaning_zh": "维持生存",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0164",
+      "part_of_speech": "verb",
+      "meaning_en": "to have real being or be present somewhere",
+      "meaning_zh": "存在",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0165",
+      "part_of_speech": "verb",
+      "meaning_en": "to destroy or kill a group completely",
+      "meaning_zh": "消灭",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0166",
+      "part_of_speech": "noun",
+      "meaning_en": "lines of dialogue spoken by performers on stage",
+      "meaning_zh": "台词",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0167",
+      "part_of_speech": "noun",
+      "meaning_en": "a person who looks after or feeds animals in a zoo or farm",
+      "meaning_zh": "饲养员",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch03-0168",
+      "part_of_speech": "noun",
+      "meaning_en": "a person who tends and guards sheep",
+      "meaning_zh": "牧羊人",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0001",
+      "part_of_speech": "noun",
+      "meaning_en": "a vast system of billions of stars, gas, and dust",
+      "meaning_zh": "星系",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0002",
+      "part_of_speech": "noun",
+      "meaning_en": "the universe regarded as an ordered and harmonious system",
+      "meaning_zh": "宇宙",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0003",
+      "part_of_speech": "noun",
+      "meaning_en": "all of space and everything that exists in it",
+      "meaning_zh": "宇宙",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0004",
+      "part_of_speech": "adjective",
+      "meaning_en": "situated or occurring between stars",
+      "meaning_zh": "星际的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0005",
+      "part_of_speech": "adjective",
+      "meaning_en": "relating to the earth or land rather than water or air",
+      "meaning_zh": "陆地的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0006",
+      "part_of_speech": "adjective",
+      "meaning_en": "relating to the sky or outer space; heavenly",
+      "meaning_zh": "天体的",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0007",
+      "part_of_speech": "noun",
+      "meaning_en": "the scientific study of stars, planets, and space",
+      "meaning_zh": "天文学",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0008",
+      "part_of_speech": "noun",
+      "meaning_en": "the study of star positions believed to influence human affairs",
+      "meaning_zh": "占星术",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0009",
+      "part_of_speech": "noun",
+      "meaning_en": "a person trained to travel and work in a spacecraft",
+      "meaning_zh": "宇航员",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0010",
+      "part_of_speech": "noun",
+      "meaning_en": "an icy celestial body that develops a glowing tail near the sun",
+      "meaning_zh": "彗星",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0011",
+      "part_of_speech": "noun",
+      "meaning_en": "a fragment of rock from space that survives passage through the atmosphere",
+      "meaning_zh": "陨石",
+      "meaning_status": "ai_draft"
+    },
+    {
+      "stable_id": "bv1at4y1579f-ch04-0012",
+      "part_of_speech": "noun",
+      "meaning_en": "a large bowl-shaped hollow caused by a volcanic eruption or impact",
+      "meaning_zh": "火山口",
+      "meaning_status": "ai_draft"
+    }
+  ]
+}
