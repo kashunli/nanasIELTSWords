@@ -96,6 +96,7 @@ class TranslationAudioTests(unittest.TestCase):
     def test_provider_constants_match_edge_tts_contract(self) -> None:
         self.assertEqual(PROVIDER, "microsoft-edge-tts")
         self.assertEqual(LANGUAGE_CODE, "zh-CN")
+        self.assertEqual(DEFAULT_VOICE, "zh-CN-YunjianNeural")
 
 
 if __name__ == "__main__":
