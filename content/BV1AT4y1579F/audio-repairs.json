@@ -263,6 +263,30 @@
       "boundary": {"start": 548.348, "end": 550.938, "duration": 2.59, "basis": "Local word timestamps identify thread after the complete string example."}
     },
     {
+      "repair_id": "bv1at4y1579f-ch11-0048-overall-v1",
+      "kind": "expand_word_clip_for_repeated_pronunciation",
+      "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\11 - 雅思词汇真经MP3 p11 雅思词汇真经chapter11 [BV1AT4y1579F_p11].m4a",
+      "source_sha256": "c08ac47095dc2f23c8a060e7a469f2879a96ed5fd67b63d8cc47912283ee1dd9",
+      "asr_source_stable_id": "bv1at4y1579f-ch11-0048",
+      "existing_item": {
+        "stable_id": "bv1at4y1579f-ch11-0048",
+        "word_audio_path": "BV1AT4y1579F/chapter11/words/word0048.mp3",
+        "word_clip": {
+          "start": 325.383,
+          "end": 327.42,
+          "duration": 2.037,
+          "occurrences": [
+            {"start": 325.28, "end": 325.98, "word": "overall"},
+            {"start": 326.97, "end": 327.32, "word": "overall"}
+          ]
+        },
+        "headword": "Overall.",
+        "sentence": "The shop assistant was wearing a white overall."
+      },
+      "basis": "Local word timestamps identify the second overall pronunciation inside the example sentence; the word clip intentionally contains both spoken occurrences.",
+      "review_reasons": ["repeated_word_pronunciation_in_sentence"]
+    },
+    {
       "repair_id": "bv1at4y1579f-ch12-0093-reap-v1",
       "kind": "split_auto_merged_sentence",
       "source_file": "D:\\n2Prepare\\nanaBeatsListening\\var\\source\\bilibili\\BV1AT4y1579F\\12 - 雅思词汇真经MP3 p12 雅思词汇真经chapter12 [BV1AT4y1579F_p12].m4a",

@@ -7,7 +7,6 @@ pub struct Summary {
     pub content_version: String,
     pub chapters: i64,
     pub items: i64,
-    pub transcript_review_items: i64,
     pub book_reference_items: i64,
     pub book_order_review_items: i64,
 }
@@ -17,13 +16,6 @@ pub struct Chapter {
     pub number: i64,
     pub title: String,
     pub item_count: i64,
-    pub transcript_review_count: i64,
-}
-
-#[derive(Debug, Serialize, Clone)]
-pub struct ReviewReason {
-    pub source: String,
-    pub reason: String,
 }
 
 #[derive(Debug, Serialize, Clone)]
@@ -60,7 +52,6 @@ pub struct ItemSummary {
     pub meaning_en: String,
     pub meaning_zh: String,
     pub sentence: String,
-    pub transcript_status: String,
     pub meaning_status: String,
     pub word_audio_url: String,
     pub sentence_audio_url: String,
@@ -68,14 +59,7 @@ pub struct ItemSummary {
     pub book_reference: Option<BookReference>,
 }
 
-#[derive(Debug, Serialize)]
-pub struct ItemDetail {
-    #[serde(flatten)]
-    pub item: ItemSummary,
-    pub accepted_word_source: String,
-    pub accepted_sentence_source: String,
-    pub review_reasons: Vec<ReviewReason>,
-}
+pub type ItemDetail = ItemSummary;
 
 #[derive(Debug, Deserialize)]
 pub struct ItemQuery {

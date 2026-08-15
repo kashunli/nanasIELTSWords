@@ -1,4 +1,3 @@
-export type TranscriptStatus = "candidate" | "needs_review" | "book_reviewed";
 export type MeaningStatus = "ai_draft" | "reviewed";
 
 export interface Summary {
@@ -7,7 +6,6 @@ export interface Summary {
   content_version: string;
   chapters: number;
   items: number;
-  transcript_review_items: number;
   book_reference_items: number;
   book_order_review_items: number;
 }
@@ -16,7 +14,6 @@ export interface Chapter {
   number: number;
   title: string;
   item_count: number;
-  transcript_review_count: number;
 }
 
 export type BookAlignmentStatus = "matched_headword" | "matched_sentence" | "matched_order";
@@ -54,14 +51,10 @@ export interface Item {
   meaning_en: string;
   meaning_zh: string;
   sentence: string;
-  transcript_status: TranscriptStatus;
   meaning_status: MeaningStatus;
   word_audio_url: string;
   sentence_audio_url: string;
   book_reference?: BookReference;
-  accepted_word_source?: string;
-  accepted_sentence_source?: string;
-  review_reasons?: Array<{source: string; reason: string}>;
 }
 
 export interface CardState {

@@ -4,13 +4,13 @@ A private local-first IELTS vocabulary memorization service built from one
 audio collection: the 22 chapters under Bilibili `BV1AT4y1579F`.
 
 The application uses the recordings as primary evidence. Whisper supplies the
-initial headword and example sentence transcript; Luna/Codex-generated English
-and Simplified Chinese meanings are stored as clearly labeled draft metadata.
-The reviewed book/PDF layer is now imported separately from the ASR layer: when
-its word or sentence evidence aligns to an audio item, it supplies the
+initial headword and example sentence transcript for preparation; Luna/Codex-
+generated English and Simplified Chinese meanings are stored as clearly labeled
+draft metadata. The reviewed book/PDF layer is imported separately: when its
+word or sentence evidence aligns to an audio item, it supplies the
 learner-facing field without changing stable audio-based item IDs or browser
-study progress. Raw ASR remains preserved in preparation artifacts and is only
-shown for learner-facing fields that still lack a reliable book match.
+study progress. Raw transcription runs and their uncertainty flags remain in
+preparation artifacts for audit, but they are not learner-facing tags.
 
 ## Current source
 
@@ -45,9 +45,9 @@ C:\Python313\python.exe tools\import_cut_manifest.py
 # chapter command is resumable; rerun an interrupted chapter explicitly.
 C:\Python313\python.exe tools\transcribe_chapters.py --pass small
 
-# Select the small-model transcript, retaining every unresolved review flag.
-# The selector also applies the explicit sentence-ASR confirmations in
-# docs/asr-tag-review.json; raw ASR review reasons remain in asr-runs.
+# Select the small-model transcript. Raw transcription flags remain in the
+# preparation artifact for audit; the runtime uses the reviewed book projection
+# and the verified source-audio cuts instead of exposing transcription tags.
 C:\Python313\python.exe tools\select_transcripts.py
 
 # Optional: rerun only flagged pairs with the larger review model. These
@@ -122,12 +122,13 @@ English meaning, Chinese translation, translated example, collocations,
 word-formation notes, source page, and alignment evidence to a word card. The
 runtime projection chooses the reviewed-book word when alignment is by book
 headword or sentence. A reliable book-word match makes the whole learner-facing
-item book-backed, so the reviewed-book example replaces the audio sentence and
-the item no longer contributes to unresolved ASR counts or review actions—even
-when the audio uses a spelling or inflection such as `Mold` for `mould`. When no
-reliable word match exists, an exact or normalized sentence match can still
-replace the sentence field. Raw ASR and review reasons remain in preparation
-and runtime audit data.
+item book-backed, so the reviewed-book example replaces the audio sentence—even
+when the audio uses a spelling or inflection such as `Mold` for `mould`. The
+Previously flagged order-only entries were also verified against the book and
+now use book-backed learner-facing fields. Raw transcription and review
+reasons remain in preparation and internal audit data; the runtime API does
+not expose transcription status, transcription source labels, or a
+transcription-review queue.
 
 ## Learner state
 

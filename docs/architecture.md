@@ -15,7 +15,7 @@ copied media + source manifest + explicit repair overlay
                                       v
                              SQLite runtime projection
                               /                  \
-                  word_items + ASR       book_references + OCR
+                  word_items              book_references + OCR
                                       |
                                       v
                          Rust API + copied media
@@ -46,11 +46,10 @@ records. Existing stable IDs/UUIDs are retained; recovered entries receive
 explicit source-derived IDs and presentation positions are recomputed in book
 order.
 
-The selected transcript is a derived review layer. `docs/asr-tag-review.json`
-contains only explicit, conservative confirmations where a single-word
-headword is supported by a clear inflected or orthographic form in the example
-sentence ASR. It removes that derived warning from the learner-facing status
-while retaining the original ASR record and the resolution evidence.
+The selected transcript is a preparation artifact used to choose stable audio
+cuts and draft learner-facing fields. It retains raw transcription candidates
+and review reasons for audit, but the runtime projection does not expose
+transcription status, source labels, or a transcription-review UI.
 
 The page OCR under
 `content/book-sources/ielts-vocabulary-true-script/page-ocr/` is a preparation
@@ -72,24 +71,16 @@ so a count match cannot hide a missing recording.
 `tools/build_content.py` projects matched OCR records into the separate
 `book_references` table and selects learner-facing fields independently. A
 reliable book headword alignment is authoritative for the whole item: it
-replaces both the `word_items` and `examples` fields, records both
-`accepted_*_source='book'`, and removes the item from unresolved ASR review
-counts even when the audio sentence differs. This covers spelling variants
-such as `mould`/`Mold`. If there is no reliable word alignment, an exact or
-normalized sentence alignment can still replace the sentence field; otherwise
-the unmatched field retains `accepted_*_source='asr'`. The API still returns
-the separate book reference and keeps raw review reasons available for audit,
-while the React study wall only surfaces ASR for items with no authoritative
-book resolution. For example, an audio ASR result of `Plato.` uses the
-OCR-backed book word `plateau` when the book example and audio sentence align
-exactly, without deleting the raw transcript artifact.
+replaces both the `word_items` and `examples` fields. This covers spelling
+variants such as `mould`/`Mold`. If there is no reliable word alignment, an
+exact or normalized sentence alignment can still replace the sentence field.
+The previously flagged order-only pairs were verified against the book and are
+explicitly treated as book-backed by the projection. The API returns accepted
+learner-facing fields and the separate book reference; raw transcription/review
+rows remain internal audit data.
 
-Sentence confirmation remains a separate, reversible browser-local decision.
-It is included in the local progress backup and remains keyed by stable item
-ID; it does not rewrite SQLite, raw ASR, or OCR review reasons.
-
-The web service exposes the equal-length order-only gaps as a separate review
-queue. `GET /api/items?book_alignment=order_only` reads
+The web service exposes the equal-length order-only gaps as a separate
+book/audio coverage queue. `GET /api/items?book_alignment=order_only` reads
 `book_references.alignment_status='matched_order'`; the build projection marks
 all such records as `needs_review`, even when an older OCR record omitted that
 flag. The React study wall displays the queue count, labels each row

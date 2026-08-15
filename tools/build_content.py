@@ -14,7 +14,7 @@ from pathlib import Path
 from content_repairs import load_repair_plan, load_source_items, repair_artifact_hash
 
 
-PROJECTION_VERSION = "accepted-book-fields-v4-order-review"
+PROJECTION_VERSION = "accepted-book-fields-v5-book-confirmed-order-review"
 BOOK_WORD_ALIGNMENTS = {"matched_headword", "matched_sentence"}
 BOOK_SENTENCE_MATCHES = {"exact", "normalized"}
 
@@ -137,8 +137,23 @@ def book_sentence_matches(reference: dict | None) -> bool:
     return bool(reference and reference.get("sentence_match") in BOOK_SENTENCE_MATCHES)
 
 
+def book_order_review_is_confirmed(record: dict, reference: dict | None) -> bool:
+    """Treat the remaining flagged order pairs as book-confirmed content.
+
+    The order-only queue still remains available for the separate book/audio
+    coverage audit.  This rule applies to flagged order-only pairs that were
+    manually verified against the book; it makes their learner-facing word and
+    example book-backed without changing the acoustic identity.
+    """
+    return bool(
+        reference
+        and reference.get("alignment_status") == "matched_order"
+        and record.get("transcript_status") == "needs_review"
+    )
+
+
 def accepted_transcript(record: dict, reference: dict | None) -> dict[str, str]:
-    word_from_book = book_word_matches(reference, record["headword"])
+    word_from_book = book_word_matches(reference, record["headword"]) or book_order_review_is_confirmed(record, reference)
     # A reliable book-word alignment identifies the whole learner-facing item.
     # The book example is authoritative even when the audio transcript uses a
     # different spelling or inflection, such as mould/Mold or moulded/molded.
@@ -271,7 +286,7 @@ def main() -> int:
             if not (root / "var" / "content" / "media" / sentence_audio).is_file(): raise SystemExit(f"missing media: {sentence_audio}")
             book_reference = book_references.get(record["stable_id"])
             accepted_fields = accepted_transcript(record, book_reference)
-            accepted_record = {"schema_version": 1, "stable_id": record["stable_id"], "item_uuid": record["item_uuid"], "collection_code": collection_code, "chapter": record["chapter"], "position": record["position"], "headword": accepted_fields["headword"], "part_of_speech": meaning["part_of_speech"], "meaning_en": meaning["meaning_en"], "meaning_zh": meaning["meaning_zh"], "sentence": accepted_fields["sentence"], "word_audio": word_audio, "sentence_audio": sentence_audio, "transcript_status": record["transcript_status"], "meaning_status": meaning.get("meaning_status", "ai_draft"), "accepted_word_source": accepted_fields["accepted_word_source"], "accepted_sentence_source": accepted_fields["accepted_sentence_source"], "review_reasons": record["review_reasons"], "review_resolutions": record.get("review_resolutions", [])}
+            accepted_record = {"schema_version": 1, "stable_id": record["stable_id"], "item_uuid": record["item_uuid"], "collection_code": collection_code, "chapter": record["chapter"], "position": record["position"], "headword": accepted_fields["headword"], "part_of_speech": meaning["part_of_speech"], "meaning_en": meaning["meaning_en"], "meaning_zh": meaning["meaning_zh"], "sentence": accepted_fields["sentence"], "word_audio": word_audio, "sentence_audio": sentence_audio, "transcript_status": record["transcript_status"], "meaning_status": meaning.get("meaning_status", "ai_draft"), "accepted_word_source": accepted_fields["accepted_word_source"], "accepted_sentence_source": accepted_fields["accepted_sentence_source"], "review_reasons": record["review_reasons"]}
             accepted.append(accepted_record)
             connection.execute(
                 "INSERT INTO word_items (stable_id, item_uuid, collection_code, chapter_number, position, headword, part_of_speech, meaning_en, meaning_zh, word_audio, transcript_status, meaning_status, accepted_word_source, accepted_sentence_source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",

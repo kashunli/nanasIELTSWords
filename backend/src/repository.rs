@@ -1,7 +1,7 @@
 use crate::{
     config::Config,
     error::AppError,
-    models::{BookReference, Chapter, ItemDetail, ItemQuery, ItemSummary, ReviewReason, Summary},
+    models::{BookReference, Chapter, ItemDetail, ItemQuery, ItemSummary, Summary},
 };
 use rusqlite::{params, Connection, OptionalExtension};
 
@@ -25,10 +25,6 @@ pub fn summary(connection: &Connection) -> Result<Summary, AppError> {
     )?;
     let chapters = connection.query_row("SELECT COUNT(*) FROM chapters", [], |row| row.get(0))?;
     let items = connection.query_row("SELECT COUNT(*) FROM word_items", [], |row| row.get(0))?;
-    let review = connection.query_row(
-        "SELECT COUNT(*) FROM word_items WHERE transcript_status='needs_review' AND (accepted_word_source <> 'book' OR accepted_sentence_source <> 'book')",
-        [], |row| row.get(0),
-    )?;
     let book_reference_items =
         connection.query_row("SELECT COUNT(*) FROM book_references", [], |row| row.get(0))?;
     let book_order_review_items = connection.query_row(
@@ -42,7 +38,6 @@ pub fn summary(connection: &Connection) -> Result<Summary, AppError> {
         content_version: row.2,
         chapters,
         items,
-        transcript_review_items: review,
         book_reference_items,
         book_order_review_items,
     })
@@ -50,21 +45,20 @@ pub fn summary(connection: &Connection) -> Result<Summary, AppError> {
 
 pub fn chapters(connection: &Connection) -> Result<Vec<Chapter>, AppError> {
     let mut statement = connection.prepare(
-        "SELECT number, title, item_count, transcript_review_count FROM chapters ORDER BY number",
+        "SELECT number, title, item_count FROM chapters ORDER BY number",
     )?;
     let rows = statement.query_map([], |row| {
         Ok(Chapter {
             number: row.get(0)?,
             title: row.get(1)?,
             item_count: row.get(2)?,
-            transcript_review_count: row.get(3)?,
         })
     })?;
     Ok(rows.collect::<Result<Vec<_>, _>>()?)
 }
 
 const ITEM_COLUMNS: &str = "w.stable_id, w.item_uuid, w.chapter_number, w.position, w.headword,
-    w.part_of_speech, w.meaning_en, w.meaning_zh, e.text, w.transcript_status,
+    w.part_of_speech, w.meaning_en, w.meaning_zh, e.text,
     w.meaning_status, w.word_audio, e.sentence_audio,
     b.book_word_id, b.headword, b.ipa, b.part_of_speech, b.meaning_zh,
     b.example_en, b.example_zh, b.collocations, b.word_formation, b.notes,
@@ -72,7 +66,6 @@ const ITEM_COLUMNS: &str = "w.stable_id, w.item_uuid, w.chapter_number, w.positi
     b.alignment_status, b.alignment_evidence, b.sentence_match, b.needs_review,
     b.review_reasons";
 const ITEM_FROM: &str = "FROM word_items w JOIN examples e ON e.word_stable_id=w.stable_id AND e.position=0 LEFT JOIN book_references b ON b.stable_id=w.stable_id";
-const ITEM_COLUMN_COUNT: usize = 32;
 
 fn book_review_reasons(value: Option<String>) -> Vec<String> {
     value
@@ -82,27 +75,27 @@ fn book_review_reasons(value: Option<String>) -> Vec<String> {
 }
 
 fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
-    let book_word_id: Option<String> = row.get(13)?;
-    let book_review_reasons = book_review_reasons(row.get(31)?);
+    let book_word_id: Option<String> = row.get(12)?;
+    let book_review_reasons = book_review_reasons(row.get(30)?);
     let book_reference = book_word_id.map(|book_word_id| BookReference {
         book_word_id,
-        headword: row.get(14).unwrap_or_default(),
-        ipa: row.get(15).unwrap_or_default(),
-        part_of_speech: row.get(16).unwrap_or_default(),
-        meaning_zh: row.get(17).unwrap_or_default(),
-        example_en: row.get(18).unwrap_or_default(),
-        example_zh: row.get(19).unwrap_or_default(),
-        collocations: row.get(20).unwrap_or_default(),
-        word_formation: row.get(21).unwrap_or_default(),
-        notes: row.get(22).unwrap_or_default(),
-        source_page: row.get(23).unwrap_or_default(),
-        pdf_page: row.get(24).unwrap_or_default(),
-        printed_page: row.get(25).unwrap_or_default(),
-        position_on_page: row.get(26).unwrap_or_default(),
-        alignment_status: row.get(27).unwrap_or_default(),
-        alignment_evidence: row.get(28).unwrap_or_default(),
-        sentence_match: row.get(29).unwrap_or_default(),
-        needs_review: row.get::<_, i64>(30).unwrap_or_default() != 0,
+        headword: row.get(13).unwrap_or_default(),
+        ipa: row.get(14).unwrap_or_default(),
+        part_of_speech: row.get(15).unwrap_or_default(),
+        meaning_zh: row.get(16).unwrap_or_default(),
+        example_en: row.get(17).unwrap_or_default(),
+        example_zh: row.get(18).unwrap_or_default(),
+        collocations: row.get(19).unwrap_or_default(),
+        word_formation: row.get(20).unwrap_or_default(),
+        notes: row.get(21).unwrap_or_default(),
+        source_page: row.get(22).unwrap_or_default(),
+        pdf_page: row.get(23).unwrap_or_default(),
+        printed_page: row.get(24).unwrap_or_default(),
+        position_on_page: row.get(25).unwrap_or_default(),
+        alignment_status: row.get(26).unwrap_or_default(),
+        alignment_evidence: row.get(27).unwrap_or_default(),
+        sentence_match: row.get(28).unwrap_or_default(),
+        needs_review: row.get::<_, i64>(29).unwrap_or_default() != 0,
         review_reasons: book_review_reasons,
     });
     Ok(ItemSummary {
@@ -115,10 +108,9 @@ fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
         meaning_en: row.get(6)?,
         meaning_zh: row.get(7)?,
         sentence: row.get(8)?,
-        transcript_status: row.get(9)?,
-        meaning_status: row.get(10)?,
-        word_audio_url: format!("/media/{}", row.get::<_, String>(11)?),
-        sentence_audio_url: format!("/media/{}", row.get::<_, String>(12)?),
+        meaning_status: row.get(9)?,
+        word_audio_url: format!("/media/{}", row.get::<_, String>(10)?),
+        sentence_audio_url: format!("/media/{}", row.get::<_, String>(11)?),
         book_reference,
     })
 }
@@ -152,37 +144,13 @@ pub fn items(connection: &Connection, query: &ItemQuery) -> Result<Vec<ItemSumma
 
 pub fn item(connection: &Connection, stable_id: &str) -> Result<ItemDetail, AppError> {
     let mut statement = connection.prepare(&format!(
-        "SELECT {}, w.accepted_word_source, w.accepted_sentence_source {} WHERE w.stable_id=?",
+        "SELECT {} {} WHERE w.stable_id=?",
         ITEM_COLUMNS, ITEM_FROM
     ))?;
-    let base = statement
-        .query_row([stable_id], |row| {
-            let item = map_item(row)?;
-            Ok((
-                item,
-                row.get::<_, String>(ITEM_COLUMN_COUNT)?,
-                row.get::<_, String>(ITEM_COLUMN_COUNT + 1)?,
-            ))
-        })
-        .optional()?;
-    let Some((item, accepted_word_source, accepted_sentence_source)) = base else {
+    let Some(item) = statement.query_row([stable_id], map_item).optional()? else {
         return Err(AppError::NotFound(format!("Unknown item: {stable_id}")));
     };
-    let mut reasons = connection.prepare(
-        "SELECT source, reason FROM review_reasons WHERE word_stable_id=? ORDER BY source, reason",
-    )?;
-    let rows = reasons.query_map([stable_id], |row| {
-        Ok(ReviewReason {
-            source: row.get(0)?,
-            reason: row.get(1)?,
-        })
-    })?;
-    Ok(ItemDetail {
-        item,
-        accepted_word_source,
-        accepted_sentence_source,
-        review_reasons: rows.collect::<Result<Vec<_>, _>>()?,
-    })
+    Ok(item)
 }
 
 pub fn batch(connection: &Connection, ids: &[String]) -> Result<Vec<ItemSummary>, AppError> {
@@ -193,7 +161,7 @@ pub fn batch(connection: &Connection, ids: &[String]) -> Result<Vec<ItemSummary>
     }
     let mut result = Vec::with_capacity(ids.len());
     for id in ids {
-        result.push(item(connection, id)?.item);
+        result.push(item(connection, id)?);
     }
     Ok(result)
 }

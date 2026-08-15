@@ -2,13 +2,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { exportFlaggedAudio, getChapters, getItems, getSummary } from "./api";
 import type { BookReference, CardState, Chapter, Item, Summary } from "./types";
 import { LocalStudyState } from "./features/study/localStudyState";
-import { LocalAsrReviewState } from "./features/review/asrReviewState.mjs";
 import { LineWaveform } from "./features/player/LineWaveform";
 import { nextPlaybackStep } from "./features/player/playbackSequence.mjs";
 import { detectSilenceGapsMs } from "./features/player/waveform.mjs";
 import { useAudioBufferPlayer } from "./features/player/useAudioBufferPlayer";
 
-type Filter = "all" | "asr" | "order-only" | "review" | "unmarked" | "known" | "flagged";
+type Filter = "all" | "order-only" | "review" | "unmarked" | "known" | "flagged";
 type Phase = "word" | "sentence";
 type PlaybackMode = "words" | "sentences" | "both";
 type RunMode = "single" | "consecutive";
@@ -209,31 +208,8 @@ function formatPlaybackTime(value: number) {
   return `${Math.floor(value / 60)}:${String(Math.floor(value % 60)).padStart(2, "0")}`;
 }
 
-function normalizeDisplayWord(value: string) {
-  return value.toLocaleLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-}
-
-function wordsDiffer(bookWord: string, asrWord: string) {
-  return normalizeDisplayWord(bookWord) !== normalizeDisplayWord(asrWord);
-}
-
-function bookWordMatches(item: Item) {
-  const reference = item.book_reference;
-  if (!reference) return false;
-  if (reference.alignment_status === "matched_headword" || reference.alignment_status === "matched_sentence") return true;
-  return !wordsDiffer(reference.headword, item.headword);
-}
-
-function bookSentenceMatches(reference?: BookReference) {
-  return Boolean(reference && (reference.sentence_match === "exact" || reference.sentence_match === "normalized"));
-}
-
 function isOrderOnlyReview(reference?: BookReference) {
   return Boolean(reference?.alignment_status === "matched_order" && reference.needs_review);
-}
-
-function bookResolvesAsrReview(item: Item) {
-  return Boolean(item.transcript_status === "needs_review" && (bookWordMatches(item) || bookSentenceMatches(item.book_reference)));
 }
 
 function alignmentLabel(reference: BookReference) {
@@ -242,26 +218,15 @@ function alignmentLabel(reference: BookReference) {
   return "Matched by chapter order";
 }
 
-function sentenceMatchLabel(reference: BookReference) {
-  if (reference.sentence_match === "exact") return "Exact audio sentence match";
-  if (reference.sentence_match === "normalized") return "Same audio sentence after punctuation normalization";
-  return "Book example differs from audio transcript";
-}
-
 function cleanCollocation(value: string) {
   return value.replace(/^\[搭\]\s*/, "");
 }
 
 type CardToggle = "known" | "flagged" | "sentence_starred";
 
-function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence, onKeepSentence, onUndoSentence, onToggle}: {
+function FocusCard({selected, card, onToggle}: {
   selected?: Item;
   card?: CardState;
-  asrPending: boolean;
-  asrConfirmed: boolean;
-  onConfirmSentence: () => void;
-  onKeepSentence: () => void;
-  onUndoSentence: () => void;
   onToggle: (key: CardToggle) => void;
 }) {
   if (!selected) return <div className="focus-card"><p>Select an item from the list.</p></div>;
@@ -273,23 +238,15 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
   const displaySentence = book?.example_en || selected.sentence;
   const displayMeaningZh = book?.meaning_zh || selected.meaning_zh;
   const hasUsage = Boolean(book && (book.collocations || book.word_formation || book.notes));
-  const bookWordIsAuthoritative = bookWordMatches(selected);
-  const hasAsrWordEvidence = !book || !bookWordIsAuthoritative;
-  const hasAsrSentenceEvidence = !book || (!bookWordIsAuthoritative && !bookSentenceMatches(book));
-  const hasAsrEvidence = !bookWordIsAuthoritative && (!book || hasAsrWordEvidence || hasAsrSentenceEvidence);
-  const sentenceDiffers = hasAsrSentenceEvidence;
-  const bookResolvedReview = bookResolvesAsrReview(selected);
 
   return <div className="focus-card">
     <div className="focus-meta">
       <span>Chapter {selected.chapter} · #{selected.position}</span>
-      {book ? <span className={`source-badge ${book.alignment_status}`}>{alignmentLabel(book)}</span> : <span className="source-badge asr-only">ASR-only record</span>}
-      {bookResolvedReview ? <span className="confirmed">Book match is authoritative</span> : asrPending ? <span className="warning">Sentence ASR review needed</span> : asrConfirmed ? <span className="confirmed">Sentence ASR confirmed in this browser</span> : null}
+      {book ? <span className={`source-badge ${book.alignment_status}`}>{alignmentLabel(book)}</span> : <span className="source-badge audio-only">Audio record</span>}
     </div>
 
     <header className="word-hero">
       <h2>{displayWord}</h2>
-      {hasAsrWordEvidence ? <p className="asr-original">ASR heard: <code>{selected.headword}</code></p> : null}
       <div className="word-facts">
         <span className="pos">{displayPartOfSpeech}</span>
         {book?.ipa ? <span className="ipa">{book.ipa}</span> : null}
@@ -300,11 +257,9 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
     <section className="example-card current-line-card" aria-label="Current played lyric line" data-current-line>
       <div className="section-kicker-row">
         <span>CURRENT LINE</span>
-        {book && !bookWordIsAuthoritative ? <span className={`match-badge ${book.sentence_match}`}>{sentenceMatchLabel(book)}</span> : null}
       </div>
       <p className="example-en">{displaySentence}</p>
       {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
-      {sentenceDiffers ? <div className="sentence-compare"><span>ASR SENTENCE</span><p>{selected.sentence}</p></div> : null}
     </section>
 
     {orderOnlyReference ? <section className="order-review-card" aria-label="Order-only book and audio alignment review">
@@ -344,19 +299,6 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
       </div>
     </section> : null}
 
-    {hasAsrEvidence ? <section className="evidence-card" aria-label="ASR evidence">
-      <div className="section-heading"><span>ASR EVIDENCE</span><strong>Unmatched fields from the audio transcription</strong></div>
-      <div className="evidence-grid">
-        {hasAsrWordEvidence ? <div><span>WORD AUDIO</span><code>{selected.headword}</code></div> : null}
-        {hasAsrSentenceEvidence ? <div><span>SENTENCE AUDIO</span><p>{selected.sentence}</p></div> : null}
-      </div>
-      {asrPending ? <div className="asr-review-actions">
-        <button type="button" className="confirm" onClick={onConfirmSentence}>✓ Confirm sentence audio</button>
-        <button type="button" onClick={onKeepSentence}>Keep sentence in review queue</button>
-      </div> : asrConfirmed ? <div className="asr-confirmed-actions"><span>Sentence reference confirmed in this browser.</span><button type="button" onClick={onUndoSentence}>Undo sentence confirmation</button></div> : null}
-      <small>Book-backed fields are shown in the learner-facing card; raw ASR is retained only for unmatched fields and audit artifacts.</small>
-    </section> : null}
-
     {book ? <section className="source-card" aria-label="Reviewed book source">
       <div className="section-heading"><span>REVIEWED BOOK SOURCE</span><strong>Provenance for this word record</strong></div>
       <p>PDF page {book.pdf_page}{book.printed_page ? ` · printed page ${book.printed_page}` : ""} · entry {book.position_on_page}</p>
@@ -375,9 +317,6 @@ export default function App() {
   const store = useRef<LocalStudyState | null>(null);
   if (!store.current) store.current = new LocalStudyState();
   const study = store.current;
-  const asrReviewStore = useRef<LocalAsrReviewState | null>(null);
-  if (!asrReviewStore.current) asrReviewStore.current = new LocalAsrReviewState();
-  const asrReview = asrReviewStore.current;
   const [summary, setSummary] = useState<Summary>();
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [items, setItems] = useState<Item[]>([]);
@@ -394,16 +333,13 @@ export default function App() {
   const [showBackup, setShowBackup] = useState(false);
   useEffect(() => {
     const unsubscribeStudy = study.subscribe(() => setStateVersion(value => value + 1));
-    const unsubscribeAsrReview = asrReview.subscribe(() => setStateVersion(value => value + 1));
-    return () => { unsubscribeStudy(); unsubscribeAsrReview(); };
-  }, [asrReview, study]);
+    return () => unsubscribeStudy();
+  }, [study]);
   useEffect(() => { void Promise.all([getSummary(), getChapters()]).then(([nextSummary, nextChapters]) => { setSummary(nextSummary); setChapters(nextChapters); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load corpus.")); }, []);
   useEffect(() => { void getItems(chapter, search, filter === "order-only" ? "order_only" : undefined).then(nextItems => { setItems(nextItems); setSelectedId(current => current && nextItems.some(item => item.stable_id === current) ? current : nextItems[0]?.stable_id); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load items.")); }, [chapter, search, filter]);
-  const isAsrPending = (item: Item) => item.transcript_status === "needs_review" && !bookResolvesAsrReview(item) && !asrReview.isConfirmed(item.stable_id);
-  const isAsrConfirmed = (item: Item) => item.transcript_status === "needs_review" && !bookResolvesAsrReview(item) && asrReview.isConfirmed(item.stable_id);
-  const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "order-only") return true; if (filter === "asr") return isAsrPending(item); if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study, asrReview]);
+  const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "order-only") return true; if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study]);
   const selected = visibleItems.find(item => item.stable_id === selectedId) || visibleItems[0];
-  const counts = useMemo(() => ({asr: items.filter(isAsrPending).length, orderOnly: summary?.book_order_review_items || 0, known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study, asrReview, summary]);
+  const counts = useMemo(() => ({orderOnly: summary?.book_order_review_items || 0, known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study, summary]);
   const selectedIndex = selected ? visibleItems.findIndex(item => item.stable_id === selected.stable_id) : -1;
   const finish = (): boolean => {
     if (!selected) return false;
@@ -457,35 +393,15 @@ export default function App() {
   const canPrevious = Boolean(selected && ((mode === "both" && phase === "sentence") || selectedIndex > 0));
   const card = selected ? study.card(selected.item_uuid) : undefined;
   const toggle = (key: "known" | "flagged" | "sentence_starred") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
-  const selectedAsrPending = Boolean(selected && isAsrPending(selected));
-  const selectedAsrConfirmed = Boolean(selected && isAsrConfirmed(selected));
-  const selectedBookReference = selected?.book_reference;
-  const selectedDisplayWord = selectedBookReference?.headword || selected?.headword || "";
-  const confirmSentenceAsr = () => {
-    if (!selected || !selectedAsrPending) return;
-    const currentIndex = visibleItems.findIndex(item => item.stable_id === selected.stable_id);
-    const nextItem = visibleItems[currentIndex + 1] || visibleItems[currentIndex - 1];
-    asrReview.confirm(selected.stable_id);
-    setMessage(`Sentence reference for ${selectedDisplayWord} confirmed in this browser.`);
-    if (filter === "asr") {
-      setSelectedId(nextItem?.stable_id);
-      setPhase("word");
-    }
-  };
-  const undoAsr = () => {
-    if (!selected || !selectedAsrConfirmed) return;
-    asrReview.undo(selected.stable_id);
-    setMessage(`Sentence reference for ${selectedDisplayWord} returned to the ASR review queue.`);
-  };
-  const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 2, study: study.exportSnapshot(), asr_review: asrReview.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
-  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { const backup = parsed as {study: unknown; asr_review?: unknown}; study.restore(backup.study); asrReview.restore(backup.asr_review); } else { study.restore(parsed); } setMessage("Progress and word/sentence review decisions restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
+  const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 3, study: study.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
+  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { study.restore((parsed as {study: unknown}).study); } else { study.restore(parsed); } setMessage("Progress restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
   const exportAudio = () => { if (!chapter) return; const ids = items.filter(item => study.card(item.item_uuid)?.flagged).map(item => item.stable_id); if (!ids.length) { setMessage("No flagged items in this chapter."); return; } void exportFlaggedAudio(chapter, ids).then(result => { setMessage(`Export ready: ${result.file_name}`); window.open(result.audio_url, "_blank"); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Export failed.")); };
   return <div className="app-shell">
     <div className="content-scroll">
-    <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div><span className="eyebrow">IELTS VOCABULARY · SOURCE-AWARE AUDIO</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items · ${summary.book_reference_items} reviewed-book references · ${summary.transcript_review_items} unresolved ASR reviews · ${summary.book_order_review_items} order-only alignments to review` : "Loading corpus…"}</p></div></div><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button></header>
-    {showBackup ? <section className="backup-panel"><button type="button" onClick={downloadBackup}>Download progress</button><label className="file-button">Restore progress<input type="file" accept="application/json" onChange={restoreBackup} /></label><button type="button" onClick={() => { if (window.confirm("Archive and reset local progress and ASR review decisions?")) { study.reset(); asrReview.reset(); } }}>Reset progress</button></section> : null}
+    <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div><span className="eyebrow">IELTS VOCABULARY · SOURCE-AWARE AUDIO</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items · ${summary.book_reference_items} reviewed-book references · ${summary.book_order_review_items} order-only alignments to review` : "Loading corpus…"}</p></div></div><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button></header>
+    {showBackup ? <section className="backup-panel"><button type="button" onClick={downloadBackup}>Download progress</button><label className="file-button">Restore progress<input type="file" accept="application/json" onChange={restoreBackup} /></label><button type="button" onClick={() => { if (window.confirm("Archive and reset local progress?")) study.reset(); }}>Reset progress</button></section> : null}
     <nav className="chapter-strip" aria-label="Chapters"><button className={chapter === null ? "active" : ""} onClick={() => setChapter(null)}>All</button>{chapters.map(item => <button key={item.number} className={chapter === item.number ? "active" : ""} onClick={() => setChapter(item.number)}>Ch {item.number}</button>)}</nav>
-    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search book word, meaning, collocation, sentence…" /><div className="filters">{(["all", "asr", "order-only", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value === "asr" ? "ASR" : value === "order-only" ? "Order-only" : value[0].toUpperCase() + value.slice(1)}{value === "asr" ? ` ${counts.asr}` : value === "order-only" ? ` ${counts.orderOnly}` : value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button type="button" onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
+    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search book word, meaning, collocation, sentence…" /><div className="filters">{(["all", "order-only", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value === "order-only" ? "Order-only" : value[0].toUpperCase() + value.slice(1)}{value === "order-only" ? ` ${counts.orderOnly}` : value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button type="button" onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
     <main className="study-layout">
       <aside className="item-list" aria-label="Vocabulary items">
         {visibleItems.map(item => {
@@ -493,16 +409,14 @@ export default function App() {
           const itemBookReference = item.book_reference;
           const itemDisplayWord = itemBookReference?.headword || item.headword;
           const itemIsOrderOnly = isOrderOnlyReview(itemBookReference);
-          const showAsrWord = Boolean(itemBookReference && !bookWordMatches(item));
-          const showAsrSentence = Boolean(itemBookReference && !bookWordMatches(item) && !bookSentenceMatches(itemBookReference));
           return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { setSelectedId(item.stable_id); setPhase("word"); }}>
             <span>{String(item.position).padStart(3, "0")}</span>
             <strong>{itemDisplayWord}</strong>
-            <small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}{itemIsOrderOnly ? " · order-only" : showAsrWord ? ` · ASR: ${item.headword}` : showAsrSentence ? " · sentence ASR" : itemBookReference ? " · book" : isAsrPending(item) ? " · sentence ASR" : isAsrConfirmed(item) ? " · ✓ sentence" : ""}</small>
+            <small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}{itemIsOrderOnly ? " · order-only" : itemBookReference ? " · book" : ""}</small>
           </button>;
         })}
       </aside>
-      <section className="focus"><FocusCard selected={selected} card={card} asrPending={selectedAsrPending} asrConfirmed={selectedAsrConfirmed} onConfirmSentence={confirmSentenceAsr} onKeepSentence={() => setMessage("Kept the sentence in the ASR review queue.")} onUndoSentence={undoAsr} onToggle={toggle} /></section>
+      <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} /></section>
     </main>
     </div>
      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} phase={phase} mode={mode} runMode={runMode} onEnd={finish} onNext={advanceNext} onPrevious={advancePrevious} onRunModeChange={setRunMode} canNext={canNext} canPrevious={canPrevious} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="both">Word + sentence</option><option value="words">Words only</option><option value="sentences">Sentences only</option></select></label><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div></section>

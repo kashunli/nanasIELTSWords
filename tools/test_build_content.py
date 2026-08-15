@@ -58,15 +58,17 @@ class ContentProjectionTests(unittest.TestCase):
         self.assertEqual(selected["accepted_sentence_source"], "book")
         self.assertFalse(unresolved_asr_review(record, reference))
 
-    def test_order_alignment_does_not_hide_different_asr_fields(self) -> None:
+    def test_confirmed_order_alignment_replaces_different_asr_fields(self) -> None:
         reference = book_reference("matched_order", "different")
         record = audio_record()
         selected = accepted_transcript(record, reference)
 
         self.assertFalse(book_word_matches(reference, record["headword"]))
-        self.assertEqual(selected["accepted_word_source"], "asr")
-        self.assertEqual(selected["accepted_sentence_source"], "asr")
-        self.assertTrue(unresolved_asr_review(record, reference))
+        self.assertEqual(selected["headword"], reference["headword"])
+        self.assertEqual(selected["sentence"], reference["example_en"])
+        self.assertEqual(selected["accepted_word_source"], "book")
+        self.assertEqual(selected["accepted_sentence_source"], "book")
+        self.assertFalse(unresolved_asr_review(record, reference))
 
     def test_fully_book_backed_review_is_not_unresolved(self) -> None:
         reference = book_reference("matched_sentence", "exact")

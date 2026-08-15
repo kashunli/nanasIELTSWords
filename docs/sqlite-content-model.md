@@ -12,8 +12,8 @@ ASR, OCR, or browser learner state.
   replace one field without silently replacing the other.
 - Keep book provenance and alignment evidence queryable without making OCR or
   model caches runtime dependencies.
-- Keep raw review reasons available for audit while exposing ASR only for
-  items without an authoritative reviewed-book resolution in the learner-facing card.
+- Keep raw transcription/review reasons available for audit without exposing
+  transcription tags or review state in the learner-facing API.
 - Leave Known, Flagged, starred-sentence, playback, and review scheduling state
   in browser LocalStorage for this local-first version.
 
@@ -100,8 +100,8 @@ not necessarily raw ASR values. Their source is explicit:
 
 | Runtime field | Use reviewed-book value when | Otherwise keep | Source column |
 | --- | --- | --- | --- |
-| `word_items.headword` | `alignment_status` is `matched_headword` or `matched_sentence` | selected ASR headword | `accepted_word_source` |
-| `examples.text` | reliable book-word alignment, or `sentence_match` is `exact` or `normalized` | selected ASR sentence | `accepted_sentence_source` |
+| `word_items.headword` | direct alignment, or a manually verified flagged `matched_order` pair | selected transcription headword | `accepted_word_source` |
+| `examples.text` | reliable book-word/sentence alignment, or a manually verified flagged `matched_order` pair | selected transcription sentence | `accepted_sentence_source` |
 
 The separate `book_references` row always retains the reviewed-book value,
 alignment method, page provenance, and review reasons. The selected ASR
@@ -109,13 +109,13 @@ artifacts remain outside the runtime projection and are not deleted when a
 book field becomes accepted. This projection rule does not change
 `stable_id`, `item_uuid`, media paths, or browser progress keys.
 
-When a reliable book-word alignment exists, both accepted sources are `book`
-and the whole item is excluded from unresolved ASR counts. Otherwise, an item
-remains in the unresolved ASR count when either accepted source is `asr`. This
-makes the summary and chapter counts describe remaining learner review work
-instead of counting ASR reasons that a reliable book match has already
-resolved. Raw selected transcripts and review reasons remain preparation/audit
-artifacts and are not deleted by this projection rule.
+The accepted-source and transcription-status columns are retained in the
+rebuilt SQLite projection as internal provenance for validation and audit. They
+are not returned by the Rust API. A reliable book-word alignment makes both
+accepted sources `book`; the 37 previously flagged order-only pairs are handled
+by the same book-backed rule after manual verification. Raw selected
+transcripts and review reasons remain preparation/audit artifacts and are not
+deleted by this projection rule.
 
 ## Runtime boundary
 
