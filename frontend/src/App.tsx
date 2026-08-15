@@ -252,6 +252,11 @@ function cleanCollocation(value: string) {
   return value.replace(/^\[搭\]\s*/, "");
 }
 
+function TranslationAudio({url, label}: {url: string; label: string}) {
+  if (!url) return null;
+  return <audio className="translation-audio" controls preload="none" src={url} aria-label={`Play ${label}`} />;
+}
+
 type CardToggle = "known" | "flagged" | "sentence_starred";
 
 function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence, onKeepSentence, onUndoSentence, onToggle}: {
@@ -303,7 +308,7 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
         {book && !bookWordIsAuthoritative ? <span className={`match-badge ${book.sentence_match}`}>{sentenceMatchLabel(book)}</span> : null}
       </div>
       <p className="example-en">{displaySentence}</p>
-      {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
+      {book?.example_zh ? <div className="example-translation"><div className="translation-heading"><span>中文翻译</span><TranslationAudio url={selected.example_zh_audio_url} label="Chinese example translation" /></div><p>{book.example_zh}</p></div> : null}
       {sentenceDiffers ? <div className="sentence-compare"><span>ASR SENTENCE</span><p>{selected.sentence}</p></div> : null}
     </section>
 
@@ -328,7 +333,7 @@ function FocusCard({selected, card, asrPending, asrConfirmed, onConfirmSentence,
           <small>{selected.meaning_status === "ai_draft" ? "AI draft English meaning" : "Reviewed English meaning"}</small>
         </article>
         <article className="meaning-card meaning-translation">
-          <span>中文释义</span>
+          <div className="translation-heading"><span>中文释义</span><TranslationAudio url={selected.meaning_zh_audio_url} label="Chinese meaning" /></div>
           <p>{displayMeaningZh || "释义待生成"}</p>
           <small>{book ? "Reviewed book OCR" : "Current runtime meaning"}</small>
         </article>

@@ -53,11 +53,13 @@ export interface Item {
   part_of_speech: string;
   meaning_en: string;
   meaning_zh: string;
+  meaning_zh_audio_url: string;
   sentence: string;
   transcript_status: TranscriptStatus;
   meaning_status: MeaningStatus;
   word_audio_url: string;
   sentence_audio_url: string;
+  example_zh_audio_url: string;
   book_reference?: BookReference;
   accepted_word_source?: string;
   accepted_sentence_source?: string;

@@ -59,11 +59,13 @@ pub struct ItemSummary {
     pub part_of_speech: String,
     pub meaning_en: String,
     pub meaning_zh: String,
+    pub meaning_zh_audio_url: String,
     pub sentence: String,
     pub transcript_status: String,
     pub meaning_status: String,
     pub word_audio_url: String,
     pub sentence_audio_url: String,
+    pub example_zh_audio_url: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub book_reference: Option<BookReference>,
 }

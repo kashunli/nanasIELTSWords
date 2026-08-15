@@ -3,7 +3,7 @@ use crate::{
     error::AppError,
     models::{BookReference, Chapter, ItemDetail, ItemQuery, ItemSummary, ReviewReason, Summary},
 };
-use rusqlite::{params, Connection, OptionalExtension};
+use rusqlite::{Connection, OptionalExtension, params};
 
 pub fn open(config: &Config) -> Result<Connection, AppError> {
     let connection = Connection::open(&config.db_path)?;
@@ -64,15 +64,23 @@ pub fn chapters(connection: &Connection) -> Result<Vec<Chapter>, AppError> {
 }
 
 const ITEM_COLUMNS: &str = "w.stable_id, w.item_uuid, w.chapter_number, w.position, w.headword,
-    w.part_of_speech, w.meaning_en, w.meaning_zh, e.text, w.transcript_status,
-    w.meaning_status, w.word_audio, e.sentence_audio,
+    w.part_of_speech, w.meaning_en, w.meaning_zh, w.meaning_zh_audio, e.text, w.transcript_status,
+    w.meaning_status, w.word_audio, e.sentence_audio, e.example_zh_audio,
     b.book_word_id, b.headword, b.ipa, b.part_of_speech, b.meaning_zh,
     b.example_en, b.example_zh, b.collocations, b.word_formation, b.notes,
     b.source_page, b.pdf_page, b.printed_page, b.position_on_page,
     b.alignment_status, b.alignment_evidence, b.sentence_match, b.needs_review,
     b.review_reasons";
 const ITEM_FROM: &str = "FROM word_items w JOIN examples e ON e.word_stable_id=w.stable_id AND e.position=0 LEFT JOIN book_references b ON b.stable_id=w.stable_id";
-const ITEM_COLUMN_COUNT: usize = 32;
+const ITEM_COLUMN_COUNT: usize = 34;
+
+fn media_url(path: String) -> String {
+    if path.is_empty() {
+        String::new()
+    } else {
+        format!("/media/{path}")
+    }
+}
 
 fn book_review_reasons(value: Option<String>) -> Vec<String> {
     value
@@ -82,27 +90,27 @@ fn book_review_reasons(value: Option<String>) -> Vec<String> {
 }
 
 fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
-    let book_word_id: Option<String> = row.get(13)?;
-    let book_review_reasons = book_review_reasons(row.get(31)?);
+    let book_word_id: Option<String> = row.get(15)?;
+    let book_review_reasons = book_review_reasons(row.get(33)?);
     let book_reference = book_word_id.map(|book_word_id| BookReference {
         book_word_id,
-        headword: row.get(14).unwrap_or_default(),
-        ipa: row.get(15).unwrap_or_default(),
-        part_of_speech: row.get(16).unwrap_or_default(),
-        meaning_zh: row.get(17).unwrap_or_default(),
-        example_en: row.get(18).unwrap_or_default(),
-        example_zh: row.get(19).unwrap_or_default(),
-        collocations: row.get(20).unwrap_or_default(),
-        word_formation: row.get(21).unwrap_or_default(),
-        notes: row.get(22).unwrap_or_default(),
-        source_page: row.get(23).unwrap_or_default(),
-        pdf_page: row.get(24).unwrap_or_default(),
-        printed_page: row.get(25).unwrap_or_default(),
-        position_on_page: row.get(26).unwrap_or_default(),
-        alignment_status: row.get(27).unwrap_or_default(),
-        alignment_evidence: row.get(28).unwrap_or_default(),
-        sentence_match: row.get(29).unwrap_or_default(),
-        needs_review: row.get::<_, i64>(30).unwrap_or_default() != 0,
+        headword: row.get(16).unwrap_or_default(),
+        ipa: row.get(17).unwrap_or_default(),
+        part_of_speech: row.get(18).unwrap_or_default(),
+        meaning_zh: row.get(19).unwrap_or_default(),
+        example_en: row.get(20).unwrap_or_default(),
+        example_zh: row.get(21).unwrap_or_default(),
+        collocations: row.get(22).unwrap_or_default(),
+        word_formation: row.get(23).unwrap_or_default(),
+        notes: row.get(24).unwrap_or_default(),
+        source_page: row.get(25).unwrap_or_default(),
+        pdf_page: row.get(26).unwrap_or_default(),
+        printed_page: row.get(27).unwrap_or_default(),
+        position_on_page: row.get(28).unwrap_or_default(),
+        alignment_status: row.get(29).unwrap_or_default(),
+        alignment_evidence: row.get(30).unwrap_or_default(),
+        sentence_match: row.get(31).unwrap_or_default(),
+        needs_review: row.get::<_, i64>(32).unwrap_or_default() != 0,
         review_reasons: book_review_reasons,
     });
     Ok(ItemSummary {
@@ -114,11 +122,13 @@ fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
         part_of_speech: row.get(5)?,
         meaning_en: row.get(6)?,
         meaning_zh: row.get(7)?,
-        sentence: row.get(8)?,
-        transcript_status: row.get(9)?,
-        meaning_status: row.get(10)?,
-        word_audio_url: format!("/media/{}", row.get::<_, String>(11)?),
-        sentence_audio_url: format!("/media/{}", row.get::<_, String>(12)?),
+        meaning_zh_audio_url: media_url(row.get(8)?),
+        sentence: row.get(9)?,
+        transcript_status: row.get(10)?,
+        meaning_status: row.get(11)?,
+        word_audio_url: media_url(row.get(12)?),
+        sentence_audio_url: media_url(row.get(13)?),
+        example_zh_audio_url: media_url(row.get(14)?),
         book_reference,
     })
 }
@@ -126,8 +136,14 @@ fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
 pub fn items(connection: &Connection, query: &ItemQuery) -> Result<Vec<ItemSummary>, AppError> {
     let mut sql = format!("SELECT {} {} WHERE 1=1", ITEM_COLUMNS, ITEM_FROM);
     match query.book_alignment.as_deref() {
-        Some("order_only") => sql.push_str(" AND b.alignment_status='matched_order' AND b.needs_review=1"),
-        Some(value) => return Err(AppError::BadRequest(format!("Unsupported book alignment filter: {value}"))),
+        Some("order_only") => {
+            sql.push_str(" AND b.alignment_status='matched_order' AND b.needs_review=1")
+        }
+        Some(value) => {
+            return Err(AppError::BadRequest(format!(
+                "Unsupported book alignment filter: {value}"
+            )));
+        }
         None => {}
     }
     if query.chapter.is_some() {
