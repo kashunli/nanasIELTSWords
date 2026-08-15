@@ -24,7 +24,7 @@ function isElementId(value) {
 function normalizeRepeatCount(value, fallback) {
   const number = Number(value);
   if (!Number.isFinite(number)) return fallback;
-  return Math.min(MAX_REPEAT_COUNT, Math.max(1, Math.round(number)));
+  return Math.min(MAX_REPEAT_COUNT, Math.max(0, Math.round(number)));
 }
 
 function normalizePause(value, fallback) {
@@ -55,6 +55,9 @@ export function normalizeAudioSequence(value) {
   for (const step of defaults.steps) {
     if (!steps.some(existing => existing.element === step.element)) steps.push({...step});
   }
+  if (!steps.some(step => step.repeatCount > 0)) {
+    steps[0] = {...steps[0], repeatCount: DEFAULT_STEP_VALUES[steps[0].element].repeatCount};
+  }
   return {version: AUDIO_SEQUENCE_VERSION, steps};
 }
 
@@ -70,14 +73,14 @@ export function reorderAudioSequence(value, fromIndex, toIndex) {
 export function updateAudioSequenceStep(value, element, patch) {
   const sequence = normalizeAudioSequence(value);
   if (!isElementId(element) || !patch || typeof patch !== "object") return sequence;
-  return {
+  return normalizeAudioSequence({
     version: AUDIO_SEQUENCE_VERSION,
     steps: sequence.steps.map(step => step.element === element ? {
       ...step,
       repeatCount: normalizeRepeatCount(patch.repeatCount, step.repeatCount),
       pauseAfterSeconds: normalizePause(patch.pauseAfterSeconds, step.pauseAfterSeconds),
     } : {...step}),
-  };
+  });
 }
 
 export function expandPlayableAudioSequence(value, audioUrls) {

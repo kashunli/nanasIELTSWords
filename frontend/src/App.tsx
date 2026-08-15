@@ -4,7 +4,7 @@ import type { AudioElementId, AudioSequenceConfig, AudioSequenceStep, CardState,
 import { LocalStudyState } from "./features/study/localStudyState";
 import { LocalAudioSequenceState } from "./features/player/localAudioSequenceState";
 import { LineWaveform } from "./features/player/LineWaveform";
-import { createDefaultAudioSequence, expandPlayableAudioSequence, nextAudioSequenceStep, reorderAudioSequence, updateAudioSequenceStep } from "./features/player/audioSequence.mjs";
+import { expandPlayableAudioSequence, nextAudioSequenceStep, reorderAudioSequence, updateAudioSequenceStep } from "./features/player/audioSequence.mjs";
 import { detectSilenceGapsMs } from "./features/player/waveform.mjs";
 import { useAudioBufferPlayer } from "./features/player/useAudioBufferPlayer";
 
@@ -368,27 +368,31 @@ function cleanCollocation(value: string) {
   return value.replace(/^\[搭\]\s*/, "");
 }
 
-function audioUrlForElement(item: Item, element: AudioElementId) {
+function audioUrlForElement(item: Item | undefined, element: AudioElementId) {
   return itemAudioUrls(item)[element] || "";
 }
 
-function AudioSequenceEditor({item, sequence, onChange, onReset}: {
-  item: Item;
+function AudioSequenceEditor({item, sequence, onChange, onReset, onClose}: {
+  item?: Item;
   sequence: AudioSequenceConfig;
   onChange: (sequence: AudioSequenceConfig) => void;
   onReset: () => void;
+  onClose: () => void;
 }) {
   const availableCount = sequence.steps.filter(step => Boolean(audioUrlForElement(item, step.element))).length;
   const updateStep = (step: AudioSequenceStep, patch: Partial<Pick<AudioSequenceStep, "repeatCount" | "pauseAfterSeconds">>) => {
     onChange(updateAudioSequenceStep(sequence, step.element, patch));
   };
 
-  return <details className="sequence-editor" open>
-    <summary>
-      <span className="section-heading"><span>PLAYBACK RECIPE</span><strong>Arrange the four audio elements</strong></span>
-      <span className="sequence-editor-summary">{availableCount}/4 audio files available</span>
-    </summary>
-    <p className="sequence-editor-intro">The order, repeat count, and pause are saved for this word in this browser. Missing translation audio can be configured now and will join the sequence when its file is added.</p>
+  return <section className="sequence-editor" aria-label="Global playback recipe">
+    <div className="sequence-editor-header">
+      <div className="section-heading"><span>PLAYBACK RECIPE</span><strong>Arrange the four audio elements</strong></div>
+      <div className="sequence-editor-header-actions">
+        <span className="sequence-editor-summary">{item ? `${availableCount}/4 audio files available for this word` : "Select a word to check audio availability"}</span>
+        <button type="button" className="sequence-close" onClick={onClose} aria-label="Close playback recipe settings">×</button>
+      </div>
+    </div>
+    <p className="sequence-editor-intro">This order, repeat count, and pause are shared by every word in this browser. Repeat 0 skips an element; at least one repeat must remain above 0. Missing translation audio is skipped for now and joins the sequence automatically when its file is available.</p>
     <ol className="sequence-rows">
       {sequence.steps.map((step, index) => {
         const available = Boolean(audioUrlForElement(item, step.element));
@@ -403,7 +407,7 @@ function AudioSequenceEditor({item, sequence, onChange, onReset}: {
             <button type="button" onClick={() => onChange(reorderAudioSequence(sequence, index, index + 1))} disabled={index === sequence.steps.length - 1} aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]} later`}>↓</button>
           </div>
           <label className="sequence-number-field sequence-repeat-field">Repeat
-            <input type="number" min="1" max="20" step="1" value={step.repeatCount} onChange={event => updateStep(step, {repeatCount: Number(event.target.value)})} />
+            <input type="number" min="0" max="20" step="1" value={step.repeatCount} onChange={event => updateStep(step, {repeatCount: Number(event.target.value)})} />
           </label>
           <label className="sequence-number-field sequence-pause-field">Pause after
             <span><input type="number" min="0" max="60" step="0.1" value={step.pauseAfterSeconds} onChange={event => updateStep(step, {pauseAfterSeconds: Number(event.target.value)})} /> s</span>
@@ -415,7 +419,7 @@ function AudioSequenceEditor({item, sequence, onChange, onReset}: {
       <span>Pause applies after every playback, including repeats, before the next available element or item.</span>
       <button type="button" className="sequence-reset" onClick={onReset}>Reset recipe</button>
     </div>
-  </details>;
+  </section>;
 }
 
 function TranslationAudio({url, label}: {url?: string; label: string}) {
@@ -425,13 +429,10 @@ function TranslationAudio({url, label}: {url?: string; label: string}) {
 
 type CardToggle = "known" | "flagged" | "sentence_starred";
 
-function FocusCard({selected, card, sequence, onToggle, onSequenceChange, onSequenceReset}: {
+function FocusCard({selected, card, onToggle}: {
   selected?: Item;
   card?: CardState;
-  sequence: AudioSequenceConfig;
   onToggle: (key: CardToggle) => void;
-  onSequenceChange: (sequence: AudioSequenceConfig) => void;
-  onSequenceReset: () => void;
 }) {
   if (!selected) return <div className="focus-card"><p>Select an item from the list.</p></div>;
 
@@ -463,7 +464,6 @@ function FocusCard({selected, card, sequence, onToggle, onSequenceChange, onSequ
       {book?.example_zh ? <div className="example-translation"><div className="translation-heading"><span>中文翻译</span><TranslationAudio url={selected.sentence_translation_audio_url} label="Chinese example translation" /></div><p>{book.example_zh}</p></div> : null}
     </section>
 
-    <AudioSequenceEditor item={selected} sequence={sequence} onChange={onSequenceChange} onReset={onSequenceReset} />
     <section className="explanation-card" aria-label="Explanation below current line">
       <div className="section-heading"><span>EXPLANATION</span><strong>Understand this word in the current line</strong></div>
       <div className="explanation-grid">
@@ -518,6 +518,7 @@ export default function App() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [showBackup, setShowBackup] = useState(false);
+  const [showPlaybackSettings, setShowPlaybackSettings] = useState(false);
   useEffect(() => {
     const unsubscribeStudy = study.subscribe(() => setStateVersion(value => value + 1));
     const unsubscribeSequences = audioSequences.subscribe(() => setSequenceVersion(value => value + 1));
@@ -530,12 +531,12 @@ export default function App() {
   const counts = useMemo(() => ({known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study]);
   const selectedIndex = selected ? visibleItems.findIndex(item => item.stable_id === selected.stable_id) : -1;
   const card = selected ? study.card(selected.item_uuid) : undefined;
-  const selectedSequence = useMemo(() => selected ? audioSequences.config(selected.item_uuid) : createDefaultAudioSequence(), [audioSequences, selected, sequenceVersion]);
+  const globalSequence = useMemo(() => audioSequences.config(), [audioSequences, sequenceVersion]);
   const playbackSequence = useMemo(() => {
-    if (mode === "sequence") return selectedSequence;
+    if (mode === "sequence") return globalSequence;
     const element: AudioElementId = mode === "words" ? "word" : "sentence";
-    return {version: 1 as const, steps: selectedSequence.steps.filter(step => step.element === element)};
-  }, [mode, selectedSequence]);
+    return {version: 1 as const, steps: globalSequence.steps.filter(step => step.element === element)};
+  }, [mode, globalSequence]);
   const advanceNext = (): boolean => {
     if (!selected) return false;
     const next = visibleItems[selectedIndex + 1];
@@ -554,10 +555,10 @@ export default function App() {
   const canNextItem = Boolean(selected && selectedIndex >= 0 && selectedIndex < visibleItems.length - 1);
   const canPreviousItem = Boolean(selected && selectedIndex > 0);
   const toggle = (key: "known" | "flagged" | "sentence_starred") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
-  const updateSelectedSequence = (sequence: AudioSequenceConfig) => { if (selected) audioSequences.update(selected.item_uuid, sequence); };
-  const resetSelectedSequence = () => { if (selected) audioSequences.reset(selected.item_uuid); };
-  const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 4, study: study.exportSnapshot(), audio_sequences: audioSequences.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
-  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { const backup = parsed as {study: unknown; audio_sequences?: unknown}; study.restore(backup.study); if (backup.audio_sequences !== undefined) audioSequences.restore(backup.audio_sequences); } else { study.restore(parsed); } setMessage("Progress and playback recipes restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
+  const updateGlobalSequence = (sequence: AudioSequenceConfig) => { audioSequences.update(sequence); };
+  const resetGlobalSequence = () => { audioSequences.reset(); };
+  const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 5, study: study.exportSnapshot(), audio_sequence: audioSequences.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
+  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { const backup = parsed as {study: unknown; audio_sequence?: unknown; audio_sequences?: unknown}; study.restore(backup.study); if (backup.audio_sequence !== undefined) audioSequences.restore(backup.audio_sequence); else if (backup.audio_sequences !== undefined) audioSequences.restore(backup.audio_sequences); } else { study.restore(parsed); } setMessage("Progress and global playback settings restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
   const exportAudio = () => { if (!chapter) return; const ids = items.filter(item => study.card(item.item_uuid)?.flagged).map(item => item.stable_id); if (!ids.length) { setMessage("No flagged items in this chapter."); return; } void exportFlaggedAudio(chapter, ids).then(result => { setMessage(`Export ready: ${result.file_name}`); window.open(result.audio_url, "_blank"); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Export failed.")); };
   return <div className="app-shell">
     <div className="content-scroll">
@@ -576,10 +577,10 @@ export default function App() {
           </button>;
         })}
       </aside>
-      <section className="focus"><FocusCard selected={selected} card={card} sequence={selectedSequence} onToggle={toggle} onSequenceChange={updateSelectedSequence} onSequenceReset={resetSelectedSequence} /></section>
+      <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} /></section>
     </main>
     </div>
-     <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playbackSequence} mode={mode} runMode={runMode} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="sequence">Configured four-part sequence</option><option value="words">English word only</option><option value="sentences">English sentence only</option></select></label><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div></section>
+      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playbackSequence} mode={mode} runMode={runMode} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="sequence">Configured four-part sequence</option><option value="words">English word only</option><option value="sentences">English sentence only</option></select></label><button type="button" className={showPlaybackSettings ? "settings-trigger selected" : "settings-trigger"} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
     {error ? <div className="toast error">{error}</div> : null}
   </div>;
 }

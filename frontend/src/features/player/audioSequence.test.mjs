@@ -36,6 +36,24 @@ test("normalization keeps every element once and clamps unsafe editor values", (
   assert.equal(result.steps[0].pauseAfterSeconds, 0);
 });
 
+test("a zero repeat disables one element while another positive repeat keeps the recipe playable", () => {
+  const result = updateAudioSequenceStep(
+    updateAudioSequenceStep(createDefaultAudioSequence(), "word", {repeatCount: 0}),
+    "sentence", {repeatCount: 2},
+  );
+  assert.equal(result.steps.find(step => step.element === "word").repeatCount, 0);
+  assert.equal(result.steps.find(step => step.element === "sentence").repeatCount, 2);
+  assert.ok(result.steps.some(step => step.repeatCount > 0));
+});
+
+test("normalization restores one active repeat when an invalid all-zero recipe is loaded", () => {
+  const result = normalizeAudioSequence({
+    steps: createDefaultAudioSequence().steps.map(step => ({...step, repeatCount: 0})),
+  });
+  assert.equal(result.steps.filter(step => step.repeatCount > 0).length, 1);
+  assert.equal(result.steps[0].repeatCount, 1);
+});
+
 test("reordering moves one element without losing the other settings", () => {
   const source = updateAudioSequenceStep(createDefaultAudioSequence(), "sentence", {repeatCount: 3, pauseAfterSeconds: 1.5});
   const result = reorderAudioSequence(source, 1, 3);
@@ -52,6 +70,12 @@ test("expansion skips future clips until their URLs are available and repeats re
   const result = expandPlayableAudioSequence(source, {word: "/word.mp3", sentence: "/sentence.mp3"});
   assert.deepEqual(result.map(cue => `${cue.element}:${cue.occurrence}`), ["word:1", "word:2", "sentence:1"]);
   assert.equal(result[0].pauseAfterSeconds, 0.75);
+});
+
+test("expansion omits an element whose global repeat count is zero", () => {
+  const source = updateAudioSequenceStep(createDefaultAudioSequence(), "word", {repeatCount: 0});
+  const result = expandPlayableAudioSequence(source, {word: "/word.mp3", sentence: "/sentence.mp3"});
+  assert.deepEqual(result.map(cue => cue.element), ["sentence"]);
 });
 
 test("single mode completes the current recipe while consecutive mode can move to the next item", () => {

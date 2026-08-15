@@ -37,10 +37,11 @@ learner's LocalStorage cards.
 An item can expose four independent learner-audio elements: the English word,
 English sentence, Chinese word translation, and Chinese sentence translation.
 The two translation paths are optional runtime media until those recordings
-are prepared. The browser stores a separate local playback recipe per item;
-the recipe controls element order, repeat count, and the pause after each
-playback. It is learner-local configuration, not a server-side mark or a
-mutation of the immutable source manifest.
+are prepared. The browser stores one global local playback recipe; the recipe
+controls element order, repeat count, and the pause after each playback for
+every item. A zero repeat count skips an element, but normalization keeps at
+least one element active. It is learner-local configuration, not a server-side
+mark or a mutation of the immutable source manifest.
 
 `content/BV1AT4y1579F/audio-repairs.json` is an auditable exception layer for
 source-cut mistakes that can be recovered from the immutable chapter audio.

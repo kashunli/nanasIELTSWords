@@ -166,11 +166,12 @@ alignment badges, or reviewed-book provenance panels.
 ## Learner state
 
 Known, Flagged, Starred sentence, playback, spaced-review state, and the
-per-word four-element audio recipe are stored under versioned browser
-LocalStorage keys. The recipe editor controls the order, repeat count, and
-pause after each of the English word, English sentence, Chinese word
-translation, and Chinese sentence translation elements. Translation audio is
-optional until those files are added; the editor can configure the rows in
+global four-element audio recipe are stored under versioned browser
+LocalStorage keys. The global recipe editor controls the order, repeat count,
+and pause after each of the English word, English sentence, Chinese word
+translation, and Chinese sentence translation elements. A repeat count of zero
+disables an element; at least one element must remain active. Translation audio
+is optional until those files are added; the editor can configure the rows in
 advance and playback skips only the unavailable files. The backend never
 persists learner state. Use the settings panel to download or restore a
 progress and recipe backup.
