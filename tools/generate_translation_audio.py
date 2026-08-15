@@ -35,7 +35,7 @@ SCHEMA_VERSION = 1
 PROVIDER = "microsoft-edge-tts"
 PACKAGE = "edge-tts"
 LANGUAGE_CODE = "zh-CN"
-DEFAULT_VOICE = "zh-CN-XiaoxiaoNeural"
+DEFAULT_VOICE = "zh-CN-YunjianNeural"
 AUDIO_ENCODING = "MP3"
 STABLE_ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 
@@ -228,7 +228,7 @@ def _is_current_audio(
     return media_path.is_file() and existing.get("audio_sha256") == sha256_file(media_path)
 
 
-def _save_audio(project_root: Path, source: TranslationSource, field: str, text: str, audio: bytes) -> dict[str, Any]:
+def _save_audio(project_root: Path, source: TranslationSource, field: str, text: str, audio: bytes, voice: str) -> dict[str, Any]:
     relative = relative_media_path(source.stable_id, field)
     destination = project_root / "var" / "content" / "media" / relative
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -236,7 +236,7 @@ def _save_audio(project_root: Path, source: TranslationSource, field: str, text:
     temporary.write_bytes(audio)
     temporary.replace(destination)
     result = _manifest_item(source, field, text, destination)
-    result["voice"] = DEFAULT_VOICE
+    result["voice"] = voice
     return result
 
 
@@ -253,15 +253,11 @@ async def _generate_async(
     delay: float,
     limit: int | None,
     force: bool,
+    concurrency: int,
+    checkpoint_every: int,
 ) -> int:
     sources, skipped = load_translation_sources(project_root)
-    word_chars, example_chars = count_characters(sources)
     total_jobs = len(sources) + sum(bool(source.example_text) for source in sources)
-    print(
-        f"source records={len(sources)} word_jobs={len(sources)} example_jobs={total_jobs - len(sources)} "
-        f"characters={word_chars + example_chars} (word={word_chars}, example={example_chars})"
-    )
-    print(f"skipped example translations={len(skipped)}")
 
     manifest_path = project_root / "content" / "BV1AT4y1579F" / "chinese-translation-audio-manifest.json"
     manifest = load_existing_manifest(manifest_path)
@@ -284,8 +280,8 @@ async def _generate_async(
     manifest["package"] = PACKAGE
     manifest["audio_encoding"] = AUDIO_ENCODING
     manifest_items: dict[str, Any] = manifest.setdefault("items", {})
-    jobs_done = 0
     jobs_reused = 0
+    pending_jobs: list[tuple[TranslationSource, str, str]] = []
     for source in sources:
         fields = [("word", source.word_text)]
         if source.example_text:
@@ -295,13 +291,30 @@ async def _generate_async(
             if not force and _is_current_audio(project_root, source.stable_id, field, text, item.get(field), voice=voice):
                 jobs_reused += 1
                 continue
-            if limit is not None and jobs_done >= limit:
-                continue
-            print(f"generating {jobs_done + 1}/{total_jobs}: {source.stable_id} {field}", flush=True)
-            audio = await synthesize_edge(text, voice)
-            item[field] = _save_audio(project_root, source, field, text, audio)
-            item[field]["voice"] = voice
-            jobs_done += 1
+            pending_jobs.append((source, field, text))
+    if limit is not None:
+        pending_jobs = pending_jobs[:limit]
+
+    jobs_done = 0
+    for start in range(0, len(pending_jobs), concurrency):
+        batch = pending_jobs[start : start + concurrency]
+        print(
+            f"synthesizing jobs {start + 1}-{start + len(batch)} of {len(pending_jobs)} "
+            f"({batch[0][0].stable_id} {batch[0][1]} … {batch[-1][0].stable_id} {batch[-1][1]})",
+            flush=True,
+        )
+        results = await asyncio.gather(
+            *(synthesize_edge(text, voice) for _, _, text in batch),
+            return_exceptions=True,
+        )
+        for (source, field, text), result in zip(batch, results):
+            if isinstance(result, BaseException):
+                raise SynthesisError(f"{source.stable_id} {field}: {result}") from result
+            manifest_items[source.stable_id][field] = _save_audio(
+                project_root, source, field, text, result, voice
+            )
+        jobs_done += len(batch)
+        if jobs_done % checkpoint_every == 0 or jobs_done == len(pending_jobs):
             write_manifest(manifest_path, manifest)
             if delay:
                 await asyncio.sleep(delay)
@@ -318,6 +331,8 @@ def generate(
     delay: float,
     limit: int | None,
     force: bool,
+    concurrency: int,
+    checkpoint_every: int,
     dry_run: bool,
 ) -> int:
     sources, skipped = load_translation_sources(project_root)
@@ -330,7 +345,17 @@ def generate(
     print(f"skipped example translations={len(skipped)}")
     if dry_run:
         return 0
-    return asyncio.run(_generate_async(project_root, voice=voice, delay=delay, limit=limit, force=force))
+    return asyncio.run(
+        _generate_async(
+            project_root,
+            voice=voice,
+            delay=delay,
+            limit=limit,
+            force=force,
+            concurrency=concurrency,
+            checkpoint_every=checkpoint_every,
+        )
+    )
 
 
 def main() -> int:
@@ -338,18 +363,26 @@ def main() -> int:
     parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--voice", default=DEFAULT_VOICE)
     parser.add_argument("--delay", type=float, default=0.15, help="seconds between synthesis requests")
+    parser.add_argument("--concurrency", type=int, default=4, help="maximum number of Edge TTS requests in flight")
+    parser.add_argument("--checkpoint-every", type=int, default=32, help="persist the manifest after this many new files")
     parser.add_argument("--limit", type=int, help="generate at most this many new files")
     parser.add_argument("--force", action="store_true", help="regenerate files even when their hashes match")
     parser.add_argument("--dry-run", action="store_true", help="report source coverage and character count without calling Edge TTS")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         raise SystemExit("--limit must be positive")
+    if args.concurrency < 1:
+        raise SystemExit("--concurrency must be positive")
+    if args.checkpoint_every < 1:
+        raise SystemExit("--checkpoint-every must be positive")
     return generate(
         args.project_root.resolve(),
         voice=args.voice,
         delay=max(0.0, args.delay),
         limit=args.limit,
         force=args.force,
+        concurrency=args.concurrency,
+        checkpoint_every=args.checkpoint_every,
         dry_run=args.dry_run,
     )
 
