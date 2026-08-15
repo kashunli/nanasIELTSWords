@@ -11,11 +11,10 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 
 export const getSummary = () => request<Summary>("/api/summary");
 export const getChapters = () => request<Chapter[]>("/api/chapters");
-export const getItems = (chapter: number | null, search: string, bookAlignment?: "order_only") => {
+export const getItems = (chapter: number | null, search: string) => {
   const params = new URLSearchParams();
   if (chapter !== null) params.set("chapter", String(chapter));
   if (search.trim()) params.set("search", search.trim());
-  if (bookAlignment) params.set("book_alignment", bookAlignment);
   return request<Item[]>(`/api/items?${params.toString()}`);
 };
 export const getItem = (stableId: string) => request<Item>(`/api/items/${encodeURIComponent(stableId)}`);

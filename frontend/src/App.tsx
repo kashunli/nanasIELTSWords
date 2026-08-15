@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { exportFlaggedAudio, getChapters, getItems, getSummary } from "./api";
-import type { BookReference, CardState, Chapter, Item, Summary } from "./types";
+import type { CardState, Chapter, Item, Summary } from "./types";
 import { LocalStudyState } from "./features/study/localStudyState";
 import { LineWaveform } from "./features/player/LineWaveform";
 import { nextPlaybackStep } from "./features/player/playbackSequence.mjs";
 import { detectSilenceGapsMs } from "./features/player/waveform.mjs";
 import { useAudioBufferPlayer } from "./features/player/useAudioBufferPlayer";
 
-type Filter = "all" | "order-only" | "review" | "unmarked" | "known" | "flagged";
+type Filter = "all" | "review" | "unmarked" | "known" | "flagged";
 type Phase = "word" | "sentence";
 type PlaybackMode = "words" | "sentences" | "both";
 type RunMode = "single" | "consecutive";
@@ -208,16 +208,6 @@ function formatPlaybackTime(value: number) {
   return `${Math.floor(value / 60)}:${String(Math.floor(value % 60)).padStart(2, "0")}`;
 }
 
-function isOrderOnlyReview(reference?: BookReference) {
-  return Boolean(reference?.alignment_status === "matched_order" && reference.needs_review);
-}
-
-function alignmentLabel(reference: BookReference) {
-  if (reference.alignment_status === "matched_sentence") return "Matched by exact sentence";
-  if (reference.alignment_status === "matched_headword") return "Matched by book word";
-  return "Matched by chapter order";
-}
-
 function cleanCollocation(value: string) {
   return value.replace(/^\[搭\]\s*/, "");
 }
@@ -232,7 +222,6 @@ function FocusCard({selected, card, onToggle}: {
   if (!selected) return <div className="focus-card"><p>Select an item from the list.</p></div>;
 
   const book = selected.book_reference;
-  const orderOnlyReference = book?.alignment_status === "matched_order" && book.needs_review ? book : undefined;
   const displayWord = book?.headword || selected.headword;
   const displayPartOfSpeech = book?.part_of_speech || selected.part_of_speech || "word";
   const displaySentence = book?.example_en || selected.sentence;
@@ -242,7 +231,6 @@ function FocusCard({selected, card, onToggle}: {
   return <div className="focus-card">
     <div className="focus-meta">
       <span>Chapter {selected.chapter} · #{selected.position}</span>
-      {book ? <span className={`source-badge ${book.alignment_status}`}>{alignmentLabel(book)}</span> : <span className="source-badge audio-only">Audio record</span>}
     </div>
 
     <header className="word-hero">
@@ -250,7 +238,6 @@ function FocusCard({selected, card, onToggle}: {
       <div className="word-facts">
         <span className="pos">{displayPartOfSpeech}</span>
         {book?.ipa ? <span className="ipa">{book.ipa}</span> : null}
-        {book ? <span className="book-source-inline">Reviewed book reference</span> : null}
       </div>
     </header>
 
@@ -261,18 +248,6 @@ function FocusCard({selected, card, onToggle}: {
       <p className="example-en">{displaySentence}</p>
       {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
     </section>
-
-    {orderOnlyReference ? <section className="order-review-card" aria-label="Order-only book and audio alignment review">
-      <div className="section-heading"><span>ORDER-ONLY REVIEW</span><strong>Book and audio are paired by position, not direct text match</strong></div>
-      <p className="order-review-intro">Listen to the word and sentence clips below, then decide whether this book entry belongs to this audio position. This record remains marked for review until you verify it yourself.</p>
-      <div className="order-review-grid">
-        <div><span>BOOK WORD</span><strong>{orderOnlyReference.headword}</strong></div>
-        <div><span>AUDIO-SIDE WORD</span><strong>{selected.headword}</strong></div>
-        <div><span>BOOK EXAMPLE</span><p>{orderOnlyReference.example_en}</p></div>
-        <div><span>AUDIO-SIDE SENTENCE</span><p>{selected.sentence}</p></div>
-      </div>
-      <small>{orderOnlyReference.book_word_id} · {orderOnlyReference.source_page} · reason: {orderOnlyReference.review_reasons.join("; ") || "order-only alignment"}</small>
-    </section> : null}
 
     <section className="explanation-card" aria-label="Explanation below current line">
       <div className="section-heading"><span>EXPLANATION</span><strong>Understand this word in the current line</strong></div>
@@ -285,24 +260,18 @@ function FocusCard({selected, card, onToggle}: {
         <article className="meaning-card meaning-translation">
           <span>中文释义</span>
           <p>{displayMeaningZh || "释义待生成"}</p>
-          <small>{book ? "Reviewed book OCR" : "Current runtime meaning"}</small>
+          <small>Chinese meaning</small>
         </article>
       </div>
     </section>
 
     {hasUsage ? <section className="usage-section" aria-label="Usage information">
-      <div className="section-heading"><span>USAGE NOTES</span><strong>Useful patterns from the reviewed book</strong></div>
+      <div className="section-heading"><span>USAGE NOTES</span><strong>Useful patterns</strong></div>
       <div className="usage-grid">
         {book?.collocations ? <article><span>COLLOCATIONS</span><p>{cleanCollocation(book.collocations)}</p></article> : null}
         {book?.word_formation ? <article><span>WORD FORMATION</span><p>{book.word_formation}</p></article> : null}
         {book?.notes ? <article><span>NOTES</span><p>{book.notes}</p></article> : null}
       </div>
-    </section> : null}
-
-    {book ? <section className="source-card" aria-label="Reviewed book source">
-      <div className="section-heading"><span>REVIEWED BOOK SOURCE</span><strong>Provenance for this word record</strong></div>
-      <p>PDF page {book.pdf_page}{book.printed_page ? ` · printed page ${book.printed_page}` : ""} · entry {book.position_on_page}</p>
-      <small>{book.book_word_id} · {book.source_page} · {alignmentLabel(book)}{book.needs_review ? ` · source review: ${book.review_reasons.join("; ") || "needs review"}` : ""}</small>
     </section> : null}
 
     <div className="card-actions">
@@ -336,10 +305,10 @@ export default function App() {
     return () => unsubscribeStudy();
   }, [study]);
   useEffect(() => { void Promise.all([getSummary(), getChapters()]).then(([nextSummary, nextChapters]) => { setSummary(nextSummary); setChapters(nextChapters); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load corpus.")); }, []);
-  useEffect(() => { void getItems(chapter, search, filter === "order-only" ? "order_only" : undefined).then(nextItems => { setItems(nextItems); setSelectedId(current => current && nextItems.some(item => item.stable_id === current) ? current : nextItems[0]?.stable_id); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load items.")); }, [chapter, search, filter]);
-  const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "order-only") return true; if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study]);
+  useEffect(() => { void getItems(chapter, search).then(nextItems => { setItems(nextItems); setSelectedId(current => current && nextItems.some(item => item.stable_id === current) ? current : nextItems[0]?.stable_id); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load items.")); }, [chapter, search]);
+  const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study]);
   const selected = visibleItems.find(item => item.stable_id === selectedId) || visibleItems[0];
-  const counts = useMemo(() => ({orderOnly: summary?.book_order_review_items || 0, known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study, summary]);
+  const counts = useMemo(() => ({known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study]);
   const selectedIndex = selected ? visibleItems.findIndex(item => item.stable_id === selected.stable_id) : -1;
   const finish = (): boolean => {
     if (!selected) return false;
@@ -398,21 +367,18 @@ export default function App() {
   const exportAudio = () => { if (!chapter) return; const ids = items.filter(item => study.card(item.item_uuid)?.flagged).map(item => item.stable_id); if (!ids.length) { setMessage("No flagged items in this chapter."); return; } void exportFlaggedAudio(chapter, ids).then(result => { setMessage(`Export ready: ${result.file_name}`); window.open(result.audio_url, "_blank"); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Export failed.")); };
   return <div className="app-shell">
     <div className="content-scroll">
-    <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div><span className="eyebrow">IELTS VOCABULARY · SOURCE-AWARE AUDIO</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items · ${summary.book_reference_items} reviewed-book references · ${summary.book_order_review_items} order-only alignments to review` : "Loading corpus…"}</p></div></div><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button></header>
+    <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div><span className="eyebrow">IELTS VOCABULARY</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items` : "Loading corpus…"}</p></div></div><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button></header>
     {showBackup ? <section className="backup-panel"><button type="button" onClick={downloadBackup}>Download progress</button><label className="file-button">Restore progress<input type="file" accept="application/json" onChange={restoreBackup} /></label><button type="button" onClick={() => { if (window.confirm("Archive and reset local progress?")) study.reset(); }}>Reset progress</button></section> : null}
     <nav className="chapter-strip" aria-label="Chapters"><button className={chapter === null ? "active" : ""} onClick={() => setChapter(null)}>All</button>{chapters.map(item => <button key={item.number} className={chapter === item.number ? "active" : ""} onClick={() => setChapter(item.number)}>Ch {item.number}</button>)}</nav>
-    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search book word, meaning, collocation, sentence…" /><div className="filters">{(["all", "order-only", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value === "order-only" ? "Order-only" : value[0].toUpperCase() + value.slice(1)}{value === "order-only" ? ` ${counts.orderOnly}` : value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button type="button" onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
+    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search word, meaning, collocation, sentence…" /><div className="filters">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button type="button" onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
     <main className="study-layout">
       <aside className="item-list" aria-label="Vocabulary items">
         {visibleItems.map(item => {
           const itemCard = study.card(item.item_uuid);
-          const itemBookReference = item.book_reference;
-          const itemDisplayWord = itemBookReference?.headword || item.headword;
-          const itemIsOrderOnly = isOrderOnlyReview(itemBookReference);
           return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { setSelectedId(item.stable_id); setPhase("word"); }}>
             <span>{String(item.position).padStart(3, "0")}</span>
-            <strong>{itemDisplayWord}</strong>
-            <small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}{itemIsOrderOnly ? " · order-only" : itemBookReference ? " · book" : ""}</small>
+            <strong>{item.headword}</strong>
+            <small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}</small>
           </button>;
         })}
       </aside>

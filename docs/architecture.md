@@ -75,14 +75,14 @@ replaces both the `word_items` and `examples` fields. This covers spelling
 variants such as `mould`/`Mold`. If there is no reliable word alignment, an
 exact or normalized sentence alignment can still replace the sentence field.
 The previously flagged order-only pairs were verified against the book and are
-explicitly treated as book-backed by the projection. The API returns accepted
-learner-facing fields and the separate book reference; raw transcription/review
-rows remain internal audit data.
+explicitly treated as book-backed by the projection. The API retains the
+separate book reference for maintenance, while the React learner page renders
+only the accepted study fields; raw transcription/review rows remain internal
+audit data.
 
-The web service exposes the equal-length order-only gaps as a separate
-book/audio coverage queue. `GET /api/items?book_alignment=order_only` reads
-`book_references.alignment_status='matched_order'`; the build projection marks
-all such records as `needs_review`, even when an older OCR record omitted that
-flag. The React study wall displays the queue count, labels each row
-`order-only`, and places the book word/example beside the audio-side
-word/sentence for manual listening review.
+The internal maintenance request `GET /api/items?book_alignment=order_only`
+still reads `book_references.alignment_status='matched_order'`; the build
+projection marks all such records as `needs_review`, even when an older OCR
+record omitted that flag. The learner study wall does not expose this queue,
+ASR comparisons, alignment badges, or reviewed-book provenance panels after
+manual verification.

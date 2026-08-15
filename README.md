@@ -111,10 +111,10 @@ only for equal-length gaps. Unresolved or unequal gaps remain unmatched and
 retain their review reasons. The generated
 `content/book-sources/ielts-vocabulary-true-script/book_audio_audit.json`
 separates confirmed sentence/headword matches, order-only associations that
-still need review, book entries with no direct audio, and unassigned audio
-items. After the current overlay there are no unassigned audio items and no
-book entries without an audio slot; 85 entries remain order-only because their
-ASR does not directly identify the book word or example sentence.
+were reviewed manually, book entries with no direct audio, and unassigned
+audio items. After the current overlay there are no unassigned audio items and
+no book entries without an audio slot; the 85 order-only records remain in the
+audit artifact as historical alignment evidence after manual verification.
 
 The runtime API reads the resulting `book_references` table, not OCR files or
 model caches. A matched reference may add the reviewed-book headword, IPA,
@@ -127,8 +127,9 @@ when the audio uses a spelling or inflection such as `Mold` for `mould`. The
 Previously flagged order-only entries were also verified against the book and
 now use book-backed learner-facing fields. Raw transcription and review
 reasons remain in preparation and internal audit data; the runtime API does
-not expose transcription status, transcription source labels, or a
-transcription-review queue.
+not expose transcription status. The React learner page uses the accepted
+word, sentence, meaning, and usage fields without rendering ASR comparisons,
+alignment badges, or reviewed-book provenance panels.
 
 ## Learner state
 
@@ -145,11 +146,8 @@ available; it must preserve the existing `bv1at4y1579f-chNN-NNNN` IDs and
 UUIDs. Keep raw ASR, OCR evidence, alignment status, and review reasons
 available for later audit.
 
-The web service exposes the unresolved order-only queue directly. The study
-wall shows an `Order-only 85` filter (the count comes from SQLite), and the
-selected card compares the reviewed-book word/example with the audio-side
-word/sentence while the normal word and sentence player remains available.
-The corresponding runtime request is
-`GET /api/items?book_alignment=order_only`; it reads the projected
-`book_references` table and does not load the audit JSON or source audio during
-a learner request.
+The learner study wall no longer exposes the order-only review queue or the
+reviewed-book provenance panel. The internal request
+`GET /api/items?book_alignment=order_only` remains available for maintenance
+audits; it reads the projected `book_references` table and does not load the
+audit JSON or source audio during a learner request.
