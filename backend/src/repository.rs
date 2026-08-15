@@ -3,7 +3,7 @@ use crate::{
     error::AppError,
     models::{BookReference, Chapter, ItemDetail, ItemQuery, ItemSummary, Summary},
 };
-use rusqlite::{params, Connection, OptionalExtension};
+use rusqlite::{Connection, OptionalExtension, params};
 
 pub fn open(config: &Config) -> Result<Connection, AppError> {
     let connection = Connection::open(&config.db_path)?;
@@ -124,8 +124,14 @@ fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
 pub fn items(connection: &Connection, query: &ItemQuery) -> Result<Vec<ItemSummary>, AppError> {
     let mut sql = format!("SELECT {} {} WHERE 1=1", ITEM_COLUMNS, ITEM_FROM);
     match query.book_alignment.as_deref() {
-        Some("order_only") => sql.push_str(" AND b.alignment_status='matched_order' AND b.needs_review=1"),
-        Some(value) => return Err(AppError::BadRequest(format!("Unsupported book alignment filter: {value}"))),
+        Some("order_only") => {
+            sql.push_str(" AND b.alignment_status='matched_order' AND b.needs_review=1")
+        }
+        Some(value) => {
+            return Err(AppError::BadRequest(format!(
+                "Unsupported book alignment filter: {value}"
+            )));
+        }
         None => {}
     }
     if query.chapter.is_some() {

@@ -418,6 +418,11 @@ function AudioSequenceEditor({item, sequence, onChange, onReset}: {
   </details>;
 }
 
+function TranslationAudio({url, label}: {url?: string; label: string}) {
+  if (!url) return null;
+  return <audio className="translation-audio" controls preload="none" src={url} aria-label={`Play ${label}`} />;
+}
+
 type CardToggle = "known" | "flagged" | "sentence_starred";
 
 function FocusCard({selected, card, sequence, onToggle, onSequenceChange, onSequenceReset}: {
@@ -455,7 +460,7 @@ function FocusCard({selected, card, sequence, onToggle, onSequenceChange, onSequ
         <span>CURRENT LINE</span>
       </div>
       <p className="example-en">{displaySentence}</p>
-      {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
+      {book?.example_zh ? <div className="example-translation"><div className="translation-heading"><span>中文翻译</span><TranslationAudio url={selected.sentence_translation_audio_url} label="Chinese example translation" /></div><p>{book.example_zh}</p></div> : null}
     </section>
 
     <AudioSequenceEditor item={selected} sequence={sequence} onChange={onSequenceChange} onReset={onSequenceReset} />
@@ -468,7 +473,7 @@ function FocusCard({selected, card, sequence, onToggle, onSequenceChange, onSequ
           <small>{selected.meaning_status === "ai_draft" ? "AI draft English meaning" : "Reviewed English meaning"}</small>
         </article>
         <article className="meaning-card meaning-translation">
-          <span>中文释义</span>
+          <div className="translation-heading"><span>中文释义</span><TranslationAudio url={selected.word_translation_audio_url} label="Chinese meaning" /></div>
           <p>{displayMeaningZh || "释义待生成"}</p>
           <small>Chinese meaning</small>
         </article>
