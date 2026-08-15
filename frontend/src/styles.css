@@ -174,6 +174,15 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
   white-space: nowrap;
 }
 
+.player-current small {
+  min-width: 0;
+  overflow: hidden;
+  color: #c5d0c8;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .player-meta .audio-time {
   flex: 0 0 auto;
   color: #e5bd76;
@@ -237,6 +246,62 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
   color: #aebbb4;
   font-size: 11px;
   line-height: 1.35;
+}
+
+/* Four-part playback recipe ---------------------------------------------- */
+.sequence-editor {
+  margin-top: 18px;
+  padding: 17px 18px 15px;
+  border: 1px solid #d8e0d6;
+  border-radius: 15px;
+  background: #f5f8f3;
+}
+
+.sequence-editor > summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.sequence-editor > summary::-webkit-details-marker { display: none; }
+.sequence-editor > summary::before { content: "＋"; order: 2; color: #4e8065; font-weight: 800; }
+.sequence-editor[open] > summary::before { content: "－"; }
+.sequence-editor .section-heading > span { color: #4e8065; }
+.sequence-editor .section-heading > strong { color: #315741; }
+.sequence-editor-summary { margin-left: auto; color: #6a7f70; font-size: 12px; white-space: nowrap; }
+.sequence-editor-intro { margin: 12px 0 0; color: #586b5f; font-size: 13px; line-height: 1.5; }
+.sequence-rows { display: grid; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; counter-reset: sequence-row; }
+.sequence-row { display: grid; grid-template-columns: 28px minmax(150px, 1fr) auto auto auto; gap: 10px; align-items: center; padding: 10px 9px; border: 1px solid #d9e1d6; border-radius: 11px; background: #fffdf8; }
+.sequence-row.pending { background: #faf8f2; border-style: dashed; }
+.sequence-position { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #e2eee1; color: #416a51; font-size: 12px; font-weight: 850; }
+.sequence-row.pending .sequence-position { background: #efe9da; color: #8c7654; }
+.sequence-row-name { min-width: 0; }
+.sequence-row-name strong { display: block; overflow: hidden; color: #354d41; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.sequence-row-name small { display: block; margin-top: 3px; color: #7e8c82; font-size: 11px; }
+.sequence-row.pending .sequence-row-name small { color: #9b8664; }
+.sequence-order-buttons { display: flex; gap: 4px; }
+.sequence-order-buttons button { width: 27px; height: 27px; padding: 0; border: 1px solid #cad8cb; border-radius: 7px; background: #edf3ed; color: #466b54; }
+.sequence-order-buttons button:disabled { cursor: not-allowed; opacity: .35; }
+.sequence-number-field { display: flex; flex-direction: column; gap: 4px; color: #6b7d70; font-size: 10px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+.sequence-number-field > input, .sequence-number-field > span { display: flex; align-items: center; gap: 5px; }
+.sequence-number-field input { width: 67px; padding: 6px 7px; border: 1px solid #cbd8cd; border-radius: 7px; background: #fff; color: #294438; font-size: 13px; letter-spacing: normal; text-transform: none; }
+.sequence-number-field span input { width: 67px; }
+.sequence-editor-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 11px; color: #718176; font-size: 11px; line-height: 1.4; }
+.sequence-reset { flex: 0 0 auto; padding: 6px 9px; border: 1px solid #c8d6c9; border-radius: 7px; background: transparent; color: #4e8065; font-size: 11px; }
+
+@media (max-width: 760px) {
+  .sequence-editor { padding: 15px 13px 13px; }
+  .sequence-editor > summary { gap: 8px; }
+  .sequence-editor-summary { font-size: 10px; }
+  .sequence-row { grid-template-columns: 27px minmax(0, 1fr) auto; gap: 7px; }
+  .sequence-order-buttons { grid-column: 3; grid-row: 1; }
+  .sequence-repeat-field, .sequence-pause-field { grid-row: 2; margin-top: 2px; }
+  .sequence-repeat-field { grid-column: 2; }
+  .sequence-pause-field { grid-column: 3; }
+  .sequence-editor-footer { align-items: flex-start; flex-direction: column; gap: 8px; }
 }
 
 .player-settings {

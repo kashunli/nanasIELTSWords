@@ -1,4 +1,15 @@
 declare module "*.mjs" {
+  export const AUDIO_ELEMENT_IDS: import("./types").AudioElementId[];
+  export const MAX_REPEAT_COUNT: number;
+  export const MAX_PAUSE_SECONDS: number;
+
+  export function createDefaultAudioSequence(): import("./types").AudioSequenceConfig;
+  export function normalizeAudioSequence(value: unknown): import("./types").AudioSequenceConfig;
+  export function reorderAudioSequence(value: unknown, fromIndex: number, toIndex: number): import("./types").AudioSequenceConfig;
+  export function updateAudioSequenceStep(value: unknown, element: import("./types").AudioElementId, patch: Partial<Pick<import("./types").AudioSequenceStep, "repeatCount" | "pauseAfterSeconds">>): import("./types").AudioSequenceConfig;
+  export function expandPlayableAudioSequence(value: unknown, audioUrls: Partial<Record<import("./types").AudioElementId, string>>): Array<import("./types").AudioSequenceStep & {url: string; occurrence: number}>;
+  export function nextAudioSequenceStep(options: {cueIndex: number; cueCount: number; runMode: "single" | "consecutive"; hasNextItem: boolean}): "next-cue" | "next-item" | "stop";
+
   export function nextPlaybackStep(options: {
     playbackMode: "words" | "sentences" | "both";
     playbackRunMode: "single" | "consecutive";

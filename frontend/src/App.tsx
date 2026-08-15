@@ -1,45 +1,170 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { exportFlaggedAudio, getChapters, getItems, getSummary } from "./api";
-import type { BookReference, CardState, Chapter, Item, Summary } from "./types";
+import type { AudioElementId, AudioSequenceConfig, AudioSequenceStep, BookReference, CardState, Chapter, Item, Summary } from "./types";
 import { LocalStudyState } from "./features/study/localStudyState";
+import { LocalAudioSequenceState } from "./features/player/localAudioSequenceState";
 import { LineWaveform } from "./features/player/LineWaveform";
-import { nextPlaybackStep } from "./features/player/playbackSequence.mjs";
+import { createDefaultAudioSequence, expandPlayableAudioSequence, nextAudioSequenceStep, reorderAudioSequence, updateAudioSequenceStep } from "./features/player/audioSequence.mjs";
 import { detectSilenceGapsMs } from "./features/player/waveform.mjs";
 import { useAudioBufferPlayer } from "./features/player/useAudioBufferPlayer";
 
 type Filter = "all" | "order-only" | "review" | "unmarked" | "known" | "flagged";
-type Phase = "word" | "sentence";
-type PlaybackMode = "words" | "sentences" | "both";
+type PlaybackMode = "sequence" | "words" | "sentences";
 type RunMode = "single" | "consecutive";
 
-function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onRunModeChange, canNext, canPrevious}: {item?: Item; phase: Phase; mode: PlaybackMode; runMode: RunMode; onEnd: () => boolean; onNext: () => boolean; onPrevious: () => boolean; onRunModeChange: (mode: RunMode) => void; canNext: boolean; canPrevious: boolean}) {
-  const url = item ? phase === "word" ? item.word_audio_url : item.sentence_audio_url : "";
-  const autoAdvanceRef = useRef(false);
+const AUDIO_ELEMENT_LABELS: Record<AudioElementId, string> = {
+  word: "English word",
+  sentence: "English sentence",
+  word_translation: "Chinese word translation",
+  sentence_translation: "Chinese sentence translation",
+};
+
+const AUDIO_ELEMENT_SHORT_LABELS: Record<AudioElementId, string> = {
+  word: "Word",
+  sentence: "Sentence",
+  word_translation: "中文释义",
+  sentence_translation: "中文例句",
+};
+
+function itemAudioUrls(item?: Item): Partial<Record<AudioElementId, string>> {
+  if (!item) return {};
+  return {
+    word: item.word_audio_url,
+    sentence: item.sentence_audio_url,
+    word_translation: item.word_translation_audio_url,
+    sentence_translation: item.sentence_translation_audio_url,
+  };
+}
+
+function sequenceKey(sequence: AudioSequenceConfig) {
+  return sequence.steps.map(step => `${step.element}:${step.repeatCount}:${step.pauseAfterSeconds}`).join("|");
+}
+
+type AudioCue = AudioSequenceStep & {url: string; occurrence: number};
+
+function AudioPlayer({item, sequence, mode, runMode, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed}: {
+  item?: Item;
+  sequence: AudioSequenceConfig;
+  mode: PlaybackMode;
+  runMode: RunMode;
+  onNextItem: () => boolean;
+  onPreviousItem: () => boolean;
+  onRunModeChange: (mode: RunMode) => void;
+  canNextItem: boolean;
+  canPreviousItem: boolean;
+  onPlayed: (item: Item) => void;
+}) {
+  const audioUrls = useMemo(() => itemAudioUrls(item), [item?.sentence_audio_url, item?.sentence_translation_audio_url, item?.word_audio_url, item?.word_translation_audio_url]);
+  const playableCues = useMemo(() => expandPlayableAudioSequence(sequence, audioUrls) as AudioCue[], [audioUrls, sequence]);
+  const recipeKey = sequenceKey(sequence);
+  const [cueIndex, setCueIndex] = useState(0);
+  const [waitingForNextCue, setWaitingForNextCue] = useState(false);
+  const continueSequenceRef = useRef(false);
   const playOnTargetChangeRef = useRef(false);
   const pendingTargetPlayRef = useRef(false);
+  const preserveSequenceRunRef = useRef(false);
+  const runModeRef = useRef(runMode);
+  runModeRef.current = runMode;
   const lastTargetKeyRef = useRef<string | undefined>(undefined);
   const currentTimeRef = useRef(0);
-  const targetKey = item ? `${item.item_uuid}:${phase}:${url}` : "";
+  const waitTimerRef = useRef<number | null>(null);
+  const playedItemRef = useRef<string | undefined>(undefined);
+  const activeCueIndex = playableCues.length ? Math.min(cueIndex, playableCues.length - 1) : 0;
+  const currentCue = playableCues[activeCueIndex];
+  const url = currentCue?.url || "";
+  const targetKey = item && currentCue ? `${item.item_uuid}:${currentCue.element}:${currentCue.occurrence}:${url}` : "";
+
+  const clearWaiting = () => {
+    if (waitTimerRef.current !== null) {
+      window.clearTimeout(waitTimerRef.current);
+      waitTimerRef.current = null;
+    }
+    setWaitingForNextCue(false);
+  };
+
   const player = useAudioBufferPlayer(url, () => {
-    const continued = onEnd();
-    if (!continued) {
-      autoAdvanceRef.current = false;
+    if (!item || !currentCue) return;
+    if (playedItemRef.current !== item.item_uuid) {
+      playedItemRef.current = item.item_uuid;
+      onPlayed(item);
+    }
+    if (!continueSequenceRef.current) {
+      continueSequenceRef.current = false;
       pendingTargetPlayRef.current = false;
+      return;
+    }
+
+    const continueSequence = () => {
+      const step = nextAudioSequenceStep({cueIndex: activeCueIndex, cueCount: playableCues.length, runMode: runModeRef.current, hasNextItem: canNextItem});
+      pendingTargetPlayRef.current = true;
+      if (step === "next-cue") {
+        setCueIndex(activeCueIndex + 1);
+        return true;
+      }
+      if (step === "stop") {
+        continueSequenceRef.current = false;
+        pendingTargetPlayRef.current = false;
+        return false;
+      }
+      preserveSequenceRunRef.current = true;
+      const moved = onNextItem();
+      if (!moved) {
+        preserveSequenceRunRef.current = false;
+        continueSequenceRef.current = false;
+        pendingTargetPlayRef.current = false;
+      }
+      return moved;
+    };
+
+    const hasNextAudio = nextAudioSequenceStep({cueIndex: activeCueIndex, cueCount: playableCues.length, runMode: runModeRef.current, hasNextItem: canNextItem}) !== "stop";
+    if (currentCue.pauseAfterSeconds > 0 && hasNextAudio) {
+      setWaitingForNextCue(true);
+      waitTimerRef.current = window.setTimeout(() => {
+        waitTimerRef.current = null;
+        setWaitingForNextCue(false);
+        if (!continueSequenceRef.current) {
+          continueSequenceRef.current = false;
+          pendingTargetPlayRef.current = false;
+          return;
+        }
+        continueSequence();
+      }, Math.round(currentCue.pauseAfterSeconds * 1000));
+    } else {
+      continueSequence();
     }
   });
   const [playerError, setPlayerError] = useState("");
   currentTimeRef.current = player.currentTime;
 
   useEffect(() => {
+    if (cueIndex >= playableCues.length && playableCues.length > 0) setCueIndex(0);
+  }, [cueIndex, playableCues.length]);
+
+  useEffect(() => {
+    const preserveSequenceRun = preserveSequenceRunRef.current;
+    preserveSequenceRunRef.current = false;
+    clearWaiting();
+    setCueIndex(0);
+    if (!preserveSequenceRun) {
+      continueSequenceRef.current = false;
+      playOnTargetChangeRef.current = false;
+      pendingTargetPlayRef.current = false;
+    }
+    playedItemRef.current = undefined;
+    player.pause();
+    player.setPosition(0);
+  }, [item?.item_uuid, recipeKey, player.pause, player.setPosition]);
+
+  useEffect(() => {
     if (targetKey === lastTargetKeyRef.current) return;
     lastTargetKeyRef.current = targetKey;
     setPlayerError("");
-    pendingTargetPlayRef.current = playOnTargetChangeRef.current || autoAdvanceRef.current;
+    pendingTargetPlayRef.current = pendingTargetPlayRef.current || playOnTargetChangeRef.current || continueSequenceRef.current;
     playOnTargetChangeRef.current = false;
   }, [targetKey]);
 
   const playFrom = async (offset: number) => {
-    if (!item || !player.audioBuffer) return;
+    if (!item || !currentCue || !player.audioBuffer || player.loadedAudioUrl !== url) return;
     const duration = player.audioBuffer.duration;
     const safeOffset = offset >= duration ? 0 : Math.max(0, offset);
     try {
@@ -47,7 +172,7 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
         start: 0,
         end: duration,
         offset: safeOffset,
-        segmentId: `${item.item_uuid}:${phase}`,
+        segmentId: `${item.item_uuid}:${currentCue.element}:${currentCue.occurrence}`,
       });
     } catch {
       setPlayerError("Audio could not be played.");
@@ -57,10 +182,10 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
   // A newly selected target is allowed to autoplay only when the current run
   // explicitly requested continuation (or the user pressed Next).
   useEffect(() => {
-    if (!pendingTargetPlayRef.current || !item || !player.audioBuffer || player.loadedAudioUrl !== url || player.isPlaying) return;
+    if (!pendingTargetPlayRef.current || waitingForNextCue || !item || !currentCue || !player.audioBuffer || player.loadedAudioUrl !== url || player.isPlaying) return;
     pendingTargetPlayRef.current = false;
     void playFrom(0);
-  }, [item, player.audioBuffer, player.isPlaying, player.loadedAudioUrl, targetKey, url]);
+  }, [currentCue, item, player.audioBuffer, player.isPlaying, player.loadedAudioUrl, targetKey, url, waitingForNextCue]);
 
   const silenceGaps = useMemo(() => {
     if (!player.audioBuffer) return [];
@@ -78,50 +203,79 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
 
   const duration = player.audioBuffer?.duration || 0.01;
   const progressLabel = `${formatPlaybackTime(player.currentTime)} / ${formatPlaybackTime(player.audioBuffer?.duration || 0)}`;
+  const hasNextTarget = activeCueIndex < playableCues.length - 1 || canNextItem;
+  const hasPreviousTarget = activeCueIndex > 0 || canPreviousItem;
   const toggle = () => {
+    if (!currentCue) return;
+    if (waitingForNextCue) {
+      clearWaiting();
+      continueSequenceRef.current = true;
+      void playFrom(0);
+      return;
+    }
     if (player.isPlaying) {
       player.pause();
       return;
     }
-    autoAdvanceRef.current = runMode === "consecutive";
+    continueSequenceRef.current = true;
     pendingTargetPlayRef.current = false;
     void playFrom(currentTimeRef.current);
   };
   const replay = () => {
-    autoAdvanceRef.current = runMode === "consecutive";
-    player.setPosition(0);
-    void playFrom(0);
+    if (!currentCue) return;
+    clearWaiting();
+    continueSequenceRef.current = true;
+    if (activeCueIndex === 0) {
+      player.setPosition(0);
+      void playFrom(0);
+    } else {
+      playOnTargetChangeRef.current = true;
+      setCueIndex(0);
+    }
   };
   const advanceManually = () => {
+    if (!currentCue) return;
+    clearWaiting();
     playOnTargetChangeRef.current = true;
-    autoAdvanceRef.current = runMode === "consecutive";
-    const advanced = onNext();
-    if (!advanced) {
+    continueSequenceRef.current = true;
+    const nextCueIndex = activeCueIndex + 1;
+    if (nextCueIndex < playableCues.length) {
+      setCueIndex(nextCueIndex);
+      return;
+    }
+    preserveSequenceRunRef.current = true;
+    const moved = onNextItem();
+    if (!moved) {
+      preserveSequenceRunRef.current = false;
       playOnTargetChangeRef.current = false;
-      autoAdvanceRef.current = false;
+      continueSequenceRef.current = false;
     }
   };
   const previousManually = () => {
+    if (!currentCue) return;
+    clearWaiting();
     playOnTargetChangeRef.current = true;
-    autoAdvanceRef.current = runMode === "consecutive";
-    const moved = onPrevious();
+    continueSequenceRef.current = true;
+    const previousCueIndex = activeCueIndex - 1;
+    if (previousCueIndex >= 0) {
+      setCueIndex(previousCueIndex);
+      return;
+    }
+    preserveSequenceRunRef.current = true;
+    const moved = onPreviousItem();
     if (!moved) {
+      preserveSequenceRunRef.current = false;
       playOnTargetChangeRef.current = false;
-      autoAdvanceRef.current = false;
+      continueSequenceRef.current = false;
     }
   };
   const toggleRunMode = () => {
     const nextMode: RunMode = runMode === "single" ? "consecutive" : "single";
-    if (nextMode === "single") {
-      autoAdvanceRef.current = false;
-      pendingTargetPlayRef.current = false;
-    } else if (player.isPlaying) {
-      autoAdvanceRef.current = true;
-    }
     onRunModeChange(nextMode);
   };
   const stop = () => {
-    autoAdvanceRef.current = false;
+    clearWaiting();
+    continueSequenceRef.current = false;
     pendingTargetPlayRef.current = false;
     player.pause();
     player.setPosition(0);
@@ -141,10 +295,10 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
         toggle();
       } else if (key === "a") {
         event.preventDefault();
-        if (canPrevious) previousManually();
+        if (hasPreviousTarget) previousManually();
       } else if (key === "d") {
         event.preventDefault();
-        if (canNext) advanceManually();
+        if (hasNextTarget) advanceManually();
       } else if (key === "r") {
         event.preventDefault();
         if (player.audioBuffer) replay();
@@ -158,22 +312,24 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
     };
     document.addEventListener("keydown", handleKeyDown, {capture: true});
     return () => document.removeEventListener("keydown", handleKeyDown, {capture: true});
-  }, [advanceManually, canNext, canPrevious, player.audioBuffer, previousManually, replay, stop, toggle, toggleRunMode]);
+  }, [advanceManually, hasNextTarget, hasPreviousTarget, player.audioBuffer, previousManually, replay, stop, toggle, toggleRunMode]);
 
   if (!item) return <section className="player empty-player">Select an item to begin listening.</section>;
+  if (!currentCue) return <section className="player empty-player">No playable audio is available for this item yet.</section>;
 
   return <section className="player" aria-label="Audio player">
     <div className="player-meta">
       <div className="player-current">
         <span className="player-kicker">CURRENT AUDIO</span>
         <strong>{item.headword}</strong>
+        <small>{AUDIO_ELEMENT_LABELS[currentCue.element]}{currentCue.repeatCount > 1 ? ` · ${currentCue.occurrence}/${currentCue.repeatCount}` : ""}</small>
       </div>
       <span className="audio-time" aria-label="Playback time">{progressLabel}</span>
     </div>
     <div className="player-controls" role="toolbar" aria-label="Playback controls">
-      <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-label="Replay audio" aria-keyshortcuts="R"><span className="button-label-full">Replay</span><span className="button-label-short">Replay</span></button>
-      <button type="button" onClick={previousManually} disabled={!canPrevious} aria-label="Previous audio" aria-keyshortcuts="A"><span className="button-label-full">Previous</span><span className="button-label-short">Prev</span></button>
-      <button type="button" onClick={advanceManually} disabled={!canNext} aria-label="Next audio" aria-keyshortcuts="D"><span className="button-label-full">Next</span><span className="button-label-short">Next</span></button>
+      <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-label="Replay configured audio sequence" aria-keyshortcuts="R"><span className="button-label-full">Replay</span><span className="button-label-short">Replay</span></button>
+      <button type="button" onClick={previousManually} disabled={!hasPreviousTarget} aria-label="Previous audio element or item" aria-keyshortcuts="A"><span className="button-label-full">Previous</span><span className="button-label-short">Prev</span></button>
+      <button type="button" onClick={advanceManually} disabled={!hasNextTarget} aria-label="Next audio element or item" aria-keyshortcuts="D"><span className="button-label-full">Next</span><span className="button-label-short">Next</span></button>
       <button type="button" onClick={stop} disabled={!player.audioBuffer} aria-label="Stop audio" aria-keyshortcuts="S"><span className="button-label-full">Stop</span><span className="button-label-short">Stop</span></button>
       <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C"><span className="button-label-full">{runMode === "single" ? "Single" : "Consecutive"}</span><span className="button-label-short">{runMode === "single" ? "Single" : "Consec."}</span></button>
       <button
@@ -181,7 +337,7 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
         className="primary play-toggle"
         onClick={toggle}
         disabled={!player.audioBuffer}
-        aria-label={`${player.isPlaying ? "Pause" : "Play"} ${phase} audio`}
+        aria-label={`${player.isPlaying ? "Pause" : "Play"} ${AUDIO_ELEMENT_LABELS[currentCue.element]}`}
         aria-keyshortcuts="Space"
       >
         {player.isPlaying ? "Pause" : "Play"}
@@ -199,7 +355,7 @@ function AudioPlayer({item, phase, mode, runMode, onEnd, onNext, onPrevious, onR
         onSeek={(time) => void player.seek(time)}
       />
     </div>
-    <div className="player-help">{playerError || `${phase} · ${runMode === "single" ? "single clip" : "play through list"} · ${mode} · A/D previous/next · Space play/pause`}</div>
+    <div className="player-help">{playerError || (waitingForNextCue ? `Paused ${currentCue.pauseAfterSeconds.toFixed(1)}s before the next audio element` : `${AUDIO_ELEMENT_SHORT_LABELS[currentCue.element]} · ${runMode === "single" ? "single item" : "play through items"} · ${mode} · A/D previous/next · Space play/pause`)}</div>
   </section>;
 }
 
@@ -222,12 +378,65 @@ function cleanCollocation(value: string) {
   return value.replace(/^\[搭\]\s*/, "");
 }
 
+function audioUrlForElement(item: Item, element: AudioElementId) {
+  return itemAudioUrls(item)[element] || "";
+}
+
+function AudioSequenceEditor({item, sequence, onChange, onReset}: {
+  item: Item;
+  sequence: AudioSequenceConfig;
+  onChange: (sequence: AudioSequenceConfig) => void;
+  onReset: () => void;
+}) {
+  const availableCount = sequence.steps.filter(step => Boolean(audioUrlForElement(item, step.element))).length;
+  const updateStep = (step: AudioSequenceStep, patch: Partial<Pick<AudioSequenceStep, "repeatCount" | "pauseAfterSeconds">>) => {
+    onChange(updateAudioSequenceStep(sequence, step.element, patch));
+  };
+
+  return <details className="sequence-editor" open>
+    <summary>
+      <span className="section-heading"><span>PLAYBACK RECIPE</span><strong>Arrange the four audio elements</strong></span>
+      <span className="sequence-editor-summary">{availableCount}/4 audio files available</span>
+    </summary>
+    <p className="sequence-editor-intro">The order, repeat count, and pause are saved for this word in this browser. Missing translation audio can be configured now and will join the sequence when its file is added.</p>
+    <ol className="sequence-rows">
+      {sequence.steps.map((step, index) => {
+        const available = Boolean(audioUrlForElement(item, step.element));
+        return <li key={step.element} className={`sequence-row ${available ? "available" : "pending"}`}>
+          <span className="sequence-position" aria-hidden="true">{index + 1}</span>
+          <div className="sequence-row-name">
+            <strong>{AUDIO_ELEMENT_LABELS[step.element]}</strong>
+            <small>{available ? "Audio available" : "Audio to be added later"}</small>
+          </div>
+          <div className="sequence-order-buttons" aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]}`}>
+            <button type="button" onClick={() => onChange(reorderAudioSequence(sequence, index, index - 1))} disabled={index === 0} aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]} earlier`}>↑</button>
+            <button type="button" onClick={() => onChange(reorderAudioSequence(sequence, index, index + 1))} disabled={index === sequence.steps.length - 1} aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]} later`}>↓</button>
+          </div>
+          <label className="sequence-number-field sequence-repeat-field">Repeat
+            <input type="number" min="1" max="20" step="1" value={step.repeatCount} onChange={event => updateStep(step, {repeatCount: Number(event.target.value)})} />
+          </label>
+          <label className="sequence-number-field sequence-pause-field">Pause after
+            <span><input type="number" min="0" max="60" step="0.1" value={step.pauseAfterSeconds} onChange={event => updateStep(step, {pauseAfterSeconds: Number(event.target.value)})} /> s</span>
+          </label>
+        </li>;
+      })}
+    </ol>
+    <div className="sequence-editor-footer">
+      <span>Pause applies after every playback, including repeats, before the next available element or item.</span>
+      <button type="button" className="sequence-reset" onClick={onReset}>Reset recipe</button>
+    </div>
+  </details>;
+}
+
 type CardToggle = "known" | "flagged" | "sentence_starred";
 
-function FocusCard({selected, card, onToggle}: {
+function FocusCard({selected, card, sequence, onToggle, onSequenceChange, onSequenceReset}: {
   selected?: Item;
   card?: CardState;
+  sequence: AudioSequenceConfig;
   onToggle: (key: CardToggle) => void;
+  onSequenceChange: (sequence: AudioSequenceConfig) => void;
+  onSequenceReset: () => void;
 }) {
   if (!selected) return <div className="focus-card"><p>Select an item from the list.</p></div>;
 
@@ -261,6 +470,8 @@ function FocusCard({selected, card, onToggle}: {
       <p className="example-en">{displaySentence}</p>
       {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
     </section>
+
+    <AudioSequenceEditor item={selected} sequence={sequence} onChange={onSequenceChange} onReset={onSequenceReset} />
 
     {orderOnlyReference ? <section className="order-review-card" aria-label="Order-only book and audio alignment review">
       <div className="section-heading"><span>ORDER-ONLY REVIEW</span><strong>Book and audio are paired by position, not direct text match</strong></div>
@@ -317,6 +528,9 @@ export default function App() {
   const store = useRef<LocalStudyState | null>(null);
   if (!store.current) store.current = new LocalStudyState();
   const study = store.current;
+  const sequenceStore = useRef<LocalAudioSequenceState | null>(null);
+  if (!sequenceStore.current) sequenceStore.current = new LocalAudioSequenceState();
+  const audioSequences = sequenceStore.current;
   const [summary, setSummary] = useState<Summary>();
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [items, setItems] = useState<Item[]>([]);
@@ -324,77 +538,53 @@ export default function App() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [selectedId, setSelectedId] = useState<string>();
-  const [phase, setPhase] = useState<Phase>("word");
-  const [mode, setMode] = useState<PlaybackMode>("both");
+  const [mode, setMode] = useState<PlaybackMode>("sequence");
   const [runMode, setRunMode] = useState<RunMode>("consecutive");
   const [stateVersion, setStateVersion] = useState(0);
+  const [sequenceVersion, setSequenceVersion] = useState(0);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [showBackup, setShowBackup] = useState(false);
   useEffect(() => {
     const unsubscribeStudy = study.subscribe(() => setStateVersion(value => value + 1));
-    return () => unsubscribeStudy();
-  }, [study]);
+    const unsubscribeSequences = audioSequences.subscribe(() => setSequenceVersion(value => value + 1));
+    return () => { unsubscribeStudy(); unsubscribeSequences(); };
+  }, [audioSequences, study]);
   useEffect(() => { void Promise.all([getSummary(), getChapters()]).then(([nextSummary, nextChapters]) => { setSummary(nextSummary); setChapters(nextChapters); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load corpus.")); }, []);
   useEffect(() => { void getItems(chapter, search, filter === "order-only" ? "order_only" : undefined).then(nextItems => { setItems(nextItems); setSelectedId(current => current && nextItems.some(item => item.stable_id === current) ? current : nextItems[0]?.stable_id); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load items.")); }, [chapter, search, filter]);
   const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "order-only") return true; if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study]);
   const selected = visibleItems.find(item => item.stable_id === selectedId) || visibleItems[0];
   const counts = useMemo(() => ({orderOnly: summary?.book_order_review_items || 0, known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study, summary]);
   const selectedIndex = selected ? visibleItems.findIndex(item => item.stable_id === selected.stable_id) : -1;
-  const finish = (): boolean => {
-    if (!selected) return false;
-    study.recordPlayed(selected);
-    const step = nextPlaybackStep({
-      playbackMode: mode,
-      playbackRunMode: runMode,
-      phase,
-      hasSentence: Boolean(selected.sentence_audio_url),
-      hasNextEntry: selectedIndex >= 0 && selectedIndex < visibleItems.length - 1,
-    });
-    if (step === "sentence") {
-      setPhase("sentence");
-      return true;
-    }
-    if (step === "next-entry") {
-      const next = visibleItems[selectedIndex + 1];
-      if (!next) return false;
-      setSelectedId(next.stable_id);
-      setPhase(mode === "sentences" ? "sentence" : "word");
-      return true;
-    }
-    return false;
-  };
+  const card = selected ? study.card(selected.item_uuid) : undefined;
+  const selectedSequence = useMemo(() => selected ? audioSequences.config(selected.item_uuid) : createDefaultAudioSequence(), [audioSequences, selected, sequenceVersion]);
+  const playbackSequence = useMemo(() => {
+    if (mode === "sequence") return selectedSequence;
+    const element: AudioElementId = mode === "words" ? "word" : "sentence";
+    return {version: 1 as const, steps: selectedSequence.steps.filter(step => step.element === element)};
+  }, [mode, selectedSequence]);
   const advanceNext = (): boolean => {
     if (!selected) return false;
-    if (mode === "both" && phase === "word" && selected.sentence_audio_url) {
-      setPhase("sentence");
-      return true;
-    }
     const next = visibleItems[selectedIndex + 1];
     if (!next) return false;
     setSelectedId(next.stable_id);
-    setPhase(mode === "sentences" ? "sentence" : "word");
     return true;
   };
   const advancePrevious = (): boolean => {
     if (!selected) return false;
-    if (mode === "both" && phase === "sentence") {
-      setPhase("word");
-      return true;
-    }
     const previous = visibleItems[selectedIndex - 1];
     if (!previous) return false;
     setSelectedId(previous.stable_id);
-    setPhase(mode === "sentences" || (mode === "both" && Boolean(previous.sentence_audio_url)) ? "sentence" : "word");
     return true;
   };
-  const changeMode = (nextMode: PlaybackMode) => { setMode(nextMode); setPhase(nextMode === "sentences" ? "sentence" : "word"); };
-  const canNext = Boolean(selected && (mode === "both" && phase === "word" && selected.sentence_audio_url || selectedIndex >= 0 && selectedIndex < visibleItems.length - 1));
-  const canPrevious = Boolean(selected && ((mode === "both" && phase === "sentence") || selectedIndex > 0));
-  const card = selected ? study.card(selected.item_uuid) : undefined;
+  const changeMode = (nextMode: PlaybackMode) => setMode(nextMode);
+  const canNextItem = Boolean(selected && selectedIndex >= 0 && selectedIndex < visibleItems.length - 1);
+  const canPreviousItem = Boolean(selected && selectedIndex > 0);
   const toggle = (key: "known" | "flagged" | "sentence_starred") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
-  const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 3, study: study.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
-  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { study.restore((parsed as {study: unknown}).study); } else { study.restore(parsed); } setMessage("Progress restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
+  const updateSelectedSequence = (sequence: AudioSequenceConfig) => { if (selected) audioSequences.update(selected.item_uuid, sequence); };
+  const resetSelectedSequence = () => { if (selected) audioSequences.reset(selected.item_uuid); };
+  const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 4, study: study.exportSnapshot(), audio_sequences: audioSequences.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
+  const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { const backup = parsed as {study: unknown; audio_sequences?: unknown}; study.restore(backup.study); if (backup.audio_sequences !== undefined) audioSequences.restore(backup.audio_sequences); } else { study.restore(parsed); } setMessage("Progress and playback recipes restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
   const exportAudio = () => { if (!chapter) return; const ids = items.filter(item => study.card(item.item_uuid)?.flagged).map(item => item.stable_id); if (!ids.length) { setMessage("No flagged items in this chapter."); return; } void exportFlaggedAudio(chapter, ids).then(result => { setMessage(`Export ready: ${result.file_name}`); window.open(result.audio_url, "_blank"); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Export failed.")); };
   return <div className="app-shell">
     <div className="content-scroll">
@@ -409,17 +599,17 @@ export default function App() {
           const itemBookReference = item.book_reference;
           const itemDisplayWord = itemBookReference?.headword || item.headword;
           const itemIsOrderOnly = isOrderOnlyReview(itemBookReference);
-          return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { setSelectedId(item.stable_id); setPhase("word"); }}>
+          return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => setSelectedId(item.stable_id)}>
             <span>{String(item.position).padStart(3, "0")}</span>
             <strong>{itemDisplayWord}</strong>
             <small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}{itemIsOrderOnly ? " · order-only" : itemBookReference ? " · book" : ""}</small>
           </button>;
         })}
       </aside>
-      <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} /></section>
+      <section className="focus"><FocusCard selected={selected} card={card} sequence={selectedSequence} onToggle={toggle} onSequenceChange={updateSelectedSequence} onSequenceReset={resetSelectedSequence} /></section>
     </main>
     </div>
-     <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} phase={phase} mode={mode} runMode={runMode} onEnd={finish} onNext={advanceNext} onPrevious={advancePrevious} onRunModeChange={setRunMode} canNext={canNext} canPrevious={canPrevious} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="both">Word + sentence</option><option value="words">Words only</option><option value="sentences">Sentences only</option></select></label><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div></section>
+     <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playbackSequence} mode={mode} runMode={runMode} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="sequence">Configured four-part sequence</option><option value="words">English word only</option><option value="sentences">English sentence only</option></select></label><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div></section>
     {error ? <div className="toast error">{error}</div> : null}
   </div>;
 }

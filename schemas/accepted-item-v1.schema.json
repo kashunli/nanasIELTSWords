@@ -12,6 +12,8 @@
     "headword": {"type": "string", "minLength": 1},
     "sentence": {"type": "string", "minLength": 1},
     "word_audio": {"type": "string", "minLength": 1},
-    "sentence_audio": {"type": "string", "minLength": 1}
+    "sentence_audio": {"type": "string", "minLength": 1},
+    "word_translation_audio": {"type": ["string", "null"]},
+    "sentence_translation_audio": {"type": ["string", "null"]}
   }
 }

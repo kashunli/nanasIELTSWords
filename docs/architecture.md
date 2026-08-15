@@ -34,6 +34,14 @@ Stable identity is acoustic position (`source/chapter/item`), not ASR text.
 This lets a future book importer replace displayed text without invalidating a
 learner's LocalStorage cards.
 
+An item can expose four independent learner-audio elements: the English word,
+English sentence, Chinese word translation, and Chinese sentence translation.
+The two translation paths are optional runtime media until those recordings
+are prepared. The browser stores a separate local playback recipe per item;
+the recipe controls element order, repeat count, and the pause after each
+playback. It is learner-local configuration, not a server-side mark or a
+mutation of the immutable source manifest.
+
 `content/BV1AT4y1579F/audio-repairs.json` is an auditable exception layer for
 source-cut mistakes that can be recovered from the immutable chapter audio.
 It does not rewrite the base cut manifest or raw ASR. The current overlay

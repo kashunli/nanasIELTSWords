@@ -59,7 +59,7 @@ pub fn chapters(connection: &Connection) -> Result<Vec<Chapter>, AppError> {
 
 const ITEM_COLUMNS: &str = "w.stable_id, w.item_uuid, w.chapter_number, w.position, w.headword,
     w.part_of_speech, w.meaning_en, w.meaning_zh, e.text,
-    w.meaning_status, w.word_audio, e.sentence_audio,
+    w.meaning_status, w.word_audio, w.word_translation_audio, e.sentence_audio, e.sentence_translation_audio,
     b.book_word_id, b.headword, b.ipa, b.part_of_speech, b.meaning_zh,
     b.example_en, b.example_zh, b.collocations, b.word_formation, b.notes,
     b.source_page, b.pdf_page, b.printed_page, b.position_on_page,
@@ -74,28 +74,32 @@ fn book_review_reasons(value: Option<String>) -> Vec<String> {
         .unwrap_or_default()
 }
 
+fn media_url(value: Option<String>) -> Option<String> {
+    value.filter(|path| !path.trim().is_empty()).map(|path| format!("/media/{path}"))
+}
+
 fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
-    let book_word_id: Option<String> = row.get(12)?;
-    let book_review_reasons = book_review_reasons(row.get(30)?);
+    let book_word_id: Option<String> = row.get(14)?;
+    let book_review_reasons = book_review_reasons(row.get(32)?);
     let book_reference = book_word_id.map(|book_word_id| BookReference {
         book_word_id,
-        headword: row.get(13).unwrap_or_default(),
-        ipa: row.get(14).unwrap_or_default(),
-        part_of_speech: row.get(15).unwrap_or_default(),
-        meaning_zh: row.get(16).unwrap_or_default(),
-        example_en: row.get(17).unwrap_or_default(),
-        example_zh: row.get(18).unwrap_or_default(),
-        collocations: row.get(19).unwrap_or_default(),
-        word_formation: row.get(20).unwrap_or_default(),
-        notes: row.get(21).unwrap_or_default(),
-        source_page: row.get(22).unwrap_or_default(),
-        pdf_page: row.get(23).unwrap_or_default(),
-        printed_page: row.get(24).unwrap_or_default(),
-        position_on_page: row.get(25).unwrap_or_default(),
-        alignment_status: row.get(26).unwrap_or_default(),
-        alignment_evidence: row.get(27).unwrap_or_default(),
-        sentence_match: row.get(28).unwrap_or_default(),
-        needs_review: row.get::<_, i64>(29).unwrap_or_default() != 0,
+        headword: row.get(15).unwrap_or_default(),
+        ipa: row.get(16).unwrap_or_default(),
+        part_of_speech: row.get(17).unwrap_or_default(),
+        meaning_zh: row.get(18).unwrap_or_default(),
+        example_en: row.get(19).unwrap_or_default(),
+        example_zh: row.get(20).unwrap_or_default(),
+        collocations: row.get(21).unwrap_or_default(),
+        word_formation: row.get(22).unwrap_or_default(),
+        notes: row.get(23).unwrap_or_default(),
+        source_page: row.get(24).unwrap_or_default(),
+        pdf_page: row.get(25).unwrap_or_default(),
+        printed_page: row.get(26).unwrap_or_default(),
+        position_on_page: row.get(27).unwrap_or_default(),
+        alignment_status: row.get(28).unwrap_or_default(),
+        alignment_evidence: row.get(29).unwrap_or_default(),
+        sentence_match: row.get(30).unwrap_or_default(),
+        needs_review: row.get::<_, i64>(31).unwrap_or_default() != 0,
         review_reasons: book_review_reasons,
     });
     Ok(ItemSummary {
@@ -110,7 +114,9 @@ fn map_item(row: &rusqlite::Row<'_>) -> rusqlite::Result<ItemSummary> {
         sentence: row.get(8)?,
         meaning_status: row.get(9)?,
         word_audio_url: format!("/media/{}", row.get::<_, String>(10)?),
-        sentence_audio_url: format!("/media/{}", row.get::<_, String>(11)?),
+        word_translation_audio_url: media_url(row.get(11)?),
+        sentence_audio_url: format!("/media/{}", row.get::<_, String>(12)?),
+        sentence_translation_audio_url: media_url(row.get(13)?),
         book_reference,
     })
 }
@@ -193,4 +199,67 @@ pub fn export_items(
         result.push(value);
     }
     Ok(result)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn maps_optional_translation_audio_to_media_urls() {
+        let connection = Connection::open_in_memory().unwrap();
+        connection.execute_batch(
+            "
+            CREATE TABLE word_items (
+                stable_id TEXT PRIMARY KEY,
+                item_uuid TEXT NOT NULL,
+                chapter_number INTEGER NOT NULL,
+                position INTEGER NOT NULL,
+                headword TEXT NOT NULL,
+                part_of_speech TEXT NOT NULL,
+                meaning_en TEXT NOT NULL,
+                meaning_zh TEXT NOT NULL,
+                word_audio TEXT NOT NULL,
+                word_translation_audio TEXT,
+                meaning_status TEXT NOT NULL
+            );
+            CREATE TABLE examples (
+                word_stable_id TEXT NOT NULL,
+                position INTEGER NOT NULL,
+                text TEXT NOT NULL,
+                sentence_audio TEXT NOT NULL,
+                sentence_translation_audio TEXT
+            );
+            CREATE TABLE book_references (
+                stable_id TEXT PRIMARY KEY,
+                book_word_id TEXT,
+                headword TEXT,
+                ipa TEXT,
+                part_of_speech TEXT,
+                meaning_zh TEXT,
+                example_en TEXT,
+                example_zh TEXT,
+                collocations TEXT,
+                word_formation TEXT,
+                notes TEXT,
+                source_page TEXT,
+                pdf_page INTEGER,
+                printed_page INTEGER,
+                position_on_page INTEGER,
+                alignment_status TEXT,
+                alignment_evidence TEXT,
+                sentence_match TEXT,
+                needs_review INTEGER,
+                review_reasons TEXT
+            );
+            INSERT INTO word_items VALUES ('item-1', 'uuid-1', 1, 1, 'adapt', 'v.', 'adjust', '适应', 'word.mp3', 'word-zh.mp3', 'reviewed');
+            INSERT INTO examples VALUES ('item-1', 0, 'She adapted.', 'sentence.mp3', 'sentence-zh.mp3');
+            ",
+        ).unwrap();
+
+        let result = items(&connection, &ItemQuery {chapter: None, search: None, book_alignment: None}).unwrap();
+        assert_eq!(result.len(), 1);
+        assert_eq!(result[0].word_translation_audio_url.as_deref(), Some("/media/word-zh.mp3"));
+        assert_eq!(result[0].sentence_translation_audio_url.as_deref(), Some("/media/sentence-zh.mp3"));
+    }
 }

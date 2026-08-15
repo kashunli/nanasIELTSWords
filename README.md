@@ -132,9 +132,15 @@ transcription-review queue.
 
 ## Learner state
 
-Known, Flagged, Starred sentence, playback, and spaced-review state is stored
-under versioned browser LocalStorage keys. The backend never persists learner
-state. Use the settings panel to download or restore a progress backup.
+Known, Flagged, Starred sentence, playback, spaced-review state, and the
+per-word four-element audio recipe are stored under versioned browser
+LocalStorage keys. The recipe editor controls the order, repeat count, and
+pause after each of the English word, English sentence, Chinese word
+translation, and Chinese sentence translation elements. Translation audio is
+optional until those files are added; the editor can configure the rows in
+advance and playback skips only the unavailable files. The backend never
+persists learner state. Use the settings panel to download or restore a
+progress and recipe backup.
 
 ## Future book material
 

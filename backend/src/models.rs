@@ -56,6 +56,10 @@ pub struct ItemSummary {
     pub word_audio_url: String,
     pub sentence_audio_url: String,
     #[serde(skip_serializing_if = "Option::is_none")]
+    pub word_translation_audio_url: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub sentence_translation_audio_url: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub book_reference: Option<BookReference>,
 }
 

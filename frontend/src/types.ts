@@ -1,5 +1,18 @@
 export type MeaningStatus = "ai_draft" | "reviewed";
 
+export type AudioElementId = "word" | "sentence" | "word_translation" | "sentence_translation";
+
+export interface AudioSequenceStep {
+  element: AudioElementId;
+  repeatCount: number;
+  pauseAfterSeconds: number;
+}
+
+export interface AudioSequenceConfig {
+  version: 1;
+  steps: AudioSequenceStep[];
+}
+
 export interface Summary {
   collection_code: string;
   title: string;
@@ -54,6 +67,8 @@ export interface Item {
   meaning_status: MeaningStatus;
   word_audio_url: string;
   sentence_audio_url: string;
+  word_translation_audio_url?: string;
+  sentence_translation_audio_url?: string;
   book_reference?: BookReference;
 }
 

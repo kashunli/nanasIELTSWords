@@ -14,7 +14,7 @@ from pathlib import Path
 from content_repairs import load_repair_plan, load_source_items, repair_artifact_hash
 
 
-PROJECTION_VERSION = "accepted-book-fields-v5-book-confirmed-order-review"
+PROJECTION_VERSION = "accepted-book-fields-v6-book-confirmed-order-review-translation-audio"
 BOOK_WORD_ALIGNMENTS = {"matched_headword", "matched_sentence"}
 BOOK_SENTENCE_MATCHES = {"exact", "normalized"}
 
@@ -47,6 +47,7 @@ CREATE TABLE word_items (
   meaning_en TEXT NOT NULL,
   meaning_zh TEXT NOT NULL,
   word_audio TEXT NOT NULL,
+  word_translation_audio TEXT,
   transcript_status TEXT NOT NULL,
   meaning_status TEXT NOT NULL,
   accepted_word_source TEXT NOT NULL,
@@ -60,6 +61,7 @@ CREATE TABLE examples (
   kind TEXT NOT NULL,
   text TEXT NOT NULL,
   sentence_audio TEXT NOT NULL,
+  sentence_translation_audio TEXT,
   transcript_status TEXT NOT NULL,
   accepted_sentence_source TEXT NOT NULL,
   UNIQUE(word_stable_id, position)
@@ -107,6 +109,23 @@ def sha256(path: Path) -> str:
         for block in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def optional_audio_path(root: Path, value: object, stable_id: str, field_name: str) -> str | None:
+    if value is None or value == "":
+        return None
+    if isinstance(value, dict):
+        value = value.get("path")
+    path = str(value or "").strip()
+    if not path:
+        return None
+    media_root = (root / "var" / "content" / "media").resolve()
+    target = (media_root / path).resolve()
+    if not target.is_relative_to(media_root):
+        raise SystemExit(f"{field_name} escapes runtime media root: {stable_id}")
+    if not target.is_file():
+        raise SystemExit(f"missing media: {path} ({field_name}, {stable_id})")
+    return path
 
 
 def normalize_sentence(value: str) -> str:
@@ -284,15 +303,17 @@ def main() -> int:
             sentence_audio = record["sentence_audio"]["path"]
             if not (root / "var" / "content" / "media" / word_audio).is_file(): raise SystemExit(f"missing media: {word_audio}")
             if not (root / "var" / "content" / "media" / sentence_audio).is_file(): raise SystemExit(f"missing media: {sentence_audio}")
+            word_translation_audio = optional_audio_path(root, record.get("word_translation_audio") or meaning.get("word_translation_audio"), record["stable_id"], "word_translation_audio")
+            sentence_translation_audio = optional_audio_path(root, record.get("sentence_translation_audio") or meaning.get("sentence_translation_audio"), record["stable_id"], "sentence_translation_audio")
             book_reference = book_references.get(record["stable_id"])
             accepted_fields = accepted_transcript(record, book_reference)
-            accepted_record = {"schema_version": 1, "stable_id": record["stable_id"], "item_uuid": record["item_uuid"], "collection_code": collection_code, "chapter": record["chapter"], "position": record["position"], "headword": accepted_fields["headword"], "part_of_speech": meaning["part_of_speech"], "meaning_en": meaning["meaning_en"], "meaning_zh": meaning["meaning_zh"], "sentence": accepted_fields["sentence"], "word_audio": word_audio, "sentence_audio": sentence_audio, "transcript_status": record["transcript_status"], "meaning_status": meaning.get("meaning_status", "ai_draft"), "accepted_word_source": accepted_fields["accepted_word_source"], "accepted_sentence_source": accepted_fields["accepted_sentence_source"], "review_reasons": record["review_reasons"]}
+            accepted_record = {"schema_version": 1, "stable_id": record["stable_id"], "item_uuid": record["item_uuid"], "collection_code": collection_code, "chapter": record["chapter"], "position": record["position"], "headword": accepted_fields["headword"], "part_of_speech": meaning["part_of_speech"], "meaning_en": meaning["meaning_en"], "meaning_zh": meaning["meaning_zh"], "sentence": accepted_fields["sentence"], "word_audio": word_audio, "word_translation_audio": word_translation_audio, "sentence_audio": sentence_audio, "sentence_translation_audio": sentence_translation_audio, "transcript_status": record["transcript_status"], "meaning_status": meaning.get("meaning_status", "ai_draft"), "accepted_word_source": accepted_fields["accepted_word_source"], "accepted_sentence_source": accepted_fields["accepted_sentence_source"], "review_reasons": record["review_reasons"]}
             accepted.append(accepted_record)
             connection.execute(
-                "INSERT INTO word_items (stable_id, item_uuid, collection_code, chapter_number, position, headword, part_of_speech, meaning_en, meaning_zh, word_audio, transcript_status, meaning_status, accepted_word_source, accepted_sentence_source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                (record["stable_id"], record["item_uuid"], collection_code, record["chapter"], record["position"], accepted_fields["headword"], meaning["part_of_speech"], meaning["meaning_en"], meaning["meaning_zh"], word_audio, record["transcript_status"], meaning.get("meaning_status", "ai_draft"), accepted_fields["accepted_word_source"], accepted_fields["accepted_sentence_source"]),
+                "INSERT INTO word_items (stable_id, item_uuid, collection_code, chapter_number, position, headword, part_of_speech, meaning_en, meaning_zh, word_audio, word_translation_audio, transcript_status, meaning_status, accepted_word_source, accepted_sentence_source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                (record["stable_id"], record["item_uuid"], collection_code, record["chapter"], record["position"], accepted_fields["headword"], meaning["part_of_speech"], meaning["meaning_en"], meaning["meaning_zh"], word_audio, word_translation_audio, record["transcript_status"], meaning.get("meaning_status", "ai_draft"), accepted_fields["accepted_word_source"], accepted_fields["accepted_sentence_source"]),
             )
-            connection.execute("INSERT INTO examples VALUES (?, ?, 0, 'main_sentence', ?, ?, ?, ?)", (f"{record['stable_id']}-main", record["stable_id"], accepted_fields["sentence"], sentence_audio, record["transcript_status"], accepted_fields["accepted_sentence_source"]))
+            connection.execute("INSERT INTO examples VALUES (?, ?, 0, 'main_sentence', ?, ?, ?, ?, ?)", (f"{record['stable_id']}-main", record["stable_id"], accepted_fields["sentence"], sentence_audio, sentence_translation_audio, record["transcript_status"], accepted_fields["accepted_sentence_source"]))
             if book_reference:
                 connection.execute(
                     "INSERT INTO book_references (stable_id, book_word_id, headword, ipa, part_of_speech, meaning_zh, example_en, example_zh, collocations, word_formation, notes, source_page, pdf_page, printed_page, position_on_page, alignment_status, alignment_evidence, sentence_match, needs_review, review_reasons) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
