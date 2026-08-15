@@ -18,8 +18,6 @@ import asyncio
 import hashlib
 import json
 import re
-import sys
-import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -52,6 +50,27 @@ class TranslationSource:
 
 class SynthesisError(RuntimeError):
     """Raised when Edge TTS does not return usable audio."""
+
+
+class RequestPacer:
+    """Keep concurrent Edge requests separated by a minimum start interval."""
+
+    def __init__(self, interval: float) -> None:
+        self.interval = max(0.0, interval)
+        self._lock = asyncio.Lock()
+        self._next_request_at = 0.0
+
+    async def wait_for_slot(self) -> None:
+        if self.interval <= 0:
+            return
+        loop = asyncio.get_running_loop()
+        async with self._lock:
+            now = loop.time()
+            scheduled = max(now, self._next_request_at)
+            self._next_request_at = scheduled + self.interval
+        wait = scheduled - now
+        if wait > 0:
+            await asyncio.sleep(wait)
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -188,25 +207,43 @@ def source_manifest_payload(
     }
 
 
-async def synthesize_edge(text: str, voice: str) -> bytes:
+async def synthesize_edge(
+    text: str,
+    voice: str,
+    *,
+    pacer: RequestPacer | None = None,
+    max_retries: int = 3,
+    retry_backoff: float = 2.0,
+) -> bytes:
     """Collect the MP3 chunks returned by one Edge TTS synthesis request."""
 
-    communicate = edge_tts.Communicate(text, voice)
-    chunks: list[bytes] = []
-    try:
-        async for chunk in communicate.stream():
-            if chunk.get("type") == "audio":
-                data = chunk.get("data")
-                if isinstance(data, bytes):
-                    chunks.append(data)
-    except Exception as exc:  # edge-tts exposes several transport exception types
-        raise SynthesisError(f"Edge TTS request failed: {exc}") from exc
-    audio = b"".join(chunks)
-    if not audio:
-        raise SynthesisError("Edge TTS returned no audio")
-    if not audio.startswith(b"ID3") and audio[:2] not in {b"\xff\xfb", b"\xff\xf3", b"\xff\xf2", b"\xff\xfa"}:
-        raise SynthesisError("Edge TTS returned bytes that do not look like MP3 audio")
-    return audio
+    for attempt in range(max_retries + 1):
+        if pacer is not None:
+            await pacer.wait_for_slot()
+        communicate = edge_tts.Communicate(text, voice)
+        chunks: list[bytes] = []
+        try:
+            async for chunk in communicate.stream():
+                if chunk.get("type") == "audio":
+                    data = chunk.get("data")
+                    if isinstance(data, bytes):
+                        chunks.append(data)
+            audio = b"".join(chunks)
+            if not audio:
+                raise SynthesisError("Edge TTS returned no audio")
+            if not audio.startswith(b"ID3") and audio[:2] not in {b"\xff\xfb", b"\xff\xf3", b"\xff\xf2", b"\xff\xfa"}:
+                raise SynthesisError("Edge TTS returned bytes that do not look like MP3 audio")
+            return audio
+        except SynthesisError as exc:
+            error = exc
+        except Exception as exc:  # edge-tts exposes several transport exception types
+            error = SynthesisError(f"Edge TTS request failed: {exc}")
+        if attempt >= max_retries:
+            raise error
+        wait = retry_backoff * (2**attempt)
+        print(f"Edge TTS request failed; retrying in {wait:g}s: {error}", flush=True)
+        await asyncio.sleep(wait)
+    raise AssertionError("unreachable retry loop")
 
 
 def _is_current_audio(
@@ -255,6 +292,9 @@ async def _generate_async(
     force: bool,
     concurrency: int,
     checkpoint_every: int,
+    request_delay: float,
+    max_retries: int,
+    retry_backoff: float,
 ) -> int:
     sources, skipped = load_translation_sources(project_root)
     total_jobs = len(sources) + sum(bool(source.example_text) for source in sources)
@@ -296,6 +336,7 @@ async def _generate_async(
         pending_jobs = pending_jobs[:limit]
 
     jobs_done = 0
+    pacer = RequestPacer(request_delay)
     for start in range(0, len(pending_jobs), concurrency):
         batch = pending_jobs[start : start + concurrency]
         print(
@@ -304,7 +345,16 @@ async def _generate_async(
             flush=True,
         )
         results = await asyncio.gather(
-            *(synthesize_edge(text, voice) for _, _, text in batch),
+            *(
+                synthesize_edge(
+                    text,
+                    voice,
+                    pacer=pacer,
+                    max_retries=max_retries,
+                    retry_backoff=retry_backoff,
+                )
+                for _, _, text in batch
+            ),
             return_exceptions=True,
         )
         for (source, field, text), result in zip(batch, results):
@@ -333,6 +383,9 @@ def generate(
     force: bool,
     concurrency: int,
     checkpoint_every: int,
+    request_delay: float,
+    max_retries: int,
+    retry_backoff: float,
     dry_run: bool,
 ) -> int:
     sources, skipped = load_translation_sources(project_root)
@@ -354,6 +407,9 @@ def generate(
             force=force,
             concurrency=concurrency,
             checkpoint_every=checkpoint_every,
+            request_delay=request_delay,
+            max_retries=max_retries,
+            retry_backoff=retry_backoff,
         )
     )
 
@@ -362,7 +418,15 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--voice", default=DEFAULT_VOICE)
-    parser.add_argument("--delay", type=float, default=0.15, help="seconds between synthesis requests")
+    parser.add_argument("--delay", type=float, default=0.15, help="seconds after each manifest checkpoint")
+    parser.add_argument(
+        "--request-delay",
+        type=float,
+        default=0.5,
+        help="minimum seconds between Edge TTS request starts (use 0 to disable)",
+    )
+    parser.add_argument("--max-retries", type=int, default=3, help="retries for transient Edge TTS failures")
+    parser.add_argument("--retry-backoff", type=float, default=2.0, help="initial seconds for exponential retry backoff")
     parser.add_argument("--concurrency", type=int, default=4, help="maximum number of Edge TTS requests in flight")
     parser.add_argument("--checkpoint-every", type=int, default=32, help="persist the manifest after this many new files")
     parser.add_argument("--limit", type=int, help="generate at most this many new files")
@@ -375,6 +439,10 @@ def main() -> int:
         raise SystemExit("--concurrency must be positive")
     if args.checkpoint_every < 1:
         raise SystemExit("--checkpoint-every must be positive")
+    if args.max_retries < 0:
+        raise SystemExit("--max-retries must be zero or positive")
+    if args.retry_backoff < 0:
+        raise SystemExit("--retry-backoff must be zero or positive")
     return generate(
         args.project_root.resolve(),
         voice=args.voice,
@@ -383,6 +451,9 @@ def main() -> int:
         force=args.force,
         concurrency=args.concurrency,
         checkpoint_every=args.checkpoint_every,
+        request_delay=max(0.0, args.request_delay),
+        max_retries=args.max_retries,
+        retry_backoff=max(0.0, args.retry_backoff),
         dry_run=args.dry_run,
     )
 
