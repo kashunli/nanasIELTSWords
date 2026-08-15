@@ -178,6 +178,11 @@ before copying the audio into the runtime projection. Use
 `--require-translation-audio` to make the build fail if any displayed Chinese
 translation is missing or does not match its manifest.
 
+The generator spaces request starts by 0.5 seconds by default and retries
+transient Edge TTS failures with exponential backoff. Adjust
+`--request-delay`, `--max-retries`, and `--retry-backoff` only when the service
+response requires a different rate; the manifest remains resumable throughout.
+
 The current book data has 3,674 word translations and 3,673 translated example
 sentences. The one record without an example sentence is retained as source
 data and is intentionally skipped rather than receiving invented text. The
