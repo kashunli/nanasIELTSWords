@@ -10,6 +10,7 @@
 /var/content/content.sqlite-*
 /var/content/media/
 /var/content/exports/
+/var/content/translation-voice-samples/
 /var/content/*.json
 
 # Disposable preparation/model work
