@@ -75,6 +75,13 @@ C:\Python313\python.exe tools\validate_content.py
 # auditable confirmed/order-only/missing/unassigned report.
 C:\Python313\python.exe tools\audit_book_audio.py
 
+# Generate Chinese translation audio with the selected Edge voice.
+C:\Python313\python.exe -m pip install edge-tts
+C:\Python313\python.exe tools\generate_translation_audio.py --voice zh-CN-YunjianNeural
+
+# Require verified translation audio during the learner DB build.
+C:\Python313\python.exe tools\build_content.py --require-translation-audio
+
 cd frontend
 pnpm install
 pnpm test
@@ -152,3 +159,27 @@ The corresponding runtime request is
 `GET /api/items?book_alignment=order_only`; it reads the projected
 `book_references` table and does not load the audit JSON or source audio during
 a learner request.
+
+## Chinese translation audio
+
+Chinese word meanings and translated example sentences come from the reviewed
+book projection in `content/book-sources/ielts-vocabulary-true-script/book_words.json`.
+`tools/generate_translation_audio.py` synthesizes them with the Microsoft Edge
+online TTS service through the `edge-tts` Python package. The selected voice is
+`zh-CN-YunjianNeural` (Yunjian, male), and the generator writes one MP3 for the
+word translation and one MP3 for the translated example sentence when that
+source text exists.
+
+The generated
+`content/BV1AT4y1579F/chinese-translation-audio-manifest.json` records the
+source text hash, audio hash, byte count, stable item ID, source page, provider,
+package, language, and voice. `tools/build_content.py` verifies these hashes
+before copying the audio into the runtime projection. Use
+`--require-translation-audio` to make the build fail if any displayed Chinese
+translation is missing or does not match its manifest.
+
+The current book data has 3,674 word translations and 3,673 translated example
+sentences. The one record without an example sentence is retained as source
+data and is intentionally skipped rather than receiving invented text. The
+runtime serves the verified MP3 files as static media; learner requests do not
+call Edge TTS or read preparation artifacts.
