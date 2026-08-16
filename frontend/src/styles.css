@@ -18,8 +18,7 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 .chapter-strip { display: flex; gap: 7px; overflow-x: auto; padding: 4px 0 17px; }
 .chapter-strip button, .filters button, .player-settings button { background: #e8ece6; padding: 9px 13px; border-radius: 999px; color: #53625b; white-space: nowrap; }
 .chapter-strip button.active, .filters button.active, .player-settings button.selected { background: #253733; color: #fffaf3; }
-.toolbar { display: flex; gap: 10px; align-items: center; padding: 14px; background: rgba(255,250,243,.78); border: 1px solid #ded8cc; border-radius: 17px; flex-wrap: wrap; }
-.toolbar input { flex: 1 1 280px; min-width: 190px; border: 1px solid #cdd6ce; padding: 11px 13px; border-radius: 11px; background: #fff; }
+.toolbar { display: flex; gap: 10px; align-items: center; padding: 10px 12px; background: rgba(255,250,243,.78); border: 1px solid #ded8cc; border-radius: 17px; flex-wrap: wrap; }
 .filters { display: flex; gap: 6px; flex-wrap: wrap; } .filters button { padding: 8px 10px; font-size: 13px; }
 .toolbar .export { margin-left: auto; background: #c86d46; color: #fff; padding: 10px 14px; border-radius: 10px; }
 .study-layout { display: grid; grid-template-columns: minmax(230px, 360px) minmax(0, 1fr); gap: 17px; margin-top: 18px; align-items: start; }
@@ -487,9 +486,8 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
   .chapter-strip { gap: 5px; padding: 1px 0 9px; }
   .chapter-strip button { padding: 6px 10px; font-size: 12px; }
 
-  /* Toolbar: search row + filter dropdown / export row */
+  /* Toolbar: filter dropdown / export row */
   .toolbar { padding: 8px; gap: 8px; border-radius: 13px; }
-  .toolbar input { flex: 1 1 100%; min-width: 0; padding: 9px 11px; font-size: 14px; border-radius: 9px; }
   .toolbar .filters { display: none; }
   .toolbar .filter-select {
     display: block;
