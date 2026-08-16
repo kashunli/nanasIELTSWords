@@ -75,7 +75,7 @@ function AudioPlayer({item, sequence, mode, runMode, playRequest, onNextItem, on
   const activeCueIndex = playableCues.length ? Math.min(cueIndex, playableCues.length - 1) : 0;
   const currentCue = playableCues[activeCueIndex];
   const url = currentCue?.url || "";
-  const targetKey = item && currentCue ? `${item.item_uuid}:${currentCue.element}:${currentCue.occurrence}:${url}` : "";
+  const targetKey = item && currentCue ? `${item.item_uuid}:${currentCue.id}:${currentCue.element}:${currentCue.occurrence}:${url}` : "";
   const requestedCueIndex = playRequest?.element
     ? playableCues.findIndex(cue => cue.element === playRequest.element)
     : 0;
@@ -178,7 +178,7 @@ function AudioPlayer({item, sequence, mode, runMode, playRequest, onNextItem, on
         start: 0,
         end: duration,
         offset: safeOffset,
-        segmentId: `${item.item_uuid}:${currentCue.element}:${currentCue.occurrence}`,
+        segmentId: `${item.item_uuid}:${currentCue.id}:${currentCue.element}:${currentCue.occurrence}`,
       });
     } catch {
       setPlayerError("Audio could not be played.");
