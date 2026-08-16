@@ -5,22 +5,21 @@ button, input, select { font: inherit; }
 button { border: 0; cursor: pointer; color: inherit; }
 .app-shell { height: 100vh; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; overflow: hidden; padding: 0; }
 .content-scroll { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding: 28px clamp(14px, 4vw, 58px); }
-.topbar { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; max-width: 1500px; margin: 0 auto 22px; }
-.brand-lockup { display: flex; align-items: flex-start; gap: 14px; min-width: 0; }
+.topbar { display: flex; align-items: center; gap: 14px; max-width: 1500px; margin: 0 auto 14px; }
+.brand-lockup { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.brand-text { min-width: 0; }
 .brand-icon { width: 54px; height: 54px; flex: 0 0 auto; border-radius: 16px; box-shadow: 0 10px 24px rgba(38, 59, 53, .16); }
 .eyebrow { color: #92764a; font-size: 11px; letter-spacing: .16em; font-weight: 800; }
-h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05em; color: #253733; }
-.topbar p { margin: 0; color: #65736d; }
+h1 { margin: 0; font-size: clamp(24px, 3.2vw, 44px); letter-spacing: -.05em; color: #253733; line-height: 1.05; }
+.brand-text p { margin: 4px 0 0; color: #65736d; font-size: 13px; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; margin-left: auto; min-width: 0; flex-wrap: wrap; }
+.topbar-controls select { flex: 1 1 110px; min-width: 0; padding: 7px 9px; border: 1px solid #cdd6ce; border-radius: 9px; background: #fff; color: #53625b; font-size: 13px; cursor: pointer; }
+.topbar-controls .outline { padding: 8px 13px; border-radius: 9px; font-size: 13px; }
+.topbar-controls .settings-trigger.selected { background: #253733; color: #fffaf3; border-color: #253733; }
 .outline, .backup-panel button, .file-button { background: transparent; border: 1px solid #b5c2b9; border-radius: 12px; padding: 11px 15px; }
 .backup-panel { max-width: 1500px; margin: 0 auto 16px; padding: 14px; display: flex; gap: 10px; flex-wrap: wrap; background: #fffaf3; border: 1px solid #d8d4c7; border-radius: 14px; }
 .file-button { cursor: pointer; } .file-button input { display: none; }
-.chapter-strip, .toolbar, .study-layout { max-width: 1500px; margin-left: auto; margin-right: auto; }
-.chapter-strip { display: flex; gap: 7px; overflow-x: auto; padding: 4px 0 17px; }
-.chapter-strip button, .filters button, .player-settings button { background: #e8ece6; padding: 9px 13px; border-radius: 999px; color: #53625b; white-space: nowrap; }
-.chapter-strip button.active, .filters button.active, .player-settings button.selected { background: #253733; color: #fffaf3; }
-.toolbar { display: flex; gap: 10px; align-items: center; padding: 10px 12px; background: rgba(255,250,243,.78); border: 1px solid #ded8cc; border-radius: 17px; flex-wrap: wrap; }
-.filters { display: flex; gap: 6px; flex-wrap: wrap; } .filters button { padding: 8px 10px; font-size: 13px; }
-.study-layout { display: grid; grid-template-columns: minmax(230px, 360px) minmax(0, 1fr); gap: 17px; margin-top: 18px; align-items: start; }
+.study-layout { max-width: 1500px; margin-left: auto; margin-right: auto; display: grid; grid-template-columns: minmax(230px, 360px) minmax(0, 1fr); gap: 17px; margin-top: 18px; align-items: start; }
 .item-list { max-height: calc(100vh - 260px); overflow: auto; padding: 7px; background: rgba(255,255,255,.65); border: 1px solid #dadfd8; border-radius: 17px; }
 .item-row { width: 100%; text-align: left; display: grid; grid-template-columns: 35px 1fr auto; gap: 7px; padding: 12px 10px; background: transparent; border-radius: 10px; align-items: center; }
 .item-row:hover, .item-row.active { background: #dfe9df; } .item-row span { color: #9aa69e; font-size: 12px; } .item-row strong { font-size: 15px; } .item-row small { color: #b05a39; font-size: 11px; }
@@ -31,7 +30,6 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 .card-actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 30px; } .card-actions button { padding: 10px 14px; border: 1px solid #cdd6ce; border-radius: 10px; background: #fff; } .card-actions button.selected { border-color: #253733; background: #253733; color: #fff; }
 .player { margin-top: 16px; background: #263b35; color: #f8f4e9; padding: 17px 19px; border-radius: 17px; } .empty-player { color: #b8c3bb; }
 .timeline { width: 100%; margin: 18px 0 9px; accent-color: #e4b36f; } .player-controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; } .player-controls button { background: #3a544b; color: #fff; padding: 9px 13px; border-radius: 9px; } .player-controls .primary { background: #e4b36f; color: #273b35; } .player-controls span { color: #aebbb4; margin-left: auto; font-size: 12px; }
-.player-settings { display: flex; justify-content: flex-end; gap: 10px; align-items: center; flex-wrap: wrap; padding: 14px 3px; color: #687871; font-size: 13px; }
 .toast { position: fixed; right: 20px; bottom: 20px; max-width: 420px; padding: 12px 15px; border-radius: 11px; background: #fff; border: 1px solid #c7d4c9; box-shadow: 0 12px 30px #0002; } .toast.error { color: #a24e32; } .toast.success { color: #2f6b45; }
 @media (max-width: 760px) { .content-scroll { padding: 19px 10px 28px; } .topbar { align-items: center; } .brand-icon { width: 46px; height: 46px; border-radius: 13px; } .brand-lockup { gap: 10px; } .study-layout { grid-template-columns: 1fr; } .item-list { max-height: 240px; order: 2; } .focus { order: 1; } .player-controls span { margin-left: 0; width: 100%; } h2 { font-size: 56px; } }
 
@@ -54,8 +52,7 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 .player-dock { position: relative; min-height: 0; z-index: 20; max-height: min(390px, 58vh); overflow-y: auto; padding: 10px clamp(14px, 4vw, 58px) calc(10px + env(safe-area-inset-bottom)); background: transparent; }
 .player-dock-inner { width: 100%; max-width: 1500px; margin: 0 auto; }
 .player-dock .player { margin-top: 0; border-radius: 17px; }
-.player-dock .player-settings { max-width: 1500px; margin: 0 auto; padding: 10px 3px 0; }
-@media (max-width: 760px) { .player-dock { max-height: 58vh; padding-right: 10px; padding-left: 10px; } .player-dock .player-settings { padding-bottom: 2px; } }
+@media (max-width: 760px) { .player-dock { max-height: 58vh; padding-right: 10px; padding-left: 10px; } }
 
 /* Word dossier ------------------------------------------------------------- */
 .focus-card { padding: clamp(22px, 4vw, 52px); }
@@ -144,20 +141,34 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 }
 
 .player-controls {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 7px;
-  align-items: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .player-controls button {
-  min-width: 0;
-  min-height: 37px;
-  padding: 8px 9px;
+  min-width: 44px;
+  min-height: 40px;
+  padding: 7px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.ctrl-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.player-controls .play-toggle .ctrl-icon { width: 26px; height: 26px; }
+.player-controls .run-mode-label { flex: 0 0 auto; margin-left: 0; color: inherit; font-size: 11px; white-space: nowrap; }
 
 .player-controls button:focus-visible,
 .play-toggle:focus-visible,
@@ -178,16 +189,15 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 }
 
 .play-toggle {
-  display: grid;
-  place-items: center;
-  width: 64px;
-  min-height: 64px;
-  padding: 0 !important;
-  border-radius: 50% !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 48px;
+  padding: 8px 22px;
+  border-radius: 999px;
   background: #e4b36f !important;
   color: #273b35 !important;
-  font-size: 13px;
-  font-weight: 850;
 }
 
 .play-toggle:disabled { opacity: .48; }
@@ -331,11 +341,6 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
   .sequence-reset, .sequence-save { padding: 7px 11px; font-size: 12px; }
 }
 
-.player-settings {
-  padding-top: 8px;
-  padding-bottom: 0;
-}
-
 /* Keep the line readable first, then put the word explanation directly below it. */
 .current-line-card {
   margin-top: 25px;
@@ -384,35 +389,9 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
     border-radius: 16px;
   }
 
-  .player-controls {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 6px;
-  }
-
-  .player-controls button {
-    min-height: 34px;
-    padding: 7px 4px;
-    font-size: 12px;
-  }
-
-  .player-controls .player-run-mode { grid-column: span 2; }
-
-  .play-toggle {
-    width: 58px;
-    min-height: 58px;
-    font-size: 12px;
-  }
-
   .player .line-waveform {
     height: 58px;
     border-radius: 11px;
-  }
-
-  .player-dock .player-settings {
-    display: flex;
-    justify-content: flex-end;
-    padding: 7px 2px 0;
-    font-size: 12px;
   }
 
   .current-line-card .example-en { font-size: 22px; }
@@ -427,77 +406,49 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
 }
 
 /* Keep every transport action in one compact row; the waveform owns the row below. */
-.button-label-short { display: none; }
-
-.player-controls {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.player-controls .player-run-mode { grid-column: auto; }
-
-.play-toggle {
-  width: auto;
-  min-height: 37px;
-  border-radius: 9px !important;
-}
-
 @media (max-width: 760px) {
   .player-controls {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 4px;
   }
 
   .player-controls button {
-    min-height: 32px;
-    padding: 5px 2px;
-    font-size: 10px;
+    min-width: 0;
+    min-height: 44px;
+    padding: 6px 3px;
+    border-radius: 10px;
   }
 
-  .button-label-full { display: none; }
-  .button-label-short { display: inline; }
+  .ctrl-icon { width: 19px; height: 19px; }
+  .player-controls .play-toggle .ctrl-icon { width: 24px; height: 24px; }
+  .player-controls .run-mode-label { font-size: 9px; }
 
   .play-toggle {
     width: auto;
-    min-height: 32px;
-    font-size: 10px;
-    border-radius: 9px !important;
+    min-height: 44px;
+    padding: 6px;
+    border-radius: 10px !important;
   }
 }
 
 /* Phone-first chrome compaction: word/sentence card and player controls own
-   the screen; title, chapter selection, and search collapse to thin rows. */
-.filter-select { display: none; }
+   the screen; title and toolbar collapse to thin rows. */
 .list-toggle { display: none; }
 
 @media (max-width: 760px) {
   .content-scroll { padding: 12px 10px 24px; }
 
-  /* Topbar: one compact line */
+  /* Topbar: one compact line; title text hidden on phones */
   .topbar { align-items: center; gap: 8px; margin-bottom: 10px; }
   .brand-lockup { align-items: center; gap: 8px; }
   .brand-icon { width: 28px; height: 28px; border-radius: 8px; box-shadow: none; }
   .eyebrow { display: none; }
-  .topbar h1 { margin: 0; font-size: 17px; letter-spacing: -.02em; line-height: 1.2; }
-  .topbar p { display: none; }
-  .topbar .outline { padding: 8px 12px; font-size: 13px; border-radius: 9px; }
-
-  /* Chapter strip: compact chip row */
-  .chapter-strip { gap: 5px; padding: 1px 0 9px; }
-  .chapter-strip button { padding: 6px 10px; font-size: 12px; }
-
-  /* Toolbar: filter controls */
-  .toolbar { padding: 8px; gap: 8px; border-radius: 13px; }
-  .toolbar .filters { display: none; }
-  .toolbar .filter-select {
-    display: block;
-    flex: 1 1 auto;
-    min-width: 0;
-    padding: 8px 9px;
-    border: 1px solid #cdd6ce;
-    border-radius: 9px;
-    background: #fff;
-    font-size: 13px;
-  }
+  .topbar h1 { display: none; }
+  .brand-text p { display: none; }
+  .topbar-controls { gap: 6px; }
+  .topbar-controls select { flex: 1 1 0; padding: 7px 8px; font-size: 12px; }
+  .topbar .outline { padding: 7px 10px; font-size: 12px; border-radius: 8px; }
 
   /* Focus card: maximum room for the word/sentence */
   .focus-card { padding: 16px 14px 20px; border-radius: 16px; min-height: 0; }

@@ -35,6 +35,28 @@ function sequenceKey(sequence: AudioSequenceConfig) {
 type AudioCue = AudioSequenceStep & {url: string; occurrence: number};
 type PlayRequest = {itemUuid: string; requestId: number; element?: AudioElementId};
 
+function IconReplay() {
+  return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>;
+}
+function IconPrevious() {
+  return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>;
+}
+function IconNext() {
+  return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>;
+}
+function IconPlay() {
+  return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>;
+}
+function IconPause() {
+  return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>;
+}
+function IconRepeat() {
+  return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>;
+}
+function IconRepeatOne() {
+  return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4zm-4-2V9h-4v2h2v4h2z"/></svg>;
+}
+
 function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed}: {
   item?: Item;
   sequence: AudioSequenceConfig;
@@ -287,13 +309,6 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
     const nextMode: RunMode = runMode === "single" ? "consecutive" : "single";
     onRunModeChange(nextMode);
   };
-  const stop = () => {
-    clearWaiting();
-    continueSequenceRef.current = false;
-    pendingTargetPlayRef.current = false;
-    player.pause();
-    player.setPosition(0);
-  };
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const target = event.target;
@@ -316,9 +331,6 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
       } else if (key === "r") {
         event.preventDefault();
         if (player.audioBuffer) replay();
-      } else if (key === "s") {
-        event.preventDefault();
-        if (player.audioBuffer) stop();
       } else if (key === "c") {
         event.preventDefault();
         toggleRunMode();
@@ -326,18 +338,17 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
     };
     document.addEventListener("keydown", handleKeyDown, {capture: true});
     return () => document.removeEventListener("keydown", handleKeyDown, {capture: true});
-  }, [advanceManually, hasNextTarget, hasPreviousTarget, player.audioBuffer, previousManually, replay, stop, toggle, toggleRunMode]);
+  }, [advanceManually, hasNextTarget, hasPreviousTarget, player.audioBuffer, previousManually, replay, toggle, toggleRunMode]);
 
   if (!item) return <section className="player empty-player">Select an item to begin listening.</section>;
   if (!currentCue) return <section className="player empty-player">No playable audio is available for this item yet.</section>;
 
   return <section className="player" aria-label="Audio player">
     <div className="player-controls" role="toolbar" aria-label="Playback controls">
-      <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-label="Replay configured audio sequence" aria-keyshortcuts="R"><span className="button-label-full">Replay</span><span className="button-label-short">Replay</span></button>
-      <button type="button" onClick={previousManually} disabled={!hasPreviousTarget} aria-label="Previous audio element or item" aria-keyshortcuts="A"><span className="button-label-full">Previous</span><span className="button-label-short">Prev</span></button>
-      <button type="button" onClick={advanceManually} disabled={!hasNextTarget} aria-label="Next audio element or item" aria-keyshortcuts="D"><span className="button-label-full">Next</span><span className="button-label-short">Next</span></button>
-      <button type="button" onClick={stop} disabled={!player.audioBuffer} aria-label="Stop audio" aria-keyshortcuts="S"><span className="button-label-full">Stop</span><span className="button-label-short">Stop</span></button>
-      <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C"><span className="button-label-full">{runMode === "single" ? "Single" : "Consecutive"}</span><span className="button-label-short">{runMode === "single" ? "Single" : "Consec."}</span></button>
+      <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-label="Replay configured audio sequence" aria-keyshortcuts="R" title="Replay (R)"><IconReplay /></button>
+      <button type="button" onClick={previousManually} disabled={!hasPreviousTarget} aria-label="Previous audio element or item" aria-keyshortcuts="A" title="Previous (A)"><IconPrevious /></button>
+      <button type="button" onClick={advanceManually} disabled={!hasNextTarget} aria-label="Next audio element or item" aria-keyshortcuts="D" title="Next (D)"><IconNext /></button>
+      <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C" title={`${runMode === "single" ? "Single" : "Consecutive"} playback (C)`}>{runMode === "consecutive" ? <IconRepeat /> : <IconRepeatOne />}<span className="run-mode-label">{runMode === "single" ? "Single" : "Consec"}</span></button>
       <button
         type="button"
         className="primary play-toggle"
@@ -345,8 +356,9 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
         disabled={!player.audioBuffer}
         aria-label={`${player.isPlaying ? "Pause" : "Play"} ${AUDIO_ELEMENT_LABELS[currentCue.element]}`}
         aria-keyshortcuts="Space"
+        title={`${player.isPlaying ? "Pause" : "Play"} (Space)`}
       >
-        {player.isPlaying ? "Pause" : "Play"}
+        {player.isPlaying ? <IconPause /> : <IconPlay />}
       </button>
     </div>
     <div className="player-transport">
@@ -643,10 +655,8 @@ export default function App() {
   const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { const backup = parsed as {study: unknown; audio_sequence?: unknown; audio_sequences?: unknown}; study.restore(backup.study); if (backup.audio_sequence !== undefined) audioSequences.restore(backup.audio_sequence); else if (backup.audio_sequences !== undefined) audioSequences.restore(backup.audio_sequences); } else { study.restore(parsed); } setMessage("Progress and global playback settings restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
   return <div className="app-shell">
     <div className="content-scroll">
-    <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div><span className="eyebrow">IELTS VOCABULARY</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items` : "Loading corpus…"}</p></div></div><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button></header>
+    <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div className="brand-text"><span className="eyebrow">IELTS VOCABULARY</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items` : "Loading corpus…"}</p></div></div><div className="topbar-controls"><select className="chapter-select" value={chapter === null ? "" : String(chapter)} onChange={event => setChapter(event.target.value === "" ? null : Number(event.target.value))} aria-label="Select chapter"><option value="">All chapters</option>{chapters.map(item => <option key={item.number} value={String(item.number)}>Ch {item.number}</option>)}</select><select className="filter-select" value={filter} onChange={event => setFilter(event.target.value as Filter)} aria-label="Filter items">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <option key={value} value={value}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` (${counts.known})` : value === "flagged" ? ` (${counts.flagged})` : value === "review" ? ` (${counts.review})` : ""}</option>)}</select><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button><button type="button" className={`outline settings-trigger ${showPlaybackSettings ? "selected" : ""}`} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button></div></header>
     {showBackup ? <section className="backup-panel"><button type="button" onClick={downloadBackup}>Download progress</button><label className="file-button">Restore progress<input type="file" accept="application/json" onChange={restoreBackup} /></label><button type="button" onClick={() => { if (window.confirm("Archive and reset local progress?")) study.reset(); }}>Reset progress</button></section> : null}
-    <nav className="chapter-strip" aria-label="Chapters"><button className={chapter === null ? "active" : ""} onClick={() => setChapter(null)}>All</button>{chapters.map(item => <button key={item.number} className={chapter === item.number ? "active" : ""} onClick={() => setChapter(item.number)}>Ch {item.number}</button>)}</nav>
-    <section className="toolbar"><div className="filters">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><select className="filter-select" value={filter} onChange={event => setFilter(event.target.value as Filter)} aria-label="Filter items">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <option key={value} value={value}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` (${counts.known})` : value === "flagged" ? ` (${counts.flagged})` : value === "review" ? ` (${counts.review})` : ""}</option>)}</select></section>
     <main className="study-layout">
       <aside ref={listRef} className={`item-list ${listOpen ? "open" : ""}`} aria-label="Vocabulary items">
         {visibleItems.map(item => {
@@ -661,7 +671,7 @@ export default function App() {
       <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} onPlayAudio={playSelectedAudio} listOpen={listOpen} onToggleList={() => setListOpen(value => !value)} /></section>
     </main>
     </div>
-      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playerSequence} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><button type="button" className={showPlaybackSettings ? "settings-trigger selected" : "settings-trigger"} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button></div></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
+      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playerSequence} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
     {error ? <div className="toast error">{error}</div> : null}{message ? <div className="toast success">{message}</div> : null}
   </div>;
 }
