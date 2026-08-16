@@ -17,6 +17,7 @@
 
 # Disposable preparation/model work
 /work/
+/content/book-sources/ielts-vocabulary-true-script/visual_ocr_queue.json
 /content/BV1AT4y1579F/asr-runs/
 /content/BV1AT4y1579F/selected-transcripts.jsonl
 /content/BV1AT4y1579F/meanings.jsonl
