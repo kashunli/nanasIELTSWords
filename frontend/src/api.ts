@@ -20,6 +20,3 @@ export const getItem = (stableId: string) => request<Item>(`/api/items/${encodeU
 export const getBatch = (stableIds: string[]) => request<Item[]>("/api/items/batch", {
   method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({stable_ids: stableIds}),
 });
-export const exportFlaggedAudio = (chapter: number, stableIds: string[]) => request<{audio_url: string; file_name: string}>("/api/exports/flagged-audio", {
-  method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({chapter, stable_ids: stableIds}),
-});
