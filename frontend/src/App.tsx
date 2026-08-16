@@ -41,12 +41,14 @@ function sequenceKey(sequence: AudioSequenceConfig) {
 }
 
 type AudioCue = AudioSequenceStep & {url: string; occurrence: number};
+type PlayRequest = {itemUuid: string; requestId: number};
 
-function AudioPlayer({item, sequence, mode, runMode, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed}: {
+function AudioPlayer({item, sequence, mode, runMode, playRequest, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed}: {
   item?: Item;
   sequence: AudioSequenceConfig;
   mode: PlaybackMode;
   runMode: RunMode;
+  playRequest?: PlayRequest;
   onNextItem: () => boolean;
   onPreviousItem: () => boolean;
   onRunModeChange: (mode: RunMode) => void;
@@ -69,6 +71,7 @@ function AudioPlayer({item, sequence, mode, runMode, onNextItem, onPreviousItem,
   const currentTimeRef = useRef(0);
   const waitTimerRef = useRef<number | null>(null);
   const playedItemRef = useRef<string | undefined>(undefined);
+  const handledPlayRequestRef = useRef<number | null>(null);
   const activeCueIndex = playableCues.length ? Math.min(cueIndex, playableCues.length - 1) : 0;
   const currentCue = playableCues[activeCueIndex];
   const url = currentCue?.url || "";
@@ -178,6 +181,23 @@ function AudioPlayer({item, sequence, mode, runMode, onNextItem, onPreviousItem,
       setPlayerError("Audio could not be played.");
     }
   };
+
+  useEffect(() => {
+    if (!playRequest || !item || playRequest.itemUuid !== item.item_uuid || !currentCue || handledPlayRequestRef.current === playRequest.requestId) return;
+    handledPlayRequestRef.current = playRequest.requestId;
+    clearWaiting();
+    continueSequenceRef.current = true;
+    playOnTargetChangeRef.current = true;
+    pendingTargetPlayRef.current = true;
+    if (activeCueIndex !== 0) {
+      setCueIndex(0);
+      return;
+    }
+    if (player.audioBuffer && player.loadedAudioUrl === url) {
+      pendingTargetPlayRef.current = false;
+      void playFrom(0);
+    }
+  }, [activeCueIndex, currentCue, item?.item_uuid, playRequest?.itemUuid, playRequest?.requestId, player.audioBuffer, player.loadedAudioUrl, targetKey, url]);
 
   // A newly selected target is allowed to autoplay only when the current run
   // explicitly requested continuation (or the user pressed Next).
@@ -422,11 +442,6 @@ function AudioSequenceEditor({item, sequence, onChange, onReset, onClose}: {
   </section>;
 }
 
-function TranslationAudio({url, label}: {url?: string; label: string}) {
-  if (!url) return null;
-  return <audio className="translation-audio" controls preload="none" src={url} aria-label={`Play ${label}`} />;
-}
-
 type CardToggle = "known" | "flagged" | "sentence_starred";
 
 function FocusCard({selected, card, onToggle}: {
@@ -461,7 +476,7 @@ function FocusCard({selected, card, onToggle}: {
         <span>CURRENT LINE</span>
       </div>
       <p className="example-en">{displaySentence}</p>
-      {book?.example_zh ? <div className="example-translation"><div className="translation-heading"><span>中文翻译</span><TranslationAudio url={selected.sentence_translation_audio_url} label="Chinese example translation" /></div><p>{book.example_zh}</p></div> : null}
+      {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><p>{book.example_zh}</p></div> : null}
     </section>
 
     <section className="explanation-card" aria-label="Explanation below current line">
@@ -473,7 +488,7 @@ function FocusCard({selected, card, onToggle}: {
           <small>{selected.meaning_status === "ai_draft" ? "AI draft English meaning" : "Reviewed English meaning"}</small>
         </article>
         <article className="meaning-card meaning-translation">
-          <div className="translation-heading"><span>中文释义</span><TranslationAudio url={selected.word_translation_audio_url} label="Chinese meaning" /></div>
+          <span>中文释义</span>
           <p>{displayMeaningZh || "释义待生成"}</p>
           <small>Chinese meaning</small>
         </article>
@@ -511,6 +526,8 @@ export default function App() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [selectedId, setSelectedId] = useState<string>();
+  const [playRequest, setPlayRequest] = useState<PlayRequest>();
+  const playRequestIdRef = useRef(0);
   const [mode, setMode] = useState<PlaybackMode>("sequence");
   const [runMode, setRunMode] = useState<RunMode>("consecutive");
   const [stateVersion, setStateVersion] = useState(0);
@@ -555,6 +572,11 @@ export default function App() {
   const canNextItem = Boolean(selected && selectedIndex >= 0 && selectedIndex < visibleItems.length - 1);
   const canPreviousItem = Boolean(selected && selectedIndex > 0);
   const toggle = (key: "known" | "flagged" | "sentence_starred") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
+  const selectAndPlay = (item: Item) => {
+    playRequestIdRef.current += 1;
+    setSelectedId(item.stable_id);
+    setPlayRequest({itemUuid: item.item_uuid, requestId: playRequestIdRef.current});
+  };
   const updateGlobalSequence = (sequence: AudioSequenceConfig) => { audioSequences.update(sequence); };
   const resetGlobalSequence = () => { audioSequences.reset(); };
   const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 5, study: study.exportSnapshot(), audio_sequence: audioSequences.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
@@ -570,7 +592,7 @@ export default function App() {
       <aside className="item-list" aria-label="Vocabulary items">
         {visibleItems.map(item => {
           const itemCard = study.card(item.item_uuid);
-          return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => setSelectedId(item.stable_id)}>
+          return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => selectAndPlay(item)} aria-label={`Play ${item.headword}`} title={`Play ${item.headword}`}>
             <span>{String(item.position).padStart(3, "0")}</span>
             <strong>{item.headword}</strong>
             <small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}</small>
@@ -580,7 +602,7 @@ export default function App() {
       <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} /></section>
     </main>
     </div>
-      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playbackSequence} mode={mode} runMode={runMode} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="sequence">Configured four-part sequence</option><option value="words">English word only</option><option value="sentences">English sentence only</option></select></label><button type="button" className={showPlaybackSettings ? "settings-trigger selected" : "settings-trigger"} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Playback enrolls this word for review")}</span></div></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
+      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playbackSequence} mode={mode} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="sequence">Configured four-part sequence</option><option value="words">English word only</option><option value="sentences">English sentence only</option></select></label><button type="button" className={showPlaybackSettings ? "settings-trigger selected" : "settings-trigger"} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Click an item to play its audio")}</span></div></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
     {error ? <div className="toast error">{error}</div> : null}
   </div>;
 }
