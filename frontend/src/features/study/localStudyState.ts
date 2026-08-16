@@ -39,7 +39,6 @@ export function normalizeSnapshot(value: unknown): StudySnapshot {
       item_uuid: key,
       known: card.known === true,
       flagged: card.flagged === true,
-      sentence_starred: card.sentence_starred === true,
       enrolled_at: validIso(card.enrolled_at),
       due_at: validIso(card.due_at),
       review_level: Number.isInteger(card.review_level) && (card.review_level as number) >= 0 ? card.review_level as number : 0,
@@ -78,12 +77,12 @@ export class LocalStudyState {
     this.storage.setItem(STUDY_STATE_KEY, JSON.stringify(this.snapshot)); this.emit(); return this.snapshot;
   }
   update(itemUuid: string, patch: Partial<CardState>) {
-    const current = this.card(itemUuid) || {item_uuid: itemUuid, known: false, flagged: false, sentence_starred: false, review_level: 0};
+    const current = this.card(itemUuid) || {item_uuid: itemUuid, known: false, flagged: false, review_level: 0};
     return this.commit({...this.snapshot.cards, [itemUuid]: {...current, ...patch, updated_at: this.now().toISOString()}}).cards[itemUuid];
   }
   recordPlayed(item: Item) {
     const now = this.now().toISOString();
-    const current = this.card(item.item_uuid) || {item_uuid: item.item_uuid, known: false, flagged: false, sentence_starred: false, review_level: 0};
+    const current = this.card(item.item_uuid) || {item_uuid: item.item_uuid, known: false, flagged: false, review_level: 0};
     return this.commit({...this.snapshot.cards, [item.item_uuid]: {...current, enrolled_at: current.enrolled_at || now, due_at: current.due_at || nextDueAt(now, 0), last_played_at: now, updated_at: now}}).cards[item.item_uuid];
   }
   completeReview(item: Item, expectedDueAt: string) {

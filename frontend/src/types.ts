@@ -76,7 +76,6 @@ export interface CardState {
   item_uuid: string;
   known: boolean;
   flagged: boolean;
-  sentence_starred: boolean;
   enrolled_at?: string;
   due_at?: string;
   review_level: number;

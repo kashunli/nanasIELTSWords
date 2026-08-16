@@ -442,7 +442,7 @@ function AudioSequenceEditor({item, sequence, onChange, onReset, onClose}: {
   </section>;
 }
 
-type CardToggle = "known" | "flagged" | "sentence_starred";
+type CardToggle = "known" | "flagged";
 
 function FocusCard({selected, card, onToggle}: {
   selected?: Item;
@@ -507,7 +507,6 @@ function FocusCard({selected, card, onToggle}: {
     <div className="card-actions">
       <button type="button" className={card?.known ? "selected" : ""} onClick={() => onToggle("known")}>✓ Known</button>
       <button type="button" className={card?.flagged ? "selected" : ""} onClick={() => onToggle("flagged")}>⚑ Flagged</button>
-      <button type="button" className={card?.sentence_starred ? "selected" : ""} onClick={() => onToggle("sentence_starred")}>★ Sentence</button>
     </div>
   </div>;
 }
@@ -571,7 +570,7 @@ export default function App() {
   const changeMode = (nextMode: PlaybackMode) => setMode(nextMode);
   const canNextItem = Boolean(selected && selectedIndex >= 0 && selectedIndex < visibleItems.length - 1);
   const canPreviousItem = Boolean(selected && selectedIndex > 0);
-  const toggle = (key: "known" | "flagged" | "sentence_starred") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
+  const toggle = (key: "known" | "flagged") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
   const selectAndPlay = (item: Item) => {
     playRequestIdRef.current += 1;
     setSelectedId(item.stable_id);

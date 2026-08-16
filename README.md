@@ -165,7 +165,7 @@ alignment badges, or reviewed-book provenance panels.
 
 ## Learner state
 
-Known, Flagged, Starred sentence, playback, spaced-review state, and the
+Known, Flagged, playback, spaced-review state, and the
 global four-element audio recipe are stored under versioned browser
 LocalStorage keys. The global recipe editor controls the order, repeat count,
 and pause after each of the English word, English sentence, Chinese word

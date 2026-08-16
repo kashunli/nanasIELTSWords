@@ -14,7 +14,7 @@ ASR, OCR, or browser learner state.
   model caches runtime dependencies.
 - Keep raw transcription/review reasons available for audit without exposing
   transcription tags or review state in the learner-facing API.
-- Leave Known, Flagged, starred-sentence, playback, and review scheduling state
+- Leave Known, Flagged, playback, and review scheduling state
   in browser LocalStorage for this local-first version.
 
 ## Relationships
