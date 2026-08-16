@@ -1,25 +1,30 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
+  appendAudioSequenceStep,
   createDefaultAudioSequence,
   expandPlayableAudioSequence,
   normalizeAudioSequence,
   nextAudioSequenceStep,
+  removeAudioSequenceStep,
   reorderAudioSequence,
   updateAudioSequenceStep,
 } from "./audioSequence.mjs";
 
 test("the default recipe contains the four audio elements in the stable order", () => {
-  assert.deepEqual(createDefaultAudioSequence().steps.map(step => step.element), [
+  const result = createDefaultAudioSequence();
+  assert.deepEqual(result.steps.map(step => step.element), [
     "word",
-    "sentence",
     "word_translation",
+    "sentence",
     "sentence_translation",
   ]);
+  assert.deepEqual(result.steps.map(step => step.id), ["word-1", "word_translation-1", "sentence-1", "sentence_translation-1"]);
 });
 
-test("normalization keeps every element once and clamps unsafe editor values", () => {
+test("normalization keeps every legacy element once and clamps unsafe editor values", () => {
   const result = normalizeAudioSequence({
+    version: 1,
     steps: [
       {element: "sentence", repeatCount: 2.6, pauseAfterSeconds: -4},
       {element: "sentence", repeatCount: 99, pauseAfterSeconds: 99},
@@ -34,6 +39,18 @@ test("normalization keeps every element once and clamps unsafe editor values", (
   ]);
   assert.equal(result.steps[0].repeatCount, 3);
   assert.equal(result.steps[0].pauseAfterSeconds, 0);
+});
+
+test("current normalization preserves duplicate occurrences", () => {
+  const result = normalizeAudioSequence({
+    version: 2,
+    steps: [
+      {id: "word-1", element: "word", repeatCount: 1, pauseAfterSeconds: 0},
+      {id: "sentence-1", element: "sentence", repeatCount: 1, pauseAfterSeconds: 0},
+      {id: "sentence-2", element: "sentence", repeatCount: 1, pauseAfterSeconds: 0},
+    ],
+  });
+  assert.deepEqual(result.steps.map(step => step.id), ["word-1", "sentence-1", "sentence-2"]);
 });
 
 test("a zero repeat disables one element while another positive repeat keeps the recipe playable", () => {
@@ -55,10 +72,19 @@ test("normalization restores one active repeat when an invalid all-zero recipe i
 });
 
 test("reordering moves one element without losing the other settings", () => {
-  const source = updateAudioSequenceStep(createDefaultAudioSequence(), "sentence", {repeatCount: 3, pauseAfterSeconds: 1.5});
+  const source = updateAudioSequenceStep(createDefaultAudioSequence(), "sentence-1", {repeatCount: 3, pauseAfterSeconds: 1.5});
   const result = reorderAudioSequence(source, 1, 3);
-  assert.deepEqual(result.steps.map(step => step.element), ["word", "word_translation", "sentence_translation", "sentence"]);
-  assert.deepEqual(result.steps[3], {element: "sentence", repeatCount: 3, pauseAfterSeconds: 1.5});
+  assert.deepEqual(result.steps.map(step => step.element), ["word", "sentence", "sentence_translation", "word_translation"]);
+  assert.deepEqual(result.steps[1], {id: "sentence-1", element: "sentence", repeatCount: 3, pauseAfterSeconds: 1.5});
+});
+
+test("appending and removing an occurrence enables a later repeat", () => {
+  const appended = appendAudioSequenceStep(createDefaultAudioSequence(), "sentence");
+  assert.deepEqual(appended.steps.map(step => step.element), ["word", "word_translation", "sentence", "sentence_translation", "sentence"]);
+  assert.equal(appended.steps.at(-1).id, "sentence-2");
+  const removed = removeAudioSequenceStep(appended, "sentence-1");
+  assert.deepEqual(removed.steps.map(step => step.element), ["word", "word_translation", "sentence_translation", "sentence"]);
+  assert.equal(removed.steps.some(step => step.id === "sentence-1"), false);
 });
 
 test("expansion skips future clips until their URLs are available and repeats ready clips", () => {
