@@ -106,21 +106,24 @@ package that starts the local backend and opens the learner UI automatically:
 .\tools\build_windows.ps1
 ```
 
-The output is written to `dist\IELTSVocabulary\`. Double-click
-`IELTSVocabulary.exe` to reuse an already-running service or start the release
-backend, wait for `/health`, and open the default browser at
+The output is written to `dist\IELTSVocabulary\` inside this repository.
+Double-click `IELTSVocabulary.exe` to reuse an already-running service or
+start the release backend, wait for `/health`, and open the default browser at
 `http://127.0.0.1:8770/`. The executable embeds the same open-book and
-sound-wave mark used by the web page. The launcher writes backend startup
-errors to `var\ielts-vocabulary-service.log` inside the package.
+sound-wave mark used by the web page. The launcher walks upward to the project
+root and writes backend startup errors to the project’s
+`var\ielts-vocabulary-service.log`.
 
 The icon is already checked into the launcher source. If the web-service mark
 changes, regenerate the Windows icon with
 `.\tools\build_windows.ps1 -RefreshIcon`; that optional step uses Pillow.
 
-The package contains the compiled backend and `frontend\dist`; it also copies
-`var\content` when that local runtime directory exists. The source audio,
-preparation caches, and model caches are not read by the launcher or runtime
-service.
+The package contains the compiled backend and `frontend\dist`, but it does not
+copy the large runtime projection. The launcher uses the project’s original
+`var\content\content.sqlite`, `var\content\media`, and
+`var\content\exports` directories, so the output executable is intentionally
+not portable outside this repository. The source audio, preparation caches,
+and model caches are not read by the launcher or runtime service.
 
 The initial content workflow is intentionally resumable. A source hash, clip
 hash, ASR model/settings, and meaning-batch hash are recorded before an output

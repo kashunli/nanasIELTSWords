@@ -38,17 +38,20 @@ fn run() -> Result<(), String> {
         return open_browser(&browser_url);
     }
 
-    let app_root = find_app_root().ok_or_else(|| {
-        "Could not find the IELTS Vocabulary application files. Build the Windows package with `tools\\build_windows.ps1`, then run IELTSVocabulary.exe from its output folder.".to_owned()
+    let launcher_root = executable_dir()
+        .ok_or_else(|| "Could not determine the IELTS Vocabulary launcher directory.".to_owned())?;
+    let project_root = find_project_root().ok_or_else(|| {
+        "Could not find the IELTS Vocabulary project root. Keep IELTSVocabulary.exe under this repository and ensure frontend\\dist\\index.html and var\\content\\content.sqlite exist.".to_owned()
     })?;
-    let service_path = find_service(&app_root).ok_or_else(|| {
+    let service_path = find_service(&launcher_root, &project_root).ok_or_else(|| {
         format!(
             "The IELTS Vocabulary backend executable is missing. Expected it beside the launcher or under `{}`.",
-            app_root.join("backend\\target\\release").display()
+            project_root.join("backend\\target\\release").display()
         )
     })?;
+    let frontend_root = find_frontend_root(&launcher_root, &project_root);
 
-    let mut service = start_service(&app_root, &service_path, &bind)?;
+    let mut service = start_service(&project_root, &service_path, &frontend_root, &bind)?;
     if let Err(message) = wait_for_service(&mut service, health_addr) {
         let _ = service.kill();
         return Err(message);
@@ -95,12 +98,16 @@ fn service_is_ready(address: SocketAddr) -> bool {
     response.starts_with("HTTP/1.1 200") || response.starts_with("HTTP/1.0 200")
 }
 
-fn find_app_root() -> Option<PathBuf> {
+fn executable_dir() -> Option<PathBuf> {
     let executable = env::current_exe().ok()?;
-    let mut candidate = executable.parent()?.to_path_buf();
+    executable.parent().map(Path::to_path_buf)
+}
+
+fn find_project_root() -> Option<PathBuf> {
+    let mut candidate = executable_dir()?;
 
     loop {
-        if is_app_root(&candidate) {
+        if is_project_root(&candidate) {
             return Some(candidate);
         }
         if !candidate.pop() {
@@ -109,21 +116,37 @@ fn find_app_root() -> Option<PathBuf> {
     }
 }
 
-fn is_app_root(root: &Path) -> bool {
-    root.join("frontend\\dist\\index.html").is_file() && find_service(root).is_some()
+fn is_project_root(root: &Path) -> bool {
+    root.join("frontend\\dist\\index.html").is_file()
+        && root.join("var\\content\\content.sqlite").is_file()
+        && root.join("var\\content\\media").is_dir()
 }
 
-fn find_service(root: &Path) -> Option<PathBuf> {
+fn find_service(launcher_root: &Path, project_root: &Path) -> Option<PathBuf> {
     [
-        root.join("ielts-vocabulary-service.exe"),
-        root.join("backend\\target\\release\\ielts-vocabulary-service.exe"),
-        root.join("backend\\target\\debug\\ielts-vocabulary-service.exe"),
+        launcher_root.join("ielts-vocabulary-service.exe"),
+        project_root.join("backend\\target\\release\\ielts-vocabulary-service.exe"),
+        project_root.join("backend\\target\\debug\\ielts-vocabulary-service.exe"),
     ]
     .into_iter()
     .find(|path| path.is_file())
 }
 
-fn start_service(root: &Path, service_path: &Path, bind: &str) -> Result<Child, String> {
+fn find_frontend_root(launcher_root: &Path, project_root: &Path) -> PathBuf {
+    let packaged = launcher_root.join("frontend\\dist");
+    if packaged.join("index.html").is_file() {
+        packaged
+    } else {
+        project_root.join("frontend\\dist")
+    }
+}
+
+fn start_service(
+    root: &Path,
+    service_path: &Path,
+    frontend_root: &Path,
+    bind: &str,
+) -> Result<Child, String> {
     let content_root = root.join("var\\content");
     let export_root = content_root.join("exports");
     fs::create_dir_all(&export_root).map_err(|error| {
@@ -157,7 +180,7 @@ fn start_service(root: &Path, service_path: &Path, bind: &str) -> Result<Child, 
             content_root.join("content.sqlite"),
         )
         .env("IELTS_VOCAB_MEDIA_ROOT", content_root.join("media"))
-        .env("IELTS_VOCAB_FRONTEND_ROOT", root.join("frontend\\dist"))
+        .env("IELTS_VOCAB_FRONTEND_ROOT", frontend_root)
         .env("IELTS_VOCAB_EXPORT_ROOT", export_root)
         .stdin(Stdio::null())
         .stdout(Stdio::from(log))
