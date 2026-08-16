@@ -564,7 +564,7 @@ export default function App() {
   const playbackSequence = useMemo(() => {
     if (mode === "sequence") return globalSequence;
     const element: AudioElementId = mode === "words" ? "word" : "sentence";
-    return {version: 1 as const, steps: globalSequence.steps.filter(step => step.element === element)};
+    return {version: 2 as const, steps: globalSequence.steps.filter(step => step.element === element)};
   }, [mode, globalSequence]);
   const playerSequence = useMemo(() => {
     const requestedElement = playRequest?.element;
@@ -577,7 +577,7 @@ export default function App() {
     if (!steps.some(step => step.element === requestedElement)) {
       steps.push({...requestedStep, repeatCount: Math.max(1, requestedStep.repeatCount), pauseAfterSeconds: 0});
     }
-    return {version: 1 as const, steps};
+    return {version: 2 as const, steps};
   }, [globalSequence, playbackSequence, playRequest?.element]);
   const advanceNext = (): boolean => {
     if (!selected) return false;

@@ -1,12 +1,13 @@
 import type { AudioSequenceConfig } from "../../types";
 import { createDefaultAudioSequence, normalizeAudioSequence } from "./audioSequence.mjs";
 
-export const AUDIO_SEQUENCE_STATE_KEY = "ielts-vocabulary:audio-sequence:v2";
+export const AUDIO_SEQUENCE_STATE_KEY = "ielts-vocabulary:audio-sequence:v3";
+export const LEGACY_AUDIO_SEQUENCE_V2_STATE_KEY = "ielts-vocabulary:audio-sequence:v2";
 export const LEGACY_AUDIO_SEQUENCE_STATE_KEY = "ielts-vocabulary:audio-sequences:v1";
-export const AUDIO_SEQUENCE_STATE_VERSION = 2;
+export const AUDIO_SEQUENCE_STATE_VERSION = 3;
 
 export interface AudioSequenceSnapshot {
-  version: 2;
+  version: 3;
   updated_at: string;
   sequence: AudioSequenceConfig;
 }
@@ -31,6 +32,13 @@ function normalizeLegacySequence(value: unknown): AudioSequenceConfig | undefine
   return candidates.every(sequence => JSON.stringify(sequence) === first) ? candidates[0] : undefined;
 }
 
+function normalizePriorV2Sequence(value: unknown): AudioSequenceConfig | undefined {
+  if (!value || typeof value !== "object") return undefined;
+  const candidate = value as {version?: unknown; sequence?: unknown};
+  if (candidate.version !== 2 || !candidate.sequence || typeof candidate.sequence !== "object") return undefined;
+  return normalizeAudioSequence(candidate.sequence);
+}
+
 export function normalizeAudioSequenceSnapshot(value: unknown): AudioSequenceSnapshot {
   const result = emptySnapshot();
   if (!value || typeof value !== "object") return result;
@@ -38,6 +46,11 @@ export function normalizeAudioSequenceSnapshot(value: unknown): AudioSequenceSna
   result.updated_at = validIso(candidate.updated_at) || result.updated_at;
   if (candidate.version === AUDIO_SEQUENCE_STATE_VERSION && candidate.sequence && typeof candidate.sequence === "object") {
     result.sequence = normalizeAudioSequence(candidate.sequence);
+    return result;
+  }
+  const priorV2Sequence = normalizePriorV2Sequence(value);
+  if (priorV2Sequence) {
+    result.sequence = priorV2Sequence;
     return result;
   }
   const legacySequence = normalizeLegacySequence(value);
@@ -52,30 +65,25 @@ export class LocalAudioSequenceState {
   constructor(private readonly storage: Storage = window.localStorage, private readonly now = () => new Date()) {
     this.snapshot = this.read();
     if (typeof window !== "undefined") window.addEventListener("storage", event => {
-      if (event.key === AUDIO_SEQUENCE_STATE_KEY) { this.snapshot = this.read(); this.emit(); }
+      if ([AUDIO_SEQUENCE_STATE_KEY, LEGACY_AUDIO_SEQUENCE_V2_STATE_KEY, LEGACY_AUDIO_SEQUENCE_STATE_KEY].includes(event.key || "")) {
+        this.snapshot = this.read();
+        this.emit();
+      }
     });
   }
 
   private read(): AudioSequenceSnapshot {
-    const raw = this.storage.getItem(AUDIO_SEQUENCE_STATE_KEY);
-    if (raw) {
+    for (const key of [AUDIO_SEQUENCE_STATE_KEY, LEGACY_AUDIO_SEQUENCE_V2_STATE_KEY, LEGACY_AUDIO_SEQUENCE_STATE_KEY]) {
+      const raw = this.storage.getItem(key);
+      if (!raw) continue;
       try {
         return normalizeAudioSequenceSnapshot(JSON.parse(raw));
       } catch {
-        this.storage.setItem(`${AUDIO_SEQUENCE_STATE_KEY}:malformed:${this.now().toISOString()}`, raw);
-        this.storage.removeItem(AUDIO_SEQUENCE_STATE_KEY);
-        return emptySnapshot();
+        this.storage.setItem(`${key}:malformed:${this.now().toISOString()}`, raw);
+        this.storage.removeItem(key);
       }
     }
-    const legacyRaw = this.storage.getItem(LEGACY_AUDIO_SEQUENCE_STATE_KEY);
-    if (!legacyRaw) return emptySnapshot();
-    try {
-      return normalizeAudioSequenceSnapshot(JSON.parse(legacyRaw));
-    } catch {
-      this.storage.setItem(`${LEGACY_AUDIO_SEQUENCE_STATE_KEY}:malformed:${this.now().toISOString()}`, legacyRaw);
-      this.storage.removeItem(LEGACY_AUDIO_SEQUENCE_STATE_KEY);
-      return emptySnapshot();
-    }
+    return emptySnapshot();
   }
 
   subscribe(listener: () => void) { this.listeners.add(listener); return () => { this.listeners.delete(listener); }; }

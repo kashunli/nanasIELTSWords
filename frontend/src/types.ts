@@ -3,13 +3,14 @@ export type MeaningStatus = "ai_draft" | "reviewed" | "not_provided";
 export type AudioElementId = "word" | "sentence" | "word_translation" | "sentence_translation";
 
 export interface AudioSequenceStep {
+  id: string;
   element: AudioElementId;
   repeatCount: number;
   pauseAfterSeconds: number;
 }
 
 export interface AudioSequenceConfig {
-  version: 1;
+  version: 2;
   steps: AudioSequenceStep[];
 }
 
