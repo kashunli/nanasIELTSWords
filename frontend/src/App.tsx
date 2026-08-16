@@ -569,6 +569,7 @@ export default function App() {
   const [selectedId, setSelectedId] = useState<string>();
   const [playRequest, setPlayRequest] = useState<PlayRequest>();
   const playRequestIdRef = useRef(0);
+  const listRef = useRef<HTMLElement | null>(null);
   const [runMode, setRunMode] = useState<RunMode>("consecutive");
   const [stateVersion, setStateVersion] = useState(0);
   const [sequenceVersion, setSequenceVersion] = useState(0);
@@ -591,6 +592,10 @@ export default function App() {
   }, [message]);
   const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study]);
   const selected = visibleItems.find(item => item.stable_id === selectedId) || visibleItems[0];
+  useEffect(() => {
+    const active = listRef.current?.querySelector?.(".item-row.active");
+    active?.scrollIntoView({block: "nearest", inline: "nearest"});
+  }, [selected?.stable_id, listOpen]);
   const counts = useMemo(() => ({known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study]);
   const selectedIndex = selected ? visibleItems.findIndex(item => item.stable_id === selected.stable_id) : -1;
   const card = selected ? study.card(selected.item_uuid) : undefined;
@@ -643,7 +648,7 @@ export default function App() {
     <nav className="chapter-strip" aria-label="Chapters"><button className={chapter === null ? "active" : ""} onClick={() => setChapter(null)}>All</button>{chapters.map(item => <button key={item.number} className={chapter === item.number ? "active" : ""} onClick={() => setChapter(item.number)}>Ch {item.number}</button>)}</nav>
     <section className="toolbar"><div className="filters">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><select className="filter-select" value={filter} onChange={event => setFilter(event.target.value as Filter)} aria-label="Filter items">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <option key={value} value={value}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` (${counts.known})` : value === "flagged" ? ` (${counts.flagged})` : value === "review" ? ` (${counts.review})` : ""}</option>)}</select></section>
     <main className="study-layout">
-      <aside className={`item-list ${listOpen ? "open" : ""}`} aria-label="Vocabulary items">
+      <aside ref={listRef} className={`item-list ${listOpen ? "open" : ""}`} aria-label="Vocabulary items">
         {visibleItems.map(item => {
           const itemCard = study.card(item.item_uuid);
           return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { selectAndPlay(item); setListOpen(false); }} aria-label={`Play ${item.headword}`} title={`Play ${item.headword}`}>
