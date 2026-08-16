@@ -7,10 +7,10 @@
 **/__pycache__/
 *.py[cod]
 
-# Local runtime projection and copied audio
+# Local runtime projection and generated exports
 /var/content/content.sqlite
 /var/content/content.sqlite-*
-/var/content/media/
+# Runtime media is intentionally tracked for repository distribution.
 /var/content/exports/
 /var/content/translation-voice-samples/
 /var/content/*.json
