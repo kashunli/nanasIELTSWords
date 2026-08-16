@@ -500,11 +500,13 @@ function AudioTextButton({children, className, onClick, ariaLabel, disabled = fa
   return <button type="button" className={`content-audio-trigger ${className}`} onClick={onClick} aria-label={ariaLabel} disabled={disabled}>{children}</button>;
 }
 
-function FocusCard({selected, card, onToggle, onPlayAudio}: {
+function FocusCard({selected, card, onToggle, onPlayAudio, listOpen, onToggleList}: {
   selected?: Item;
   card?: CardState;
   onToggle: (key: CardToggle) => void;
   onPlayAudio: (element: AudioElementId) => void;
+  listOpen: boolean;
+  onToggleList: () => void;
 }) {
   if (!selected) return <div className="focus-card"><p>Select an item from the list.</p></div>;
 
@@ -563,6 +565,7 @@ function FocusCard({selected, card, onToggle, onPlayAudio}: {
     <div className="card-actions">
       <button type="button" className={card?.known ? "selected" : ""} onClick={() => onToggle("known")}>✓ Known</button>
       <button type="button" className={card?.flagged ? "selected" : ""} onClick={() => onToggle("flagged")}>⚑ Flagged</button>
+      <button type="button" className="list-toggle" onClick={onToggleList} aria-expanded={listOpen}>{listOpen ? "Hide list" : "List"}</button>
     </div>
   </div>;
 }
@@ -591,6 +594,7 @@ export default function App() {
   const [message, setMessage] = useState("");
   const [showBackup, setShowBackup] = useState(false);
   const [showPlaybackSettings, setShowPlaybackSettings] = useState(false);
+  const [listOpen, setListOpen] = useState(false);
   useEffect(() => {
     const unsubscribeStudy = study.subscribe(() => setStateVersion(value => value + 1));
     const unsubscribeSequences = audioSequences.subscribe(() => setSequenceVersion(value => value + 1));
@@ -657,19 +661,19 @@ export default function App() {
     <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div><span className="eyebrow">IELTS VOCABULARY</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items` : "Loading corpus…"}</p></div></div><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button></header>
     {showBackup ? <section className="backup-panel"><button type="button" onClick={downloadBackup}>Download progress</button><label className="file-button">Restore progress<input type="file" accept="application/json" onChange={restoreBackup} /></label><button type="button" onClick={() => { if (window.confirm("Archive and reset local progress?")) study.reset(); }}>Reset progress</button></section> : null}
     <nav className="chapter-strip" aria-label="Chapters"><button className={chapter === null ? "active" : ""} onClick={() => setChapter(null)}>All</button>{chapters.map(item => <button key={item.number} className={chapter === item.number ? "active" : ""} onClick={() => setChapter(item.number)}>Ch {item.number}</button>)}</nav>
-    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search word, meaning, collocation, sentence…" /><div className="filters">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><button type="button" onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
+    <section className="toolbar"><input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search word, meaning, collocation, sentence…" /><div className="filters">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` ${counts.known}` : value === "flagged" ? ` ${counts.flagged}` : value === "review" ? ` ${counts.review}` : ""}</button>)}</div><select className="filter-select" value={filter} onChange={event => setFilter(event.target.value as Filter)} aria-label="Filter items">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <option key={value} value={value}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` (${counts.known})` : value === "flagged" ? ` (${counts.flagged})` : value === "review" ? ` (${counts.review})` : ""}</option>)}</select><button type="button" onClick={() => setFilter("flagged")} className="export" onDoubleClick={exportAudio}>Export flagged</button></section>
     <main className="study-layout">
-      <aside className="item-list" aria-label="Vocabulary items">
+      <aside className={`item-list ${listOpen ? "open" : ""}`} aria-label="Vocabulary items">
         {visibleItems.map(item => {
           const itemCard = study.card(item.item_uuid);
-          return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => selectAndPlay(item)} aria-label={`Play ${item.headword}`} title={`Play ${item.headword}`}>
+          return <button type="button" key={item.stable_id} className={selected?.stable_id === item.stable_id ? "item-row active" : "item-row"} onClick={() => { selectAndPlay(item); setListOpen(false); }} aria-label={`Play ${item.headword}`} title={`Play ${item.headword}`}>
             <span>{String(item.position).padStart(3, "0")}</span>
             <strong>{item.headword}</strong>
             <small>{itemCard?.known ? "✓" : ""}{itemCard?.flagged ? " ⚑" : ""}</small>
           </button>;
         })}
       </aside>
-      <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} onPlayAudio={playSelectedAudio} /></section>
+      <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} onPlayAudio={playSelectedAudio} listOpen={listOpen} onToggleList={() => setListOpen(value => !value)} /></section>
     </main>
     </div>
       <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playerSequence} mode={mode} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="sequence">Configured four-part sequence</option><option value="words">English word only</option><option value="sentences">English sentence only</option></select></label><button type="button" className={showPlaybackSettings ? "settings-trigger selected" : "settings-trigger"} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Click an item to play its audio")}</span></div></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>

@@ -559,3 +559,70 @@ h1 { margin: 7px 0 4px; font-size: clamp(28px, 4vw, 54px); letter-spacing: -.05e
     border-radius: 9px !important;
   }
 }
+
+/* Phone-first chrome compaction: word/sentence card and player controls own
+   the screen; title, chapter selection, and search collapse to thin rows. */
+.filter-select { display: none; }
+.list-toggle { display: none; }
+
+@media (max-width: 760px) {
+  .content-scroll { padding: 12px 10px 24px; }
+
+  /* Topbar: one compact line */
+  .topbar { align-items: center; gap: 8px; margin-bottom: 10px; }
+  .brand-lockup { align-items: center; gap: 8px; }
+  .brand-icon { width: 28px; height: 28px; border-radius: 8px; box-shadow: none; }
+  .eyebrow { display: none; }
+  .topbar h1 { margin: 0; font-size: 17px; letter-spacing: -.02em; line-height: 1.2; }
+  .topbar p { display: none; }
+  .topbar .outline { padding: 8px 12px; font-size: 13px; border-radius: 9px; }
+
+  /* Chapter strip: compact chip row */
+  .chapter-strip { gap: 5px; padding: 1px 0 9px; }
+  .chapter-strip button { padding: 6px 10px; font-size: 12px; }
+
+  /* Toolbar: search row + filter dropdown / export row */
+  .toolbar { padding: 8px; gap: 8px; border-radius: 13px; }
+  .toolbar input { flex: 1 1 100%; min-width: 0; padding: 9px 11px; font-size: 14px; border-radius: 9px; }
+  .toolbar .filters { display: none; }
+  .toolbar .filter-select {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 8px 9px;
+    border: 1px solid #cdd6ce;
+    border-radius: 9px;
+    background: #fff;
+    font-size: 13px;
+  }
+  .toolbar .export { flex: 0 0 auto; margin-left: 0; padding: 8px 11px; font-size: 12px; border-radius: 8px; }
+
+  /* Focus card: maximum room for the word/sentence */
+  .focus-card { padding: 16px 14px 20px; border-radius: 16px; min-height: 0; }
+  .focus-meta { font-size: 11px; }
+  .word-title-row h2 { font-size: clamp(42px, 13vw, 58px); }
+  .current-line-card { margin-top: 18px; padding: 15px 15px 16px; }
+  .current-line-card .example-en { font-size: 22px; }
+  .explanation-card { margin-top: 10px; }
+  .card-actions { margin-top: 18px; }
+  .card-actions .list-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    border: 1px solid #cdd6ce;
+    border-radius: 10px;
+    background: transparent;
+    color: #315741;
+  }
+
+  /* Item list: hidden until opened, then a compact strip */
+  .item-list { display: none; max-height: 168px; padding: 5px; border-radius: 13px; }
+  .item-list.open { display: block; }
+  .item-row { padding: 8px 9px; grid-template-columns: 26px 1fr auto; gap: 6px; }
+  .item-row strong { font-size: 14px; }
+
+  /* Backup panel: compact when open */
+  .backup-panel { margin-bottom: 10px; padding: 10px; gap: 8px; }
+  .backup-panel button, .backup-panel .file-button { padding: 8px 12px; font-size: 13px; border-radius: 9px; }
+}
