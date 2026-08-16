@@ -5,9 +5,10 @@ mod models;
 mod repository;
 mod routes;
 
-use axum::{routing::{get, post}, Router};
+use axum::{http::header::CACHE_CONTROL, http::HeaderValue, routing::{get, post}, Router};
 use std::sync::Arc;
 use tower_http::services::{ServeDir, ServeFile};
+use tower_http::set_header::SetResponseHeaderLayer;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[tokio::main]
@@ -16,6 +17,14 @@ async fn main() -> anyhow::Result<()> {
     let config = Arc::new(config::Config::from_env());
     tokio::fs::create_dir_all(&config.export_root).await?;
     let frontend_index = config.frontend_root.join("index.html");
+    // Audio is large and replayed constantly; let browsers keep it in the HTTP
+    // cache for a day, then revalidate via Last-Modified (ServeDir returns 304).
+    let media = Router::new()
+        .nest_service("/media", ServeDir::new(config.media_root.clone()))
+        .layer(SetResponseHeaderLayer::overriding(
+            CACHE_CONTROL,
+            HeaderValue::from_static("public, max-age=86400"),
+        ));
     let app = Router::new()
         .route("/health", get(routes::health))
         .route("/api/summary", get(routes::summary))
@@ -24,7 +33,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/api/items/{stable_id}", get(routes::item))
         .route("/api/items/batch", post(routes::batch))
         .route("/api/exports/flagged-audio", post(routes::flagged_export))
-        .nest_service("/media", ServeDir::new(config.media_root.clone()))
+        .merge(media)
         .nest_service("/exports", ServeDir::new(config.export_root.clone()))
         .fallback_service(ServeDir::new(config.frontend_root.clone()).fallback(ServeFile::new(frontend_index)))
         .with_state(routes::AppState { config: config.clone() });
