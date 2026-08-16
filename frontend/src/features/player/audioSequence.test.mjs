@@ -11,15 +11,17 @@ import {
   updateAudioSequenceStep,
 } from "./audioSequence.mjs";
 
-test("the default recipe contains the four audio elements in the stable order", () => {
+test("the default recipe is the five-occurrence listening sequence", () => {
   const result = createDefaultAudioSequence();
   assert.deepEqual(result.steps.map(step => step.element), [
     "word",
     "word_translation",
     "sentence",
     "sentence_translation",
+    "sentence",
   ]);
-  assert.deepEqual(result.steps.map(step => step.id), ["word-1", "word_translation-1", "sentence-1", "sentence_translation-1"]);
+  assert.deepEqual(result.steps.map(step => step.id), ["word-1", "word_translation-1", "sentence-1", "sentence_translation-1", "sentence-2"]);
+  assert.deepEqual(result.steps.map(step => step.repeatCount), [1, 0, 1, 0, 1]);
 });
 
 test("normalization keeps every legacy element once and clamps unsafe editor values", () => {
@@ -74,12 +76,21 @@ test("normalization restores one active repeat when an invalid all-zero recipe i
 test("reordering moves one element without losing the other settings", () => {
   const source = updateAudioSequenceStep(createDefaultAudioSequence(), "sentence-1", {repeatCount: 3, pauseAfterSeconds: 1.5});
   const result = reorderAudioSequence(source, 1, 3);
-  assert.deepEqual(result.steps.map(step => step.element), ["word", "sentence", "sentence_translation", "word_translation"]);
+  assert.deepEqual(result.steps.map(step => step.element), ["word", "sentence", "sentence_translation", "word_translation", "sentence"]);
   assert.deepEqual(result.steps[1], {id: "sentence-1", element: "sentence", repeatCount: 3, pauseAfterSeconds: 1.5});
 });
 
 test("appending and removing an occurrence enables a later repeat", () => {
-  const appended = appendAudioSequenceStep(createDefaultAudioSequence(), "sentence");
+  const base = normalizeAudioSequence({
+    version: 2,
+    steps: [
+      {id: "word-1", element: "word", repeatCount: 1, pauseAfterSeconds: 0},
+      {id: "word_translation-1", element: "word_translation", repeatCount: 1, pauseAfterSeconds: 0},
+      {id: "sentence-1", element: "sentence", repeatCount: 1, pauseAfterSeconds: 0},
+      {id: "sentence_translation-1", element: "sentence_translation", repeatCount: 1, pauseAfterSeconds: 0},
+    ],
+  });
+  const appended = appendAudioSequenceStep(base, "sentence");
   assert.deepEqual(appended.steps.map(step => step.element), ["word", "word_translation", "sentence", "sentence_translation", "sentence"]);
   assert.equal(appended.steps.at(-1).id, "sentence-2");
   const removed = removeAudioSequenceStep(appended, "sentence-1");
@@ -88,18 +99,28 @@ test("appending and removing an occurrence enables a later repeat", () => {
 });
 
 test("expansion skips future clips until their URLs are available and repeats ready clips", () => {
-  const source = updateAudioSequenceStep(
-    updateAudioSequenceStep(createDefaultAudioSequence(), "word", {repeatCount: 2, pauseAfterSeconds: 0.75}),
-    "word_translation",
-    {repeatCount: 4, pauseAfterSeconds: 1},
-  );
+  const source = normalizeAudioSequence({
+    version: 2,
+    steps: [
+      {id: "word-1", element: "word", repeatCount: 2, pauseAfterSeconds: 0.75},
+      {id: "sentence-1", element: "sentence", repeatCount: 0, pauseAfterSeconds: 3},
+      {id: "word_translation-1", element: "word_translation", repeatCount: 4, pauseAfterSeconds: 1},
+      {id: "sentence-2", element: "sentence", repeatCount: 1, pauseAfterSeconds: 0},
+    ],
+  });
   const result = expandPlayableAudioSequence(source, {word: "/word.mp3", sentence: "/sentence.mp3"});
-  assert.deepEqual(result.map(cue => `${cue.element}:${cue.occurrence}`), ["word:1", "word:2", "sentence:1"]);
+  assert.deepEqual(result.map(cue => `${cue.id}:${cue.occurrence}`), ["word-1:1", "word-1:2", "sentence-2:1"]);
   assert.equal(result[0].pauseAfterSeconds, 0.75);
 });
 
 test("expansion omits an element whose global repeat count is zero", () => {
-  const source = updateAudioSequenceStep(createDefaultAudioSequence(), "word", {repeatCount: 0});
+  const source = normalizeAudioSequence({
+    version: 2,
+    steps: [
+      {id: "word-1", element: "word", repeatCount: 0, pauseAfterSeconds: 0},
+      {id: "sentence-1", element: "sentence", repeatCount: 1, pauseAfterSeconds: 0},
+    ],
+  });
   const result = expandPlayableAudioSequence(source, {word: "/word.mp3", sentence: "/sentence.mp3"});
   assert.deepEqual(result.map(cue => cue.element), ["sentence"]);
 });

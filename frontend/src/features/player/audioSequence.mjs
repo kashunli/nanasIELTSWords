@@ -13,11 +13,13 @@ const DEFAULT_STEP_VALUES = {
 export function createDefaultAudioSequence() {
   return {
     version: AUDIO_SEQUENCE_VERSION,
-    steps: AUDIO_ELEMENT_IDS.map(element => ({
-      id: `${element}-1`,
-      element,
-      ...DEFAULT_STEP_VALUES[element],
-    })),
+    steps: [
+      {id: "word-1", element: "word", ...DEFAULT_STEP_VALUES.word},
+      {id: "word_translation-1", element: "word_translation", repeatCount: 0, pauseAfterSeconds: 0},
+      {id: "sentence-1", element: "sentence", ...DEFAULT_STEP_VALUES.sentence},
+      {id: "sentence_translation-1", element: "sentence_translation", repeatCount: 0, pauseAfterSeconds: 0},
+      {id: "sentence-2", element: "sentence", ...DEFAULT_STEP_VALUES.sentence},
+    ],
   };
 }
 
