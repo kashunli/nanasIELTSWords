@@ -4,7 +4,7 @@ import type { AudioElementId, AudioSequenceConfig, AudioSequenceStep, CardState,
 import { LocalStudyState } from "./features/study/localStudyState";
 import { LocalAudioSequenceState } from "./features/player/localAudioSequenceState";
 import { LineWaveform } from "./features/player/LineWaveform";
-import { expandPlayableAudioSequence, nextAudioSequenceStep, reorderAudioSequence, updateAudioSequenceStep } from "./features/player/audioSequence.mjs";
+import { appendAudioSequenceStep, AUDIO_ELEMENT_IDS, expandPlayableAudioSequence, nextAudioSequenceStep, removeAudioSequenceStep, reorderAudioSequence, updateAudioSequenceStep } from "./features/player/audioSequence.mjs";
 import { detectSilenceGapsMs } from "./features/player/waveform.mjs";
 import { useAudioBufferPlayer } from "./features/player/useAudioBufferPlayer";
 
@@ -37,7 +37,7 @@ function itemAudioUrls(item?: Item): Partial<Record<AudioElementId, string>> {
 }
 
 function sequenceKey(sequence: AudioSequenceConfig) {
-  return sequence.steps.map(step => `${step.element}:${step.repeatCount}:${step.pauseAfterSeconds}`).join("|");
+  return sequence.steps.map(step => `${step.id}:${step.element}:${step.repeatCount}:${step.pauseAfterSeconds}`).join("|");
 }
 
 type AudioCue = AudioSequenceStep & {url: string; occurrence: number};
@@ -402,45 +402,88 @@ function AudioSequenceEditor({item, sequence, onChange, onReset, onClose}: {
   onReset: () => void;
   onClose: () => void;
 }) {
-  const availableCount = sequence.steps.filter(step => Boolean(audioUrlForElement(item, step.element))).length;
+  const [addMenuOpen, setAddMenuOpen] = useState(false);
+  const [draggingStepId, setDraggingStepId] = useState<string | null>(null);
+  const availableCount = AUDIO_ELEMENT_IDS.filter(element => Boolean(audioUrlForElement(item, element))).length;
   const updateStep = (step: AudioSequenceStep, patch: Partial<Pick<AudioSequenceStep, "repeatCount" | "pauseAfterSeconds">>) => {
-    onChange(updateAudioSequenceStep(sequence, step.element, patch));
+    onChange(updateAudioSequenceStep(sequence, step.id, patch));
+  };
+  const addStep = (element: AudioElementId) => {
+    onChange(appendAudioSequenceStep(sequence, element));
+    setAddMenuOpen(false);
   };
 
   return <section className="sequence-editor" aria-label="Global playback recipe">
     <div className="sequence-editor-header">
-      <div className="section-heading"><span>PLAYBACK RECIPE</span><strong>Arrange the four audio elements</strong></div>
+      <div className="section-heading"><span>PLAYBACK RECIPE</span><strong>Listening sequence</strong></div>
       <div className="sequence-editor-header-actions">
-        <span className="sequence-editor-summary">{item ? `${availableCount}/4 audio files available for this word` : "Select a word to check audio availability"}</span>
+        <span className="sequence-editor-summary">{item ? `${availableCount}/${AUDIO_ELEMENT_IDS.length} audio files available for this word` : "Select a word to check audio availability"}</span>
         <button type="button" className="sequence-close" onClick={onClose} aria-label="Close playback recipe settings">×</button>
       </div>
     </div>
-    <p className="sequence-editor-intro">This order, repeat count, and pause are shared by every word in this browser. Repeat 0 skips an element; at least one repeat must remain above 0. Missing translation audio is skipped for now and joins the sequence automatically when its file is available.</p>
+    <p className="sequence-editor-intro">Each row is one playback occurrence. Add the same audio more than once when you want it repeated later.</p>
     <ol className="sequence-rows">
-      {sequence.steps.map((step, index) => {
-        const available = Boolean(audioUrlForElement(item, step.element));
-        return <li key={step.element} className={`sequence-row ${available ? "available" : "pending"}`}>
-          <span className="sequence-position" aria-hidden="true">{index + 1}</span>
-          <div className="sequence-row-name">
-            <strong>{AUDIO_ELEMENT_LABELS[step.element]}</strong>
-            <small>{available ? "Audio available" : "Audio to be added later"}</small>
-          </div>
-          <div className="sequence-order-buttons" aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]}`}>
-            <button type="button" onClick={() => onChange(reorderAudioSequence(sequence, index, index - 1))} disabled={index === 0} aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]} earlier`}>↑</button>
-            <button type="button" onClick={() => onChange(reorderAudioSequence(sequence, index, index + 1))} disabled={index === sequence.steps.length - 1} aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]} later`}>↓</button>
-          </div>
-          <label className="sequence-number-field sequence-repeat-field">Repeat
-            <input type="number" min="0" max="20" step="1" value={step.repeatCount} onChange={event => updateStep(step, {repeatCount: Number(event.target.value)})} />
-          </label>
-          <label className="sequence-number-field sequence-pause-field">Pause after
-            <span><input type="number" min="0" max="60" step="0.1" value={step.pauseAfterSeconds} onChange={event => updateStep(step, {pauseAfterSeconds: Number(event.target.value)})} /> s</span>
-          </label>
-        </li>;
-      })}
+      {(() => {
+        const occurrenceCounts = new Map<AudioElementId, number>();
+        return sequence.steps.map((step, index) => {
+          const available = Boolean(audioUrlForElement(item, step.element));
+          const occurrence = (occurrenceCounts.get(step.element) || 0) + 1;
+          occurrenceCounts.set(step.element, occurrence);
+          const fromIndex = draggingStepId ? sequence.steps.findIndex(candidate => candidate.id === draggingStepId) : -1;
+          return <li
+            key={step.id}
+            className={`sequence-row ${available ? "available" : "pending"} ${draggingStepId === step.id ? "dragging" : ""}`}
+            draggable
+            onDragStart={event => {
+              setDraggingStepId(step.id);
+              event.dataTransfer.effectAllowed = "move";
+            }}
+            onDragOver={event => event.preventDefault()}
+            onDrop={event => {
+              event.preventDefault();
+              if (fromIndex >= 0 && fromIndex !== index) onChange(reorderAudioSequence(sequence, fromIndex, index));
+              setDraggingStepId(null);
+            }}
+            onDragEnd={() => setDraggingStepId(null)}
+          >
+            <div className="sequence-row-leading">
+              <span className="sequence-position" aria-hidden="true">{index + 1}</span>
+              <span className="sequence-drag-handle" aria-hidden="true">⠿</span>
+            </div>
+            <div className="sequence-row-name">
+              <div className="sequence-row-title">
+                <strong>{AUDIO_ELEMENT_LABELS[step.element]}</strong>
+                {occurrence > 1 ? <span className="sequence-repeat-badge">REPEAT</span> : null}
+              </div>
+              <small>{available ? "Audio available" : "Audio to be added later"}</small>
+            </div>
+            <div className="sequence-order-buttons" aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]}`}>
+              <button type="button" onClick={() => onChange(reorderAudioSequence(sequence, index, index - 1))} disabled={index === 0} aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]} earlier`}>↑</button>
+              <button type="button" onClick={() => onChange(reorderAudioSequence(sequence, index, index + 1))} disabled={index === sequence.steps.length - 1} aria-label={`Move ${AUDIO_ELEMENT_LABELS[step.element]} later`}>↓</button>
+            </div>
+            <label className="sequence-number-field sequence-repeat-field"><span>REPEAT</span>
+              <input type="number" min="0" max="20" step="1" value={step.repeatCount} onChange={event => updateStep(step, {repeatCount: Number(event.target.value)})} />
+            </label>
+            <label className="sequence-number-field sequence-pause-field"><span>PAUSE AFTER</span>
+              <span className="sequence-seconds-input"><input type="number" min="0" max="60" step="0.1" value={step.pauseAfterSeconds} onChange={event => updateStep(step, {pauseAfterSeconds: Number(event.target.value)})} /><b>s</b></span>
+            </label>
+            <button type="button" className="sequence-remove" onClick={() => onChange(removeAudioSequenceStep(sequence, step.id))} disabled={sequence.steps.length <= 1} aria-label={`Remove ${AUDIO_ELEMENT_LABELS[step.element]} occurrence`}>×</button>
+          </li>;
+        });
+      })()}
     </ol>
+    <div className="sequence-add-area">
+      <button type="button" className="sequence-add-step" onClick={() => setAddMenuOpen(value => !value)} aria-expanded={addMenuOpen}>＋ <span>Add step</span></button>
+      {addMenuOpen ? <div className="sequence-add-menu" role="menu" aria-label="Choose an audio step">
+        {AUDIO_ELEMENT_IDS.map(element => <button key={element} type="button" role="menuitem" onClick={() => addStep(element)}>{AUDIO_ELEMENT_LABELS[element]}</button>)}
+      </div> : null}
+    </div>
     <div className="sequence-editor-footer">
       <span>Pause applies after every playback, including repeats, before the next available element or item.</span>
-      <button type="button" className="sequence-reset" onClick={onReset}>Reset recipe</button>
+      <div className="sequence-editor-actions">
+        <button type="button" className="sequence-reset" onClick={onReset}>Reset sequence</button>
+        <button type="button" className="sequence-save" onClick={onClose}>Save sequence</button>
+      </div>
     </div>
   </section>;
 }
