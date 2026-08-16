@@ -9,7 +9,6 @@ import { detectSilenceGapsMs } from "./features/player/waveform.mjs";
 import { useAudioBufferPlayer } from "./features/player/useAudioBufferPlayer";
 
 type Filter = "all" | "review" | "unmarked" | "known" | "flagged";
-type PlaybackMode = "sequence" | "words" | "sentences";
 type RunMode = "single" | "consecutive";
 
 const AUDIO_ELEMENT_LABELS: Record<AudioElementId, string> = {
@@ -17,13 +16,6 @@ const AUDIO_ELEMENT_LABELS: Record<AudioElementId, string> = {
   sentence: "English sentence",
   word_translation: "Chinese word translation",
   sentence_translation: "Chinese sentence translation",
-};
-
-const AUDIO_ELEMENT_SHORT_LABELS: Record<AudioElementId, string> = {
-  word: "Word",
-  sentence: "Sentence",
-  word_translation: "中文释义",
-  sentence_translation: "中文例句",
 };
 
 function itemAudioUrls(item?: Item): Partial<Record<AudioElementId, string>> {
@@ -43,10 +35,9 @@ function sequenceKey(sequence: AudioSequenceConfig) {
 type AudioCue = AudioSequenceStep & {url: string; occurrence: number};
 type PlayRequest = {itemUuid: string; requestId: number; element?: AudioElementId};
 
-function AudioPlayer({item, sequence, mode, runMode, playRequest, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed}: {
+function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed}: {
   item?: Item;
   sequence: AudioSequenceConfig;
-  mode: PlaybackMode;
   runMode: RunMode;
   playRequest?: PlayRequest;
   onNextItem: () => boolean;
@@ -341,14 +332,6 @@ function AudioPlayer({item, sequence, mode, runMode, playRequest, onNextItem, on
   if (!currentCue) return <section className="player empty-player">No playable audio is available for this item yet.</section>;
 
   return <section className="player" aria-label="Audio player">
-    <div className="player-meta">
-      <div className="player-current">
-        <span className="player-kicker">CURRENT AUDIO</span>
-        <strong>{item.headword}</strong>
-        <small>{AUDIO_ELEMENT_LABELS[currentCue.element]}{currentCue.repeatCount > 1 ? ` · ${currentCue.occurrence}/${currentCue.repeatCount}` : ""}</small>
-      </div>
-      <span className="audio-time" aria-label="Playback time">{progressLabel}</span>
-    </div>
     <div className="player-controls" role="toolbar" aria-label="Playback controls">
       <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-label="Replay configured audio sequence" aria-keyshortcuts="R"><span className="button-label-full">Replay</span><span className="button-label-short">Replay</span></button>
       <button type="button" onClick={previousManually} disabled={!hasPreviousTarget} aria-label="Previous audio element or item" aria-keyshortcuts="A"><span className="button-label-full">Previous</span><span className="button-label-short">Prev</span></button>
@@ -377,8 +360,9 @@ function AudioPlayer({item, sequence, mode, runMode, playRequest, onNextItem, on
         vadNonSpeechIntervals={[]}
         onSeek={(time) => void player.seek(time)}
       />
+      <span className="audio-time" aria-label="Playback time">{progressLabel}</span>
     </div>
-    <div className="player-help">{playerError || (waitingForNextCue ? `Paused ${currentCue.pauseAfterSeconds.toFixed(1)}s before the next audio element` : `${AUDIO_ELEMENT_SHORT_LABELS[currentCue.element]} · ${runMode === "single" ? "single item" : "play through items"} · ${mode} · A/D previous/next · Space play/pause`)}</div>
+    {playerError || waitingForNextCue ? <div className="player-status">{playerError || `Paused ${currentCue.pauseAfterSeconds.toFixed(1)}s before the next audio element`}</div> : null}
   </section>;
 }
 
@@ -586,7 +570,6 @@ export default function App() {
   const [selectedId, setSelectedId] = useState<string>();
   const [playRequest, setPlayRequest] = useState<PlayRequest>();
   const playRequestIdRef = useRef(0);
-  const [mode, setMode] = useState<PlaybackMode>("sequence");
   const [runMode, setRunMode] = useState<RunMode>("consecutive");
   const [stateVersion, setStateVersion] = useState(0);
   const [sequenceVersion, setSequenceVersion] = useState(0);
@@ -602,30 +585,30 @@ export default function App() {
   }, [audioSequences, study]);
   useEffect(() => { void Promise.all([getSummary(), getChapters()]).then(([nextSummary, nextChapters]) => { setSummary(nextSummary); setChapters(nextChapters); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load corpus.")); }, []);
   useEffect(() => { void getItems(chapter, search).then(nextItems => { setItems(nextItems); setSelectedId(current => current && nextItems.some(item => item.stable_id === current) ? current : nextItems[0]?.stable_id); }).catch(errorValue => setError(errorValue instanceof Error ? errorValue.message : "Could not load items.")); }, [chapter, search]);
+  useEffect(() => {
+    if (!message) return;
+    const timer = window.setTimeout(() => setMessage(""), 3500);
+    return () => window.clearTimeout(timer);
+  }, [message]);
   const visibleItems = useMemo(() => items.filter(item => { const card = study.card(item.item_uuid); if (filter === "known") return card?.known; if (filter === "flagged") return card?.flagged; if (filter === "unmarked") return !card?.known && !card?.flagged; if (filter === "review") return Boolean(card?.due_at && Date.parse(card.due_at) <= Date.now()); return true; }), [items, filter, stateVersion, study]);
   const selected = visibleItems.find(item => item.stable_id === selectedId) || visibleItems[0];
   const counts = useMemo(() => ({known: items.filter(item => study.card(item.item_uuid)?.known).length, flagged: items.filter(item => study.card(item.item_uuid)?.flagged).length, review: items.filter(item => { const due = study.card(item.item_uuid)?.due_at; return due && Date.parse(due) <= Date.now(); }).length}), [items, stateVersion, study]);
   const selectedIndex = selected ? visibleItems.findIndex(item => item.stable_id === selected.stable_id) : -1;
   const card = selected ? study.card(selected.item_uuid) : undefined;
   const globalSequence = useMemo(() => audioSequences.config(), [audioSequences, sequenceVersion]);
-  const playbackSequence = useMemo(() => {
-    if (mode === "sequence") return globalSequence;
-    const element: AudioElementId = mode === "words" ? "word" : "sentence";
-    return {version: 2 as const, steps: globalSequence.steps.filter(step => step.element === element)};
-  }, [mode, globalSequence]);
   const playerSequence = useMemo(() => {
     const requestedElement = playRequest?.element;
-    if (!requestedElement) return playbackSequence;
+    if (!requestedElement) return globalSequence;
     const requestedStep = globalSequence.steps.find(step => step.element === requestedElement);
-    if (!requestedStep) return playbackSequence;
-    const steps = playbackSequence.steps.map(step => step.element === requestedElement
+    if (!requestedStep) return globalSequence;
+    const steps = globalSequence.steps.map(step => step.element === requestedElement
       ? {...step, repeatCount: Math.max(1, step.repeatCount), pauseAfterSeconds: 0}
       : step);
     if (!steps.some(step => step.element === requestedElement)) {
       steps.push({...requestedStep, repeatCount: Math.max(1, requestedStep.repeatCount), pauseAfterSeconds: 0});
     }
     return {version: 2 as const, steps};
-  }, [globalSequence, playbackSequence, playRequest?.element]);
+  }, [globalSequence, playRequest?.element]);
   const advanceNext = (): boolean => {
     if (!selected) return false;
     const next = visibleItems[selectedIndex + 1];
@@ -640,7 +623,6 @@ export default function App() {
     setSelectedId(previous.stable_id);
     return true;
   };
-  const changeMode = (nextMode: PlaybackMode) => setMode(nextMode);
   const canNextItem = Boolean(selected && selectedIndex >= 0 && selectedIndex < visibleItems.length - 1);
   const canPreviousItem = Boolean(selected && selectedIndex > 0);
   const toggle = (key: "known" | "flagged") => { if (selected) study.update(selected.item_uuid, {[key]: !card?.[key]}); };
@@ -676,7 +658,7 @@ export default function App() {
       <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} onPlayAudio={playSelectedAudio} listOpen={listOpen} onToggleList={() => setListOpen(value => !value)} /></section>
     </main>
     </div>
-      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playerSequence} mode={mode} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><label>Content <select value={mode} onChange={event => changeMode(event.target.value as PlaybackMode)}><option value="sequence">Configured four-part sequence</option><option value="words">English word only</option><option value="sentences">English sentence only</option></select></label><button type="button" className={showPlaybackSettings ? "settings-trigger selected" : "settings-trigger"} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button><span>{message || (card?.due_at ? `Review due ${new Date(card.due_at).toLocaleDateString()}` : "Click an item to play its audio")}</span></div></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
-    {error ? <div className="toast error">{error}</div> : null}
+      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playerSequence} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /><div className="player-settings"><button type="button" className={showPlaybackSettings ? "settings-trigger selected" : "settings-trigger"} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button></div></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
+    {error ? <div className="toast error">{error}</div> : null}{message ? <div className="toast success">{message}</div> : null}
   </div>;
 }
