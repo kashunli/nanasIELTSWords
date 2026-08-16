@@ -471,6 +471,7 @@ function FocusCard({selected, card, onToggle, onPlayAudio}: {
   const displaySentence = book?.example_en || selected.sentence;
   const displayMeaningZh = book?.meaning_zh || selected.meaning_zh;
   const hasUsage = Boolean(book && (book.collocations || book.word_formation || book.notes));
+  const hasReviewedEnglishMeaning = selected.meaning_status === "reviewed" && Boolean(selected.meaning_en.trim());
 
   return <div className="focus-card">
     <div className="focus-meta">
@@ -496,16 +497,16 @@ function FocusCard({selected, card, onToggle, onPlayAudio}: {
       {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><AudioTextButton className="example-translation-text" onClick={() => onPlayAudio("sentence_translation")} ariaLabel={`Play Chinese translation of the example sentence for ${displayWord}`} disabled={!selected.sentence_translation_audio_url}>{book.example_zh}</AudioTextButton></div> : null}
     </section>
 
-    <section className="explanation-card" aria-label="Explanation below current line">
+    {hasReviewedEnglishMeaning ? <section className="explanation-card" aria-label="Explanation below current line">
       <div className="section-heading"><span>EXPLANATION</span><strong>Understand this word in the current line</strong></div>
       <div className="explanation-grid">
         <article className="meaning-card meaning-primary">
           <span>MEANING</span>
-          <p>{selected.meaning_en || "Meaning pending"}</p>
-          <small>{selected.meaning_status === "ai_draft" ? "AI draft English meaning" : "Reviewed English meaning"}</small>
+          <p>{selected.meaning_en}</p>
+          <small>Reviewed English meaning</small>
         </article>
       </div>
-    </section>
+    </section> : null}
 
     {hasUsage ? <section className="usage-section" aria-label="Usage information">
       <div className="section-heading"><span>USAGE NOTES</span><strong>Useful patterns</strong></div>

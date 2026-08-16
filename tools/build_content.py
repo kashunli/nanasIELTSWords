@@ -14,7 +14,7 @@ from pathlib import Path
 from content_repairs import load_repair_plan, load_source_items, repair_artifact_hash
 
 
-PROJECTION_VERSION = "accepted-book-fields-v7-book-confirmed-order-review-verified-translation-audio"
+PROJECTION_VERSION = "accepted-book-fields-v8-no-ai-draft-english-meaning"
 BOOK_WORD_ALIGNMENTS = {"matched_headword", "matched_sentence"}
 BOOK_SENTENCE_MATCHES = {"exact", "normalized"}
 
@@ -109,6 +109,14 @@ def sha256(path: Path) -> str:
         for block in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def runtime_meaning(record: dict) -> dict:
+    """Keep model-drafted English meanings in preparation, not the runtime."""
+    status = str(record.get("meaning_status", "ai_draft")).strip() or "ai_draft"
+    if status != "ai_draft":
+        return {**record, "meaning_status": status}
+    return {**record, "meaning_en": "", "meaning_status": "not_provided"}
 
 
 def optional_audio_path(root: Path, value: object, stable_id: str, field_name: str) -> str | None:
@@ -336,7 +344,7 @@ def main() -> int:
     # suppressed from the runtime projection.  Keep that preparation evidence
     # intact, but do not require suppressed IDs to appear in the runtime build.
     effective_meanings = {
-        stable_id: record
+        stable_id: runtime_meaning(record)
         for stable_id, record in {**repaired_meanings, **meanings}.items()
         if stable_id in source_ids
     }
@@ -374,7 +382,7 @@ def main() -> int:
             connection.execute("INSERT INTO chapters VALUES (?, ?, ?, ?, ?)", (collection_code, number, f"Chapter {number}", len(chapter_items), review_count))
         accepted: list[dict] = []
         for record in selected:
-            meaning = effective_meanings.get(record["stable_id"], {"part_of_speech": "", "meaning_en": "Meaning pending", "meaning_zh": "释义待生成", "meaning_status": "ai_draft"})
+            meaning = effective_meanings.get(record["stable_id"], {"part_of_speech": "", "meaning_en": "", "meaning_zh": "释义待生成", "meaning_status": "not_provided"})
             if not record["headword"] or not record["sentence"]: raise SystemExit(f"empty selected transcript: {record['stable_id']}")
             word_audio = record["word_audio"]["path"]
             sentence_audio = record["sentence_audio"]["path"]
@@ -392,11 +400,11 @@ def main() -> int:
             sentence_translation_audio = sentence_translation_audio or generated_sentence_translation_audio or None
             if args.require_translation_audio and (not word_translation_audio or (display_example_zh and not sentence_translation_audio)):
                 raise SystemExit(f"missing required translation audio for {record['stable_id']}")
-            accepted_record = {"schema_version": 1, "stable_id": record["stable_id"], "item_uuid": record["item_uuid"], "collection_code": collection_code, "chapter": record["chapter"], "position": record["position"], "headword": accepted_fields["headword"], "part_of_speech": meaning["part_of_speech"], "meaning_en": meaning["meaning_en"], "meaning_zh": meaning["meaning_zh"], "sentence": accepted_fields["sentence"], "word_audio": word_audio, "word_translation_audio": word_translation_audio, "sentence_audio": sentence_audio, "sentence_translation_audio": sentence_translation_audio, "transcript_status": record["transcript_status"], "meaning_status": meaning.get("meaning_status", "ai_draft"), "accepted_word_source": accepted_fields["accepted_word_source"], "accepted_sentence_source": accepted_fields["accepted_sentence_source"], "review_reasons": record["review_reasons"]}
+            accepted_record = {"schema_version": 1, "stable_id": record["stable_id"], "item_uuid": record["item_uuid"], "collection_code": collection_code, "chapter": record["chapter"], "position": record["position"], "headword": accepted_fields["headword"], "part_of_speech": meaning["part_of_speech"], "meaning_en": meaning["meaning_en"], "meaning_zh": meaning["meaning_zh"], "sentence": accepted_fields["sentence"], "word_audio": word_audio, "word_translation_audio": word_translation_audio, "sentence_audio": sentence_audio, "sentence_translation_audio": sentence_translation_audio, "transcript_status": record["transcript_status"], "meaning_status": meaning.get("meaning_status", "not_provided"), "accepted_word_source": accepted_fields["accepted_word_source"], "accepted_sentence_source": accepted_fields["accepted_sentence_source"], "review_reasons": record["review_reasons"]}
             accepted.append(accepted_record)
             connection.execute(
                 "INSERT INTO word_items (stable_id, item_uuid, collection_code, chapter_number, position, headword, part_of_speech, meaning_en, meaning_zh, word_audio, word_translation_audio, transcript_status, meaning_status, accepted_word_source, accepted_sentence_source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                (record["stable_id"], record["item_uuid"], collection_code, record["chapter"], record["position"], accepted_fields["headword"], meaning["part_of_speech"], meaning["meaning_en"], meaning["meaning_zh"], word_audio, word_translation_audio, record["transcript_status"], meaning.get("meaning_status", "ai_draft"), accepted_fields["accepted_word_source"], accepted_fields["accepted_sentence_source"]),
+                (record["stable_id"], record["item_uuid"], collection_code, record["chapter"], record["position"], accepted_fields["headword"], meaning["part_of_speech"], meaning["meaning_en"], meaning["meaning_zh"], word_audio, word_translation_audio, record["transcript_status"], meaning.get("meaning_status", "not_provided"), accepted_fields["accepted_word_source"], accepted_fields["accepted_sentence_source"]),
             )
             connection.execute("INSERT INTO examples VALUES (?, ?, 0, 'main_sentence', ?, ?, ?, ?, ?)", (f"{record['stable_id']}-main", record["stable_id"], accepted_fields["sentence"], sentence_audio, sentence_translation_audio, record["transcript_status"], accepted_fields["accepted_sentence_source"]))
             if book_reference:
@@ -405,7 +413,6 @@ def main() -> int:
                     (record["stable_id"], book_reference["book_word_id"], book_reference["headword"], book_reference["ipa"], book_reference["part_of_speech"], book_reference["meaning_zh"], book_reference["example_en"], book_reference["example_zh"], book_reference["collocations"], book_reference["word_formation"], book_reference["notes"], book_reference["source_page"], book_reference["pdf_page"], book_reference["printed_page"], book_reference["position_on_page"], book_reference["alignment_status"], book_reference["alignment_evidence"], book_reference["sentence_match"], book_reference["needs_review"], book_reference["review_reasons"]),
                 )
             for reason in record["review_reasons"]: connection.execute("INSERT INTO review_reasons VALUES (?, 'asr', ?)", (record["stable_id"], reason))
-            if meaning.get("meaning_status") != "reviewed": connection.execute("INSERT INTO review_reasons VALUES (?, 'meaning', 'ai_draft_meaning')", (record["stable_id"],))
         for artifact, path in (("source_manifest", content / "source-manifest.json"), ("audio_repairs", content / "audio-repairs.json"), ("selected_transcripts", content / "selected-transcripts.jsonl"), ("meanings", meaning_path), ("book_words", book_reference_path), ("translation_audio", translation_audio_path_manifest)):
             if path.exists(): connection.execute("INSERT INTO source_revisions VALUES (?, ?, ?, ?)", (artifact, sha256(path), f"ielts-vocabulary-tools-{PROJECTION_VERSION}", now))
         connection.commit()

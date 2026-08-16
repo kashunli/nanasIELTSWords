@@ -5,8 +5,9 @@ audio collection: the 22 chapters under Bilibili `BV1AT4y1579F`.
 
 The application uses the recordings as primary evidence. Whisper supplies the
 initial headword and example sentence transcript for preparation; Luna/Codex-
-generated English and Simplified Chinese meanings are stored as clearly labeled
-draft metadata. The reviewed book/PDF layer is imported separately: when its
+generated meanings remain in preparation artifacts for audit, but model-drafted
+English meanings are not projected into the learner runtime. The reviewed
+book/PDF layer is imported separately: when its
 word or sentence evidence aligns to an audio item, it supplies the
 learner-facing field without changing stable audio-based item IDs or browser
 study progress. Raw transcription runs and their uncertainty flags remain in

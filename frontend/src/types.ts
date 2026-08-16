@@ -1,4 +1,4 @@
-export type MeaningStatus = "ai_draft" | "reviewed";
+export type MeaningStatus = "ai_draft" | "reviewed" | "not_provided";
 
 export type AudioElementId = "word" | "sentence" | "word_translation" | "sentence_translation";
 

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import unittest
 
-from build_content import accepted_transcript, book_sentence_matches, book_word_matches, unresolved_asr_review
+from build_content import accepted_transcript, book_sentence_matches, book_word_matches, runtime_meaning, unresolved_asr_review
 
 
 def book_reference(alignment_status: str, sentence_match: str, headword: str = "plateau") -> dict[str, str]:
@@ -20,6 +20,15 @@ def audio_record(headword: str = "Plato.", sentence: str = "The atmosphere is th
 
 
 class ContentProjectionTests(unittest.TestCase):
+    def test_ai_draft_english_meaning_is_not_projected(self) -> None:
+        draft = {"part_of_speech": "n.", "meaning_en": "generated meaning", "meaning_zh": "书中释义", "meaning_status": "ai_draft"}
+
+        projected = runtime_meaning(draft)
+
+        self.assertEqual(projected["meaning_en"], "")
+        self.assertEqual(projected["meaning_zh"], "书中释义")
+        self.assertEqual(projected["meaning_status"], "not_provided")
+
     def test_sentence_match_replaces_sentence_only(self) -> None:
         reference = book_reference("matched_sentence", "normalized")
         selected = accepted_transcript(audio_record(), reference)
