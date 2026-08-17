@@ -515,10 +515,6 @@ function FocusCard({selected, card, onToggle, onPlayAudio, listOpen, onToggleLis
   const hasReviewedEnglishMeaning = selected.meaning_status === "reviewed" && Boolean(selected.meaning_en.trim());
 
   return <div className="focus-card">
-    <div className="focus-meta">
-      <span>Chapter {selected.chapter} · #{selected.position}</span>
-    </div>
-
     <header className="word-hero">
       <div className="word-title-row">
         <h2><AudioTextButton className="word-audio-trigger" onClick={() => onPlayAudio("word")} ariaLabel={`Play ${displayWord}`} disabled={!selected.word_audio_url}>{displayWord}</AudioTextButton></h2>
@@ -531,11 +527,8 @@ function FocusCard({selected, card, onToggle, onPlayAudio, listOpen, onToggleLis
     </header>
 
     <section className="example-card current-line-card" aria-label="Current played lyric line" data-current-line>
-      <div className="section-kicker-row">
-        <span>CURRENT LINE</span>
-      </div>
       <AudioTextButton className="example-en example-audio-trigger" onClick={() => onPlayAudio("sentence")} ariaLabel={`Play example sentence for ${displayWord}`} disabled={!selected.sentence_audio_url}>{displaySentence}</AudioTextButton>
-      {book?.example_zh ? <div className="example-translation"><span>中文翻译</span><AudioTextButton className="example-translation-text" onClick={() => onPlayAudio("sentence_translation")} ariaLabel={`Play Chinese translation of the example sentence for ${displayWord}`} disabled={!selected.sentence_translation_audio_url}>{book.example_zh}</AudioTextButton></div> : null}
+      {book?.example_zh ? <div className="example-translation"><AudioTextButton className="example-translation-text" onClick={() => onPlayAudio("sentence_translation")} ariaLabel={`Play Chinese translation of the example sentence for ${displayWord}`} disabled={!selected.sentence_translation_audio_url}>{book.example_zh}</AudioTextButton></div> : null}
     </section>
 
     {hasReviewedEnglishMeaning ? <section className="explanation-card" aria-label="Explanation below current line">

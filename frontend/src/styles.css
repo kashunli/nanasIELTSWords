@@ -24,7 +24,7 @@ h1 { margin: 0; font-size: clamp(24px, 3.2vw, 44px); letter-spacing: -.05em; col
 .item-row { width: 100%; text-align: left; display: grid; grid-template-columns: 35px 1fr auto; gap: 7px; padding: 12px 10px; background: transparent; border-radius: 10px; align-items: center; }
 .item-row:hover, .item-row.active { background: #dfe9df; } .item-row span { color: #9aa69e; font-size: 12px; } .item-row strong { font-size: 15px; } .item-row small { color: #b05a39; font-size: 11px; }
 .focus { min-width: 0; } .focus-card { background: #fffdf8; border: 1px solid #ded8cc; border-radius: 22px; padding: clamp(22px, 4vw, 52px); min-height: 420px; box-shadow: 0 18px 46px rgba(45, 66, 57, .08); }
-.focus-meta { color: #718077; font-size: 13px; } h2 { margin: 18px 0 2px; font-size: clamp(42px, 7vw, 96px); letter-spacing: -.07em; color: #243c35; } .pos { color: #a07745; font-style: italic; }
+h2 { margin: 18px 0 2px; font-size: clamp(42px, 7vw, 96px); letter-spacing: -.07em; color: #243c35; } .pos { color: #a07745; font-style: italic; }
 .meanings { margin-top: 18px; padding: 15px 17px; background: #f4f0e7; border-left: 4px solid #bd8750; border-radius: 8px; } .meanings p { margin: 5px 0; font-size: 18px; } .meanings small { color: #9a8165; }
 .sentence { margin-top: 30px; } .sentence span { color: #92764a; font-size: 11px; font-weight: 800; letter-spacing: .14em; } .sentence p { font-size: clamp(18px, 2.6vw, 29px); line-height: 1.35; margin: 8px 0; }
 .card-actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 30px; } .card-actions button { padding: 10px 14px; border: 1px solid #cdd6ce; border-radius: 10px; background: #fff; } .card-actions button.selected { border-color: #253733; background: #253733; color: #fff; }
@@ -56,8 +56,6 @@ h1 { margin: 0; font-size: clamp(24px, 3.2vw, 44px); letter-spacing: -.05em; col
 
 /* Word dossier ------------------------------------------------------------- */
 .focus-card { padding: clamp(22px, 4vw, 52px); }
-.focus-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.focus-meta > span { margin-left: 0; }
 .word-hero { margin-top: 12px; }
 .content-audio-trigger {
   appearance: none;
@@ -91,11 +89,10 @@ h1 { margin: 0; font-size: clamp(24px, 3.2vw, 44px); letter-spacing: -.05em; col
 .word-facts .pos { margin: 0; }
 .ipa { color: #5a6d68; font-size: 16px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
 .meaning-card { min-height: 126px; padding: 17px 18px; border-radius: 14px; border: 1px solid #ded8cc; background: #f7f3ea; }
-.meaning-card span, .example-card > .section-kicker-row > span:first-child, .example-translation span, .usage-grid span { color: #92764a; font-size: 10px; font-weight: 850; letter-spacing: .14em; }
+.meaning-card span, .example-translation span, .usage-grid span { color: #92764a; font-size: 10px; font-weight: 850; letter-spacing: .14em; }
 .meaning-card p { margin: 10px 0 7px; font-size: 19px; line-height: 1.35; }
 .meaning-card small { color: #8f826e; }
 .example-card { margin-top: 24px; padding: 20px 21px; border: 1px solid #dfd7c7; border-radius: 15px; background: #fffaf1; }
-.section-kicker-row { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
 .match-badge { padding: 4px 8px; border-radius: 999px; font-size: 11px; font-weight: 750; }
 .match-badge.exact { background: #e4f1e5; color: #3f7451; }
 .match-badge.normalized { background: #e5eef8; color: #416b96; }
@@ -452,7 +449,6 @@ h1 { margin: 0; font-size: clamp(24px, 3.2vw, 44px); letter-spacing: -.05em; col
 
   /* Focus card: maximum room for the word/sentence */
   .focus-card { padding: 16px 14px 20px; border-radius: 16px; min-height: 0; }
-  .focus-meta { font-size: 11px; }
   .word-title-row h2 { font-size: clamp(42px, 13vw, 58px); }
   .current-line-card { margin-top: 18px; padding: 15px 15px 16px; }
   .current-line-card .example-en { font-size: 22px; }
