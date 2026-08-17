@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { getChapters, getItems, getSummary } from "./api";
-import type { AudioElementId, AudioSequenceConfig, AudioSequenceStep, CardState, Chapter, Item, Summary } from "./types";
+import type { AudioElementId, AudioSequenceConfig, AudioSequenceStep, Chapter, Item, Summary } from "./types";
 import { LocalStudyState } from "./features/study/localStudyState";
 import { LocalAudioSequenceState } from "./features/player/localAudioSequenceState";
 import { LineWaveform } from "./features/player/LineWaveform";
@@ -57,7 +57,7 @@ function IconRepeatOne() {
   return <svg className="ctrl-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4zm-4-2V9h-4v2h2v4h2z"/></svg>;
 }
 
-function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed}: {
+function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPreviousItem, onRunModeChange, canNextItem, canPreviousItem, onPlayed, cardActions}: {
   item?: Item;
   sequence: AudioSequenceConfig;
   runMode: RunMode;
@@ -68,6 +68,7 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
   canNextItem: boolean;
   canPreviousItem: boolean;
   onPlayed: (item: Item) => void;
+  cardActions?: ReactNode;
 }) {
   const audioUrls = useMemo(() => itemAudioUrls(item), [item?.sentence_audio_url, item?.sentence_translation_audio_url, item?.word_audio_url, item?.word_translation_audio_url]);
   const playableCues = useMemo(() => expandPlayableAudioSequence(sequence, audioUrls) as AudioCue[], [audioUrls, sequence]);
@@ -348,6 +349,7 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
       <button type="button" onClick={previousManually} disabled={!hasPreviousTarget} aria-label="Previous audio element or item" aria-keyshortcuts="A" title="Previous (A)"><IconPrevious /></button>
       <button type="button" onClick={advanceManually} disabled={!hasNextTarget} aria-label="Next audio element or item" aria-keyshortcuts="D" title="Next (D)"><IconNext /></button>
       <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C" title={`${runMode === "single" ? "Single" : "Consecutive"} playback (C)`}>{runMode === "consecutive" ? <IconRepeat /> : <IconRepeatOne />}</button>
+      {cardActions}
     </div>
     <div className="player-transport">
       <button
@@ -477,8 +479,6 @@ function AudioSequenceEditor({item, sequence, onChange, onReset, onClose}: {
   </section>;
 }
 
-type CardToggle = "known" | "flagged";
-
 function AudioTextButton({children, className, onClick, ariaLabel, disabled = false}: {
   children: ReactNode;
   className: string;
@@ -489,13 +489,9 @@ function AudioTextButton({children, className, onClick, ariaLabel, disabled = fa
   return <button type="button" className={`content-audio-trigger ${className}`} onClick={onClick} aria-label={ariaLabel} disabled={disabled}>{children}</button>;
 }
 
-function FocusCard({selected, card, onToggle, onPlayAudio, listOpen, onToggleList}: {
+function FocusCard({selected, onPlayAudio}: {
   selected?: Item;
-  card?: CardState;
-  onToggle: (key: CardToggle) => void;
   onPlayAudio: (element: AudioElementId) => void;
-  listOpen: boolean;
-  onToggleList: () => void;
 }) {
   if (!selected) return <div className="focus-card"><p>Select an item from the list.</p></div>;
 
@@ -543,12 +539,6 @@ function FocusCard({selected, card, onToggle, onPlayAudio, listOpen, onToggleLis
         {book?.notes ? <article><span>NOTES</span><p>{book.notes}</p></article> : null}
       </div>
     </section> : null}
-
-    <div className="card-actions">
-      <button type="button" className={card?.known ? "selected" : ""} onClick={() => onToggle("known")}>✓ Known</button>
-      <button type="button" className={card?.flagged ? "selected" : ""} onClick={() => onToggle("flagged")}>⚑ Flagged</button>
-      <button type="button" className="list-toggle" onClick={onToggleList} aria-expanded={listOpen}>{listOpen ? "Hide list" : "List"}</button>
-    </div>
   </div>;
 }
 
@@ -639,6 +629,11 @@ export default function App() {
   const resetGlobalSequence = () => { audioSequences.reset(); };
   const downloadBackup = () => { const blob = new Blob([JSON.stringify({version: 5, study: study.exportSnapshot(), audio_sequence: audioSequences.exportSnapshot()}, null, 2)], {type: "application/json"}); const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "ielts-vocabulary-progress.json"; link.click(); URL.revokeObjectURL(link.href); };
   const restoreBackup = (event: React.ChangeEvent<HTMLInputElement>) => { const file = event.target.files?.[0]; if (!file) return; void file.text().then(text => { const parsed: unknown = JSON.parse(text); if (parsed && typeof parsed === "object" && "study" in parsed) { const backup = parsed as {study: unknown; audio_sequence?: unknown; audio_sequences?: unknown}; study.restore(backup.study); if (backup.audio_sequence !== undefined) audioSequences.restore(backup.audio_sequence); else if (backup.audio_sequences !== undefined) audioSequences.restore(backup.audio_sequences); } else { study.restore(parsed); } setMessage("Progress and global playback settings restored."); }).catch(() => setError("Progress backup is not valid JSON.")); };
+  const cardActions = <span className="card-actions-inline">
+    <button type="button" className={`card-action-button ${card?.known ? "selected" : ""}`} onClick={() => toggle("known")} aria-pressed={Boolean(card?.known)} title={card?.known ? "Mark as unknown" : "Mark as known"}>✓ Known</button>
+    <button type="button" className={`card-action-button ${card?.flagged ? "selected" : ""}`} onClick={() => toggle("flagged")} aria-pressed={Boolean(card?.flagged)} title={card?.flagged ? "Clear flag" : "Flag for review"}>⚑ Flagged</button>
+    <button type="button" className="card-action-button list-toggle" onClick={() => setListOpen(value => !value)} aria-expanded={listOpen} title={listOpen ? "Hide the vocabulary list" : "Show the vocabulary list"}>{listOpen ? "Hide list" : "List"}</button>
+  </span>;
   return <div className="app-shell">
     <div className="content-scroll">
     <header className="topbar"><div className="brand-lockup"><img className="brand-icon" src="/icon.svg" alt="" aria-hidden="true" /><div className="brand-text"><span className="eyebrow">IELTS VOCABULARY</span><h1>{summary?.title || "IELTS Vocabulary"}</h1><p>{summary ? `${summary.items} items` : "Loading corpus…"}</p></div></div><div className="topbar-controls"><select className="chapter-select" value={chapter === null ? "" : String(chapter)} onChange={event => setChapter(event.target.value === "" ? null : Number(event.target.value))} aria-label="Select chapter"><option value="">All chapters</option>{chapters.map(item => <option key={item.number} value={String(item.number)}>Ch {item.number}</option>)}</select><select className="filter-select" value={filter} onChange={event => setFilter(event.target.value as Filter)} aria-label="Filter items">{(["all", "review", "unmarked", "known", "flagged"] as Filter[]).map(value => <option key={value} value={value}>{value[0].toUpperCase() + value.slice(1)}{value === "known" ? ` (${counts.known})` : value === "flagged" ? ` (${counts.flagged})` : value === "review" ? ` (${counts.review})` : ""}</option>)}</select><button className="outline" onClick={() => setShowBackup(value => !value)}>Progress</button><button type="button" className={`outline settings-trigger ${showPlaybackSettings ? "selected" : ""}`} onClick={() => setShowPlaybackSettings(value => !value)} aria-label={showPlaybackSettings ? "Close global playback settings" : "Open global playback settings"} aria-expanded={showPlaybackSettings} title="Global playback settings"><span className="settings-gear" aria-hidden="true">⚙</span><span>Recipe</span></button></div></header>
@@ -654,10 +649,10 @@ export default function App() {
           </button>;
         })}
       </aside>
-      <section className="focus"><FocusCard selected={selected} card={card} onToggle={toggle} onPlayAudio={playSelectedAudio} listOpen={listOpen} onToggleList={() => setListOpen(value => !value)} /></section>
+      <section className="focus"><FocusCard selected={selected} onPlayAudio={playSelectedAudio} /></section>
     </main>
     </div>
-      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playerSequence} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} /></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
+      <section className="player-dock" aria-label="Fixed playback controls"><div className="player-dock-inner"><AudioPlayer item={selected} sequence={playerSequence} runMode={runMode} playRequest={playRequest} onNextItem={advanceNext} onPreviousItem={advancePrevious} onRunModeChange={setRunMode} canNextItem={canNextItem} canPreviousItem={canPreviousItem} onPlayed={item => study.recordPlayed(item)} cardActions={cardActions} /></div>{showPlaybackSettings ? <div className="playback-settings-popover" role="dialog" aria-label="Global playback settings"><AudioSequenceEditor item={selected} sequence={globalSequence} onChange={updateGlobalSequence} onReset={resetGlobalSequence} onClose={() => setShowPlaybackSettings(false)} /></div> : null}</section>
     {error ? <div className="toast error">{error}</div> : null}{message ? <div className="toast success">{message}</div> : null}
   </div>;
 }
