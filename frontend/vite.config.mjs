@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: "127.0.0.1",
-    port: 4174,
+    port: Number(process.env.PORT) || 4174,
     proxy: {
       "/api": "http://127.0.0.1:8770",
       "/media": "http://127.0.0.1:8770",
