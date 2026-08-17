@@ -196,12 +196,13 @@ h2 { margin: 18px 0 2px; font-size: clamp(42px, 7vw, 96px); letter-spacing: -.07
 
 .play-toggle {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: auto;
-  min-height: 48px;
-  padding: 8px 22px;
-  border-radius: 999px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-radius: 50%;
   background: #e4b36f !important;
   color: #273b35 !important;
 }
@@ -415,7 +416,7 @@ h2 { margin: 18px 0 2px; font-size: clamp(42px, 7vw, 96px); letter-spacing: -.07
 @media (max-width: 760px) {
   .player-controls {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 4px;
   }
 
@@ -430,10 +431,10 @@ h2 { margin: 18px 0 2px; font-size: clamp(42px, 7vw, 96px); letter-spacing: -.07
   .player-controls .play-toggle .ctrl-icon { width: 30px; height: 30px; }
 
   .play-toggle {
-    width: auto;
-    min-height: 44px;
-    padding: 6px;
-    border-radius: 10px !important;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50% !important;
   }
 }
 

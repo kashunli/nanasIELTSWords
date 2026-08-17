@@ -348,6 +348,8 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
       <button type="button" onClick={previousManually} disabled={!hasPreviousTarget} aria-label="Previous audio element or item" aria-keyshortcuts="A" title="Previous (A)"><IconPrevious /></button>
       <button type="button" onClick={advanceManually} disabled={!hasNextTarget} aria-label="Next audio element or item" aria-keyshortcuts="D" title="Next (D)"><IconNext /></button>
       <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C" title={`${runMode === "single" ? "Single" : "Consecutive"} playback (C)`}>{runMode === "consecutive" ? <IconRepeat /> : <IconRepeatOne />}</button>
+    </div>
+    <div className="player-transport">
       <button
         type="button"
         className="primary play-toggle"
@@ -359,8 +361,6 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
       >
         {player.isPlaying ? <IconPause /> : <IconPlay />}
       </button>
-    </div>
-    <div className="player-transport">
       <LineWaveform
         audioBuffer={player.audioBuffer}
         loadFailed={player.loadFailed}
