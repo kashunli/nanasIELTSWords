@@ -4,8 +4,8 @@ body { height: 100vh; margin: 0; min-width: 320px; overflow: hidden; background:
 button, input, select { font: inherit; }
 button { border: 0; cursor: pointer; color: inherit; }
 .app-shell { height: 100vh; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; overflow: hidden; padding: 0; }
-.content-scroll { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding: 28px clamp(14px, 4vw, 58px); }
-.topbar { display: flex; align-items: center; gap: 14px; max-width: 1500px; margin: 0 auto 14px; }
+.content-scroll { min-height: 0; display: flex; flex-direction: column; overflow: hidden; padding: 28px clamp(14px, 4vw, 58px) 0; }
+.topbar { flex: 0 0 auto; width: 100%; display: flex; align-items: center; gap: 14px; max-width: 1500px; margin: 0 auto 14px; }
 .brand-lockup { display: flex; align-items: center; gap: 14px; min-width: 0; }
 .brand-text { min-width: 0; }
 .brand-icon { width: 54px; height: 54px; flex: 0 0 auto; border-radius: 16px; box-shadow: 0 10px 24px rgba(38, 59, 53, .16); }
@@ -17,20 +17,20 @@ h1 { margin: 0; font-size: clamp(24px, 3.2vw, 44px); letter-spacing: -.05em; col
 .topbar-controls .outline { padding: 8px 13px; border-radius: 9px; font-size: 13px; }
 .topbar-controls .settings-trigger.selected { background: #253733; color: #fffaf3; border-color: #253733; }
 .outline, .backup-panel button, .file-button { background: transparent; border: 1px solid #b5c2b9; border-radius: 12px; padding: 11px 15px; }
-.backup-panel { max-width: 1500px; margin: 0 auto 16px; padding: 14px; display: flex; gap: 10px; flex-wrap: wrap; background: #fffaf3; border: 1px solid #d8d4c7; border-radius: 14px; }
+.backup-panel { flex: 0 0 auto; width: 100%; max-width: 1500px; margin: 0 auto 16px; padding: 14px; display: flex; gap: 10px; flex-wrap: wrap; background: #fffaf3; border: 1px solid #d8d4c7; border-radius: 14px; }
 .file-button { cursor: pointer; } .file-button input { display: none; }
-.study-layout { max-width: 1500px; margin-left: auto; margin-right: auto; display: grid; grid-template-columns: minmax(230px, 360px) minmax(0, 1fr); gap: 17px; margin-top: 18px; align-items: start; }
-.item-list { max-height: calc(100vh - 260px); overflow: auto; padding: 7px; background: rgba(255,255,255,.65); border: 1px solid #dadfd8; border-radius: 17px; }
+.study-layout { flex: 1 1 auto; min-height: 0; width: 100%; max-width: 1500px; margin-left: auto; margin-right: auto; display: grid; grid-template-columns: minmax(230px, 360px) minmax(0, 1fr); gap: 17px; align-items: stretch; }
+.item-list { min-height: 0; overflow: auto; padding: 7px; background: rgba(255,255,255,.65); border: 1px solid #dadfd8; border-radius: 17px; }
 .item-row { width: 100%; text-align: left; display: grid; grid-template-columns: 35px 1fr auto; gap: 7px; padding: 12px 10px; background: transparent; border-radius: 10px; align-items: center; }
 .item-row:hover, .item-row.active { background: #dfe9df; } .item-row span { color: #9aa69e; font-size: 12px; } .item-row strong { font-size: 15px; } .item-row small { color: #b05a39; font-size: 11px; }
-.focus { min-width: 0; } .focus-card { background: #fffdf8; border: 1px solid #ded8cc; border-radius: 22px; padding: clamp(22px, 4vw, 52px); min-height: 420px; box-shadow: 0 18px 46px rgba(45, 66, 57, .08); }
+.focus { min-width: 0; min-height: 0; overflow-y: auto; align-self: stretch; padding-bottom: 24px; } .focus-card { background: #fffdf8; border: 1px solid #ded8cc; border-radius: 22px; padding: clamp(22px, 4vw, 52px); min-height: 420px; box-shadow: 0 18px 46px rgba(45, 66, 57, .08); }
 h2 { margin: 18px 0 2px; font-size: clamp(42px, 7vw, 96px); letter-spacing: -.07em; color: #243c35; } .pos { color: #a07745; font-style: italic; }
 .meanings { margin-top: 18px; padding: 15px 17px; background: #f4f0e7; border-left: 4px solid #bd8750; border-radius: 8px; } .meanings p { margin: 5px 0; font-size: 18px; } .meanings small { color: #9a8165; }
 .sentence { margin-top: 30px; } .sentence span { color: #92764a; font-size: 11px; font-weight: 800; letter-spacing: .14em; } .sentence p { font-size: clamp(18px, 2.6vw, 29px); line-height: 1.35; margin: 8px 0; }
 .player { margin-top: 16px; background: #263b35; color: #f8f4e9; padding: 17px 19px; border-radius: 17px; } .empty-player { color: #b8c3bb; }
 .timeline { width: 100%; margin: 18px 0 9px; accent-color: #e4b36f; } .player-controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; } .player-controls button { background: #3a544b; color: #fff; padding: 9px 13px; border-radius: 9px; } .player-controls .primary { background: #e4b36f; color: #273b35; } .player-controls span { color: #aebbb4; margin-left: auto; font-size: 12px; }
 .toast { position: fixed; right: 20px; bottom: 20px; max-width: 420px; padding: 12px 15px; border-radius: 11px; background: #fff; border: 1px solid #c7d4c9; box-shadow: 0 12px 30px #0002; } .toast.error { color: #a24e32; } .toast.success { color: #2f6b45; }
-@media (max-width: 760px) { .content-scroll { padding: 19px 10px 28px; } .topbar { align-items: center; } .brand-icon { width: 46px; height: 46px; border-radius: 13px; } .brand-lockup { gap: 10px; } .study-layout { grid-template-columns: 1fr; } .item-list { max-height: 240px; order: 2; } .focus { order: 1; } .player-controls span { margin-left: 0; width: 100%; } h2 { font-size: 56px; } }
+@media (max-width: 760px) { .content-scroll { padding: 12px 10px 0; } .topbar { align-items: center; } .brand-icon { width: 46px; height: 46px; border-radius: 13px; } .brand-lockup { gap: 10px; } .study-layout { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; } .item-list { max-height: 240px; order: 2; min-height: 0; } .focus { order: 1; } .player-controls span { margin-left: 0; width: 100%; } h2 { font-size: 56px; } }
 
 /* The player uses the same decoded-PCM wavebar interaction as the listening
    projects: the hidden range input keeps the SVG keyboard- and pointer-seekable. */
@@ -448,7 +448,7 @@ h2 { margin: 18px 0 2px; font-size: clamp(42px, 7vw, 96px); letter-spacing: -.07
 /* Phone-first chrome compaction: word/sentence card and player controls own
    the screen; title and toolbar collapse to thin rows. */
 @media (max-width: 760px) {
-  .content-scroll { padding: 12px 10px 24px; }
+  .content-scroll { padding: 12px 10px 0; }
 
   /* Topbar: one compact line; title text hidden on phones */
   .topbar { align-items: center; gap: 8px; margin-bottom: 10px; }
