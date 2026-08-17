@@ -238,7 +238,6 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
   }, [player.audioBuffer]);
 
   const duration = player.audioBuffer?.duration || 0.01;
-  const progressLabel = `${formatPlaybackTime(player.currentTime)} / ${formatPlaybackTime(player.audioBuffer?.duration || 0)}`;
   const hasNextTarget = activeCueIndex < playableCues.length - 1 || canNextItem;
   const hasPreviousTarget = activeCueIndex > 0 || canPreviousItem;
   const toggle = () => {
@@ -348,7 +347,7 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
       <button type="button" onClick={replay} disabled={!player.audioBuffer} aria-label="Replay configured audio sequence" aria-keyshortcuts="R" title="Replay (R)"><IconReplay /></button>
       <button type="button" onClick={previousManually} disabled={!hasPreviousTarget} aria-label="Previous audio element or item" aria-keyshortcuts="A" title="Previous (A)"><IconPrevious /></button>
       <button type="button" onClick={advanceManually} disabled={!hasNextTarget} aria-label="Next audio element or item" aria-keyshortcuts="D" title="Next (D)"><IconNext /></button>
-      <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C" title={`${runMode === "single" ? "Single" : "Consecutive"} playback (C)`}>{runMode === "consecutive" ? <IconRepeat /> : <IconRepeatOne />}<span className="run-mode-label">{runMode === "single" ? "Single" : "Consec"}</span></button>
+      <button type="button" className={`player-run-mode ${runMode === "consecutive" ? "selected" : ""}`} onClick={toggleRunMode} aria-label="Toggle single or consecutive playback" aria-pressed={runMode === "consecutive"} aria-keyshortcuts="C" title={`${runMode === "single" ? "Single" : "Consecutive"} playback (C)`}>{runMode === "consecutive" ? <IconRepeat /> : <IconRepeatOne />}</button>
       <button
         type="button"
         className="primary play-toggle"
@@ -372,15 +371,9 @@ function AudioPlayer({item, sequence, runMode, playRequest, onNextItem, onPrevio
         vadNonSpeechIntervals={[]}
         onSeek={(time) => void player.seek(time)}
       />
-      <span className="audio-time" aria-label="Playback time">{progressLabel}</span>
     </div>
     {playerError || waitingForNextCue ? <div className="player-status">{playerError || `Paused ${currentCue.pauseAfterSeconds.toFixed(1)}s before the next audio element`}</div> : null}
   </section>;
-}
-
-function formatPlaybackTime(value: number) {
-  if (!Number.isFinite(value) || value < 0) return "0:00";
-  return `${Math.floor(value / 60)}:${String(Math.floor(value % 60)).padStart(2, "0")}`;
 }
 
 function cleanCollocation(value: string) {
